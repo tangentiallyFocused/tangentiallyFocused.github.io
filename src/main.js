@@ -16,27 +16,52 @@ import themes from './themes.json';
 console.log(projects);
 console.log(themes);
 const nodes_formatted_for_cytoscape = projects.map((project) => {
-  return {data: {id: project.title}}
+  return {
+    data: {
+      id: project.name,
+      type: "project"
+    }
+  }
 })
 nodes_formatted_for_cytoscape.push(...themes.map((theme) => {
-  return {data: {id: theme.name}}
+  return {
+    data: {
+      id: theme.name,
+      type: "theme"
+    }
+  }
 }))
 
 // highlighting nodes
 import formats from './formats.json';
-import collaborations from './collaboration.json';
+import collaborations from './collaborations.json';
 import materials from './materials.json';
-console.log(format);
+console.log(formats);
 console.log(collaborations);
 console.log(materials);
-nodes_formatted_for_cytoscape.push(...formats.map((formats) => {
-  return {data: {id: formats.name}}
+nodes_formatted_for_cytoscape.push(...formats.map((format) => {
+  return {
+    data: {
+      id: format.name,
+      type: "format"
+    }
+  }
 }))
 nodes_formatted_for_cytoscape.push(...collaborations.map((collaboration) => {
-  return {data: {id: collaboration.name}}
+  return {
+    data: {
+      id: collaboration.name,
+      type: "collaboration"
+    }
+  }
 }))
-nodes_formatted_for_cytoscape.push(...material.map((materials) => {
-  return {data: {id: material.name}}
+nodes_formatted_for_cytoscape.push(...materials.map((material) => {
+  return {
+    data: {
+      id: material.name,
+      type: "project"
+    }
+  }
 }))
 
 // .sort(() => .5 - Math.random());

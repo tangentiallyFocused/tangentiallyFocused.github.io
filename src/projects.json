@@ -1,6 +1,6 @@
 [
     {
-        "title": "AELN",
+        "name": "AELN",
         "format": "Video Game",
         "main_theme": "Perception\nInteraction",
         "start_month": "January",
@@ -11,7 +11,7 @@
         "materials": "Unity Game Engine\nC#\nGitHub\nBlender\nPhotoshop\nGoogle Workspace"
     },
     {
-        "title": "Body Series",
+        "name": "Body Series",
         "format": "Painting",
         "main_theme": "Perception",
         "start_month": "April",
@@ -22,7 +22,7 @@
         "materials": "Wood\nCanvas\nAcrylic Gesso\nAcrylic Paint\nOil Paint\nPlaster"
     },
     {
-        "title": "Custom Nails",
+        "name": "Custom Nails",
         "format": "Sculpture",
         "main_theme": "???",
         "start_month": "February",
@@ -33,7 +33,7 @@
         "materials": "3D Scanner\n3D Printer\nPLA\nBlender\nNail E-file\nSolid Builder Gel\nGel Nail Polish"
     },
     {
-        "title": "House of Memory",
+        "name": "House of Memory",
         "format": "Sculpture",
         "main_theme": "Interaction",
         "start_month": "April",
@@ -44,7 +44,7 @@
         "materials": "Wood\nMirrors\nVelcro\nWire\nPlaster\nCable Phones"
     },
     {
-        "title": "Journals & Notebooks",
+        "name": "Journals & Notebooks",
         "format": "Organizational Resources",
         "main_theme": "???",
         "start_month": "-",
@@ -55,7 +55,7 @@
         "materials": "Google Workspace"
     },
     {
-        "title": "Language Structures the Brain",
+        "name": "Language Structures the Brain",
         "format": "Research",
         "main_theme": "Interconnectivity\nInteraction\nPerception",
         "start_month": "May",
@@ -66,7 +66,7 @@
         "materials": "Microsoft PowerPoint\nGoogle Workspace"
     },
     {
-        "title": "Mindmaps",
+        "name": "Mindmaps",
         "format": "Organizational Resources",
         "main_theme": "???",
         "start_month": "-",
@@ -77,7 +77,7 @@
         "materials": "XMind"
     },
     {
-        "title": "Pet Perspectives",
+        "name": "Pet Perspectives",
         "format": "Drawing",
         "main_theme": "Perception",
         "start_month": "July",
@@ -88,7 +88,7 @@
         "materials": "Colored Pencils\nPaper"
     },
     {
-        "title": "Portfolio",
+        "name": "Portfolio",
         "format": "Coding",
         "main_theme": "Interconnectivity\nInteraction\nPerception",
         "start_month": "-",
@@ -99,7 +99,7 @@
         "materials": "HTML\nCSS\nJS\nGitHub"
     },
     {
-        "title": "'Snow White' Variants",
+        "name": "'Snow White' Variants",
         "format": "Research",
         "main_theme": "Interconnectivity",
         "start_month": "January",
@@ -110,7 +110,7 @@
         "materials": "ArcGIS"
     },
     {
-        "title": "Study Spreadsheet",
+        "name": "Study Spreadsheet",
         "format": "Organizational Resources",
         "main_theme": "???",
         "start_month": "-",
@@ -121,7 +121,7 @@
         "materials": "Google Workspace"
     },
     {
-        "title": "Town H@ll",
+        "name": "Town H@ll",
         "format": "Coding",
         "main_theme": "Interaction",
         "start_month": "May",
@@ -132,7 +132,7 @@
         "materials": "Figma\nBalsamiq\nMiro\nProcreate\nChatGPT"
     },
     {
-        "title": "Use Your Inside Voice",
+        "name": "Use Your Inside Voice",
         "format": "Research\nDrawing",
         "main_theme": "Perception",
         "start_month": "September",
@@ -143,7 +143,7 @@
         "materials": "Photoshop\nPaper\nCardboard\nJamovi\nGoogle Workspace\nZotero\nPSYCInfo"
     },
     {
-        "title": "We're All Mad Here",
+        "name": "We're All Mad Here",
         "format": "Research",
         "main_theme": "Perception",
         "start_month": "September",

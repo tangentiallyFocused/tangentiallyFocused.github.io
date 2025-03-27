@@ -9,8 +9,9 @@ import cytoscape from 'cytoscape';
 import projects from './projects.json';
 import themes from './themes.json';
 
-console.log(projects);
 console.log(themes);
+console.log(projects);
+
 
 // nodes = dados.map((point) => {{data: {id: point.name}}})
 

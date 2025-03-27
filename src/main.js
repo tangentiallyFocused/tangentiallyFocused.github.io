@@ -6,9 +6,11 @@ import cytoscape from 'cytoscape';
 
 // cyqtip( cytoscape ); // register extension
 
-import dados from './nodes.json';
+import projects from './projects.json';
+import themes from './themes.json';
 
-console.log(dados);
+console.log(projects);
+console.log(themes);
 
 // nodes = dados.map((point) => {{data: {id: point.name}}})
 

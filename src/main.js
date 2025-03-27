@@ -71,19 +71,21 @@ console.log(nodes_formatted_for_cytoscape);
 const edges = projects.flatMap((project) => {
   return [
     { // edge format
-      data: { id: '${project.name}-${project.format}', source: project.name, target: project.format }
+      data: { id: `${project.name}-${project.format}`, source: project.name, target: project.format }
     },
     ...project.themes.map((theme) => ({ // edge theme
-        data: { id: '${project.name}-${theme}', source: project.name, target: theme }
+        data: { id: `${project.name}-${theme}`, source: project.name, target: theme }
       })),
     ...project.materials.map((material) => ({ // edge theme
-        data: { id: '${project.name}-${material}', source: project.name, target: material }
+        data: { id: `${project.name}-${material}`, source: project.name, target: material }
       })),
     { // edge collaboration
-      data: { id: '${project.name}-${project.collaboration}', source: project.name, target: project.collaboration }
+      data: { id: `${project.name}-${project.collaboration}`, source: project.name, target: project.collaboration }
     },
   ]
 });
+
+console.log(edges);
 
   // { // dates
 

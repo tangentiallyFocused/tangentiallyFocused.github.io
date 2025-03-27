@@ -8,7 +8,7 @@
         "end_month": "May",
         "end_year": "2025",
         "collaboration": "Group",
-        "materials": ["Unity Game Engine", "C#", "GitHub", "Blender", "Photoshop", "Google Workspace"]
+        "materials": ["Unity Game Engine", "C#", "GitHub", "Blender", "Adobe Photoshop", "Google Workspace"]
     },
     {
         "name": "Body Series",
@@ -140,7 +140,7 @@
         "end_month": "December",
         "end_year": "2024",
         "collaboration": "Group",
-        "materials": ["Photoshop", "Paper", "Cardboard", "Jamovi", "Google Workspace", "Zotero", "PSYCInfo"]
+        "materials": ["Adobe Photoshop", "Paper", "Cardboard", "Jamovi", "Google Workspace", "Zotero", "PSYCInfo"]
     },
     {
         "name": "We're All Mad Here",
@@ -151,6 +151,6 @@
         "end_month": "December",
         "end_year": "2024",
         "collaboration": "Solo",
-        "materials": ["PYSCInfo", "Zotero", "Google Workspace"]
+        "materials": ["PSYCInfo", "Zotero", "Google Workspace"]
     }
 ]

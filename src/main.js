@@ -18,13 +18,13 @@ console.log(projects);
 
 let searchBar = document.getElementById("search-bar");
 // document.getElementById('cy').style.backgroundColor = 'green';
-const nodes = dados.map((point) => {
-  return {data: {id: point.title}}
-})
+// const nodes = dados.map((point) => {
+//   return {data: {id: point.title}}
+// })
 
 // .sort(() => .5 - Math.random());
 
-console.log(nodes);
+// console.log(nodes);
 
     // { // dates
   //   data: {id: 'dates', topic: 'materials'},

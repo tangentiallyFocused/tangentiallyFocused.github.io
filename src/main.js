@@ -111,8 +111,8 @@ var cy = cytoscape({
       selector: 'node',
       style: {
         // 'background-color': '#666',
-        'background-color': 'rgb(0,0,161)',
-        'label': 'data(id)'
+        // 'background-color': 'rgb(0,0,161)',
+        // 'label': 'data(id)'
       }
     },
     {
@@ -124,7 +124,48 @@ var cy = cytoscape({
         'target-arrow-shape': 'triangle',
         'curve-style': 'bezier'
       }
-    }
+    },
+
+    //project node
+    {
+      selector: 'node[type = "project"]',
+      style: {
+        'background-color': 'magenta',
+        'label': 'data(id)'
+      }
+    },
+    //theme node
+    {
+      selector: 'node[type = "theme"]',
+      style: {
+        'background-color': 'magenta',
+        'label': 'data(id)'
+      }
+    },
+    //format node
+    {
+      selector: 'node[type = "format"]',
+      style: {
+        'background-color': 'yellow',
+        'label': 'data(id)'
+      }
+    },
+    //collaboration node
+    {
+      selector: 'node[type = "collaboration"]',
+      style: {
+        'background-color': 'yellow',
+        'label': 'data(id)'
+      }
+    },
+    //material node
+    {
+      selector: 'node[type = "material"]',
+      style: {
+        'background-color': 'yellow',
+        'label': 'data(id)'
+      }
+    },
   ],
 
   layout: {

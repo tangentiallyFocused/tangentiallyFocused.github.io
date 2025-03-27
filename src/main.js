@@ -1,7 +1,7 @@
 //const fs = require('fs');
 //import fs from 'fs';
 
-import cytoscape from 'cytoscape';
+import cytoscape from './cytoscape';
 // import cyqtip from 'cytoscape-qtip';
 
 // cyqtip( cytoscape ); // register extension

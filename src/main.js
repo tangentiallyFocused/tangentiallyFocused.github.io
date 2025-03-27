@@ -68,6 +68,7 @@ nodes_formatted_for_cytoscape.push(...materials.map((material) => {
 
 console.log(nodes_formatted_for_cytoscape);
 
+
     // { // dates
   //   data: {id: 'dates', topic: 'materials'},
   // },
@@ -95,6 +96,22 @@ var cy = cytoscape({
   container: document.getElementById('cy'),
   elements: [ // list of graph elements to start with
     ...nodes_formatted_for_cytoscape,
+    // {
+    //   // material --> project
+    //   // group --> project
+    //   projects.map((project) => {
+    //     return {
+    //       data: {
+    //         id: project.name,
+    //         type: "project",
+    //         source: 
+    //       }
+    //     }
+    //   })
+
+
+
+    // }
     // { // edge ab
     //   data: { id: 'ab', source: 'a', target: 'b' }
     // },
@@ -187,7 +204,8 @@ cy.on('mouseover', 'node', function (evt) {
 });
 
 
-// cy.userZoomingEnabled(false);
+cy.maxZoom(2);
+cy.minZoom(0.7);
 cy.center();
 
 // (evt) is an anon function bc it's a function that nothing else will ever need to call

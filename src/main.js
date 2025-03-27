@@ -6,7 +6,7 @@ import cytoscape from 'cytoscape';
 
 // cyqtip( cytoscape ); // register extension
 
-import dados from './nodes.json' assert { type: 'json' };
+import dados from './nodes.json' with { type: 'json' };
 
 console.log(dados);
 

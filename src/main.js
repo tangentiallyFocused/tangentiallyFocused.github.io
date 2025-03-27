@@ -59,7 +59,7 @@ nodes_formatted_for_cytoscape.push(...materials.map((material) => {
   return {
     data: {
       id: material.name,
-      type: "project"
+      type: "material"
     }
   }
 }))

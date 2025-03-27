@@ -1,0 +1,337 @@
+[
+  {
+    "data": {
+      "id": "Octopalien",
+      "idInt": 1,
+      "type": "videoGame",
+      "startYr": 2022,
+      "startMth": "Sept",
+      "endYr": 2022,
+      "endMth": "Oct",
+      "authorN": "group",
+      "course": "MAS 121",
+    },
+
+    "group": "nodes",
+    "removed": false,
+    "selected": true,
+    "selectable": true,
+  },
+
+  {
+    "data": {
+      "id": "Car Game",
+      "idInt": 2,
+      "type": "videoGame",
+      "startYr": 2022,
+      "startMth": "Oct",
+      "endYr": 2022,
+      "endMth": "Nov",
+      "authorN": "group",
+      "course": "MAS 121",
+    },
+
+    "group": "nodes",
+    "removed": false,
+    "selected": true,
+    "selectable": true,
+  },
+
+  {
+    "data": {
+      "id": "Apple Person",
+      "idInt": 3,
+      "type": "sculpture",
+      "startYr": 2024,
+      "startMth": "Jan",
+      "endYr": 2024,
+      "endMth": "Apr",
+      "authorN": "solo",
+      "course": "ARTS 207",
+    },
+
+    "group": "nodes",
+    "removed": false,
+    "selected": true,
+    "selectable": true,
+  },
+
+  {
+    "data": {
+      "id": "Memory Box House",
+      "idInt": 4,
+      "type": "sculpture",
+      "startYr": 2024,
+      "startMth": "Apr",
+      "endYr": 2024,
+      "endMth": "May",
+      "authorN": "solo",
+      "course": "ARTS 207",
+    },
+
+    "group": "nodes",
+    "removed": false,
+    "selected": true,
+    "selectable": true,
+  },
+
+  {
+    "data": {
+      "id": "Uglow copy",
+      "idInt": 5,
+      "type": "painting",
+      "startYr": 2024,
+      "startMth": "Mar",
+      "endYr": "Present",
+      "authorN": "solo",
+      "course": "ARTS 218",
+    },
+
+    "group": "nodes",
+    "removed": false,
+    "selected": true,
+    "selectable": true,
+  },
+
+  {
+    "data": {
+      "id": "Body series",
+      "idInt": 6,
+      "type": "painting",
+      "startYr": 2024,
+      "startMth": "Apr",
+      "endYr": 2024,
+      "endMth": "May",
+      "authorN": "solo",
+      "course": "ARTS 218",
+    },
+
+    "group": "nodes",
+    "removed": false,
+    "selected": true,
+    "selectable": true,
+  },
+
+  {
+    "data": {
+      "id": "Reed's Perspective",
+      "idInt": 7,
+      "type": "drawing",
+      "startYr": 2023,
+      "startMth": "July",
+      "endYr": 2023,
+      "endMth": "July",
+      "authorN": "solo",
+      "course": "ARTS 105",
+    },
+
+    "group": "nodes",
+    "removed": false,
+    "selected": true,
+    "selectable": true,
+  },
+
+  {
+    "data": {
+      "id": "Chonks' Perspective",
+      "idInt": 8,
+      "type": "drawing",
+      "startYr": 2023,
+      "startMth": "July",
+      "endYr": 2023,
+      "endMth": "July",
+      "authorN": "solo",
+      "course": "ARTS 105",
+    },
+
+    "group": "nodes",
+    "removed": false,
+    "selected": true,
+    "selectable": true,
+  },
+
+  {
+    "data": {
+      "id": "David: Landart",
+      "idInt": 9,
+      "type": "drawing",
+      "startYr": 2023,
+      "startMth": "July",
+      "endYr": 2023,
+      "endMth": "July",
+      "authorN": "solo",
+      "course": "ARTS 105",
+    },
+
+    "group": "nodes",
+    "removed": false,
+    "selected": true,
+    "selectable": true,
+  },
+
+  {
+    "data": {
+      "id": "Choro drawing",
+      "idInt": 10,
+      "type": "drawing",
+      "startYr": 2024,
+      "startMth": "Mar",
+      "endYr": 2024,
+      "endMth": "Mar",
+      "authorN": "solo",
+    },
+
+    "group": "nodes",
+    "removed": false,
+    "selected": true,
+    "selectable": true,
+  },
+
+  {
+    "data": {
+      "id": "115 website",
+      "idInt": 11,
+      "type": "coding / cs",
+      "startYr": 2022,
+      "startMth": "Jan",
+      "endYr": 2022,
+      "endMth": "May",
+      "authorN": "group",
+      "course": "CS 115",
+    },
+
+    "group": "nodes",
+    "removed": false,
+    "selected": true,
+    "selectable": true,
+  },
+
+  {
+    "data": {
+      "id": "220 wireframes",
+      "idInt": 12,
+      "type": "coding / cs",
+      "startYr": 2024,
+      "startMth": "May",
+      "endYr": 2024,
+      "endMth": "July",
+      "authorN": "group",
+      "course": "CS 220",
+    },
+
+    "group": "nodes",
+    "removed": false,
+    "selected": true,
+    "selectable": true,
+  },
+
+  {
+    "data": {
+      "id": "Jewellery holder",
+      "idInt": 13,
+      "type": "sculpture",
+      "startYr": 2024,
+      "startMth": "Oct",
+      "endYr": 2024,
+      "endMth": "Oct",
+      "authorN": "solo",
+    },
+
+    "group": "nodes",
+    "removed": false,
+    "selected": true,
+    "selectable": true,
+  },
+
+  {
+    "data": {
+      "id": "Mr. S",
+      "idInt": 14,
+      "type": "drawing",
+      "startYr": 2024,
+      "startMth": "Oct",
+      "endYr": 2024,
+      "endMth": "Oct",
+      "authorN": "group",
+      "course": "PSYC 307R",
+    },
+
+    "group": "nodes",
+    "removed": false,
+    "selected": true,
+    "selectable": true,
+  },
+
+  {
+    "data": {
+      "id": "216 slides",
+      "idInt": 15,
+      "type": "slideshow",
+      "startYr": 2023,
+      "startMth": "May",
+      "endYr": 2023,
+      "endMth": "May",
+      "authorN": "solo",
+      "course": "PSYC 216",
+    },
+
+    "group": "nodes",
+    "removed": false,
+    "selected": true,
+    "selectable": true,
+  },
+
+  {
+    "data": {
+      "id": "Mindmaps (Jeremy)",
+      "idInt": 16,
+      "type": "mindmaps",
+      "startYr": 2023,
+      "startMth": "July",
+      "endYr": 2023,
+      "endMth": "July",
+      "authorN": "solo",
+      "course": "ARTS 105",
+    },
+
+    "group": "nodes",
+    "removed": false,
+    "selected": true,
+    "selectable": true,
+  },
+
+  {
+    "data": {
+      "id": "Development Journal",
+      "idInt": 17,
+      "type": "document",
+      "startYr": 2022,
+      "startMth": "Sept",
+      "endYr": 2022,
+      "endMth": "Dec",
+      "authorN": "solo",
+      "course": "MAS 121",
+    },
+
+    "group": "nodes",
+    "removed": false,
+    "selected": true,
+    "selectable": true,
+  },
+
+  {
+    "data": {
+      "id": "Study spreadsheet",
+      "idInt": 18,
+      "type": "spreadsheet",
+      "startYr": 2023,
+      "endYr": 2023,
+      "authorN": "solo",
+    },
+
+    "group": "nodes",
+    "removed": false,
+    "selected": true,
+    "selectable": true,
+  },
+]

@@ -23,21 +23,21 @@ nodes_formatted_for_cytoscape.push(...themes.map((theme) => {
 }))
 
 // highlighting nodes
-import formats from './formats.json';
-import collaboration from './collaboration.json';
-import materials from './materials.json';
-console.log(formats);
-console.log(collaboration);
-console.log(materials);
-nodes_formatted_for_cytoscape.push(...formats.map((formats) => {
-  return {data: {id: formats.name}}
-}))
-nodes_formatted_for_cytoscape.push(...collaboration.map((collaboration) => {
-  return {data: {id: collaboration.name}}
-}))
-nodes_formatted_for_cytoscape.push(...materials.map((materials) => {
-  return {data: {id: materials.name}}
-}))
+// import formats from './formats.json';
+// import collaboration from './collaboration.json';
+// import materials from './materials.json';
+// console.log(formats);
+// console.log(collaboration);
+// console.log(materials);
+// nodes_formatted_for_cytoscape.push(...formats.map((formats) => {
+//   return {data: {id: formats.name}}
+// }))
+// nodes_formatted_for_cytoscape.push(...collaboration.map((collaboration) => {
+//   return {data: {id: collaboration.name}}
+// }))
+// nodes_formatted_for_cytoscape.push(...materials.map((materials) => {
+//   return {data: {id: materials.name}}
+// }))
 
 // .sort(() => .5 - Math.random());
 

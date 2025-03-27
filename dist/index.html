@@ -3,15 +3,13 @@
 
 <head>
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <link rel="stylesheet" href="./allStyle.css">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>All</title>
+  <title>All- Network</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.31.0/cytoscape.min.js"></script>
-  <script src="./allJS.js"> </script>
 
-  <script type="module" crossorigin src="/assets/index-CbnTSRFp.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-DdJaLM5G.css">
+  <script type="module" crossorigin src="/assets/index-C4j1Lwno.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-1xdS0sxK.css">
 </head>
 
 <body>
@@ -22,28 +20,295 @@
       <div id="icon"> </div>
       <div class="spacer"></div>
       <div id="nav-buttons">
-        <a href="portfolioPg1.html">
-          <div>
-            <h1>Thing</h1>
-          </div>
-        </a>
-        <a href="portfolioPg1.html">
-          <div>
-            <h1>Something</h1>
-          </div>
-        </a>
-        <a href="portfolioPg1.html">
-          <div>
-            <h1>Yuh</h1>
-          </div>
-        </a>
+        <div class="navButton" id="allButton">
+          <a href="allPage.html">
+            <div>
+              <h1>All</h1>
+            </div>
+          </a>
+        </div>
+        <div class="navButton" id="idkButton"> <!-- temp -->
+          <a href="interconPage.html">
+            <div>
+              <h1>?</h1>
+            </div>
+          </a>
+        </div>
+        <div class="navButton" id="contactButton">
+          <a href="portfolioPg1.html">
+            <div>
+              <h1>Contact</h1>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
     <input id="search-bar" width="300px" height="80px" >
     <div id="cy"></div>
 
+    <div class="filterArea">
+      <div class="filterBoxes">
+        <div class="typeBoxes">
+          <input type="checkbox" id="typeFilter" name="type">
+          <label for="typeFilter"> Types</label><br> 
 
-  </div>
+          <input type="checkbox" id="vgFilter" name="videoGame" class="typeChild">
+          <label for="vgFilter"> Video Game</label><br> 
+
+          <input type="checkbox" id="sculptFilter" name="sculpture" class="typeChild">
+          <label for="sculptFilter"> Sculpture</label><br> 
+
+          <input type="checkbox" id="paintFilter" name="painting" class="typeChild">
+          <label for="paintFilter"> Painting</label><br> 
+
+          <input type="checkbox" id="drawFilter" name="drawing" class="typeChild">
+          <label for="drawFilter"> Drawing</label><br> 
+
+          <input type="checkbox" id="codeFilter" name="coding" class="typeChild">
+          <label for="codeFilter"> Coding</label><br> 
+
+          <input type="checkbox" id="resFilter" name="research" class="typeChild">
+          <label for="resFilter"> Research</label><br> 
+
+          <input type="checkbox" id="orgFilter" name="organizationalDocs" class="typeChild">
+          <label for="orgFilter"> Organizational Documents</label><br> 
+        </div>
+
+        <div class="themeBoxes">
+          <input type="checkbox" id="themeFilter" name="themes">
+          <label for="themeFilter"> Themes</label><br> 
+
+          <input type="checkbox" id="interconFilter" name="interconnectivity">
+          <label for="interconFilter"> Interconnectivity</label><br> 
+
+          <input type="checkbox" id="interactFilter" name="interaction">
+          <label for="interactFilter"> Interaction</label><br> 
+
+          <input type="checkbox" id="perceptFilter" name="perception">
+          <label for="perceptFilter"> Perception</label><br> 
+        </div>
+
+        <div class="subjectBoxes">
+          <input type="checkbox" id="subjectFilter" name="coursesubjects">
+          <label for="subjectFilter"> Course Subject</label><br> 
+
+          <input type="checkbox" id="anthFilter" name="anthropology">
+          <label for="anthFilter"> Anthropology</label><br> 
+
+          <input type="checkbox" id="artFilter" name="arts">
+          <label for="artFilter"> Art</label><br> 
+
+          <input type="checkbox" id="csFilter" name="computerScience">
+          <label for="csFilter"> Computer Science</label><br> 
+
+          <input type="checkbox" id="psychFilter" name="psychology">
+          <label for="psychFilter"> Psychology</label><br> 
+        </div>
+
+        <div class="collabBoxes">
+          <input type="checkbox" id="collabFilter" name="collaboration">
+          <label for="collabFilter"> Collaboration</label><br> 
+
+          <input type="checkbox" id="groupFilter" name="Group">
+          <label for="groupFilter"> Group</label><br> 
+
+          <input type="checkbox" id="soloFilter" name="Solo">
+          <label for="soloFilter"> Solo</label><br> 
+        </div>
+
+        <div class="materBoxes">
+          <input type="checkbox" id="materFilter" name="Materials">
+          <label for="materFilter" > Materials</label><br>
+          
+          <input type="checkbox" id="3dprFilter" name="3D Printer">
+          <label for="3dprFilter" > 3D Printer</label><br>
+
+          <input type="checkbox" id="3dscFilter" name="3D Scanner">
+          <label for="3dscFilter" > 3D Scanner</label><br>
+
+          <input type="checkbox" id="gessoFilter" name="Acrylic Gesso">
+          <label for="gessoFilter" > Acrylic Gesso</label><br>
+
+          <input type="checkbox" id="acryFilter" name="Acrylic Paint">
+          <label for="acryFilter" > Acrylic Paint</label><br>
+
+          <input type="checkbox" id="arcgFilter" name="ArcGIS">
+          <label for="arcgFilter" > ArcGIS</label><br>
+
+          <input type="checkbox" id="balsFilter" name="Balsamiq">
+          <label for="balsFilter" > Balsamiq</label><br>
+
+          <input type="checkbox" id="blenFilter" name="Blender">
+          <label for="blenFilter" > Blender</label><br>
+
+          <input type="checkbox" id="burlFilter" name="Burlap">
+          <label for="burlFilter" > Burlap</label><br>
+
+          <input type="checkbox" id="cameFilter" name="Camera">
+          <label for="cameFilter" > Camera</label><br>
+
+          <input type="checkbox" id="canvFilter" name="Canvas">
+          <label for="canvFilter" > Canvas</label><br>
+
+          <input type="checkbox" id="cardFilter" name="Cardboard">
+          <label for="cardFilter" > Cardboard</label><br>
+
+          <input type="checkbox" id="chatFilter" name="ChatGPT">
+          <label for="chatFilter" > ChatGPT</label><br>
+
+          <input type="checkbox" id="coloFilter" name="Colored Pencil">
+          <label for="coloFilter" > Colored Pencil</label><br>
+
+          <input type="checkbox" id="cssFilter" name="CSS">
+          <label for="cssFilter" > CSS</label><br>
+
+          <input type="checkbox" id="figmFilter" name="Figma">
+          <label for="figmFilter" > Figma</label><br>
+
+          <input type="checkbox" id="gelpFilter" name="Gel Polish">
+          <label for="gelpFilter" > Gel Polish</label><br>
+
+          <input type="checkbox" id="docsFilter" name="Google Docs">
+          <label for="docsFilter" > Google Docs</label><br>
+
+          <input type="checkbox" id="sheetsFilter" name="Google Sheets">
+          <label for="sheetsFilter" > Google Sheets</label><br>
+
+          <input type="checkbox" id="htmlFilter" name="HTML">
+          <label for="htmlFilter" > HTML</label><br>
+
+          <input type="checkbox" id="javaFilter" name="JavaScript">
+          <label for="javaFilter" > JavaScript</label><br>
+
+          <input type="checkbox" id="miroFilter" name="Miro">
+          <label for="miroFilter" > Miro</label><br>
+
+          <input type="checkbox" id="mirrorFilter" name="Mirrors">
+          <label for="mirrorFilter" > Mirrors</label><br>
+
+          <input type="checkbox" id="nailFilter" name="Nail E-file">
+          <label for="nailFilter" > Nail E-file</label><br>
+
+          <input type="checkbox" id="oilpFilter" name="Oil Paint">
+          <label for="oilpFilter" > Oil Paint</label><br>
+
+          <input type="checkbox" id="papeFilter" name="Paper">
+          <label for="papeFilter" > Paper</label><br>
+
+          <input type="checkbox" id="pencFilter" name="Pencil">
+          <label for="pencFilter" > Pencil</label><br>
+
+          <input type="checkbox" id="photFilter" name="Photoshop">
+          <label for="photFilter" > Photoshop</label><br>
+
+          <input type="checkbox" id="plasFilter" name="Plaster">
+          <label for="plasFilter" > Plaster</label><br>
+
+          <input type="checkbox" id="parisFilter" name="Plaster of Paris">
+          <label for="parisFilter" > Plaster of Paris</label><br>
+
+          <input type="checkbox" id="pptxFilter" name="PowerPoint">
+          <label for="pptxFilter" > PowerPoint</label><br>
+
+          <input type="checkbox" id="procFilter" name="Procreate">
+          <label for="procFilter" > Procreate</label><br>
+
+          <input type="checkbox" id="rockFilter" name="Rocks">
+          <label for="rockFilter" > Rocks</label><br>
+
+          <input type="checkbox" id="soliFilter" name="Solid Builder Gel">
+          <label for="soliFilter" > Solid Builder Gel</label><br>
+
+          <input type="checkbox" id="tapeFilter" name="Tape">
+          <label for="tapeFilter" > Tape</label><br>
+
+          <input type="checkbox" id="unityFilter" name="Unity Game Engine">
+          <label for="unityFilter" > Unity Game Engine</label><br>
+
+          <input type="checkbox" id="velcFilter" name="Velcro">
+          <label for="velcFilter" > Velcro</label><br>
+
+          <input type="checkbox" id="wireFilter" name="Wire">
+          <label for="wireFilter" > Wire</label><br>
+
+          <input type="checkbox" id="woodFilter" name="Wood">
+          <label for="woodFilter" > Wood</label><br>
+
+          <input type="checkbox" id="xmindFilter" name="XMind">
+          <label for="xmindFilter" > XMind</label><br>
+        </div>
+
+        <div class="projectBoxes">
+          <input type="checkbox" id="3dnaFilter" name="3D Nails">
+          <label for="3dnaFilter" > 3D Nails</label><br>
+
+          <input type="checkbox" id="115wFilter" name="115 Website">
+          <label for="115wFilter" > 115 Website</label><br>
+
+          <input type="checkbox" id="220wFilter" name="220 Wireframes">
+          <label for="220wFilter" > 220 Wireframes</label><br>
+
+          <input type="checkbox" id="aelnFilter" name="AELN">
+          <label for="aelnFilter" > AELN</label><br>
+
+          <input type="checkbox" id="appleFilter" name="Apple & Person">
+          <label for="appleFilter" > Apple & Person</label><br>
+
+          <input type="checkbox" id="bodyFilter" name="Body Series">
+          <label for="bodyFilter" > Body Series</label><br>
+
+          <input type="checkbox" id="carFilter" name="Car Game">
+          <label for="carFilter" > Car Game</label><br>
+
+          <input type="checkbox" id="choroFilter" name="Choro">
+          <label for="choroFilter" > Choro</label><br>
+
+          <input type="checkbox" id="devFilter" name="Development Journals">
+          <label for="devFilter" > Development Journals</label><br>
+
+          <input type="checkbox" id="feelFilter" name="Feelings Paper">
+          <label for="feelFilter" > Feelings Paper</label><br>
+
+          <input type="checkbox" id="jewelFilter" name="Jewellery Holder">
+          <label for="jewelFilter" > Jewellery Holder</label><br>
+
+          <input type="checkbox" id="landFilter" name="Landart">
+          <label for="landFilter" > Landart</label><br>
+
+          <input type="checkbox" id="memoFilter" name="Memory Box House">
+          <label for="memoFilter" > Memory Box House</label><br>
+
+          <input type="checkbox" id="mindFilter" name="Mindmaps">
+          <label for="mindFilter" > Mindmaps</label><br>
+
+          <input type="checkbox" id="mrsFilter" name="Mr S">
+          <label for="mrsFilter" > Mr S</label><br>
+
+          <input type="checkbox" id="octoFilter" name="Octopalien">
+          <label for="octoFilter" > Octopalien</label><br>
+
+          <input type="checkbox" id="petpFilter" name="Pet Perspectives">
+          <label for="petpFilter" > Pet Perspectives</label><br>
+
+          <input type="checkbox" id="snowFilter" name="Snow White Map">
+          <label for="snowFilter" > Snow White Map</label><br>
+
+          <input type="checkbox" id="studFilter" name="Study Spreadsheet">
+          <label for="studFilter" > Study Spreadsheet</label><br>
+
+          <input type="checkbox" id="uglowFilter" name="Uglow copy">
+          <label for="uglowFilter" > Uglow copy</label><br>
+
+          <input type="checkbox" id="weiFilter" name="Wei et al">
+          <label for="weiFilter" > Wei et al</label><br>
+        </div>
+
+        <input type="checkbox" id="persFilter" name="Personal">
+        <label for="persFilter" > Personal</label><br>
+      </div>
+    </div>
+  </div> 
+  
 </body>
 
 </html>

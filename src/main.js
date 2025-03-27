@@ -6,28 +6,49 @@ import cytoscape from 'cytoscape';
 
 // cyqtip( cytoscape ); // register extension
 
-import projects from './projects.json';
-import themes from './themes.json';
-
-console.log(projects);
-console.log(themes);
-
 let searchBar = document.getElementById("search-bar");
 // document.getElementById('cy').style.backgroundColor = 'green';
-const nodes = dados.map((point) => {
+
+
+// page nodes
+import projects from './projects.json';
+import themes from './themes.json';
+console.log(projects);
+console.log(themes);
+const nodes_formatted_for_cytoscape = projects.map((point) => {
   return {data: {id: point.title}}
 })
+nodes_formatted_for_cytoscape.push(...themes.map((theme) => {
+  return {data: {id: theme.name}}
+}))
+
+// highlighting nodes
+import formats from './formats.json';
+import collaboration from './collaboration.json';
+import materials from './materials.json';
+console.log(formats);
+console.log(collaboration);
+console.log(materials);
+nodes_formatted_for_cytoscape.push(...formats.map((formats) => {
+  return {data: {id: formats.name}}
+}))
+nodes_formatted_for_cytoscape.push(...collaboration.map((collaboration) => {
+  return {data: {id: collaboration.name}}
+}))
+nodes_formatted_for_cytoscape.push(...materials.map((materials) => {
+  return {data: {id: materials.name}}
+}))
 
 // .sort(() => .5 - Math.random());
 
-console.log(nodes);
+console.log(nodes_formatted_for_cytoscape);
 
     // { // dates
   //   data: {id: 'dates', topic: 'materials'},
   // },
 
 
-// const nodes = [
+// const nodes_formatted_for_cytoscape = [
 //   { // node a
 //     data: { id: 'a' },
 //   },
@@ -48,7 +69,7 @@ console.log(nodes);
 var cy = cytoscape({
   container: document.getElementById('cy'),
   elements: [ // list of graph elements to start with
-    ...nodes,
+    ...nodes_formatted_for_cytoscape,
     // { // edge ab
     //   data: { id: 'ab', source: 'a', target: 'b' }
     // },
@@ -122,7 +143,7 @@ searchBar.addEventListener("input", (target) => {
   console.log("in graveyard after restore", removed)
 
   if (searchBar.value) {
-    cy.nodes().filter(node => {
+    cy.nodes_formatted_for_cytoscape().filter(node => {
       console.log(node.data("id"))
       if (!node.data("id").toLowerCase().includes((searchBar.value || "").toLowerCase())) {
         removed.push(cy.remove(node))
@@ -135,7 +156,7 @@ searchBar.addEventListener("input", (target) => {
 
 function restore() {
   removed.forEach((e) => {
-    e.nodes().restore()
+    e.nodes_formatted_for_cytoscape().restore()
   })
   removed.forEach((e) => {
     e.edges().restore()

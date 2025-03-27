@@ -1,0 +1,92 @@
+
+body{
+  margin: 0;
+  background-color: beige;
+}
+/* #contents {
+
+} */
+.nav-bar {
+  position: relative;
+  top: 0;
+  width: 100%;
+  background-color: lightgoldenrodyellow;
+  display: flex;
+  flex-direction: row;
+}
+
+#nav-buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.navButton {
+  padding: 0px 15px;
+}
+
+#icon {
+  background-color: brown;
+  width: 80px;
+  height: 80px;
+}
+
+.spacer {
+  width: auto;
+  flex-grow: 2;
+}
+
+#nav-buttons {
+  width:auto
+}
+
+a:link {
+    text-decoration: inherit;
+    color: magenta;
+    /* color: inherit; */
+}
+
+a:visited {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+a:hover {
+  opacity: 50%;
+}
+
+#cy {
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  height: 85%;
+  background-color: aqua;
+}
+
+/* source: https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling */
+input[type="checkbox"] {
+  /* disables default browser appearance, allowing changes */
+  appearance: none;
+
+  position: relative;
+  width: 1em;
+  height: 1em;
+  border: 1px solid gray;
+  /* Adjusts the position of the checkboxes on the text baseline */
+  vertical-align: -2px;
+  /* Set here so that Windows' High-Contrast Mode can override */
+  color: green;
+}
+
+input[type="checkbox"]::before {
+  content: "✔";
+  position: absolute;
+  font-size: 1.2em;
+  right: -1px;
+  top: -0.3em;
+  visibility: hidden;
+}
+
+input[type="checkbox"]:checked::before {
+  /* Use `visibility` instead of `display` to avoid recalculating layout */
+  visibility: visible;
+}

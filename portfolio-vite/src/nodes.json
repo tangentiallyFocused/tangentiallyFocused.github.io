@@ -1,0 +1,156 @@
+[
+    {
+        "title": "AELN",
+        "format": "Video Game",
+        "main_theme": "Perception\nInteraction",
+        "start_month": "January",
+        "start_year": "2025",
+        "end_month": "May",
+        "end_year": "2025",
+        "collaboration": "Group",
+        "materials": "Unity Game Engine\nC#\nGitHub\nBlender\nPhotoshop\nGoogle Workspace"
+    },
+    {
+        "title": "Body Series",
+        "format": "Painting",
+        "main_theme": "Perception",
+        "start_month": "April",
+        "start_year": "2024",
+        "end_month": "May",
+        "end_year": "2024",
+        "collaboration": "Solo",
+        "materials": "Wood\nCanvas\nAcrylic Gesso\nAcrylic Paint\nOil Paint\nPlaster"
+    },
+    {
+        "title": "Custom Nails",
+        "format": "Sculpture",
+        "main_theme": "???",
+        "start_month": "February",
+        "start_year": "2025",
+        "end_month": "April",
+        "end_year": "2025",
+        "collaboration": "Solo",
+        "materials": "3D Scanner\n3D Printer\nPLA\nBlender\nNail E-file\nSolid Builder Gel\nGel Nail Polish"
+    },
+    {
+        "title": "House of Memory",
+        "format": "Sculpture",
+        "main_theme": "Interaction",
+        "start_month": "April",
+        "start_year": "2024",
+        "end_month": "May",
+        "end_year": "2024",
+        "collaboration": "Solo",
+        "materials": "Wood\nMirrors\nVelcro\nWire\nPlaster\nCable Phones"
+    },
+    {
+        "title": "Journals & Notebooks",
+        "format": "Organizational Resources",
+        "main_theme": "???",
+        "start_month": "-",
+        "start_year": "2022",
+        "end_month": "-",
+        "end_year": "2024",
+        "collaboration": "Solo",
+        "materials": "Google Workspace"
+    },
+    {
+        "title": "Language Structures the Brain",
+        "format": "Research",
+        "main_theme": "Interconnectivity\nInteraction\nPerception",
+        "start_month": "May",
+        "start_year": "20243",
+        "end_month": "May",
+        "end_year": "2023",
+        "collaboration": "Solo",
+        "materials": "Microsoft PowerPoint\nGoogle Workspace"
+    },
+    {
+        "title": "Mindmaps",
+        "format": "Organizational Resources",
+        "main_theme": "???",
+        "start_month": "-",
+        "start_year": "2023",
+        "end_month": "-",
+        "end_year": "2023",
+        "collaboration": "Solo",
+        "materials": "XMind"
+    },
+    {
+        "title": "Pet Perspectives",
+        "format": "Drawing",
+        "main_theme": "Perception",
+        "start_month": "July",
+        "start_year": "2023",
+        "end_month": "July",
+        "end_year": "2023",
+        "collaboration": "Solo",
+        "materials": "Colored Pencils\nPaper"
+    },
+    {
+        "title": "Portfolio",
+        "format": "Coding",
+        "main_theme": "Interconnectivity\nInteraction\nPerception",
+        "start_month": "-",
+        "start_year": "2023",
+        "end_month": "March",
+        "end_year": "2025",
+        "collaboration": "Solo",
+        "materials": "HTML\nCSS\nJS\nGitHub"
+    },
+    {
+        "title": "'Snow White' Variants",
+        "format": "Research",
+        "main_theme": "Interconnectivity",
+        "start_month": "January",
+        "start_year": "2024",
+        "end_month": "April",
+        "end_year": "2024",
+        "collaboration": "Solo",
+        "materials": "ArcGIS"
+    },
+    {
+        "title": "Study Spreadsheet",
+        "format": "Organizational Resources",
+        "main_theme": "???",
+        "start_month": "-",
+        "start_year": "2023",
+        "end_month": "-",
+        "end_year": "2023",
+        "collaboration": "Solo",
+        "materials": "Google Workspace"
+    },
+    {
+        "title": "Town H@ll",
+        "format": "Coding",
+        "main_theme": "Interaction",
+        "start_month": "May",
+        "start_year": "2024",
+        "end_month": "July",
+        "end_year": "2024",
+        "collaboration": "Group",
+        "materials": "Figma\nBalsamiq\nMiro\nProcreate\nChatGPT"
+    },
+    {
+        "title": "Use Your Inside Voice",
+        "format": "Research\nDrawing",
+        "main_theme": "Perception",
+        "start_month": "September",
+        "start_year": "2024",
+        "end_month": "December",
+        "end_year": "2024",
+        "collaboration": "Group",
+        "materials": "Photoshop\nPaper\nCardboard\nJamovi\nGoogle Workspace\nZotero\nPSYCInfo"
+    },
+    {
+        "title": "We're All Mad Here",
+        "format": "Research",
+        "main_theme": "Perception",
+        "start_month": "September",
+        "start_year": "2024",
+        "end_month": "December",
+        "end_year": "2024",
+        "collaboration": "Solo",
+        "materials": "PYSCInfo\nZotero\nGoogle Workspace"
+    }
+]

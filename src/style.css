@@ -28,6 +28,10 @@ body{
   background-color: brown;
   width: 80px;
   height: 80px;
+  /* img {
+    position: absolute;
+    z-index: 2;
+  } */
 }
 
 .spacer {

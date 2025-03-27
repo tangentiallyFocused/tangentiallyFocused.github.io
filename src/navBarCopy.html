@@ -8,23 +8,25 @@
     <script typ="module" src="navBarCopyJS.JS"></script>
 </head>
 <body>
-    <div id="myNav" class="overlay">
+    <div id="myNav"> <!-- class="overlay"> -->
         <!-- Button to close the overlay nav -->
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+        <img href="javascript:void(0)" src="/public/logo1.PNG" id="logo" onclick="openNav()"></img> 
 
         <!-- Overlay content -->
         <div class="overlay-content">
-            <div id="topRow" class="nav-content"></div>
-            <a href="projectsHTML.html" id="projectsLink" class="nav-content">Projects</a>
-            <a href="aboutHTML.html" id="aboutLink" class="nav-content">About</a>
-            <a href="contactForm/contactHTML.html" id="contactLink" class="nav-content">Contact</a>
-            <div id="bottomRow" class="nav-content"></div>
+            <!-- <div id="topRow"></div> -->
+            <a href="projectsHTML.html" id="projectsLink">Projects</a>
+            <a href="aboutHTML.html" id="aboutLink">About</a>
+            <a href="contactForm/contactHTML.html" id="contactLink">Contact</a>
+            <!-- <div id="bottomRow"></div> -->
         </div>
         
     </div>
 
     <!-- Use any element ot open/show the overlay navigation menu -->
-     <span onclick="openNav()">&#9776; open</span>
+    <!-- <img src="/public/logo1.PNG" id="logo" onclick="openNav()"></img>  -->
+    <!-- <span onclick="openNav()">&#9776; open</span> -->
 
     <br>
     <br>

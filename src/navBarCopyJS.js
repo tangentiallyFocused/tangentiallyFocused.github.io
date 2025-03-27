@@ -1,20 +1,21 @@
 // open when someone clicks on the span element
-function openNav() {
-    document.getElementById("topRow").style.width = "100%";
-
-    // if()
-    
+function openNav() {    
     document.getElementById("projectsLink").style.width = "100%";
     document.getElementById("aboutLink").style.width = "100%";
     document.getElementById("contactLink").style.width = "100%";
-    document.getElementById("bottomRow").style.width = "100%";
+
+    // replace logo with x when nav is open
+    let logoBox = document.getElementById("logo");
+    logoBox.src = "/public/exitMenu.PNG";
+    logoBox.class = "closebtn";
+    
+    // logoBox.onclick = closeNav();
 }
 
 // close when someone clicks on the "x" symbol inside the overlay
 function closeNav() {
-    document.getElementById("topRow").style.width = "0%";
     document.getElementById("projectsLink").style.width = "0%";
     document.getElementById("aboutLink").style.width = "0%";
     document.getElementById("contactLink").style.width = "0%";
-    document.getElementById("bottomRow").style.width = "0%";
 }
+

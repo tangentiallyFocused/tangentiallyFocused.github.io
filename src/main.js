@@ -68,59 +68,35 @@ nodes_formatted_for_cytoscape.push(...materials.map((material) => {
 
 console.log(nodes_formatted_for_cytoscape);
 
+const edges = projects.flatMap((project) => {
+  return [
+    { // edge format
+      data: { id: '${project.name}-${project.format}', source: project.name, target: project.format }
+    },
+    ...project.themes.map((theme) => ({ // edge theme
+        data: { id: '${project.name}-${theme}', source: project.name, target: theme }
+      })),
+    ...project.materials.map((material) => ({ // edge theme
+        data: { id: '${project.name}-${material}', source: project.name, target: material }
+      })),
+    { // edge collaboration
+      data: { id: '${project.name}-${project.collaboration}', source: project.name, target: project.collaboration }
+    },
+  ]
+});
 
-    // { // dates
-  //   data: {id: 'dates', topic: 'materials'},
-  // },
+  // { // dates
 
-
-// const nodes_formatted_for_cytoscape = [
-//   { // node a
-//     data: { id: 'a' },
-//   },
-//   { // node b
-//     data: { id: 'b' },
-//   },
-//   { // node a
-//     data: { id: 'c' },
-//   },
-//   { // node b
-//     data: { id: 'd' },
-
-//   },].sort(() => .5 - Math.random());
-
-
-
+// let nodeAmount = nodes_formatted_for_cytoscape.length;
+// points = [],
+// for(let point = 0; point < nodeAmount; point++) {
+//     console.log(point);
+//   }
 
 var cy = cytoscape({
   container: document.getElementById('cy'),
   elements: [ // list of graph elements to start with
-    ...nodes_formatted_for_cytoscape,
-    // {
-    //   // material --> project
-    //   // group --> project
-    //   projects.map((project) => {
-    //     return {
-    //       data: {
-    //         id: project.name,
-    //         type: "project",
-    //         source: 
-    //       }
-    //     }
-    //   })
-
-
-
-    // }
-    // { // edge ab
-    //   data: { id: 'ab', source: 'a', target: 'b' }
-    // },
-    // { // edge ab
-    //   data: { id: 'ac', source: 'a', target: 'c' }
-    // },
-    // { // edge ab
-    //   data: { id: 'ad', source: 'a', target: 'd' }
-    // }
+    ...nodes_formatted_for_cytoscape, ...edges
   ],
 
   style: [ // the stylesheet for the graph
@@ -187,9 +163,9 @@ var cy = cytoscape({
 
   layout: {
     name: 'random',
-  }
-
+  },
 });
+
 cy.on('click', 'node', (evt) => {
   var node = evt.target;
   console.log('clicked ' + node.id());

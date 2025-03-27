@@ -2,155 +2,155 @@
     {
         "name": "AELN",
         "format": "Video Game",
-        "main_theme": "Perception\nInteraction",
+        "themes": ["Perception", "Interaction"],
         "start_month": "January",
         "start_year": "2025",
         "end_month": "May",
         "end_year": "2025",
         "collaboration": "Group",
-        "materials": "Unity Game Engine\nC#\nGitHub\nBlender\nPhotoshop\nGoogle Workspace"
+        "materials": ["Unity Game Engine", "C#", "GitHub", "Blender", "Photoshop", "Google Workspace"]
     },
     {
         "name": "Body Series",
         "format": "Painting",
-        "main_theme": "Perception",
+        "themes": ["Perception"],
         "start_month": "April",
         "start_year": "2024",
         "end_month": "May",
         "end_year": "2024",
         "collaboration": "Solo",
-        "materials": "Wood\nCanvas\nAcrylic Gesso\nAcrylic Paint\nOil Paint\nPlaster"
+        "materials": ["Wood", "Canvas", "Acrylic Gesso", "Acrylic Paint", "Oil Paint", "Plaster"]
     },
     {
         "name": "Custom Nails",
         "format": "Sculpture",
-        "main_theme": "???",
+        "themes": ["Interconnectivity"],
         "start_month": "February",
         "start_year": "2025",
         "end_month": "April",
         "end_year": "2025",
         "collaboration": "Solo",
-        "materials": "3D Scanner\n3D Printer\nPLA\nBlender\nNail E-file\nSolid Builder Gel\nGel Nail Polish"
+        "materials": ["3D Scanner", "3D Printer", "PLA", "Blender", "Nail E-file", "Solid Builder Gel", "Gel Nail Polish"]
     },
     {
         "name": "House of Memory",
         "format": "Sculpture",
-        "main_theme": "Interaction",
+        "themes": ["Interaction"],
         "start_month": "April",
         "start_year": "2024",
         "end_month": "May",
         "end_year": "2024",
         "collaboration": "Solo",
-        "materials": "Wood\nMirrors\nVelcro\nWire\nPlaster\nCable Phones"
+        "materials": ["Wood", "Mirrors", "Velcro", "Wire", "Plaster", "Cable Phones"]
     },
     {
         "name": "Journals & Notebooks",
         "format": "Organizational Resources",
-        "main_theme": "???",
+        "themes": ["Interaction"],
         "start_month": "-",
         "start_year": "2022",
         "end_month": "-",
         "end_year": "2024",
         "collaboration": "Solo",
-        "materials": "Google Workspace"
+        "materials": ["Google Workspace"]
     },
     {
         "name": "Language Structures the Brain",
         "format": "Research",
-        "main_theme": "Interconnectivity\nInteraction\nPerception",
+        "themes": ["Interconnectivity", "Interaction", "Perception"],
         "start_month": "May",
         "start_year": "20243",
         "end_month": "May",
         "end_year": "2023",
         "collaboration": "Solo",
-        "materials": "Microsoft PowerPoint\nGoogle Workspace"
+        "materials": ["Microsoft PowerPoint", "Google Workspace"]
     },
     {
         "name": "Mindmaps",
         "format": "Organizational Resources",
-        "main_theme": "???",
+        "themes": ["Perception"],
         "start_month": "-",
         "start_year": "2023",
         "end_month": "-",
         "end_year": "2023",
         "collaboration": "Solo",
-        "materials": "XMind"
+        "materials": ["XMind"]
     },
     {
         "name": "Pet Perspectives",
         "format": "Drawing",
-        "main_theme": "Perception",
+        "themes": ["Perception"],
         "start_month": "July",
         "start_year": "2023",
         "end_month": "July",
         "end_year": "2023",
         "collaboration": "Solo",
-        "materials": "Colored Pencils\nPaper"
+        "materials": ["Colored Pencils", "Paper"]
     },
     {
         "name": "Portfolio",
         "format": "Coding",
-        "main_theme": "Interconnectivity\nInteraction\nPerception",
+        "themes": ["Interconnectivity", "Interaction", "Perception"],
         "start_month": "-",
         "start_year": "2023",
         "end_month": "March",
         "end_year": "2025",
         "collaboration": "Solo",
-        "materials": "HTML\nCSS\nJS\nGitHub"
+        "materials": ["HTML", "CSS", "JS", "GitHub", "Procreate"]
     },
     {
         "name": "'Snow White' Variants",
         "format": "Research",
-        "main_theme": "Interconnectivity",
+        "themes": ["Interconnectivity"],
         "start_month": "January",
         "start_year": "2024",
         "end_month": "April",
         "end_year": "2024",
         "collaboration": "Solo",
-        "materials": "ArcGIS"
+        "materials": ["ArcGIS"]
     },
     {
         "name": "Study Spreadsheet",
         "format": "Organizational Resources",
-        "main_theme": "???",
+        "themes": ["Perception"],
         "start_month": "-",
         "start_year": "2023",
         "end_month": "-",
         "end_year": "2023",
         "collaboration": "Solo",
-        "materials": "Google Workspace"
+        "materials": ["Google Workspace"]
     },
     {
         "name": "Town H@ll",
         "format": "Coding",
-        "main_theme": "Interaction",
+        "themes": ["Interaction"],
         "start_month": "May",
         "start_year": "2024",
         "end_month": "July",
         "end_year": "2024",
         "collaboration": "Group",
-        "materials": "Figma\nBalsamiq\nMiro\nProcreate\nChatGPT"
+        "materials": ["Figma", "Balsamiq", "Miro", "Procreate", "ChatGPT"]
     },
     {
         "name": "Use Your Inside Voice",
-        "format": "Research\nDrawing",
-        "main_theme": "Perception",
+        "format": "Research",
+        "themes": ["Perception"],
         "start_month": "September",
         "start_year": "2024",
         "end_month": "December",
         "end_year": "2024",
         "collaboration": "Group",
-        "materials": "Photoshop\nPaper\nCardboard\nJamovi\nGoogle Workspace\nZotero\nPSYCInfo"
+        "materials": ["Photoshop", "Paper", "Cardboard", "Jamovi", "Google Workspace", "Zotero", "PSYCInfo"]
     },
     {
         "name": "We're All Mad Here",
         "format": "Research",
-        "main_theme": "Perception",
+        "themes": ["Perception"],
         "start_month": "September",
         "start_year": "2024",
         "end_month": "December",
         "end_year": "2024",
         "collaboration": "Solo",
-        "materials": "PYSCInfo\nZotero\nGoogle Workspace"
+        "materials": ["PYSCInfo", "Zotero", "Google Workspace"]
     }
 ]

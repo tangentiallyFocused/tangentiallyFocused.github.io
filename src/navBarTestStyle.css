@@ -17,7 +17,7 @@
 .overlay-content {
     position: relative;
     top: 25%; /* 25% from top */
-    width: 100%;
+    width: 100vw;
     text-align: center; /* centered text/links */
     margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
 }
@@ -26,8 +26,32 @@
 .overlay a {
     padding: 8px;
     text-decoration: none;
+    font-size: 36px;
+    color: red;
+    display: block; /* display block instead of inline */
+    transition: 0.3s; /* transition effects on hover (color) */
 }
 
-*{
-    background-color: pink;
+/* when you mouse over nav links, change color */
+.overlay a:hover, .overlay a:focus {
+    color: orange;
 }
+
+/* position close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+/* when the height of the screen is less than 450px, change link font-size and position to close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+

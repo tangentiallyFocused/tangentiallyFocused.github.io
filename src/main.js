@@ -15,8 +15,8 @@ import projects from './projects.json';
 import themes from './themes.json';
 console.log(projects);
 console.log(themes);
-const nodes_formatted_for_cytoscape = projects.map((point) => {
-  return {data: {id: point.title}}
+const nodes_formatted_for_cytoscape = projects.map((project) => {
+  return {data: {id: project.title}}
 })
 nodes_formatted_for_cytoscape.push(...themes.map((theme) => {
   return {data: {id: theme.name}}
@@ -24,19 +24,19 @@ nodes_formatted_for_cytoscape.push(...themes.map((theme) => {
 
 // highlighting nodes
 import formats from './formats.json';
-import collaboration from './collaboration.json';
+import collaborations from './collaboration.json';
 import materials from './materials.json';
-console.log(formats);
-console.log(collaboration);
+console.log(format);
+console.log(collaborations);
 console.log(materials);
 nodes_formatted_for_cytoscape.push(...formats.map((formats) => {
   return {data: {id: formats.name}}
 }))
-nodes_formatted_for_cytoscape.push(...collaboration.map((collaboration) => {
+nodes_formatted_for_cytoscape.push(...collaborations.map((collaboration) => {
   return {data: {id: collaboration.name}}
 }))
-nodes_formatted_for_cytoscape.push(...materials.map((materials) => {
-  return {data: {id: materials.name}}
+nodes_formatted_for_cytoscape.push(...material.map((materials) => {
+  return {data: {id: material.name}}
 }))
 
 // .sort(() => .5 - Math.random());

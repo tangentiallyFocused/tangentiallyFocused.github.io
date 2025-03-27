@@ -1,18 +1,32 @@
 {
-  "name": "tangentiallyFocused.github.io",
-  "private": true,
+  "name": "tangentiallyfocused.github.io",
   "version": "1.0.0",
-  "license": "MIT",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "devDependencies": {
-    "vite": "^6.2.0"
-  },
+  "main": "index.js",
   "dependencies": {
-    "cytoscape": "^3.31.1"
-  }
+    "cytoscape": "^3.31.1",
+    "esbuild": "^0.25.1",
+    "fsevents": "^2.3.3",
+    "nanoid": "^3.3.10",
+    "picocolors": "^1.1.1",
+    "postcss": "^8.5.3",
+    "rollup": "^4.36.0",
+    "source-map-js": "^1.2.1",
+    "vite": "^6.2.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tangentiallyFocused/tangentiallyFocused.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tangentiallyFocused/tangentiallyFocused.github.io/issues"
+  },
+  "homepage": "https://github.com/tangentiallyFocused/tangentiallyFocused.github.io#readme",
+  "description": ""
 }

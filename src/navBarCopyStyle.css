@@ -38,7 +38,7 @@
     background-color: rgb(255,244,79); /* lemon yellow fallback color */
     background-color: rgb(255,244,79,0.9); /* lemon yellow fallback color */
     overflow-x: hidden; /* disable horizontal scroll */
-    transition: 3s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+    transition: 2.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
 }
 
 #contactLink {
@@ -52,7 +52,7 @@
     background-color: rgb(142,58,89); /* quinacridone magenta fallback color */
     background-color: rgb(142,58,89,0.9); /* quinacridone magenta w/ opacity */
     overflow-x: hidden; /* disable horizontal scroll */
-    transition: 3.25s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+    transition: 3s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
 }
 
 /* navigation links inside overlay */

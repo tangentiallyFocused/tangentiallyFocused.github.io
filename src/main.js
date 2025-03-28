@@ -19,7 +19,8 @@ const nodes_formatted_for_cytoscape = projects.map((project) => {
   return {
     data: {
       id: project.name,
-      type: "project"
+      type: "project",
+      page: project.page
     }
   }
 })
@@ -27,7 +28,8 @@ nodes_formatted_for_cytoscape.push(...themes.map((theme) => {
   return {
     data: {
       id: theme.name,
-      type: "theme"
+      type: "theme",
+      page: theme.page
     }
   }
 }))
@@ -88,12 +90,6 @@ const edges = projects.flatMap((project) => {
 console.log(edges);
 
   // { // dates
-
-// let nodeAmount = nodes_formatted_for_cytoscape.length;
-// points = [],
-// for(let point = 0; point < nodeAmount; point++) {
-//     console.log(point);
-//   }
 
 var cy = cytoscape({
   container: document.getElementById('cy'),
@@ -168,16 +164,45 @@ var cy = cytoscape({
   },
 });
 
-cy.on('click', 'node', (evt) => {
-  var node = evt.target;
-  console.log('clicked ' + node.id());
-});
+// cy.on('click', 'node', (evt) => {
+//   var node = evt.target;
+//   console.log('clicked ' + node.id());
+// });
 cy.on('mouseover', 'node', function (evt) {
   var node = evt.target;
+  // node.style("")
   node.style("background-color", "blue");
+
+  restore();
+  cy.nodes().filter((e) => {
+    if (!node.closedNeighborhood().includes(e && e!==node)) {
+      removed.push(cy.remove(e))
+    }
+  })
+  console.log("yello", cy.nodes());
 
   node.connectedEdges().forEach((edge) => {
     edge.style("line-color", "red")
+  })
+});
+
+// cy.nodes().on('click', 'node[type = "project"]', (node) => {
+//   console.log("clicked node");
+//   console.log(node.target);
+//   // window.location.href = node.page;
+// });
+
+cy.nodes('node[type="project"]').forEach((node) => {
+	node.on('click', (e) => {
+    // console.log("bleh", e.target.data("page"));
+    window.location.href = e.target.data("page");
+  })
+});
+
+cy.nodes('node[type="theme"]').forEach((node) => {
+	node.on('click', (e) => {
+    // console.log("bleh", e.target.data("page"));
+    window.location.href = e.target.data("page");
   })
 });
 
@@ -205,7 +230,7 @@ searchBar.addEventListener("input", (target) => {
   console.log("in graveyard after restore", removed)
 
   if (searchBar.value) {
-    cy.nodes_formatted_for_cytoscape().filter(node => {
+    cy.nodes().filter(node => {
       console.log(node.data("id"))
       if (!node.data("id").toLowerCase().includes((searchBar.value || "").toLowerCase())) {
         removed.push(cy.remove(node))
@@ -218,7 +243,7 @@ searchBar.addEventListener("input", (target) => {
 
 function restore() {
   removed.forEach((e) => {
-    e.nodes_formatted_for_cytoscape().restore()
+    e.nodes().restore()
   })
   removed.forEach((e) => {
     e.edges().restore()

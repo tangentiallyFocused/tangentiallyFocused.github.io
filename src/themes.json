@@ -1,11 +1,14 @@
 [
     {
-        "name": "Interconnectivity"
+        "name": "Interconnectivity",
+        "page": "/src/theme_interconnectivity.html"
     },
     {
-        "name": "Interaction"
+        "name": "Interaction",
+        "page": "/src/theme_interaction.html"
     },
     {
-        "name": "Perception"
+        "name": "Perception",
+        "page": "/src/theme_perception.html"
     }
 ]

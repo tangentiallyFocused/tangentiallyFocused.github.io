@@ -8,7 +8,8 @@
         "end_month": "May",
         "end_year": "2025",
         "collaboration": "Group",
-        "materials": ["Unity Game Engine", "C#", "GitHub", "Blender", "Adobe Photoshop", "Google Workspace"]
+        "materials": ["Unity Game Engine", "C#", "GitHub", "Blender", "Adobe Photoshop", "Google Workspace"],
+        "page": "/src/projects/proj_aeln.html"
     },
     {
         "name": "Body Series",
@@ -19,7 +20,8 @@
         "end_month": "May",
         "end_year": "2024",
         "collaboration": "Solo",
-        "materials": ["Wood", "Canvas", "Acrylic Gesso", "Acrylic Paint", "Oil Paint", "Plaster"]
+        "materials": ["Wood", "Canvas", "Acrylic Gesso", "Acrylic Paint", "Oil Paint", "Plaster"],
+        "page": "/src/projects/proj_bodySeries.html"
     },
     {
         "name": "Custom Nails",
@@ -30,7 +32,8 @@
         "end_month": "April",
         "end_year": "2025",
         "collaboration": "Solo",
-        "materials": ["3D Scanner", "3D Printer", "PLA", "Blender", "Nail E-file", "Solid Builder Gel", "Gel Nail Polish"]
+        "materials": ["3D Scanner", "3D Printer", "PLA", "Blender", "Nail E-file", "Solid Builder Gel", "Gel Nail Polish"],
+        "page": "/src/projects/proj_cNails.html"
     },
     {
         "name": "House of Memory",
@@ -41,7 +44,8 @@
         "end_month": "May",
         "end_year": "2024",
         "collaboration": "Solo",
-        "materials": ["Wood", "Mirrors", "Velcro", "Wire", "Plaster", "Cable Phones"]
+        "materials": ["Wood", "Mirrors", "Velcro", "Wire", "Plaster", "Cable Phones"],
+        "page": "/src/projects/proj_houseOfMemory.html"
     },
     {
         "name": "Journals & Notebooks",
@@ -52,7 +56,8 @@
         "end_month": "-",
         "end_year": "2024",
         "collaboration": "Solo",
-        "materials": ["Google Workspace"]
+        "materials": ["Google Workspace"],
+        "page": "/src/projects/proj_journalsNotebooks.html"
     },
     {
         "name": "Language Structures the Brain",
@@ -63,7 +68,8 @@
         "end_month": "May",
         "end_year": "2023",
         "collaboration": "Solo",
-        "materials": ["Microsoft PowerPoint", "Google Workspace"]
+        "materials": ["Microsoft PowerPoint", "Google Workspace"],
+        "page": "/src/projects/proj_languageStructures.html"
     },
     {
         "name": "Mindmaps",
@@ -74,7 +80,8 @@
         "end_month": "-",
         "end_year": "2023",
         "collaboration": "Solo",
-        "materials": ["XMind"]
+        "materials": ["XMind"],
+        "page": "/src/projects/proj_mindmaps.html"
     },
     {
         "name": "Pet Perspectives",
@@ -85,7 +92,8 @@
         "end_month": "July",
         "end_year": "2023",
         "collaboration": "Solo",
-        "materials": ["Colored Pencils", "Paper"]
+        "materials": ["Colored Pencils", "Paper"],
+        "page": "/src/projects/proj_petPerspectives.html"
     },
     {
         "name": "Portfolio",
@@ -96,7 +104,8 @@
         "end_month": "March",
         "end_year": "2025",
         "collaboration": "Solo",
-        "materials": ["HTML", "CSS", "JS", "GitHub", "Procreate"]
+        "materials": ["HTML", "CSS", "JS", "GitHub", "Procreate"],
+        "page": "/src/projects/proj_portfolio.html"
     },
     {
         "name": "'Snow White' Variants",
@@ -107,7 +116,8 @@
         "end_month": "April",
         "end_year": "2024",
         "collaboration": "Solo",
-        "materials": ["ArcGIS"]
+        "materials": ["ArcGIS"],
+        "page": "/src/projects/proj_snowWhite.html"
     },
     {
         "name": "Study Spreadsheet",
@@ -118,7 +128,8 @@
         "end_month": "-",
         "end_year": "2023",
         "collaboration": "Solo",
-        "materials": ["Google Workspace"]
+        "materials": ["Google Workspace"],
+        "page": "/src/projects/proj_studySpread.html"
     },
     {
         "name": "Town H@ll",
@@ -129,7 +140,8 @@
         "end_month": "July",
         "end_year": "2024",
         "collaboration": "Group",
-        "materials": ["Figma", "Balsamiq", "Miro", "Procreate", "ChatGPT"]
+        "materials": ["Figma", "Balsamiq", "Miro", "Procreate", "ChatGPT", "HTML", "CSS", "JS"],
+        "page": "/src/projects/proj_townHall.html"
     },
     {
         "name": "Use Your Inside Voice",
@@ -140,7 +152,8 @@
         "end_month": "December",
         "end_year": "2024",
         "collaboration": "Group",
-        "materials": ["Adobe Photoshop", "Paper", "Cardboard", "Jamovi", "Google Workspace", "Zotero", "PSYCInfo"]
+        "materials": ["Adobe Photoshop", "Paper", "Cardboard", "Jamovi", "Google Workspace", "Zotero", "PSYCInfo"],
+        "page": "/src/projects/proj_useInsideVoice.html"
     },
     {
         "name": "We're All Mad Here",
@@ -151,6 +164,7 @@
         "end_month": "December",
         "end_year": "2024",
         "collaboration": "Solo",
-        "materials": ["PSYCInfo", "Zotero", "Google Workspace"]
+        "materials": ["PSYCInfo", "Zotero", "Google Workspace"],
+        "page": "/src/projects/proj_wereMad.html"
     }
 ]

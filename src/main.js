@@ -264,14 +264,14 @@ function restore() {
 
 //checkbox filters
 
-// let typeFilt = document.getElementById("typeFilter");
-// let typeKids = document.querySelectorAll(".typeChild");
+let formatFilt = document.getElementById("formatFilter");
+let formatKids = document.querySelectorAll(".formatChild");
 
-// typeFilt.addEventListener('change', () => {
-//   typeKids.forEach(checkbox => {
-//     checkbox.checked = typeFilt.checked;
-//   });
-// });
+formatFilt.addEventListener('change', () => {
+  formatKids.forEach(checkbox => {
+    checkbox.checked = formatFilt.checked;
+  });
+});
 
 
 
@@ -342,3 +342,23 @@ function closeNav() {
 
 let logo = document.getElementById("icon").addEventListener('click', openNav);
 
+
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("active");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}

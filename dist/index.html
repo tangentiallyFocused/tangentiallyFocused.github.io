@@ -8,8 +8,8 @@
   <title>All- Network</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.31.0/cytoscape.min.js"></script>
 
-  <script type="module" crossorigin src="./assets/index-BUhm1IhU.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-BhknREw4.css">
+  <script type="module" crossorigin src="./assets/index-ScbVSI4r.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-NALy5GA5.css">
 </head>
 
 <body>
@@ -36,32 +36,199 @@
     <!-- <input id="search-bar" width="300px" height="80px" > -->
     <div id="cy"></div>
 
+    <button class="accordion">Projects</button>
+    <div class="panel">
+      <div class="mainFilter">
+        <input type="checkbox" id="projectFilter" name="project">
+        <label for="projectFilter"> Projects</label><br>
+      </div>
+
+      <div class="colA">
+        <input type="checkbox" id="project_aeln" name="AELN" class="projectChild">
+        <label for="project_aeln"> AELN</label><br> 
+
+        <input type="checkbox" id="project_bodySeries" name="Body Series" class="projectChild">
+        <label for="project_bodySeries"> Sculpture</label><br> 
+
+        <input type="checkbox" id="project_cNails" name="Custom Nails" class="projectChild">
+        <label for="project_cNails"> Custom Nails</label><br>
+
+      </div>
+
+      <div class="colB">
+        <input type="checkbox" id="project_houseOfMemory" name="House of Memory" class="projectChild">
+        <label for="project_houseOfMemory"> House of Memory</label><br>
+
+        <input type="checkbox" id="project_journalsNotebooks" name="Journals & Notebooks" class="projectChild">
+        <label for="project_journalsNotebooks"> Journals & Notebooks</label><br>
+
+        <input type="checkbox" id="project_languageStructures" name="Language Structures the Brain" class="projectChild">
+        <label for="project_languageStructures"> Language Structures the Brain</label><br>
+
+      </div>
+
+      <div class="colC">
+        <input type="checkbox" id="project_mindmaps" name="Mindmaps" class="projectChild">
+        <label for="project_mindmaps"> Mindmaps</label><br>
+
+        <input type="checkbox" id="project_petPerspectives" name="Pet Perspectives" class="projectChild">
+        <label for="project_petPerspectives"> Pet Perspectives</label><br>
+
+        <input type="checkbox" id="project_portfolio" name="Portfolio" class="projectChild">
+        <label for="project_portfolio"> Portfolio</label><br>
+
+      </div>
+
+      <div class="colD">
+        <input type="checkbox" id="project_snowWhite" name="'Snow White' Variants" class="projectChild">
+        <label for="project_snowWhite"> 'Snow White' Variants</label><br>
+
+        <input type="checkbox" id="project_studySpread" name="Study Spreadsheet" class="projectChild">
+        <label for="project_studySpread"> Study Spreadsheet</label><br>
+
+        <input type="checkbox" id="project_townHall" name="Town H@ll" class="projectChild">
+        <label for="project_townHall"> Town H@ll</label><br>
+
+      </div>
+
+      <div class="colE">
+        <input type="checkbox" id="project_useInsideVoice" name="Use Your Inside Voice" class="projectChild">
+        <label for="project_useInsideVoice"> Use Your Inside Voice</label><br>
+
+        <input type="checkbox" id="project_wereMad" name="We're All Mad Here" class="projectChild">
+        <label for="project_wereMad"> We're All Mad Here</label><br>
+
+      </div>
+
+      
+    </div>
+    <!-- end format panel -->
+
+    <button class="accordion">Formats</button>
+    <div class="panel">
+      <div class="mainFilter">
+        <input type="checkbox" id="formatFilter" name="format">
+        <label for="formatFilter"> Formats</label><br>
+      </div>
+
+      <div class="colA">
+        <input type="checkbox" id="format_vg" name="videoGame" class="formatChild">
+        <label for="format_vg"> Video Game</label><br> 
+
+        <input type="checkbox" id="format_sculpt" name="sculpture" class="formatChild">
+        <label for="format_sculpt"> Sculpture</label><br> 
+
+        <input type="checkbox" id="format_paint" name="painting" class="formatChild">
+        <label for="format_paint"> Painting</label><br>
+      </div>
+
+      <div class="colB">
+        <input type="checkbox" id="format_draw" name="drawing" class="formatChild">
+        <label for="format_draw"> Drawing</label><br> 
+
+        <input type="checkbox" id="format_code" name="coding" class="formatChild">
+        <label for="format_code"> Coding</label><br> 
+
+        <input type="checkbox" id="format_research" name="research" class="formatChild">
+        <label for="format_research"> Research</label><br>
+
+      </div>
+
+      <div class="colC">
+        <input type="checkbox" id="format_org" name="organizationalDocs" class="formatChild">
+        <label for="format_org"> Organizational Documents</label><br> 
+
+      </div>
+      
+    </div>
+    <!-- end format panel -->
+
+    <button class="accordion">Themes</button>
+    <div class="panel">
+      <div class="mainFilter">
+        <input type="checkbox" id="themesFilter" name="themes">
+        <label for="themesFilter"> Themes</label><br>
+      </div>
+
+      <div class="colA">
+        <input type="checkbox" id="themes_interconnectivity" name="Interconnectivity" class="themeChild">
+        <label for="format_vg"> Video Game</label><br> 
+
+        <input type="checkbox" id="themes_interaction" name="Interaction" class="themeChild">
+        <label for="themes_interaction"> Interaction</label><br> 
+
+        <input type="checkbox" id="themes_perception" name="Perception" class="themeChild">
+        <label for="themes_perception"> Perception</label><br>
+      </div>
+      
+    </div>
+    <!-- end themes panel -->
+
+    <button class="accordion">Collaboration</button>
+    <div class="panel">
+      <div class="mainFilter">
+        <input type="checkbox" id="collabFilter" name="Collaboration">
+        <label for="collabFilter"> Collaboration</label><br>
+      </div>
+
+      <div class="colA">
+        <input type="checkbox" id="collab_solo" name="Solo" class="collabChild">
+        <label for="collab_solo"> Solo</label><br> 
+
+        <input type="checkbox" id="collab_group" name="Group" class="collabChild">
+        <label for="collab_group"> Group</label><br> 
+
+      </div>
+      
+    </div>
+    <!-- end collaboration panel -->
+
+    <!-- <button class="accordion">Materials</button>
+    <div class="panel">
+      <div class="mainFilter">
+        <input type="checkbox" id="formatFilter" name="Materials">
+        <label for="formatFilter"> Formats</label><br>
+      </div>
+
+      <div class="colA">
+        <input type="checkbox" id="format_vg" name="videoGame" class="formatChild">
+        <label for="format_vg"> Video Game</label><br> 
+
+        <input type="checkbox" id="format_sculpt" name="sculpture" class="formatChild">
+        <label for="format_sculpt"> Sculpture</label><br> 
+
+        <input type="checkbox" id="format_paint" name="painting" class="formatChild">
+        <label for="format_paint"> Painting</label><br>
+      </div>
+
+      <div class="colB">
+        <input type="checkbox" id="format_draw" name="drawing" class="formatChild">
+        <label for="format_draw"> Drawing</label><br> 
+
+        <input type="checkbox" id="format_code" name="coding" class="formatChild">
+        <label for="format_code"> Coding</label><br> 
+
+        <input type="checkbox" id="format_research" name="research" class="formatChild">
+        <label for="format_research"> Research</label><br>
+
+      </div>
+
+      <div class="colC">
+        <input type="checkbox" id="format_org" name="organizationalDocs" class="formatChild">
+        <label for="format_org"> Organizational Documents</label><br> 
+
+      </div>
+      
+    </div> -->
+    <!-- end materials panel -->
+
+
+
+
     <!-- <div class="filterArea">
       <div class="filterBoxes">
         <div class="typeBoxes">
-          <input type="checkbox" id="typeFilter" name="type">
-          <label for="typeFilter"> Types</label><br> 
-
-          <input type="checkbox" id="vgFilter" name="videoGame" class="typeChild">
-          <label for="vgFilter"> Video Game</label><br> 
-
-          <input type="checkbox" id="sculptFilter" name="sculpture" class="typeChild">
-          <label for="sculptFilter"> Sculpture</label><br> 
-
-          <input type="checkbox" id="paintFilter" name="painting" class="typeChild">
-          <label for="paintFilter"> Painting</label><br> 
-
-          <input type="checkbox" id="drawFilter" name="drawing" class="typeChild">
-          <label for="drawFilter"> Drawing</label><br> 
-
-          <input type="checkbox" id="codeFilter" name="coding" class="typeChild">
-          <label for="codeFilter"> Coding</label><br> 
-
-          <input type="checkbox" id="resFilter" name="research" class="typeChild">
-          <label for="resFilter"> Research</label><br> 
-
-          <input type="checkbox" id="orgFilter" name="organizationalDocs" class="typeChild">
-          <label for="orgFilter"> Organizational Documents</label><br> 
+          ///
         </div>
 
         <div class="themeBoxes">

@@ -138,6 +138,9 @@ var cy = cytoscape({
       selector: 'node[type = "format"]',
       style: {
         'background-color': 'yellow',
+        'width': 15,
+        'height': 15,
+        'shape': 'round-pentagon',
         'label': 'data(id)'
       }
     },
@@ -146,6 +149,9 @@ var cy = cytoscape({
       selector: 'node[type = "collaboration"]',
       style: {
         'background-color': 'yellow',
+        'width': 15,
+        'height': 15,
+        'shape': 'round-pentagon',
         'label': 'data(id)'
       }
     },
@@ -154,6 +160,9 @@ var cy = cytoscape({
       selector: 'node[type = "material"]',
       style: {
         'background-color': 'yellow',
+        'width': 15,
+        'height': 15,
+        'shape': 'round-pentagon',
         'label': 'data(id)'
       }
     },
@@ -176,7 +185,8 @@ cy.on('mouseover', 'node', function (evt) {
   restore();
   cy.nodes().filter((e) => {
     if (!node.closedNeighborhood().includes(e && e!==node)) {
-      removed.push(cy.remove(e))
+      console.log(node.closedNeighborhood())
+      // removed.push(cy.remove(e))
     }
   })
   console.log("yello", cy.nodes());
@@ -223,23 +233,23 @@ cy.on('mouseout', 'node', (evt) => {
 });
 let removed = []
 
-searchBar.addEventListener("input", (target) => {
-  console.log(target)
-  console.log("in graveyard before restore", removed)
-  restore()
-  console.log("in graveyard after restore", removed)
+// searchBar.addEventListener("input", (target) => {
+//   console.log(target)
+//   console.log("in graveyard before restore", removed)
+//   restore()
+//   console.log("in graveyard after restore", removed)
 
-  if (searchBar.value) {
-    cy.nodes().filter(node => {
-      console.log(node.data("id"))
-      if (!node.data("id").toLowerCase().includes((searchBar.value || "").toLowerCase())) {
-        removed.push(cy.remove(node))
-      }
-    });
-  }
-  console.log("in graveyard after search", removed)
+//   if (searchBar.value) {
+//     cy.nodes().filter(node => {
+//       console.log(node.data("id"))
+//       if (!node.data("id").toLowerCase().includes((searchBar.value || "").toLowerCase())) {
+//         removed.push(cy.remove(node))
+//       }
+//     });
+//   }
+//   console.log("in graveyard after search", removed)
 
-})
+// })
 
 function restore() {
   removed.forEach((e) => {
@@ -254,14 +264,14 @@ function restore() {
 
 //checkbox filters
 
-let typeFilt = document.getElementById("typeFilter");
-let typeKids = document.querySelectorAll(".typeChild");
+// let typeFilt = document.getElementById("typeFilter");
+// let typeKids = document.querySelectorAll(".typeChild");
 
-typeFilt.addEventListener('change', () => {
-  typeKids.forEach(checkbox => {
-    checkbox.checked = typeFilt.checked;
-  });
-});
+// typeFilt.addEventListener('change', () => {
+//   typeKids.forEach(checkbox => {
+//     checkbox.checked = typeFilt.checked;
+//   });
+// });
 
 
 
@@ -306,3 +316,29 @@ typeFilt.addEventListener('change', () => {
 //    alert("None filled");
 //   //  return false;
 // }
+
+
+// open when someone clicks on the span element
+function openNav() {    
+  document.getElementById("projectsLink").style.width = "100%";
+  document.getElementById("aboutLink").style.width = "100%";
+  document.getElementById("contactLink").style.width = "100%";
+
+  // replace logo with x when nav is open
+  let logoBox = document.getElementById("icon");
+  logoBox.src = "/public/exitMenu.PNG";
+  logoBox.class = "closebtn";
+  
+  // logoBox.onclick = closeNav();
+}
+
+// close when someone clicks on the "x" symbol inside the overlay
+function closeNav() {
+  document.getElementById("projectsLink").style.width = "0%";
+  document.getElementById("aboutLink").style.width = "0%";
+  document.getElementById("contactLink").style.width = "0%";
+}
+
+
+let logo = document.getElementById("icon").addEventListener('click', openNav);
+

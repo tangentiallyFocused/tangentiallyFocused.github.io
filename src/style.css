@@ -1,7 +1,14 @@
-
-body{
+*{
+  padding: 0;
   margin: 0;
-  background-color: beige;
+  box-sizing: border-box;
+  font-family: 'Recursive';
+  src: url('/fonts/Recursive_Web/woff2_variable/Recursive_VF_1.085.woff2') format('woff2-variations');
+  font-weight: 300 1000;
+}
+body{
+  /* margin: 0; */
+  background-color: #FAF9F6;
 }
 /* #contents {
 
@@ -25,7 +32,7 @@ body{
 }
 
 #icon {
-  background-color: brown;
+  /* background-color: brown; */
   width: 80px;
   height: 80px;
   margin-left: 1vw;
@@ -48,11 +55,38 @@ a:visited {
     color: inherit;
 }
 
+.colunas {
+  height: 85vh;
+  /* display: flex; */
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.content-left {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  /* gap: 20px; */
+}
+
+.content-right {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  /* gap: 20px; */
+  /* right: 0; */
+}
+
+
+
+
 #cy {
   position: absolute;
-  top: 100px;
-  width: 100%;
-  height: 85%;
+  left: 0;
+  /* top: 100px; */
+  top: 10vh;
+  width: 90vw;
+  height: 85vh;
   /* background-color: aqua; */
 }
 
@@ -178,11 +212,12 @@ a:hover, .overlay a:focus {
   color: #444;
   cursor: pointer;
   padding: 18px;
-  width: 100%;
+  /* width: 100%; */
   text-align: left;
   border: none;
   outline: none;
   transition: 0.4s;
+  right: 0;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
@@ -197,3 +232,10 @@ a:hover, .overlay a:focus {
   display: none;
   overflow: hidden;
 }
+
+
+/* @font-face {
+  font-family: 'Recursive';
+  src: url('/fonts/Recursive_Web/woff2_variable/Recursive_VF_1.085.woff2') format('woff2-variations');
+  font-weight: 300 1000;
+ } */

@@ -89,6 +89,27 @@ const edges = projects.flatMap((project) => {
 
 console.log(edges);
 
+
+// function materialFilter(jsonFile) {
+//   // const materialFile = jsonFile;
+//   console.log(jsonFile.length);
+//   for(let grouping = 0; grouping < jsonFile.length; grouping++) {
+//     let materialObject = jsonFile[grouping];
+//     // const materialShort = materialText.split(" ").toLowerCase();
+//     let materialShort = materialObject.name;
+//     let mobj = materialObject.toString();
+//     let mstr = materialShort.toString();
+//     let mshrt = materialShort.replaceAll(' ', '').toString().toLowerCase().substring(0,10);
+//     let code = "<input type='checkbox' id='" + `${mshrt}` + "Filter' name='" + `${mstr}` + "'>\n<label for=" + mshrt + "Filter> " + mstr + "</label><br>\n";
+
+//     document.getElementById("test").innerHTML = code;
+   
+//     console.log(code);
+//   }
+  
+// }
+// console.log(materialFilter(materials));
+
   // { // dates
 
 var cy = cytoscape({
@@ -98,15 +119,20 @@ var cy = cytoscape({
   ],
 
   style: [ // the stylesheet for the graph
+    // 'node' components
     {
       selector: 'node',
       style: {
         // 'background-color': '#666',
         // 'background-color': 'rgb(0,0,161)',
         // 'label': 'data(id)'
+        'font-family': 'Recursive',
+        'src': "url('/src/fonts/Recursive_Web/woff2_variable/Recursive_VF_1.085.woff2') format('woff2-variations')",
+        'font-weight': '300 1000',
       }
     },
-    {
+    // edge components
+    { 
       selector: 'edge',
       style: {
         'width': 3,
@@ -121,7 +147,7 @@ var cy = cytoscape({
     {
       selector: 'node[type = "project"]',
       style: {
-        'background-color': 'magenta',
+        'background-color': 'rgb(142,58,89)',
         'label': 'data(id)'
       }
     },
@@ -129,7 +155,7 @@ var cy = cytoscape({
     {
       selector: 'node[type = "theme"]',
       style: {
-        'background-color': 'magenta',
+        'background-color': 'rgb(142,58,89)',
         'label': 'data(id)'
       }
     },
@@ -137,7 +163,7 @@ var cy = cytoscape({
     {
       selector: 'node[type = "format"]',
       style: {
-        'background-color': 'yellow',
+        'background-color': 'rgb(255,244,79)',
         'width': 15,
         'height': 15,
         'shape': 'round-pentagon',
@@ -148,7 +174,7 @@ var cy = cytoscape({
     {
       selector: 'node[type = "collaboration"]',
       style: {
-        'background-color': 'yellow',
+        'background-color': 'rgb(255,244,79)',
         'width': 15,
         'height': 15,
         'shape': 'round-pentagon',
@@ -159,7 +185,7 @@ var cy = cytoscape({
     {
       selector: 'node[type = "material"]',
       style: {
-        'background-color': 'yellow',
+        'background-color': 'rgb(255,244,79)',
         'width': 15,
         'height': 15,
         'shape': 'round-pentagon',
@@ -168,6 +194,7 @@ var cy = cytoscape({
     },
   ],
 
+  // node layout
   layout: {
     name: 'random',
   },
@@ -177,10 +204,12 @@ var cy = cytoscape({
 //   var node = evt.target;
 //   console.log('clicked ' + node.id());
 // });
+
+// mouseOVER behaviour on nodes & edges
 cy.on('mouseover', 'node', function (evt) {
   var node = evt.target;
   // node.style("")
-  node.style("background-color", "blue");
+  node.style("background-color", "rgb(0,49,83)");
 
   restore();
   cy.nodes().filter((e) => {
@@ -196,12 +225,7 @@ cy.on('mouseover', 'node', function (evt) {
   })
 });
 
-// cy.nodes().on('click', 'node[type = "project"]', (node) => {
-//   console.log("clicked node");
-//   console.log(node.target);
-//   // window.location.href = node.page;
-// });
-
+// project page nodes : click opens new PROJECT page
 cy.nodes('node[type="project"]').forEach((node) => {
 	node.on('click', (e) => {
     // console.log("bleh", e.target.data("page"));
@@ -209,6 +233,7 @@ cy.nodes('node[type="project"]').forEach((node) => {
   })
 });
 
+// theme page nodes : click opens new THEME page
 cy.nodes('node[type="theme"]').forEach((node) => {
 	node.on('click', (e) => {
     // console.log("bleh", e.target.data("page"));
@@ -216,11 +241,11 @@ cy.nodes('node[type="theme"]').forEach((node) => {
   })
 });
 
-
 cy.maxZoom(2);
 cy.minZoom(0.7);
 cy.center();
 
+// mouseOUT behaviour on nodes & edges
 // (evt) is an anon function bc it's a function that nothing else will ever need to call
 // => is so that you don't need to write the word function (it's a js shortcut; "syntactic candy")
 cy.on('mouseout', 'node', (evt) => {
@@ -231,6 +256,7 @@ cy.on('mouseout', 'node', (evt) => {
     edge.style("line-color", "blue")
   })
 });
+
 let removed = []
 
 // searchBar.addEventListener("input", (target) => {
@@ -251,6 +277,7 @@ let removed = []
 
 // })
 
+// restore removed nodes & edges
 function restore() {
   removed.forEach((e) => {
     e.nodes().restore()
@@ -362,3 +389,5 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+
+

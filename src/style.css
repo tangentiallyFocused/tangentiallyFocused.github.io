@@ -42,12 +42,6 @@ body{
   margin-bottom: 0;
 }
 
-/* delete? */
-a:visited {
-    text-decoration: inherit;
-    color: inherit;
-}
-
 .colunas {
   height: 85vh;
   /* display: flex; */

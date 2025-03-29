@@ -1,6 +1,6 @@
 *{
   padding: 0;
-  margin: 0;
+  margin: 0 0.5vw;
   box-sizing: border-box;
   font-family: 'Recursive';
   src: url('/fonts/Recursive_Web/woff2_variable/Recursive_VF_1.085.woff2') format('woff2-variations');
@@ -21,12 +21,16 @@ body{
   display: flex;
   flex-direction: row;
   line-height: 80px;
+ 
+  border-bottom-style: solid;
+  border-bottom-width: 10px 5px;
+  border-bottom-color: lightblue;
 }
 
 #icon {
   /* background-color: brown; */
   height: 80px;
-  left: 1vw;
+  /* left: 1vw; */
   position: relative;
   z-index: 2;
 }
@@ -38,8 +42,13 @@ body{
 
 #myName {
   position: absolute;
-  right: 1vw;
+  /* right: 1vw; */
+  right: 0;
   margin-bottom: 0;
+
+  font-size: 175%;
+  font-weight: 300;
+  font-style: italic;
 }
 
 .colunas {
@@ -69,7 +78,8 @@ body{
   left: 0;
   /* top: 100px; */
   top: 10vh;
-  width: 90vw;
+  /* width: 90vw; */
+  width: 100vw;
   height: 85vh;
   /* background-color: aqua; */
 }

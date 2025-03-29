@@ -36,7 +36,7 @@ body{
   flex-grow: 2;
 }
 
-#nav-buttons {
+#myName {
   position: absolute;
   right: 1vw;
   margin-bottom: 0;

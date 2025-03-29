@@ -17,26 +17,17 @@ body{
   position: relative;
   top: 0;
   width: 100%;
-  /* background-color: lightgoldenrodyellow; */
+  /* background-color: aqua; */
   display: flex;
   flex-direction: row;
-}
-
-#nav-buttons {
-  display: flex;
-  flex-direction: row;
-}
-
-.navButton {
-  padding: 0px 15px;
+  line-height: 80px;
 }
 
 #icon {
   /* background-color: brown; */
-  width: 80px;
   height: 80px;
-  margin-left: 1vw;
-  position: absolute;
+  left: 1vw;
+  position: relative;
   z-index: 2;
 }
 
@@ -45,9 +36,11 @@ body{
   flex-grow: 2;
 }
 
-/* #nav-buttons {
-  width:auto
-} */
+#nav-buttons {
+  position: absolute;
+  right: 1vw;
+  margin-bottom: 0;
+}
 
 /* delete? */
 a:visited {
@@ -70,11 +63,8 @@ a:visited {
 }
 
 .content-right {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  /* gap: 20px; */
-  /* right: 0; */
+  right: 0;
+  position: absolute;
 }
 
 
@@ -212,12 +202,11 @@ a:hover, .overlay a:focus {
   color: #444;
   cursor: pointer;
   padding: 18px;
-  /* width: 100%; */
-  text-align: left;
+  width: 9vw;
+  text-align: center;
   border: none;
   outline: none;
   transition: 0.4s;
-  right: 0;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
@@ -227,10 +216,15 @@ a:hover, .overlay a:focus {
 
 /* Style the accordion panel. Note: hidden by default */
 .panel {
-  padding: 0 18px;
+  /* padding: 0 18px;
   background-color: white;
   display: none;
+  overflow: hidden; */
+  padding: 0 18px;
+  background-color: aqua;
+  max-height: 0;
   overflow: hidden;
+  transition: max-height 0.2s ease-out;
 }
 
 

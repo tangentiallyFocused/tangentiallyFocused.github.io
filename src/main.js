@@ -72,18 +72,38 @@ console.log(nodes_formatted_for_cytoscape);
 
 const edges = projects.flatMap((project) => {
   return [
-    { // edge format
+    // edge format : project name --> format
+    { 
       data: { id: `${project.name}-${project.format}`, source: project.name, target: project.format }
     },
-    ...project.themes.map((theme) => ({ // edge theme
-        data: { id: `${project.name}-${theme}`, source: project.name, target: theme }
-      })),
-    ...project.materials.map((material) => ({ // edge theme
-        data: { id: `${project.name}-${material}`, source: project.name, target: material }
-      })),
-    { // edge collaboration
-      data: { id: `${project.name}-${project.collaboration}`, source: project.name, target: project.collaboration }
+    // edge format : format --> name
+    {
+      data: { id: `${project.format}-${project.name}`, source: project.format, target: project.name }
     },
+    // edge theme : name --> theme
+    ...project.themes.flatMap((theme) => [{
+        data: { id: `${project.name}-${theme}`, source: project.name, target: theme }
+      },
+    // edge theme : theme --> name
+      {
+        data: { id: `${theme}-${project.name}`, source: theme, target: project.name }
+      }]),
+    // edge material : name --> material
+    ...project.materials.flatMap((material) => [{ // edge theme
+        data: { id: `${project.name}-${material}`, source: project.name, target: material }
+      },
+      // edge material : material --> name
+      {
+        data: { id: `${material}-${project.name}`, source: material, target: project.name }
+      }]),
+    // edge collaboration : name --> collaboration
+    {
+      data: { id: `${project.collaboration}-${project.name}`, source: project.collaboration, target: project.name }
+    },
+    // edge collaboration : collaboration --> name
+    {
+      data: { id: `${project.collaboration}-${project.name}`, source: project.collaboration, target: project.name }
+    }
   ]
 });
 
@@ -123,12 +143,10 @@ var cy = cytoscape({
     {
       selector: 'node',
       style: {
-        // 'background-color': '#666',
-        // 'background-color': 'rgb(0,0,161)',
         // 'label': 'data(id)'
         'font-family': 'Recursive',
-        'src': "url('/src/fonts/Recursive_Web/woff2_variable/Recursive_VF_1.085.woff2') format('woff2-variations')",
-        'font-weight': '300 1000',
+        // 'src': "url('/src/fonts/Recursive_Web/woff2_variable/Recursive_VF_1.085.woff2') format('woff2-variations')",
+        // 'font-weight': '300 1000',
       }
     },
     // edge components
@@ -139,7 +157,7 @@ var cy = cytoscape({
         'line-color': '#ccc',
         'target-arrow-color': '#ccc',
         'target-arrow-shape': 'triangle',
-        'curve-style': 'bezier'
+        'curve-style': 'straight'
       }
     },
 
@@ -192,6 +210,34 @@ var cy = cytoscape({
         'label': 'data(id)'
       }
     },
+
+    {
+      selector: 'node.theFocus',
+      style: {
+        'background-color': "rgb(0,49,83)",
+        'border-color': "rgb(0,49,83)",
+        'border-width': '6px'
+      }
+    },
+    {
+      selector: 'node.semitransp',
+      style: {
+        'opacity': '0.5'
+      }
+    },
+    {
+      selector: 'edge.theFocus',
+      style: {
+        // 'mid-target-arrow-color': 'orange'
+        'line-color': "rgb(0,49,83)"
+      }
+    },
+    {
+      selector: 'edge.semitransp',
+      style: {
+        'opacity': '0.2'
+      }
+    }
   ],
 
   // node layout
@@ -206,23 +252,40 @@ var cy = cytoscape({
 // });
 
 // mouseOVER behaviour on nodes & edges
-cy.on('mouseover', 'node', function (evt) {
-  var node = evt.target;
-  // node.style("")
-  node.style("background-color", "rgb(0,49,83)");
+// cy.on('mouseover', 'node', function (evt) {
+//   var node = evt.target;
+//   // node.style("")
+//   node.style("background-color", "rgb(0,49,83)");
 
-  restore();
-  cy.nodes().filter((e) => {
-    if (!node.closedNeighborhood().includes(e && e!==node)) {
-      console.log(node.closedNeighborhood())
-      // removed.push(cy.remove(e))
-    }
-  })
-  console.log("yello", cy.nodes());
+//   restore();
 
-  node.connectedEdges().forEach((edge) => {
-    edge.style("line-color", "red")
-  })
+  
+
+//   // cy.nodes().filter((e) => {
+//   //   if (!node.closedNeighborhood().includes(e && e!==node)) {
+//   //     console.log(node.closedNeighborhood())
+//   //     // removed.push(cy.remove(e))
+//   //   }
+//   // })
+//   // console.log("yello", cy.nodes());
+
+//   // node.connectedEdges().forEach((edge) => {
+//   //   edge.style("line-color", "red")
+//   // })
+// });
+
+cy.on("mouseover", "node", (e) => {
+  var sel = e.target;
+
+  cy.elements().difference(sel.outgoers()).not(sel).addClass('semitransp');
+  sel.addClass('theFocus').outgoers().addClass('theFocus');
+});
+cy.on('mouseout', "node", (e) => {
+  var sel = e.target;
+
+  cy.elements().removeClass('semitransp');
+  sel.removeClass('theFocus').outgoers().removeClass('theFocus');
+
 });
 
 // project page nodes : click opens new PROJECT page
@@ -250,11 +313,11 @@ cy.center();
 // => is so that you don't need to write the word function (it's a js shortcut; "syntactic candy")
 cy.on('mouseout', 'node', (evt) => {
   var node = evt.target;
-  node.style("background-color", "green");
+  // node.style("background-color", "green");
   console.log(node.connectedEdges())
-  node.connectedEdges().forEach((edge) => {
-    edge.style("line-color", "blue")
-  })
+  // node.connectedEdges().forEach((edge) => {
+    // edge.style("line-color", "blue")
+  // })
 });
 
 let removed = []
@@ -371,21 +434,36 @@ let logo = document.getElementById("icon").addEventListener('click', openNav);
 
 
 
+// var acc = document.getElementsByClassName("accordion");
+// var i;
+
+// for (i = 0; i < acc.length; i++) {
+//   acc[i].addEventListener("click", function() {
+//     /* Toggle between adding and removing the "active" class,
+//     to highlight the button that controls the panel */
+//     this.classList.toggle("active");
+
+//     /* Toggle between hiding and showing the active panel */
+//     var panel = this.nextElementSibling;
+//     if (panel.style.display === "block") {
+//       panel.style.display = "none";
+//     } else {
+//       panel.style.display = "block";
+//     }
+//   });
+// }
+
 var acc = document.getElementsByClassName("accordion");
 var i;
 
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
-    /* Toggle between adding and removing the "active" class,
-    to highlight the button that controls the panel */
     this.classList.toggle("active");
-
-    /* Toggle between hiding and showing the active panel */
     var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
     } else {
-      panel.style.display = "block";
+      panel.style.maxHeight = panel.scrollHeight + "px";
     }
   });
 }

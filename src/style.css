@@ -173,7 +173,7 @@ input[type="checkbox"]:checked::before {
 
 #projectsLink {
   /* height & width depends on how you want to reveal the overlay (see js below) */
-  height: 33.3vh; /* 100vh / 5 */
+  height: 33.5vh;
   width: 0;
   position: fixed; /* stay in place */
   z-index: 1; /* sit on top */
@@ -187,7 +187,7 @@ input[type="checkbox"]:checked::before {
 
 #aboutLink {
   /* height & width depends on how you want to reveal the overlay (see js below) */
-  height: 33.3vh; /* 100vh / 5 */
+  height: 33.5vh;
   width: 0;
   position: fixed; /* stay in place */
   z-index: 1; /* sit on top */
@@ -201,7 +201,7 @@ input[type="checkbox"]:checked::before {
 
 #contactLink {
   /* height & width depends on how you want to reveal the overlay (see js below) */
-  height: 33.3vh; /* 100vh / 5 */
+  height: 33.5vh;
   width: 0;
   position: fixed; /* stay in place */
   z-index: 1; /* sit on top */

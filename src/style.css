@@ -43,12 +43,17 @@ body{
 #myName {
   position: absolute;
   /* right: 1vw; */
-  right: 0;
+  /* right: 0; */
+
   margin-bottom: 0;
 
   font-size: 175%;
   font-weight: 300;
   font-style: italic;
+}
+
+.menuBtn {
+  right: 0;
 }
 
 .colunas {

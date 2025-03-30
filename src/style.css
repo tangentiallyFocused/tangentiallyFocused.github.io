@@ -6,13 +6,17 @@
   src: url('/fonts/Recursive_Web/woff2_variable/Recursive_VF_1.085.woff2') format('woff2-variations');
   font-weight: 300 1000;
 }
+
 body{
   /* margin: 0; */
+  /* margin-left: 1.5vw; */
   background-color: #FAF9F6;
 }
+
 /* #contents {
 
 } */
+
 .nav-bar {
   position: relative;
   top: 0;
@@ -21,10 +25,12 @@ body{
   display: flex;
   flex-direction: row;
   line-height: 80px;
- 
+  margin: 0;
+
   border-bottom-style: solid;
   border-bottom-width: 10px 5px;
   border-bottom-color: lightblue;
+  margin-bottom: 3vh;
 }
 
 #icon {
@@ -32,7 +38,7 @@ body{
   height: 80px;
   /* left: 1vw; */
   position: relative;
-  z-index: 2;
+  /* z-index: 2; */
 }
 
 .spacer {
@@ -40,11 +46,22 @@ body{
   flex-grow: 2;
 }
 
+
+#rightNav { 
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  right: 0;
+}
+
 #myName {
-  position: absolute;
+  /* position: absolute; */
   /* right: 1vw; */
   /* right: 0; */
-
+  /* position:fixed; */
+  display: flex;
+  width: auto;
+  /* right: 80px; */
   margin-bottom: 0;
 
   font-size: 175%;
@@ -52,9 +69,29 @@ body{
   font-style: italic;
 }
 
-.menuBtn {
-  right: 0;
+#openMenu {
+  /* right: 0; */
+  display: flex;
+  height: 80px;
+  /* position:fixed; */
+  /* background-color: #FAF9F6; */
 }
+
+#closeMenu {
+  right: 0.5vw;
+  height: 80px;
+  position:fixed;
+  top: 0;
+  z-index: 15;
+  visibility:hidden;
+}
+
+/* .menuBtn { */
+  /* right: 0; */
+  /* display: flex; */
+  /* height: 80px; */
+  /* position:fixed; */
+/* } */
 
 .colunas {
   height: 85vh;
@@ -120,6 +157,8 @@ input[type="checkbox"]:checked::before {
 
 
 
+
+/* NAV BAR */
 
 /* NAV BAR */
 
@@ -191,8 +230,7 @@ a {
 }
 
 /* when you mouse over nav links, change color */
-/* .overlay  */
-a:hover, .overlay a:focus {
+a:hover, a:focus {
   color: orange;
   opacity: 50%;
 }

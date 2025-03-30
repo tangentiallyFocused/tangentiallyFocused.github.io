@@ -415,11 +415,15 @@ function openNav() {
   document.getElementById("contactLink").style.width = "100vw";
 
   // replace logo with x when nav is open
-  var menuBox = document.getElementById("openMenu");
+  let menuBox = document.getElementById("openMenu");
   menuBox.src = "/public/exitMenu.PNG";
-  // logoBox.class = "closebtn";
-  
-  // logoBox.onclick = closeNav();
+  menuBox.style.visibility = "hidden";
+  menuBox.style.zIndex = "-2";
+
+  let closeBox = document.getElementById("closeMenu");
+  closeBox.style.visibility = "visible";
+  closeBox.style.zIndex = "15";
+  closeBox.alt = "Multiplication symbol hand drawn in lemon yellow used to close the menu.";
 }
 
 // close when someone clicks on the "x" symbol inside the overlay
@@ -428,12 +432,22 @@ function closeNav() {
   document.getElementById("aboutLink").style.width = "0vw";
   document.getElementById("contactLink").style.width = "0vw";
 
-  var menuBox = document.getElementById("closeMenu");
+  // replace logo with + when nav is closed
+  let closeBox = document.getElementById("closeMenu");
+  closeBox.style.visibility = "hidden";
+
+
+  let menuBox = document.getElementById("openMenu");
   menuBox.src = "/public/openMenu.PNG";
+  menuBox.style.visibility = "visible";
+  menuBox.style.zIndex = "0";
+  menuBox.alt = "Three horizontal line menu symbol hand drawn in prussian blue used to open the menu.";
+
 }
 
 
-let logo = document.getElementById("icon").addEventListener('click', openNav);
+document.getElementById("openMenu").addEventListener('click', openNav);
+document.getElementById("closeMenu").addEventListener('click', closeNav);
 
 
 

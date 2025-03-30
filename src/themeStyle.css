@@ -9,6 +9,7 @@
 
 body{
     /* margin: 0; */
+    /* margin-left: 1.5vw; */
     background-color: #FAF9F6;
 }
 
@@ -24,6 +25,12 @@ body{
     display: flex;
     flex-direction: row;
     line-height: 80px;
+    margin: 0;
+
+    border-bottom-style: solid;
+    border-bottom-width: 10px 5px;
+    border-bottom-color: lightblue;
+    margin-bottom: 3vh;
 }
   
 #icon {
@@ -31,7 +38,7 @@ body{
     height: 80px;
     /* left: 1vw; */
     position: relative;
-    z-index: 2;
+    /* z-index: 2; */
 }
   
 .spacer {
@@ -39,12 +46,53 @@ body{
     flex-grow: 2;
 }
   
-#myName {
-    position: absolute;
-    /* right: 1vw; */
+
+#rightNav { 
+    display: flex;
+    flex-direction: row;
+    position: fixed;
     right: 0;
-    margin-bottom: 0;
 }
+
+#myName {
+    /* position: absolute; */
+    /* right: 1vw; */
+    /* right: 0; */
+    /* position:fixed; */
+    display: flex;
+    width: auto;
+    /* right: 80px; */
+    margin-bottom: 0;
+
+    font-size: 175%;
+    font-weight: 300;
+    font-style: italic;
+}
+
+#openMenu {
+    /* right: 0; */
+    display: flex;
+    height: 80px;
+    /* position:fixed; */
+    /* background-color: #FAF9F6; */
+}
+
+#closeMenu {
+    right: 0.5vw;
+    height: 80px;
+    position:fixed;
+    top: 0;
+    z-index: 15;
+    visibility:hidden;
+}
+
+/* .menuBtn { */
+    /* right: 0; */
+    /* display: flex; */
+    /* height: 80px; */
+    /* position:fixed; */
+/* } */
+
   
 /* NAV BAR */
 
@@ -105,7 +153,7 @@ a {
     /* padding: 8px; */
     text-decoration: none;
     font-size: 36px;
-    /* color: pink; */
+    color: pink;
     display: block; /* display block instead of inline */
     transition: 0.3s; /* transition effects on hover (color) */
     /* line-height: 20vh; */
@@ -116,8 +164,7 @@ a {
 }
   
 /* when you mouse over nav links, change color */
-/* .overlay  */
-a:hover, .overlay a:focus {
+a:hover, a:focus {
     color: orange;
     opacity: 50%;
 }
@@ -125,4 +172,9 @@ a:hover, .overlay a:focus {
 /* when the height of the screen is less than 450px, change link font-size and position to close button again, so they don't overlap */
 @media screen and (max-height: 450px) {
     a {font-size: 20px}
+}
+
+h1, h2, h3, h4, h5, h6, i {
+    margin: 0;
+    padding: 0;
 }

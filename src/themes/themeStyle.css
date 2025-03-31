@@ -39,6 +39,7 @@ body{
     /* left: 1vw; */
     position: relative;
     /* z-index: 2; */
+    cursor: pointer;
 }
   
 .spacer {
@@ -70,20 +71,22 @@ body{
 }
 
 #openMenu {
-    /* right: 0; */
-    display: flex;
-    height: 80px;
-    /* position:fixed; */
-    /* background-color: #FAF9F6; */
+  /* right: 0; */
+  display: flex;
+  height: 80px;
+  /* position:fixed; */
+  /* background-color: #FAF9F6; */
+  cursor: pointer;
 }
 
 #closeMenu {
-    right: 0.5vw;
-    height: 80px;
-    position:fixed;
-    top: 0;
-    z-index: 15;
-    visibility:hidden;
+  right: 0.5vw;
+  height: 80px;
+  position:fixed;
+  top: 0;
+  z-index: 15;
+  visibility:hidden;
+  cursor: pointer;
 }
 
 /* .menuBtn { */

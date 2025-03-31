@@ -39,6 +39,7 @@ body{
   /* left: 1vw; */
   position: relative;
   /* z-index: 2; */
+  cursor: pointer;
 }
 
 .spacer {
@@ -75,6 +76,7 @@ body{
   height: 80px;
   /* position:fixed; */
   /* background-color: #FAF9F6; */
+  cursor: pointer;
 }
 
 #closeMenu {
@@ -84,6 +86,7 @@ body{
   top: 0;
   z-index: 15;
   visibility:hidden;
+  cursor: pointer;
 }
 
 /* .menuBtn { */
@@ -173,7 +176,8 @@ input[type="checkbox"]:checked::before {
 
 #projectsLink {
   /* height & width depends on how you want to reveal the overlay (see js below) */
-  height: 33.5vh;
+  /* height: 33.5vh; */
+  height: calc(100vh / 3);
   width: 0;
   position: fixed; /* stay in place */
   z-index: 1; /* sit on top */
@@ -187,7 +191,8 @@ input[type="checkbox"]:checked::before {
 
 #aboutLink {
   /* height & width depends on how you want to reveal the overlay (see js below) */
-  height: 33.5vh;
+  /* height: 33.5vh; */
+  height: calc(100vh / 3);
   width: 0;
   position: fixed; /* stay in place */
   z-index: 1; /* sit on top */
@@ -201,7 +206,8 @@ input[type="checkbox"]:checked::before {
 
 #contactLink {
   /* height & width depends on how you want to reveal the overlay (see js below) */
-  height: 33.5vh;
+  /* height: 33.5vh; */
+  height: calc(100vh / 3);
   width: 0;
   position: fixed; /* stay in place */
   z-index: 1; /* sit on top */
@@ -280,3 +286,15 @@ a:hover, a:focus {
   src: url('/fonts/Recursive_Web/woff2_variable/Recursive_VF_1.085.woff2') format('woff2-variations');
   font-weight: 300 1000;
  } */
+
+
+ /* deadling with hover vs. no hover capabilities; these deal with the PRIMARY inputs */
+ @media (hover: hover) {
+  /* targets ONLY devices that CAN hover */
+
+ }
+
+ @media (hover: none) {
+  /* targets ONLY devices that CANNOT hover */
+  
+ }

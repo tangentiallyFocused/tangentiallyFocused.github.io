@@ -11,8 +11,8 @@ let searchBar = document.getElementById("search-bar");
 
 
 // page nodes
-import projects from './projects.json';
-import themes from './themes.json';
+import projects from './jsons/projects.json';
+import themes from './jsons/themes.json';
 console.log(projects);
 console.log(themes);
 const nodes_formatted_for_cytoscape = projects.map((project) => {
@@ -35,9 +35,9 @@ nodes_formatted_for_cytoscape.push(...themes.map((theme) => {
 }))
 
 // highlighting nodes
-import formats from './formats.json';
-import collaborations from './collaborations.json';
-import materials from './materials.json';
+import formats from './jsons/formats.json';
+import collaborations from './jsons/collaborations.json';
+import materials from './jsons/materials.json';
 console.log(formats);
 console.log(collaborations);
 console.log(materials);
@@ -279,6 +279,7 @@ cy.on("mouseover", "node", (e) => {
 
   cy.elements().difference(sel.outgoers()).not(sel).addClass('semitransp');
   sel.addClass('theFocus').outgoers().addClass('theFocus');
+  e.cy.container().style.cursor = "pointer";
 });
 cy.on('mouseout', "node", (e) => {
   var sel = e.target;

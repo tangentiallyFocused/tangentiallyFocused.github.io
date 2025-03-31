@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Interconnectivity",
+        "page": "/src/themes/theme_interconnectivity.html"
+    },
+    {
+        "name": "Interaction",
+        "page": "/src/themes/theme_interaction.html"
+    },
+    {
+        "name": "Perception",
+        "page": "/src/themes/theme_perception.html"
+    }
+]

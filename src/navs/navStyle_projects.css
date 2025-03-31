@@ -201,6 +201,7 @@ h1, h2, h3, h4, h5, h6, i {
     /* max-width: fit-content; */
 
     text-align: center;
-    /* max-width: 100vw; */
+    max-width: 100vw;
     margin-top: 2vh;
+    justify-content: space-evenly;
 }

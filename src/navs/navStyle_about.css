@@ -259,3 +259,9 @@ h1 {
 .content-left {
     max-width: 50vw;
 }
+
+embed {
+    margin-top: 3vh;
+    /* align-self: center; */
+    /* align-content: center; */
+}

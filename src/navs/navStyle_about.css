@@ -244,9 +244,9 @@ h1, h2, h3, h4, h5, h6, i {
     align-content: center;
 }
 
-#aboutMe {
-    /* width: 50vw; */
-}
+/* #aboutMe {
+    width: 50vw;
+} */
 
 h1 {
     font-size: 550%;

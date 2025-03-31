@@ -38,7 +38,6 @@ body{
   height: 80px;
   /* left: 1vw; */
   position: relative;
-  /* z-index: 2; */
   cursor: pointer;
 }
 
@@ -171,7 +170,7 @@ input[type="checkbox"]:checked::before {
   top: 25%; /* 25% from top */
   width: 100vw;
   text-align: center; /* centered text/links */
-  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  margin-top: 80px; /* 80px top margin to avoid conflict with the close button on smaller screens */
 }
 
 #projectsLink {

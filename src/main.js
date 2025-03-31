@@ -166,7 +166,7 @@ var cy = cytoscape({
       selector: 'node[type = "project"]',
       style: {
         'background-color': 'rgb(142,58,89)',
-        'label': 'data(id)'
+        'label': 'data(id)',
       }
     },
     //theme node
@@ -174,7 +174,7 @@ var cy = cytoscape({
       selector: 'node[type = "theme"]',
       style: {
         'background-color': 'rgb(142,58,89)',
-        'label': 'data(id)'
+        'label': 'data(id)',
       }
     },
     //format node
@@ -279,14 +279,17 @@ cy.on("mouseover", "node", (e) => {
 
   cy.elements().difference(sel.outgoers()).not(sel).addClass('semitransp');
   sel.addClass('theFocus').outgoers().addClass('theFocus');
-  e.cy.container().style.cursor = "pointer";
+  e.cy.container().style.cursor = "pointer"; // https://stackoverflow.com/questions/19532031/how-do-i-change-cursor-to-pointer-when-mouse-is-over-a-node
+  
+  // console.log("sel.width() = " + sel.width() + " sel.outerWidth() = " + sel.outerWidth());
+  // console.log("sel.height() = " + sel.height() + " sel.outerHeight() = " + sel.outerHeight());
 });
 cy.on('mouseout', "node", (e) => {
   var sel = e.target;
 
   cy.elements().removeClass('semitransp');
   sel.removeClass('theFocus').outgoers().removeClass('theFocus');
-
+  e.cy.container().style.cursor = "auto"; // https://stackoverflow.com/questions/19532031/how-do-i-change-cursor-to-pointer-when-mouse-is-over-a-node
 });
 
 // project page nodes : click opens new PROJECT page

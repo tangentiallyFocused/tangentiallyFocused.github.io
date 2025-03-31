@@ -105,7 +105,7 @@ body{
     top: 25%; /* 25% from top */
     width: 100vw;
     text-align: center; /* centered text/links */
-    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+    margin-top: 80px; /* 30px top margin to avoid conflict with the close button on smaller screens */
 }
   
 #projectsLink {
@@ -180,4 +180,82 @@ a:hover, a:focus {
 h1, h2, h3, h4, h5, h6, i {
     margin: 0;
     padding: 0;
+}
+
+/* .mePics {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
+} */
+
+#me1 {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 500px;
+    height: 500px;
+
+    position: absolute;
+    /* right: 114px;
+    top:  */
+    margin: 0;
+}
+
+#me2 {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+
+    /* position: absolute; */
+    /* right: 500px;
+    top: 400px; */
+    position: relative;
+
+    right: 20%;
+    top: 25vh;
+    /* right: 4vw; */
+    /* top: 70vh; */
+    margin: 0;
+}
+
+#me3 {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
+
+    position: relative;
+    right: 9vw;
+    /* right: 45%; */
+    top: 33vh;
+    /* position: absolute; */
+    /* right: 425px;
+    top: 525px; */
+    margin: 0;
+}
+
+.mePics {
+    max-width: 35vw;
+    position: absolute;
+    /* right: 35vw; */
+    right: 15vw;
+    top: 20vh;
+    align-content: center;
+}
+
+#aboutMe {
+    /* width: 50vw; */
+}
+
+h1 {
+    font-size: 550%;
+}
+
+.content-right {
+    max-width: 40vw;;
+}
+
+.content-left {
+    max-width: 50vw;
 }

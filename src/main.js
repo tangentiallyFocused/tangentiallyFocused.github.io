@@ -442,7 +442,8 @@ function closeNav() {
 
 
   let menuBox = document.getElementById("openMenu");
-  menuBox.src = "/public/openMenu.PNG";
+  // menuBox.src = "/public/openMenu.PNG";
+  menuBox.src = "/dist/openMenu.PNG";
   menuBox.style.visibility = "visible";
   menuBox.style.zIndex = "0";
   menuBox.alt = "Three horizontal line menu symbol hand drawn in prussian blue used to open the menu.";

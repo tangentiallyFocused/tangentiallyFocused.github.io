@@ -18,7 +18,7 @@ body{
   } */
 
 .nav-bar {
-    position: relative;
+    position: sticky;
     top: 0;
     width: 100%;
     /* background-color: aqua; */
@@ -31,6 +31,10 @@ body{
     border-bottom-width: 10px 5px;
     border-bottom-color: lightblue;
     margin-bottom: 3vh;
+
+    background-color: #FAF9F6;
+
+    box-shadow: 0px 2px 5px lightblue;
 }
   
 #icon {
@@ -199,6 +203,7 @@ h1, h2, h3, h4, h5, h6, i {
     /* right: 114px;
     top:  */
     margin: 0;
+    z-index: -1;
 }
 
 #me2 {
@@ -217,6 +222,7 @@ h1, h2, h3, h4, h5, h6, i {
     /* right: 4vw; */
     /* top: 70vh; */
     margin: 0;
+    z-index: -1;
 }
 
 #me3 {
@@ -233,6 +239,7 @@ h1, h2, h3, h4, h5, h6, i {
     /* right: 425px;
     top: 525px; */
     margin: 0;
+    z-index: -1;
 }
 
 .mePics {
@@ -264,4 +271,5 @@ embed {
     margin-top: 3vh;
     /* align-self: center; */
     /* align-content: center; */
+    z-index: -1;
 }

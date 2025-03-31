@@ -7,11 +7,9 @@
     font-weight: 300 1000;
 }
 
-body{
-    /* margin: 0; */
-    /* margin-left: 1.5vw; */
+/* body{
     background-color: #FAF9F6;
-}
+} */
 
   /* #contents {
   
@@ -75,22 +73,22 @@ body{
 }
 
 #openMenu {
-  /* right: 0; */
-  display: flex;
-  height: 80px;
-  /* position:fixed; */
-  /* background-color: #FAF9F6; */
-  cursor: pointer;
+    /* right: 0; */
+    display: flex;
+    height: 80px;
+    /* position:fixed; */
+    /* background-color: #FAF9F6; */
+    cursor: pointer;
 }
 
 #closeMenu {
-  right: 0.5vw;
-  height: 80px;
-  position:fixed;
-  top: 0;
-  z-index: 15;
-  visibility:hidden;
-  cursor: pointer;
+    right: 0.5vw;
+    height: 80px;
+    position:fixed;
+    top: 0;
+    z-index: 15;
+    visibility:hidden;
+    cursor: pointer;
 }
 
 /* .menuBtn { */
@@ -179,9 +177,4 @@ a:hover, a:focus {
 /* when the height of the screen is less than 450px, change link font-size and position to close button again, so they don't overlap */
 @media screen and (max-height: 450px) {
     a {font-size: 20px}
-}
-
-h1, h2, h3, h4, h5, h6, i {
-    margin: 0;
-    padding: 0;
 }

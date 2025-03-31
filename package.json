@@ -13,5 +13,18 @@
   },
   "dependencies": {
     "cytoscape": "^3.31.1"
-  }
+  },
+  "main": "vite.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tangentiallyFocused/tangentiallyFocused.github.io.git"
+  },
+  "keywords": [],
+  "author": "Lara Baldez Duque Ribeiro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tangentiallyFocused/tangentiallyFocused.github.io/issues"
+  },
+  "homepage": "https://github.com/tangentiallyFocused/tangentiallyFocused.github.io#readme",
+  "description": ""
 }

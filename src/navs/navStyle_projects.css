@@ -34,6 +34,8 @@ body{
     margin-bottom: 3vh;
 
     background-color: #FAF9F6;
+
+    box-shadow: 0px 2px 5px lightblue;
 }
   
 #icon {
@@ -190,6 +192,7 @@ h1, h2, h3, h4, h5, h6, i {
     object-fit: cover;
     width: 350px;
     height: 250px;
+    cursor: pointer;
 
 }
 
@@ -197,11 +200,14 @@ h1, h2, h3, h4, h5, h6, i {
     display: flex;
     flex-direction: row;
 
-    /* width: 100vw; */
-    /* max-width: fit-content; */
-
     text-align: center;
     max-width: 100vw;
     margin-top: 2vh;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.proj_card {
+    margin-top: 3vh;
+    margin-bottom: 3vh;
 }

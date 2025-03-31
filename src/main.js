@@ -442,7 +442,6 @@ function closeNav() {
 
 
   let menuBox = document.getElementById("openMenu");
-  // menuBox.src = "/public/openMenu.PNG";
   menuBox.src = "/public/open-menu.PNG";
   menuBox.style.visibility = "visible";
   menuBox.style.zIndex = "0";

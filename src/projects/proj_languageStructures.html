@@ -5,36 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Language Structures the Brain</title>
     <link rel="stylesheet" href="projStyle.css">
+    <link rel="stylesheet" href="/src/headerStyle.css">
 </head>
 <body>
-    
-    
 
-    <!-- nav bar -->
-    <div class="nav-bar">
-        <!-- <img id="icon" src="/public/logo1.PNG" onclick="location.href = '/'"> </img> -->
-        <img id="icon" src="/public/logo1.PNG" onclick="location.href = '/dist/'"> </img>
-        <div class="spacer"></div>
-        <div id="rightNav">
-            <div id="myName"> 
-                Lara Baldez Duque Ribeiro
-            </div>
-            <img id="openMenu" class="menuBtn" href="javascript:void(0)" src="/public/open-menu.PNG" alt=+>
+   <!-- header bar -->
+    <div class="header_bar">
+        <img id="icon" src="/public/logo.PNG" alt="logo" onclick="location.href = '/dist/.html'">
+        <div id="spacer"></div>
+        <div id="myName">
+            Lara Baldez Duque Ribeiro
         </div>
-    
-        <div class="overlay-content">
-            <img id="closeMenu" class="menuBtn" href="javascript:void(0)" src="/public/exitMenu.PNG" alt="Multiplication symbol hand drawn in lemon yellow used to close the menu.">
-            <a href="/src/navs/nav_projects.html" id="projectsLink">Projects</a>
-            <a href="/src/navs/nav_about.html" id="aboutLink">About</a>
-            <a href="/src/navs/contactForm/nav_contact.html" id="contactLink">Contact</a>
-        </div>
+        <img id="open_menu" class="menu_btn" href="javascript:void(0)" src="/public/open_menu.PNG" alt="open">
     </div>
 
-
-
-
-
-
+    <div class="overlay_content">
+        <img id="close_menu" class="menu_btn" href="javascript:void(0)" src="/public/exit_menu.PNG" alt="exit">
+        <a href="/src/navs/nav_projects.html" id="projects_link">Projects</a>
+        <a href="/src/navs/nav_about.html" id="about_link">About</a>
+        <a href="/src/navs/nav_contact.html" id="contact_link">Contact</a>
+    </div>
 
 
     <!-- content -->
@@ -66,5 +56,6 @@
 
 </body>
 
-<script typ="module" src="projJS.js"></script>
+<script type="module" src="projJS.js"></script>
+<script type="module" src="/src/headerJS.js"></script>
 </html>

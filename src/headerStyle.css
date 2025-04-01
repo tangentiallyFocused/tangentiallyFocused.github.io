@@ -24,7 +24,7 @@ body {
 
     display: flex;
     flex-direction: row;
-    line-height: 80px;
+    /* line-height: 80px; */
     margin-bottom: 3vh;
 
     /* font-size: 175%; */
@@ -39,6 +39,8 @@ body {
 
     z-index: 2;
     top: 0;
+
+    align-items: center;
 }
 
 #icon {

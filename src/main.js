@@ -292,21 +292,59 @@ cy.on('mouseout', "node", (e) => {
   e.cy.container().style.cursor = "auto"; // https://stackoverflow.com/questions/19532031/how-do-i-change-cursor-to-pointer-when-mouse-is-over-a-node
 });
 
-// project page nodes : click opens new PROJECT page
-cy.nodes('node[type="project"]').forEach((node) => {
-	node.on('click', (e) => {
-    // console.log("bleh", e.target.data("page"));
-    window.location.href = e.target.data("page");
-  })
-});
 
-// theme page nodes : click opens new THEME page
-cy.nodes('node[type="theme"]').forEach((node) => {
-	node.on('click', (e) => {
-    // console.log("bleh", e.target.data("page"));
-    window.location.href = e.target.data("page");
-  })
-});
+if('node[type="project"]') {
+  cy.nodes('node[type="project"]').forEach((node) => {
+    node.on('click', (e) => {
+      // console.log("bleh", e.target.data("page"));
+      window.location.href = e.target.data("page");
+    })
+    node.on('tap', (e) => {
+      // console.log("bleh", e.target.data("page"));
+      window.location.href = e.target.data("page");
+    })
+  });
+} else if ('node[type="theme"]') {
+  cy.nodes('node[type="theme"]').forEach((node) => {
+    node.on('click', (e) => {
+      // console.log("bleh", e.target.data("page"));
+      window.location.href = e.target.data("page");
+    })
+    node.on('tap', (e) => {
+      // console.log("bleh", e.target.data("page"));
+      window.location.href = e.target.data("page");
+    })
+  });
+}
+
+
+
+
+
+
+
+
+
+// // project page nodes : click opens new PROJECT page
+// cy.nodes('node[type="project"]').forEach((node) => {
+// 	node.on('click', (e) => {
+//     // console.log("bleh", e.target.data("page"));
+//     window.location.href = e.target.data("page");
+//   })
+//   node.on('tap', (e) => {
+//     // console.log("bleh", e.target.data("page"));
+//     window.location.href = e.target.data("page");
+//   })
+// });
+
+// // theme page nodes : click opens new THEME page
+// cy.nodes('node[type="theme"]').forEach((node) => {
+// 	node.on('click', (e) => {
+//     // console.log("bleh", e.target.data("page"));
+//     window.location.href = e.target.data("page");
+//   })
+  
+// });
 
 cy.maxZoom(2);
 cy.minZoom(0.7);

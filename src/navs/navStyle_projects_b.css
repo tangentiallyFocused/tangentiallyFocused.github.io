@@ -25,7 +25,7 @@ body {
     justify-content: space-evenly;
 }
 
-img {
+.image {
     object-fit: cover;
     width: 350px;
     height: 250px;
@@ -37,6 +37,7 @@ img {
     max-width: fit-content;
     margin: 3vh 0;
     border: solid black 1px;
+    cursor: pointer;
 }
 
 .card_info {

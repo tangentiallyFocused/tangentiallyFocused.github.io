@@ -112,7 +112,7 @@ document.getElementById("des_materials").innerText = des_materials[0].toString()
 if((image.length > 0)) {
     if((title != "Study Spreadsheet") && (title != "'Snow White' Variants")) {
         document.getElementById("works").innerHTML += "<img id='image1'></img>";
-        image1.src = image[0].toString();
+        image1.src = "/public" + image[0].toString();
         image1.alt = image_alt[0].toString();
         // image1.width = 500;
         // image1.style.width = "500px";

@@ -7,9 +7,16 @@
         "start_year": "2025",
         "end_month": "May",
         "end_year": "2025",
+        "role": "Creator",
         "collaboration": "Group",
+        "collaborators": "Lara Baldez Duque Ribeiro, Annabel Obas, Emmie Reagan, & Nkechi Ezirim",
         "materials": ["Unity Game Engine", "C#", "GitHub", "Blender", "Adobe Photoshop", "Google Workspace"],
-        "page": "/src/projects/proj_aeln.html"
+        "des_materials": ["Unity Game Engine"],
+        "page": "/src/projects/proj.html#aeln",
+        "image": ["/public/aeln_a.PNG"],
+        "image_alt": ["pic one"],
+        "iframe": [],
+        "iframe_alt": []
     },
     {
         "name": "Body Series",
@@ -19,9 +26,16 @@
         "start_year": "2024",
         "end_month": "May",
         "end_year": "2024",
+        "role": "Painter",
         "collaboration": "Solo",
+        "collaborators": "Lara Baldez Duque Ribeiro",
         "materials": ["Wood", "Canvas", "Acrylic Gesso", "Acrylic Paint", "Oil Paint", "Plaster"],
-        "page": "/src/projects/proj_bodySeries.html"
+        "des_materials": ["oil on canvas"],
+        "page": "/src/projects/proj.html#bodySeries",
+        "image": ["/public/body_a.JPG"],
+        "image_alt": [],
+        "iframe": [],
+        "iframe_alt": []
     },
     {
         "name": "Custom Nails",
@@ -31,9 +45,16 @@
         "start_year": "2025",
         "end_month": "April",
         "end_year": "2025",
+        "role": "Designer & Sculptor",
         "collaboration": "Solo",
+        "collaborators": "Lara Baldez Duque Ribeiro",
         "materials": ["3D Scanner", "3D Printer", "PLA", "Blender", "Nail E-file", "Solid Builder Gel", "Gel Nail Polish"],
-        "page": "/src/projects/proj_cNails.html"
+        "des_materials": ["gel polish on PLA"],
+        "page": "/src/projects/proj.html#cNails",
+        "image": ["/public/nails_a.PNG"],
+        "image_alt": [],
+        "iframe": [],
+        "iframe_alt": []
     },
     {
         "name": "House of Memory",
@@ -43,9 +64,16 @@
         "start_year": "2024",
         "end_month": "May",
         "end_year": "2024",
+        "role": "Designer & Sculptor",
         "collaboration": "Solo",
+        "collaborators": "Lara Baldez Duque Ribeiro",
         "materials": ["Wood", "Mirrors", "Velcro", "Wire", "Plaster", "Cable Phones"],
-        "page": "/src/projects/proj_houseOfMemory.html"
+        "des_materials": ["mirrors on wood with plaster and cable phones"],
+        "page": "/src/projects/proj.html#houseOfMemory",
+        "image": ["/public/house_a.JPG"],
+        "image_alt": [],
+        "iframe": [],
+        "iframe_alt": []
     },
     {
         "name": "Journals & Notebooks",
@@ -55,9 +83,16 @@
         "start_year": "2022",
         "end_month": "-",
         "end_year": "2024",
+        "role": "Creator",
         "collaboration": "Solo",
+        "collaborators": "Lara Baldez Duque Ribeiro",
         "materials": ["Google Workspace"],
-        "page": "/src/projects/proj_journalsNotebooks.html"
+        "des_materials": ["Google Docs"],
+        "page": "/src/projects/proj.html#journalsNotebooks",
+        "image": ["/public/jn_a.PNG"],
+        "image_alt": [],
+        "iframe": [],
+        "iframe_alt": []
     },
     {
         "name": "Language Structures the Brain",
@@ -67,9 +102,16 @@
         "start_year": "20243",
         "end_month": "May",
         "end_year": "2023",
+        "role": "Primary Investigator",
         "collaboration": "Solo",
+        "collaborators": "Lara Baldez Duque Ribeiro",
         "materials": ["Microsoft PowerPoint", "Google Workspace"],
-        "page": "/src/projects/proj_languageStructures.html"
+        "des_materials": ["Microsoft PowerPoint"],
+        "page": "/src/projects/proj.html#languageStructures",
+        "image": ["/public/language_a.PNG"],
+        "image_alt": [],
+        "iframe": [],
+        "iframe_alt": []
     },
     {
         "name": "Mindmaps",
@@ -79,9 +121,16 @@
         "start_year": "2023",
         "end_month": "-",
         "end_year": "2023",
+        "role": "Creator",
         "collaboration": "Solo",
+        "collaborators": "Lara Baldez Duque Ribeiro",
         "materials": ["XMind"],
-        "page": "/src/projects/proj_mindmaps.html"
+        "des_materials": ["XMind"],
+        "page": "/src/projects/proj.html#mindmaps",
+        "image": ["/public/mindmap.PNG"],
+        "image_alt": [],
+        "iframe": [],
+        "iframe_alt": []
     },
     {
         "name": "Pet Perspectives",
@@ -91,9 +140,16 @@
         "start_year": "2023",
         "end_month": "July",
         "end_year": "2023",
+        "role": "Creator",
         "collaboration": "Solo",
+        "collaborators": "Lara Baldez Duque Ribeiro",
         "materials": ["Colored Pencils", "Paper"],
-        "page": "/src/projects/proj_petPerspectives.html"
+        "des_materials": ["colored pencils on paper"],
+        "page": "/src/projects/proj.html#petPerspectives",
+        "image": ["/public/pet_perspective.PNG"],
+        "image_alt": [],
+        "iframe": [],
+        "iframe_alt": []
     },
     {
         "name": "Portfolio",
@@ -103,9 +159,16 @@
         "start_year": "2023",
         "end_month": "March",
         "end_year": "2025",
+        "role": "Designer & Developer",
         "collaboration": "Solo",
+        "collaborators": "Lara Baldez Duque Ribeiro",
         "materials": ["HTML", "CSS", "JS", "GitHub", "Procreate"],
-        "page": "/src/projects/proj_portfolio.html"
+        "des_materials": ["HTML, CSS, and JS"],
+        "page": "/src/projects/proj.html#portfolio",
+        "image": ["/public/portfolio_a.PNG"],
+        "image_alt": [],
+        "iframe": [],
+        "iframe_alt": []
     },
     {
         "name": "'Snow White' Variants",
@@ -115,9 +178,16 @@
         "start_year": "2024",
         "end_month": "April",
         "end_year": "2024",
+        "role": "Primary Investigator",
         "collaboration": "Solo",
+        "collaborators": "Lara Baldez Duque Ribeiro",
         "materials": ["ArcGIS"],
-        "page": "/src/projects/proj_snowWhite.html"
+        "des_materials": ["ArcGIS"],
+        "page": "/src/projects/proj.html#snowWhite",
+        "image": ["/public/snow_white.PNG"],
+        "image_alt": [],
+        "iframe": ["https://storymaps.arcgis.com/stories/c6bff788464d437eb51a1540cba36b7f?header"],
+        "iframe_alt": []
     },
     {
         "name": "Study Spreadsheet",
@@ -127,9 +197,16 @@
         "start_year": "2023",
         "end_month": "-",
         "end_year": "2023",
+        "role": "Creator",
         "collaboration": "Solo",
+        "collaborators": "Lara Baldez Duque Ribeiro",
         "materials": ["Google Workspace"],
-        "page": "/src/projects/proj_studySpread.html"
+        "des_materials": ["Google Sheets"],
+        "page": "/src/projects/proj.html#studySpread",
+        "image": ["/public/study-spreadsheet.PNG"],
+        "image_alt": ["spreadsheet screenshot"],
+        "iframe": ["https://docs.google.com/spreadsheets/d/e/2PACX-1vS28bCxBDux2F7rpVHDlhKB6kwYmDTCsQPCHymEC3fCdte8ROGIkjfAj7GN7NBJhcUmRVfBkTZ-06vV/pubhtml?widget=true&amp;headers=false"],
+        "iframe_alt": ["google doc sheet"]
     },
     {
         "name": "Town H@ll",
@@ -139,9 +216,16 @@
         "start_year": "2024",
         "end_month": "July",
         "end_year": "2024",
+        "role": "Designer & Developer",
         "collaboration": "Group",
+        "collaborators": "Lara Baldez Duque Ribeiro, Annabel Obas, Yitzel Serna, Elizabeth Smith",
         "materials": ["Figma", "Balsamiq", "Miro", "Procreate", "ChatGPT", "HTML", "CSS", "JS"],
-        "page": "/src/projects/proj_townHall.html"
+        "des_materials": ["Figma"],
+        "page": "/src/projects/proj.html#townHall",
+        "image": ["/public/townhall_a.PNG"],
+        "image_alt": [],
+        "iframe": [],
+        "iframe_alt": []
     },
     {
         "name": "Use Your Inside Voice",
@@ -151,9 +235,16 @@
         "start_year": "2024",
         "end_month": "December",
         "end_year": "2024",
+        "role": "Primary Investigator",
         "collaboration": "Group",
+        "collaborators": "Lara Baldez Duque Ribeiro & Madeleine Hansen",
         "materials": ["Adobe Photoshop", "Paper", "Cardboard", "Jamovi", "Google Workspace", "Zotero", "PSYCInfo"],
-        "page": "/src/projects/proj_useInsideVoice.html"
+        "des_materials": ["Google Docs"],
+        "page": "/src/projects/proj.html#useInsideVoice",
+        "image": ["/public/use_inside_a.PNG"],
+        "image_alt": [],
+        "iframe": [],
+        "iframe_alt": []
     },
     {
         "name": "We're All Mad Here",
@@ -163,8 +254,15 @@
         "start_year": "2024",
         "end_month": "December",
         "end_year": "2024",
+        "role": "Primary Investigator",
         "collaboration": "Solo",
+        "collaborators": "Lara Baldez Duque Ribeiro",
         "materials": ["PSYCInfo", "Zotero", "Google Workspace"],
-        "page": "/src/projects/proj_wereMad.html"
+        "des_materials": ["Google Docs"],
+        "page": "/src/projects/proj.html#wereMad",
+        "image": ["/public/were_mad.PNG"],
+        "image_alt": [],
+        "iframe": [],
+        "iframe_alt": []
     }
 ]

@@ -4,15 +4,20 @@
     src: url('/fonts/Recursive_Web/woff2_variable/Recursive_VF_1.085.woff2') format('woff2-variations');
     font-weight: 300 1000;
     margin: 0;
-    justify-content: center;
+    /* justify-content: center; */
+    /* justify-content: space-between; */
 }
 
 body {
     background-color: #FAF9F6;
     margin: 0 0.5px;
-}
-
-
+    display: flex;
+    flex-direction: column;
+    /* max-height: fit-content; */
+    height: 100vh;
+    /* justify-content: stretch; */
+    justify-content: space-between;
+  }
 
 /* HEADER BAR */
 
@@ -194,6 +199,7 @@ a:hover, a:focus {
     flex-direction: row;
     line-height: 40px;
     margin-top: 3vh;
+    margin-bottom: 0;
 
     font-size: 1vw;
     font-weight: 300;
@@ -204,14 +210,14 @@ a:hover, a:focus {
     background-color: #FAF9F6;
     width: 100vw;
 
-    z-index: 2;
-
     padding-left: 2vw;
-    padding-right: 2vw;;
+    padding-right: 2vw;
 
-    align-self: flex-end;
+    /* align-self: flex-end; */
 
     align-items: center;
+
+    bottom: 0;
 }
 
 .footer_socials {
@@ -220,6 +226,11 @@ a:hover, a:focus {
     align-items: center;
     margin: 0;
     padding: 0;
+}
+
+#linkedin {
+    cursor: pointer;
+    max-height: 40px;
 }
 
 .all {

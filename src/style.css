@@ -14,15 +14,13 @@ body {
 
 /*****************/
 
+
+
 #cy {
-  position: absolute;
+  /* position: absolute; */
   left: 0;
-  /* top: 100px; */
-  top: 10vh;
-  /* width: 90vw; */
   width: 100vw;
-  height: 85vh;
-  /* background-color: aqua; */
+  height: 79vh;
 }
 
 /* source: https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling */

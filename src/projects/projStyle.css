@@ -14,17 +14,21 @@ body {
 
 /*****************/
 
-#media1 {
-    max-width: 50vw;
-    position: absolute;
-    right: 6vw;
+body {
+    display: flex;
+    flex-direction: column;
+}
 
+#media1 {
+    /* max-width: 50vw; */
+    /* position: absolute; */
+    right: 6vw;
 }
 
 iframe {
-    width: 60vw;
-    height: 85vh;
-    position: absolute;
+    /* width: 60vw;
+    height: 85vh; */
+    /* position: absolute; */
     right: 6vw;
 }
 
@@ -35,6 +39,34 @@ h1, h2, h3, h4, h5, h6, i {
 }
 
 #cite {
-    position: absolute;
-    bottom: 5vh;
+    /* position: absolute; */
+    /* bottom: 5vh; */
+    align-self: flex-end;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    max-height: 83vh;
+    /* min-height: 100vh; */
+    /* what if i want the left to stay put and the right to scroll? */
+}
+
+.content_spacer {
+    /* flex: stretch; */
+    flex-grow: 2;
+}
+
+.content {
+    /* min-height: 79vh; */
+    display: flex;
+    flex-direction: row;
+    /* gap: 20px; */
+    gap: 6vw;
+    margin: 0 2vw;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* flex-grow: 2; */
+    /* min-height: calc(100vh-80px); */
 }

@@ -6,7 +6,7 @@ function openNav() {
   
     // replace logo with x when nav is open
     let menuBox = document.getElementById("open_menu");
-    menuBox.src = "/public/exit_menu.PNG";
+    menuBox.src = "/exit_menu.PNG";
     menuBox.style.visibility = "hidden";
     menuBox.style.zIndex = "-2";
 
@@ -28,7 +28,7 @@ function closeNav() {
 
 
     let menuBox = document.getElementById("open_menu");
-    menuBox.src = "/public/open_menu.PNG";
+    menuBox.src = "/open_menu.PNG";
     menuBox.style.visibility = "visible";
     menuBox.style.zIndex = "0";
     menuBox.alt = "open";

@@ -1,5 +1,5 @@
 // import projects from '/src/jsons/projects.json';
-import projects from '/src/jsons/projects.json' assert { type: "json" };
+import projects from '/src/jsons/projects.json' with { type: "json" };
 
 const url = window.location.href;
 

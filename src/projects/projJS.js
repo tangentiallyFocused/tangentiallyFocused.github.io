@@ -108,19 +108,17 @@ document.getElementById("year").innerText = end_year;
 
 document.getElementById("des_materials").innerText = des_materials[0].toString();
 
-let media1 = document.getElementById("image1");
-
 if((image.length > 0)) {
     if((title != "Study Spreadsheet") && (title != "'Snow White' Variants")) {
         document.getElementById("works").innerHTML += "<img id='image1'></img>";
         image1.src = image[0].toString();
         image1.alt = image_alt[0].toString();
         // image1.width = 500;
-        // image1.width = "500px";
+        // image1.style.width = "500px";
     }
 }
 
-if(iframe.length > 0) {
+if(iframe.length > 0 && iframe !== undefined) {
     document.getElementById("works").innerHTML += "<iframe id='iframe1'></iframe>";
     let iframe1 = document.getElementById("iframe1");
     iframe1.src = iframe[0].toString();

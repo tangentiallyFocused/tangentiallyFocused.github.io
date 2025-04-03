@@ -1,0 +1,90 @@
+/* * {
+    box-sizing: border-box;
+    font-family: 'Recursive';
+    src: url('/fonts/Recursive_Web/woff2_variable/Recursive_VF_1.085.woff2') format('woff2-variations');
+    font-weight: 300 1000;
+    margin: 0;
+    justify-content: center;
+}
+
+body {
+    background-color: #FAF9F6;
+    margin: 0 0.5px;
+} */
+
+/*****************/
+
+body {
+    /* display: flex;
+    flex-direction: column; */
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    min-width: fit-content;
+    height: 100vh;
+    margin: 0 2vw;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3vw;
+    /* justify-content: space-between; */
+    /* margin: 0 ; */
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    /* max-height: 83vh; */
+    /* max-height: 100vh; */
+    /* min-height: 100vh; */
+    /* what if i want the left to stay put and the right to scroll? */
+    /* flex-wrap: wrap; */
+    /* width: 60vw; */
+    /* width: 100vw; */
+    /* justify-content: center; */
+    /* width: 100%; */
+    width: 40vw;
+    align-content: center;
+    max-height: 100vh;
+}
+
+#works {
+    max-width: 60vw;
+    align-content: center;
+}
+
+#image1 {
+    max-width: 50vw;
+    max-height: 100vh;
+}
+
+#iframe1 {
+    min-width: 50vw;
+    min-height: 79.5vh;
+}
+
+.content_spacer {
+    flex-grow: 2;
+}
+
+#cite {
+    align-self: flex-end;
+    font-size: 90%;
+    /* width: 100%; */
+    /* width: fit-content; */
+    /* max-width: 80vw; */
+}
+
+#main_title {
+    font-size: 2.5vw;
+    font-weight: 800;
+    margin: 0;
+    left: 0;
+    /* text-align: center; */
+}
+
+#dates {
+    font-size: 1.5vw;
+    /* text-align: center; */
+}

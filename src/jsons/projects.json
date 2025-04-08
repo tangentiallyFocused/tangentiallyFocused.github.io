@@ -170,7 +170,7 @@
         "role": "Designer & Developer",
         "collaboration": "Solo",
         "collaborators": "Lara Baldez Duque Ribeiro",
-        "materials": ["HTML", "CSS", "JS", "GitHub", "Procreate"],
+        "materials": ["HTML", "CSS", "JS", "JSON", "GitHub", "Procreate"],
         "des_materials": ["HTML, CSS, and JS"],
         "key_materials": "HTML, CSS, JS, GitHub",
         "page": "/src/projects/proj.html#portfolio",

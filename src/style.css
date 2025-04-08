@@ -13,7 +13,22 @@ body {
 } */
 
 /*****************/
+* {
+    --c_background: #FAF9F6;
+    --q_magenta: rgb(142,58,89);
+    --q_magenta_09: rgb(142,58,89,0.9);
+    --l_yellow: rgb(255,244,79);
+    --l_yellow_09: rgb(255,244,79,0.9);
+    --p_blue: rgb(0,49,83);
+    --p_blue_09: rgb(0,49,83,0.9);
 
+    --qp_violet: rgb(71,54,86);
+    --qp_violet_09: rgb(71,54,86,0.9);
+    --lp_green: rgb(127, 172, 133);
+    --lp_green_09: rgb(127, 172, 133,0.9);
+    --ql_orange: rgb(199,151,84);
+    --ql_orange_09: rgb(199,151,84,0.9);
+}
 
 
 #cy {
@@ -50,6 +65,19 @@ input[type="checkbox"]::before {
 input[type="checkbox"]:checked::before {
   /* Use `visibility` instead of `display` to avoid recalculating layout */
   visibility: visible;
+}
+
+#search_bar {
+  margin-left: 2vw; 
+  width: 25vw;
+  color: var(--p_blue_09);
+  border: solid 1px var(--p_blue);
+  border-radius: 2px;
+  background-color: rgb(127, 172, 133, 0.2);
+}
+
+#search_bar::placeholder {
+  color: rgb(0,49,83,0.5);
 }
 
 

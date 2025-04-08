@@ -12,7 +12,7 @@ projects.forEach((project) => {
     page_link = project.page;
 
     projects_html += '<div class="proj_card" onclick="location.href=\'' + page_link + '\'";>';
-        projects_html += '<img class="image" src="' + image + '" alt="' + image_alt + '">' + '</img>';
+        projects_html += '<img class="pic" src="' + image + '" alt="' + image_alt + '">' + '</img>';
         
         projects_html += '<span class="title">' + title + '</span>';
 

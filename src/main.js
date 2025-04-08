@@ -2,11 +2,17 @@
 //import fs from 'fs';
 
 import cytoscape from 'cytoscape';
+// import cola from 'cytoscape-cola';
+// import elk from 'cytoscape-elk';
+ 
+// cytoscape.use(elk);
+// cytoscape.use(cola);
+
 // import cyqtip from 'cytoscape-qtip';
 
 // cyqtip( cytoscape ); // register extension
 
-let searchBar = document.getElementById("search-bar");
+let searchBar = document.getElementById("search_bar");
 // document.getElementById('cy').style.backgroundColor = 'green';
 
 
@@ -153,7 +159,7 @@ var cy = cytoscape({
     { 
       selector: 'edge',
       style: {
-        'width': 3,
+        'width': 1.5,
         'line-color': '#ccc',
         'target-arrow-color': '#ccc',
         'target-arrow-shape': 'triangle',
@@ -167,6 +173,22 @@ var cy = cytoscape({
       style: {
         'background-color': 'rgb(142,58,89)',
         'label': 'data(id)',
+        // 'color': 'pink',
+        // 'font-size': 13,
+        // 'font-size': 17,
+
+        // 'text-valign': 'center',
+        // 'text-halign': 'center',
+        // 'text-wrap': 'wrap',
+        // 'width': 'label',
+        // 'height': 'label',
+        // 'padding': '5px',
+        // 'text-justification': 'center',
+        // 'shape': 'roundrectangle',
+        // 'text-max-width': '125px',
+        // 'font-size': '8'
+        // 'border-width': '5',
+        // 'border-color': 'rgb(142,58,89)'
       }
     },
     //theme node
@@ -175,6 +197,20 @@ var cy = cytoscape({
       style: {
         'background-color': 'rgb(142,58,89)',
         'label': 'data(id)',
+        // 'color': 'pink',
+        // 'font-size': 13,
+        // 'font-size': 17,
+
+        // 'text-valign': 'center',
+        // 'text-halign': 'center',
+        // 'text-wrap': 'wrap',
+        // 'width': 'label',
+        // 'height': 'label',
+        // 'padding': '5px',
+        // 'text-justification': 'center',
+        // 'shape': 'roundrectangle',
+        // 'text-max-width': '125px',
+        // 'font-size': '8'
       }
     },
     //format node
@@ -185,7 +221,20 @@ var cy = cytoscape({
         'width': 15,
         'height': 15,
         'shape': 'round-pentagon',
-        'label': 'data(id)'
+        'label': 'data(id)',
+        // 'font-size': 13,
+        // // 'color': 'darkorange',
+
+        // 'text-valign': 'center',
+        // 'text-halign': 'center',
+        // 'text-wrap': 'wrap',
+        // 'width': 'label',
+        // 'height': 'label',
+        // 'padding': '5px',
+        // 'text-justification': 'center',
+        // 'shape': 'roundrectangle',
+        // 'text-max-width': '125px',
+        // 'font-size': '8'
       }
     },
     //collaboration node
@@ -196,7 +245,20 @@ var cy = cytoscape({
         'width': 15,
         'height': 15,
         'shape': 'round-pentagon',
-        'label': 'data(id)'
+        'label': 'data(id)',
+        // 'font-size': 13,
+        // // 'color': 'redorange',
+
+        // 'text-valign': 'center',
+        // 'text-halign': 'center',
+        // 'text-wrap': 'wrap',
+        // 'width': 'label',
+        // 'height': 'label',
+        // 'padding': '5px',
+        // 'text-justification': 'center',
+        // 'shape': 'roundrectangle',
+        // 'text-max-width': '125px',
+        // 'font-size': '8'
       }
     },
     //material node
@@ -207,35 +269,62 @@ var cy = cytoscape({
         'width': 15,
         'height': 15,
         'shape': 'round-pentagon',
-        'label': 'data(id)'
+        'label': 'data(id)',
+        // 'font-size': 13,
+        // 'color': 'darkorange',
+
+        // 'text-valign': 'center',
+        // 'text-halign': 'center',
+        // 'text-wrap': 'wrap',
+        // 'width': 'label',
+        // 'height': 'label',
+        // 'padding': '5px',
+        // 'text-justification': 'center',
+        // 'shape': 'roundrectangle',
+        // 'text-max-width': '125px',
+        // 'font-size': '8'
       }
     },
 
     {
       selector: 'node.theFocus',
       style: {
-        'background-color': "rgb(0,49,83)",
-        'border-color': "rgb(0,49,83)",
-        'border-width': '6px'
+        'background-color': 'rgb(0,49,83)',
+        'border-color': 'rgb(0,49,83)',
+        // 'color': 'lightblue',
+        // 'color': "white",
+        'color': "rgb(0,49,83)",
+          //changes font color to prussian blue on hover
+        // 'border-width': '6px',
+        'border-width': '2px',
+        'z-index': '2',
+          // brings the nodes forward so as to avoid any additional ndoes hiding/covering it
+        // 'font-size': '10'
+        // 'font-size': 15,
+        // 'font-size': 20,
       }
     },
     {
       selector: 'node.semitransp',
       style: {
-        'opacity': '0.5'
+        'opacity': '0.5',
+        // 'z-index': '-5'
       }
     },
     {
       selector: 'edge.theFocus',
       style: {
-        // 'mid-target-arrow-color': 'orange'
-        'line-color': "rgb(0,49,83)"
+        // 'mid-target-arrow-color': 'orange',
+        'line-color': "rgb(0,49,83)",
+        'target-arrow-color': 'rgb(0,49,83)',
+        'z-index': '3'
       }
     },
     {
       selector: 'edge.semitransp',
       style: {
-        'opacity': '0.2'
+        'opacity': '0.2',
+        // 'z-index': '-5'
       }
     }
   ],
@@ -243,8 +332,28 @@ var cy = cytoscape({
   // node layout
   layout: {
     name: 'random',
+
+    // name: 'fcose',
+    // randomize: true,
+    // fit: true,
+    // animate: false,
+    // gravity: 1,
+    // nestingFactor: 0.5,
+    // edgeElasticity: edge => 0.1,
+    // nodeRepulsion: node => 9000,
+    // idealEdgeLength: edge => 40,
+    // // nodeSeparation: 2000,
+    // // boundingBox: {
+    // //   x1: 0,
+    // //   y1: 0,
+    // //   x2: 600,
+    // //   y2: 500
+    // // },
+    // // nodeOverlap: 10000,
   },
 });
+
+// cy.nodes().noOverlap({padding: 15});
 
 // cy.on('click', 'node', (evt) => {
 //   var node = evt.target;
@@ -274,6 +383,7 @@ var cy = cytoscape({
 //   // })
 // });
 
+// FOR DESKTOP
 cy.on("mouseover", "node", (e) => {
   var sel = e.target;
 
@@ -292,32 +402,90 @@ cy.on('mouseout', "node", (e) => {
   e.cy.container().style.cursor = "auto"; // https://stackoverflow.com/questions/19532031/how-do-i-change-cursor-to-pointer-when-mouse-is-over-a-node
 });
 
+// FOR MOBILE
+cy.on("touchstart", "node", (e) => {
+  var sel = e.target;
+
+  cy.elements().difference(sel.outgoers()).not(sel).addClass('semitransp');
+  sel.addClass('theFocus').outgoers().addClass('theFocus');
+  e.cy.container().style.cursor = "pointer"; // https://stackoverflow.com/questions/19532031/how-do-i-change-cursor-to-pointer-when-mouse-is-over-a-node
+  
+  // console.log("sel.width() = " + sel.width() + " sel.outerWidth() = " + sel.outerWidth());
+  // console.log("sel.height() = " + sel.height() + " sel.outerHeight() = " + sel.outerHeight());\
+});
+cy.on('touchend', "node", (e) => {
+  var sel = e.target;
+
+  cy.elements().removeClass('semitransp');
+  sel.removeClass('theFocus').outgoers().removeClass('theFocus');
+  e.cy.container().style.cursor = "auto"; // https://stackoverflow.com/questions/19532031/how-do-i-change-cursor-to-pointer-when-mouse-is-over-a-node
+});
+
 
 if('node[type="project"]') {
   cy.nodes('node[type="project"]').forEach((node) => {
     node.on('click', (e) => {
-      // console.log("bleh", e.target.data("page"));
       window.location.href = e.target.data("page");
     })
     node.on('tap', (e) => {
-      // console.log("bleh", e.target.data("page"));
       window.location.href = e.target.data("page");
     })
   });
 } else if ('node[type="theme"]') {
   cy.nodes('node[type="theme"]').forEach((node) => {
     node.on('click', (e) => {
-      // console.log("bleh", e.target.data("page"));
       window.location.href = e.target.data("page");
     })
     node.on('tap', (e) => {
-      // console.log("bleh", e.target.data("page"));
       window.location.href = e.target.data("page");
     })
   });
-}
+} 
+      // cy.filter(edges.semitransp);
+      // cy.remove('node.semitransparent' && 'edge.semitransparent');
+      // removed.push(cy.remove('node.semitransp'));
+      // removed.push(cy.remove('edge.semitransp'));
+      // cy.elements('node#`{\'e\'}`, edge[source="`{\'e\'}`"]');
+      // cy.elements('node#Wood, edge[source="Wood"]');
+      // cy.elements('node#j, edge[source = "j"]');
+      // cy.filter('#some\\$funky\\@id');
 
 
+
+      // var sel = e.target;
+
+      // cy.elements().difference(sel.outgoers()).not(sel).addClass('highlightFocus');
+      // sel.addClass('highlightFocus').outgoers().addClass('highlightFocus');
+      // let notHighlight = cy.nodes(':not(.highlightFocus)');
+
+      // cy.nodes().filter(node => {
+      //   // console.log("node.data('id'): " + node.data("id"));
+      //   // if()
+
+      //   if((node.data("id") != sel) && (node.data() != sel.outgoers())) {
+      //     removed.push(cy.remove(node));
+      //   }
+      // })
+
+      // console.log("removed: " + removed);
+
+      // cy.elements().difference(sel.outgoers()).not(sel).addClass()
+
+      // cy.$('#j').outgoers();
+//     })
+//   }
+// )}
+
+// cy.on("click", "node", (e) => {
+//   if('node[type="material"]') {
+//     var sel = e.target;
+
+//     cy.elements().difference(sel.outgoers()).not(sel).addClass('highlightFocus');
+//     sel.addClass('highlightFocus').outgoers().addClass('highlightFocus');
+
+    
+//   }
+// });
 
 
 
@@ -364,11 +532,16 @@ cy.on('mouseout', 'node', (evt) => {
 
 let removed = []
 
-// searchBar.addEventListener("input", (target) => {
-//   console.log(target)
-//   console.log("in graveyard before restore", removed)
-//   restore()
-//   console.log("in graveyard after restore", removed)
+
+
+
+
+// searchBar.addEventListener("input", (e) => {
+//   console.log("e.target: " + e.target);
+//   console.log("e: " + e);
+//   // console.log("in graveyard BEFORE restore", removed);
+//   restore();
+//   // console.log("in graveyard AFTER restore", removed);
 
 //   if (searchBar.value) {
 //     cy.nodes().filter(node => {
@@ -378,9 +551,27 @@ let removed = []
 //       }
 //     });
 //   }
-//   console.log("in graveyard after search", removed)
+  // console.log("in graveyard after search", removed)
 
 // })
+
+searchBar.addEventListener("input", (target) => {
+  console.log(target)
+  // console.log("in graveyard before restore", removed)
+  restore()
+  // console.log("in graveyard after restore", removed)
+
+  if (searchBar.value) {
+    cy.nodes().filter(node => {
+      console.log(node.data("id"))
+      if (!node.data("id").toLowerCase().includes((searchBar.value || "").toLowerCase())) {
+        removed.push(cy.remove(node))
+      }
+    });
+  }
+  // console.log("in graveyard after search", removed)
+
+})
 
 // restore removed nodes & edges
 function restore() {

@@ -1,0 +1,9 @@
+[
+    {
+        "name": "header_bar",
+        "logo": "/public/logo.PNG",
+        "logo_alt": "logo",
+        "on_click": "location.href = '/dist/"
+
+    }
+]

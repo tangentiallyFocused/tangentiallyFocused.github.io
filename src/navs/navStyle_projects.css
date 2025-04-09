@@ -13,37 +13,175 @@ body {
 } */
 
 /*****************/
+:root {
+    --c_background: #FAF9F6;
+    --q_magenta: rgb(142,58,89);
+    --l_yellow: rgb(255,244,79);
+    --p_blue: rgb(0,49,83);
 
-h1, h2, h3, h4, h5, h6, i {
-    margin: 0;
-    padding: 0;
+    --qp_violet: rgb(71,54,86);
+    --lp_green: rgb(127, 172, 133);
+    --ql_orange: rgb(199,151,84);
 }
 
-.proj_pic {
+*, *::before, *::after {
+    /* --c_background: #FAF9F6;
+    --q_magenta: rgb(142,58,89);
+    --l_yellow: rgb(255,244,79);
+    --p_blue: rgb(0,49,83);
+
+    --qp_violet: rgb(71,54,86);
+    --lp_green: rgb(127, 172, 133);
+    --ql_orange: rgb(199,151,84); */
+
+    box-sizing: border-box;
+}
+
+#projects {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 10px;
+
+    width: 100vw;
+    max-height: calc(100vw-80px);
+
+    justify-content: space-evenly;
+}
+
+.pic {
     object-fit: cover;
     width: 350px;
     height: 250px;
-    cursor: pointer;
-
-}
-
-.projects {
-    display: flex;
-    flex-direction: row;
-
-    text-align: center;
-    max-width: 100vw;
-    max-height: calc(100vw-80px);
-    /* margin-top: 2vh; */
-    justify-content: space-evenly;
-    flex-wrap: wrap;
 }
 
 .proj_card {
-    margin-top: 3vh;
-    margin-bottom: 3vh;
+    position: relative;
+    max-width: fit-content;
+    margin: 3vh 0;
+    /* border: solid black 3px; */
+    cursor: pointer;
+    /* width: 350px; */
+    /* height: 250px; */
+    border-radius: 5px;
+    overflow: hidden;
+    outline: thin solid var(--p_blue);
 }
 
-.intro {
-    margin: 0 1.5vw;
+.proj_card:hover {
+    transform: scale(1.10);
+    outline: thin solid var(--q_magenta);
 }
+
+.card_info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    padding: 7.5px;
+    /* background: rgb(0,49,83,0.2); */
+    background: linear-gradient(rgb(127, 172, 133,0), rgb(0,49,83,1));
+    /* height: 50%; */
+    width: 100%;
+}
+
+.card_title {
+    font-size: 115%;
+    position: relative;
+    color: white;
+    text-shadow: -2px 2px var(--p_blue);
+        /* MAKE IT SO THAT ON HOVER, THE TEXT SHADOW & THE LINE TURN MAGENTA */
+    padding-bottom: 5px;
+    width: fit-content;
+    font-weight: 800;
+}
+
+.proj_card:hover .card_title {
+    text-shadow: -2px 2px var(--q_magenta);
+}
+
+.proj_card:hover .card_title::after {
+    content: "";
+    position: absolute;
+    background: var(--q_magenta);
+        /* MAKE IT SO THAT ON HOVER, THE TEXT SHADOW & THE LINE TURN MAGENTA */
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+}
+
+.card_title::after {
+    content: "";
+    position: absolute;
+    background: var(--p_blue);
+        /* MAKE IT SO THAT ON HOVER, THE TEXT SHADOW & THE LINE TURN MAGENTA */
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+}
+
+.bottom_info {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    color: var(--c_background);
+    /* padding-top: 1vh; */
+    padding-top: 1vh;
+}
+
+.info_left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+#arrow {
+    /* text-align: center; */
+    text-align: right;
+    padding-right: 5px;
+    /* position: absolute; */
+    position: relative;
+    width: 20%;
+    /* align-content: center; */
+    align-content: end;
+    font-size: 200%;
+}
+
+#arrow:hover {
+    color: var(--q_magenta);
+}
+
+.key_materials {
+    font-size: 75%;
+    padding-top: 0.5vh;
+}
+
+
+
+
+/* .card_title { */
+    /* position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1; */
+    /* font-size: 3vw; */
+    /* font-size: 120%; */
+    /* background-color: rgb(0,49,83); */
+    /* background-color: rgb(0,49,83,0.9); */
+    /* background: linear-gradient(rgb(0, 83, 143), rgb(0,49,83)); */
+    /* background: linear-gradient(var(--lp_green), var(--p_blue)); */
+    /* width: 100%;
+} */
+
+/* .title:hover { */
+    /* background-color: rgb(0,49,83,0.9); */
+    /* background: linear-gradient(rgb(0, 107, 183, 0.9), rgb(0,49,83,0.9)); */
+    /* background: linear-gradient(rgb(127, 172, 133,0.7), rgb(0,49,83,0.7)); */
+/* } */

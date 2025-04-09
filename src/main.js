@@ -15,6 +15,7 @@ import cytoscape from 'cytoscape';
 let searchBar = document.getElementById("search_bar");
 // document.getElementById('cy').style.backgroundColor = 'green';
 
+// const url = window.location.href;
 
 // page nodes
 import projects from './jsons/projects.json';
@@ -678,5 +679,3 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
-
-

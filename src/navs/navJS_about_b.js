@@ -24,7 +24,7 @@ about.forEach((element) => {
             me_image_split = me_image[spot].toString();
             me_alt_split = me_image_alt[spot].toString();
             me_id_split = me_image_id[spot].toString();
-            about_right_html += '<img id="' + me_id_split + '" class="me_pic" src="' + me_image_split + '" alt="' + me_alt_split + '">';
+            about_right_html += '<img id="' + me_id_split + '" class="me_pic" src="/public' + me_image_split + '" alt="' + me_alt_split + '">';
         }
     } else {
         materials_split = materials[0].toString();
@@ -38,7 +38,7 @@ about.forEach((element) => {
     resume = element.resume;
     resume_alt = element.resume_alt;
 
-    resume_html += '<embed id="resume" src="' + resume + '" alt="' + resume_alt + '" type="application/pdf" width="95%" height"500vh">';
+    resume_html += '<embed id="resume" src="/public' + resume + '" alt="' + resume_alt + '" type="application/pdf" width="95%" height"500vh">';
 
 });
 document.getElementById("resume_section").innerHTML += resume_html;    

@@ -1,6 +1,6 @@
 /* * {
     box-sizing: border-box;
-    font-family: 'Recursive';
+    font-family: 'Recursive', "Trebuchet MS", Helvetica, sans-serif;
     src: url('/fonts/Recursive_Web/woff2_variable/Recursive_VF_1.085.woff2') format('woff2-variations');
     font-weight: 300 1000;
     margin: 0;
@@ -13,6 +13,13 @@ body {
 } */
 
 /*****************/
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    font-family: 'Recursive', "Trebuchet MS", Helvetica, sans-serif;
+    src: url('/fonts/Recursive_Web/woff2_variable/Recursive_VF_1.085.woff2') format('woff2-variations');
+    font-weight: 300 1000;
+}
 
 h1, h2, h3, h4, h5, h6, i {
     margin: 0;
@@ -60,7 +67,7 @@ h1, h2, h3, h4, h5, h6, i {
     font-weight: 500;
     color: grey;
     border-radius: 50px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
 }
 
 .contact-left textarea {

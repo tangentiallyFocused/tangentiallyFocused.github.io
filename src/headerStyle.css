@@ -1,5 +1,5 @@
-* {
-    box-sizing: border-box;
+:root {
+    /* box-sizing: border-box; */
     font-family: 'Recursive', "Trebuchet MS", Helvetica, sans-serif;
     src: url('/fonts/Recursive_Web/woff2_variable/Recursive_VF_1.085.woff2') format('woff2-variations');
     font-weight: 300 1000;
@@ -23,6 +23,13 @@
     --ql_orange: rgb(199,151,84);
     --ql_orange_09: rgb(199,151,84,0.9);
 
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    font-family: 'Recursive', "Trebuchet MS", Helvetica, sans-serif;
+    src: url('/fonts/Recursive_Web/woff2_variable/Recursive_VF_1.085.woff2') format('woff2-variations');
+    font-weight: 300 1000;
 }
 
 body {
@@ -251,7 +258,9 @@ a:hover, a:focus {
 
 #linkedin {
     cursor: pointer;
-    max-height: 40px;
+    /* max-height: 40px; */
+    height: 40px;
+    max-height: 1vh;
 }
 
 #linkedin:hover {

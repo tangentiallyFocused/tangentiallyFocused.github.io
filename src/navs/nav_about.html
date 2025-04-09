@@ -29,31 +29,53 @@
 
 
     <!-- content -->
-    <div class="content">
-        <div class="content-right">
-            <div class="mePics">
-                <img id="me1" src="/public/me_a.JPG" alt="">
-                <img id="me2" src="/public/me_b.JPG" alt="">
-                <img id="me3" src="/public/me_c.JPG" alt="">
+    <div id="content_top">
+        <div id="content_left">
+            <div id="intro">
+                <h1 id="page_title">Hi! I'm Lara</h1>
+
+                <p id="about_me">
+                    I'm a senior at Wellesley College studying Cognitive & Linguistic Sciences 
+                        (with a concentration in Psychology), and Media Arts & Sciences (with a
+                        concentration in Computer Science)!
+                </p>
+
+                <div id="spacer">
+
+                </div>
+
             </div>
         </div>
 
-        <div class="content-left">
-            <h1>Hi! I'm Lara</h1>
-    
-            <br>
-        
-            <p id="aboutMe">
-                I'm a senior at Wellesley College studying Cognitive & Linguistic Sciences 
-                    (with a concentration in Psychology), and Media Arts & Sciences (with a
-                    concentration in Computer Science)!
-        
-                
-            </p>
-
-            <!-- <embed src="/public/lara_bdr_resume.pdf" type="application/pdf" width="925vw" height="500vh"> -->
-            <embed src="/public/lara_bdr_resume.pdf" type="application/pdf" width="95%" height="500vh">
+        <div id="content_right">
+            <div id="me_pics">
+            </div>
         </div>
+
+       
+    </div>
+
+    <div id="content_below">
+        <button id="resume_link">
+            Traditional Resume
+            <br>
+            &#8595;
+        </button>
+
+        <button id="dynamic_resume_link">
+            Dynamic Resume
+            <br>
+            &#8595;
+        </button>
+        
+    </div>
+
+    <div id="resume_section">
+
+    </div>
+
+    <div id="dynamic_resume_section">
+        [WIP]
     </div>
 
     <!-- footer -->
@@ -78,6 +100,6 @@
 
 </body>
 
-<script type="module" src="navJS_projects.js"></script>
+<script type="module" src="navJS_about.js"></script>
 <script type="module" src="/src/headerJS.js"></script>
 </html>

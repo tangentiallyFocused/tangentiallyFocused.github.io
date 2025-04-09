@@ -37,6 +37,10 @@ body {
     box-sizing: border-box;
 }
 
+.intro {
+    padding: 0 1vw;
+}
+
 #projects {
     display: flex;
     flex-direction: row;
@@ -63,12 +67,15 @@ body {
     cursor: pointer;
     /* width: 350px; */
     /* height: 250px; */
+    height: 250px;
     border-radius: 5px;
     overflow: hidden;
     outline: thin solid var(--p_blue);
+
+    transition: transform 500ms ease;
 }
 
-.proj_card:hover {
+.proj_card:hover, .proj_card:focus {
     transform: scale(1.10);
     outline: thin solid var(--q_magenta);
 }
@@ -87,13 +94,20 @@ body {
     background: linear-gradient(rgb(127, 172, 133,0), rgb(0,49,83,1));
     /* height: 50%; */
     width: 100%;
+    transform: translateY(55%);
+    transition: transform 500ms ease;
+}
+
+.proj_card:hover .card_info, .proj_card:focus .card_info {
+    transform: translateY(0%);
 }
 
 .card_title {
     font-size: 115%;
     position: relative;
     color: white;
-    text-shadow: -2px 2px var(--p_blue);
+    /* text-shadow: -2px 2px var(--p_blue); */
+    text-shadow: -3px 3px var(--p_blue);
         /* MAKE IT SO THAT ON HOVER, THE TEXT SHADOW & THE LINE TURN MAGENTA */
     padding-bottom: 5px;
     width: fit-content;
@@ -101,7 +115,8 @@ body {
 }
 
 .proj_card:hover .card_title {
-    text-shadow: -2px 2px var(--q_magenta);
+    /* text-shadow: -2px 2px var(--q_magenta); */
+    text-shadow: -3px 3px var(--q_magenta);
 }
 
 .proj_card:hover .card_title::after {

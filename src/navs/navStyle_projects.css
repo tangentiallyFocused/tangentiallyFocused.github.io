@@ -99,7 +99,7 @@ body {
 }
 
 .proj_card:hover .card_info, .proj_card:focus .card_info {
-    transform: translateY(0%);
+    transform: translateY(1.5%);
 }
 
 .card_title {

@@ -14,7 +14,7 @@
         "des_materials": ["Unity Game Engine"],
         "key_materials": "Unity Game Engine, Blender, Photoshop",
         "page": "/src/projects/proj.html#aeln",
-        "image": ["/./aeln_a.PNG"],
+        "image": ["/public/aeln_a.PNG"],
         "image_alt": ["pic one"],
         "iframe": [],
         "iframe_alt": []
@@ -34,7 +34,7 @@
         "des_materials": ["oil on canvas"],
         "key_materials": "Wood, Canvas, Oil Paint",
         "page": "/src/projects/proj.html#bodySeries",
-        "image": ["/./body_a.JPG"],
+        "image": ["/public/body_a.JPG"],
         "image_alt": ["garage bodies"],
         "iframe": [],
         "iframe_alt": []
@@ -54,7 +54,7 @@
         "des_materials": ["gel polish on PLA"],
         "key_materials": "3D Technology, Blender, Gel Polish",
         "page": "/src/projects/proj.html#cNails",
-        "image": ["/./nails_a.jpg"],
+        "image": ["/public/nails_a.jpg"],
         "image_alt": ["hand pic"],
         "iframe": [],
         "iframe_alt": []
@@ -74,7 +74,7 @@
         "des_materials": ["mirrors on wood with plaster and cable phones"],
         "key_materials": "Wood, Mirrors, Plaster, Cable Phones",
         "page": "/src/projects/proj.html#houseOfMemory",
-        "image": ["/./house_a.JPG"],
+        "image": ["/public/house_a.JPG"],
         "image_alt": ["house pic"],
         "iframe": [],
         "iframe_alt": []
@@ -94,7 +94,7 @@
         "des_materials": ["Google Docs"],
         "key_materials": "Google Workspace",
         "page": "/src/projects/proj.html#journalsNotebooks",
-        "image": ["/./jn_a.PNG"],
+        "image": ["/public/jn_a.PNG"],
         "image_alt": ["328 ss"],
         "iframe": [],
         "iframe_alt": []
@@ -114,7 +114,7 @@
         "des_materials": ["Microsoft PowerPoint"],
         "key_materials": "Microsoft PowerPoint",
         "page": "/src/projects/proj.html#languageStructures",
-        "image": ["/./language_a.PNG"],
+        "image": ["/public/language_a.PNG"],
         "image_alt": ["language ss"],
         "iframe": [],
         "iframe_alt": []
@@ -134,7 +134,7 @@
         "des_materials": ["XMind"],
         "key_materials": "XMind",
         "page": "/src/projects/proj.html#mindmaps",
-        "image": ["/./mindmap.PNG"],
+        "image": ["/public/mindmap.PNG"],
         "image_alt": ["mindmap ss"],
         "iframe": [],
         "iframe_alt": []
@@ -154,7 +154,7 @@
         "des_materials": ["colored pencils on paper"],
         "key_materials": "Colored Pencil, Paper",
         "page": "/src/projects/proj.html#petPerspectives",
-        "image": ["/./pet_perspective.JPG"],
+        "image": ["/public/pet_perspective.JPG"],
         "image_alt": ["combined pets"],
         "iframe": [],
         "iframe_alt": []
@@ -174,7 +174,7 @@
         "des_materials": ["HTML, CSS, and JS"],
         "key_materials": "HTML, CSS, JS, GitHub",
         "page": "/src/projects/proj.html#portfolio",
-        "image": ["/./portfolio_a.PNG"],
+        "image": ["/public/portfolio_a.PNG"],
         "image_alt": ["portfolio ss"],
         "iframe": [],
         "iframe_alt": []
@@ -194,7 +194,7 @@
         "des_materials": ["ArcGIS"],
         "key_materials": "ArcGIS",
         "page": "/src/projects/proj.html#snowWhite",
-        "image": ["/./snow_white.PNG"],
+        "image": ["/public/snow_white.PNG"],
         "image_alt": ["snow white ss"],
         "iframe": ["https://storymaps.arcgis.com/stories/c6bff788464d437eb51a1540cba36b7f?header"],
         "iframe_alt": []
@@ -214,7 +214,7 @@
         "des_materials": ["Google Sheets"],
         "key_materials": "Google Workspace",
         "page": "/src/projects/proj.html#studySpread",
-        "image": ["/./study-spreadsheet.PNG"],
+        "image": ["/public/study-spreadsheet.PNG"],
         "image_alt": ["spreadsheet screenshot"],
         "iframe": ["https://docs.google.com/spreadsheets/d/e/2PACX-1vS28bCxBDux2F7rpVHDlhKB6kwYmDTCsQPCHymEC3fCdte8ROGIkjfAj7GN7NBJhcUmRVfBkTZ-06vV/pubhtml?widget=true&amp;headers=false"],
         "iframe_alt": ["google doc sheet"]
@@ -234,7 +234,7 @@
         "des_materials": ["Figma"],
         "key_materials": "Figma",
         "page": "/src/projects/proj.html#townHall",
-        "image": ["/./townhall_a.PNG"],
+        "image": ["/public/townhall_a.PNG"],
         "image_alt": ["figma ss"],
         "iframe": [],
         "iframe_alt": []
@@ -254,7 +254,7 @@
         "des_materials": ["Google Docs"],
         "key_materials": "Photoshop, Jamovi, PSYCInfo",
         "page": "/src/projects/proj.html#useInsideVoice",
-        "image": ["/./use_inside_a.PNG"],
+        "image": ["/public/use_inside_a.PNG"],
         "image_alt": ["docs ss"],
         "iframe": [],
         "iframe_alt": []
@@ -274,7 +274,7 @@
         "des_materials": ["Google Docs"],
         "key_materials": "PSYCInfo, Google Workspace",
         "page": "/src/projects/proj.html#wereMad",
-        "image": ["/./were-mad.PNG"],
+        "image": ["/public/were-mad.PNG"],
         "image_alt": ["docs ss"],
         "iframe": [],
         "iframe_alt": []

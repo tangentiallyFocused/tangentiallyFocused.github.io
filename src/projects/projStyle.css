@@ -15,58 +15,82 @@ body {
 /*****************/
 
 body {
+    /* display: flex;
+    flex-direction: column; */
+}
+
+.content {
     display: flex;
-    flex-direction: column;
-}
-
-#media1 {
-    /* max-width: 50vw; */
-    /* position: absolute; */
-    right: 6vw;
-}
-
-iframe {
-    /* width: 60vw;
-    height: 85vh; */
-    /* position: absolute; */
-    right: 6vw;
-}
-
-
-h1, h2, h3, h4, h5, h6, i {
-    margin: 0;
-    padding: 0;
-}
-
-#cite {
-    /* position: absolute; */
-    /* bottom: 5vh; */
-    align-self: flex-end;
+    flex-direction: row;
+    min-width: fit-content;
+    height: 100vh;
+    margin: 0 2vw;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3vw;
+    /* justify-content: space-between; */
+    /* margin: 0 ; */
 }
 
 .info {
     display: flex;
     flex-direction: column;
-    max-height: 83vh;
+    /* max-height: 83vh; */
+    /* max-height: 100vh; */
     /* min-height: 100vh; */
     /* what if i want the left to stay put and the right to scroll? */
+    /* flex-wrap: wrap; */
+    /* width: 60vw; */
+    /* width: 100vw; */
+    /* justify-content: center; */
+    /* width: 100%; */
+    /* width: 40vw; */
+    width: 50vw;
+    align-content: center;
+    max-height: 100vh;
+}
+
+#works {
+    max-width: 60vw;
+    align-content: center;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+#image1 {
+    /* width: 45vw; */
+    max-width: 50vw;
+    /* min-width: 300px; */
+    min-width: 100%;
+    max-height: 100vh;
+}
+
+#iframe1 {
+    min-width: 50vw;
+    min-height: 79.5vh;
 }
 
 .content_spacer {
-    /* flex: stretch; */
     flex-grow: 2;
 }
 
-.content {
-    /* min-height: 79vh; */
-    display: flex;
-    flex-direction: row;
-    /* gap: 20px; */
-    gap: 6vw;
-    margin: 0 2vw;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    /* flex-grow: 2; */
-    /* min-height: calc(100vh-80px); */
+#cite {
+    align-self: flex-end;
+    font-size: 90%;
+    /* width: 100%; */
+    /* width: fit-content; */
+    /* max-width: 80vw; */
+}
+
+#main_title {
+    font-size: 2.5vw;
+    font-weight: 800;
+    margin: 0;
+    left: 0;
+    /* text-align: center; */
+}
+
+#dates {
+    font-size: 1.5vw;
+    /* text-align: center; */
 }

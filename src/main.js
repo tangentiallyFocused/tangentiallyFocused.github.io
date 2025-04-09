@@ -151,7 +151,9 @@ var cy = cytoscape({
       selector: 'node',
       style: {
         // 'label': 'data(id)'
-        'font-family': 'Recursive',
+        'font-family': '"Recursive", "Trebuchet MS", "Helvetica", "sans-serif"',
+        'src': "url('/fonts/Recursive_Web/woff2_variable/Recursive_VF_1.085.woff2') format('woff2-variations')",
+        'font-weight': '300 1000',
         // 'src': "url('/src/fonts/Recursive_Web/woff2_variable/Recursive_VF_1.085.woff2') format('woff2-variations')",
         // 'font-weight': '300 1000',
       }

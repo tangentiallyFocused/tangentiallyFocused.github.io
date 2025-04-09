@@ -12,7 +12,8 @@ projects.forEach((project) => {
     image_alt = project.image_alt;
     page_link = project.page;
 
-    projects_html += '<div class="proj_card" onclick="location.href=\'' + page_link + '\'";>';
+    // projects_html += '<div class="proj_card" onclick="location.href=\'' + page_link + '\'";>';
+    projects_html += '<div class="proj_card">';
     
     // projects_html += '<img class="pic" src="' + image + '" alt="' + image_alt + '">' + '</img>';
         
@@ -29,11 +30,11 @@ projects.forEach((project) => {
                     projects_html += '<span class="key_materials">' + key_materials + '</span>';
                 projects_html += '</div>'
 
-                projects_html += '<div id="arrow">&#8594;</div>'; //or should this be span?
+                projects_html += '<div id="arrow" onclick="location.href=\'' + page_link + '\'";>&#8594;</div>'; //or should this be span?
             projects_html += '</div>';
         projects_html += '</div>'; // end div .card_info
         
-        projects_html += '<img class="pic" src="' + image + '" alt="' + image_alt + '">' + '</img>';
+        projects_html += '<img class="pic" src="/public' + image + '" alt="' + image_alt + '">' + '</img>';
 
     projects_html += '</div>'; // end div .proj_card
 });

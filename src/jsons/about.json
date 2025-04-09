@@ -1,0 +1,9 @@
+[
+    {
+        "me_image": ["/me_a.JPG", "/me_b.JPG", "/me_c.JPG"],
+        "me_image_alt": ["me a", "me b", "me c"],
+        "me_image_id": ["me_a", "me_b", "me_c"],
+        "resume": "/lara_bdr_resume.pdf",
+        "resume_alt": "lara bdr resume"
+    }
+]

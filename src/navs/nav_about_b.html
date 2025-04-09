@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>About</title>
     <link rel="icon" type="image/x-icon" href="/public/logo.PNG">
-    <!-- <link rel="stylesheet" href="contactStyle.css"> -->
-    <link rel="stylesheet" href="/src/navs/contactForm/contactStyle.css">
+    <link rel="stylesheet" href="navStyle_about_b.css">
     <link rel="stylesheet" href="/src/headerStyle.css">
 </head>
 <body>
@@ -30,26 +29,53 @@
 
 
     <!-- content -->
-    <div class="contact-container">
-        <form action="" class="contact-left"> <!-- has the contact fields -->
-            <div class="contact-left-title">
-                <h2>Get in touch</h2>
-                <hr>
+    <div id="content_top">
+        <div id="content_left">
+            <div id="intro">
+                <h1 id="page_title">Hi! I'm Lara</h1>
+
+                <p id="about_me">
+                    I'm a senior at Wellesley College studying Cognitive & Linguistic Sciences 
+                        (with a concentration in Psychology), and Media Arts & Sciences (with a
+                        concentration in Computer Science)!
+                </p>
+
+                <div id="spacer">
+
+                </div>
+
             </div>
-
-            <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required> <!-- input for getting user's name -->
-            <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required> <!-- input for getting user's email -->
-            <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea> <!-- message input area -->
-            <button type="submit">Submit <!-- insert image --> </button>
-             <!-- <a href="mailto:lbduquer@gmail.com" class="button" type="submit">Submit</a> -->
-        </form>
-        <div class="contact-right">
-            <!-- is the right column of the webpage -->
-        </div>
-        <div class="contact-bottom">
-            <!-- resume -->
         </div>
 
+        <div id="content_right">
+            <div id="me_pics">
+            </div>
+        </div>
+
+       
+    </div>
+
+    <div id="content_below">
+        <button id="resume_link">
+            Traditional Resume
+            <br>
+            &#8595;
+        </button>
+
+        <button id="dynamic_resume_link">
+            Dynamic Resume
+            <br>
+            &#8595;
+        </button>
+        
+    </div>
+
+    <div id="resume_section">
+
+    </div>
+
+    <div id="dynamic_resume_section">
+        [WIP]
     </div>
 
     <!-- footer -->
@@ -71,9 +97,9 @@
               </svg> • <email>lbduquer@gmail.com</email>
         </div>
     </div>
-    
+
 </body>
 
-<script type="module" src="navJS_contact.js"></script>
+<script type="module" src="navJS_about_b.js"></script>
 <script type="module" src="/src/headerJS.js"></script>
 </html>

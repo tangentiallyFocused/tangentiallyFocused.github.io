@@ -39,6 +39,7 @@ body {
 
 .intro {
     padding: 0 1vw;
+    text-align: center;
 }
 
 #projects {
@@ -75,7 +76,7 @@ body {
     transition: transform 500ms ease;
 }
 
-.proj_card:hover, .proj_card:focus {
+.proj_card:hover, .proj_card:focus, .proj_card:active {
     transform: scale(1.10);
     outline: thin solid var(--q_magenta);
 }
@@ -90,7 +91,7 @@ body {
     left: 0;
     z-index: 1;
     padding: 7.5px;
-    /* background: rgb(0,49,83,0.2); */
+    /* background: rgb(0,49,83, 0.7); */
     background: linear-gradient(rgb(127, 172, 133,0), rgb(0,49,83,1));
     /* height: 50%; */
     width: 100%;
@@ -98,8 +99,14 @@ body {
     transition: transform 500ms ease;
 }
 
-.proj_card:hover .card_info, .proj_card:focus .card_info {
+.card_info:hover #arrow, .card_info:focus #arrow, .card_info:active #arrow {
+    color: var(--c_background);
+    text-shadow: -3px 3px var(--q_magenta);
+}
+
+.proj_card:hover .card_info, .proj_card:focus .card_info, .proj_card:active .card_info {
     transform: translateY(1.5%);
+    background: linear-gradient(rgb(127, 172, 133,0), rgb(0,49,83,1));
 }
 
 .card_title {
@@ -114,12 +121,12 @@ body {
     font-weight: 800;
 }
 
-.proj_card:hover .card_title {
+.proj_card:hover .card_title, .proj_card:focus .card_title, .proj_card:active .card_title {
     /* text-shadow: -2px 2px var(--q_magenta); */
     text-shadow: -3px 3px var(--q_magenta);
 }
 
-.proj_card:hover .card_title::after {
+.proj_card:hover .card_title::after, .proj_card:focus .card_title::after, .proj_card:active .card_title::after {
     content: "";
     position: absolute;
     background: var(--q_magenta);
@@ -167,36 +174,14 @@ body {
     /* align-content: center; */
     align-content: end;
     font-size: 200%;
-}
-
-#arrow:hover {
     color: var(--q_magenta);
 }
+
+/* #arrow:hover {
+    color: var(--q_magenta);
+} */
 
 .key_materials {
     font-size: 75%;
     padding-top: 0.5vh;
 }
-
-
-
-
-/* .card_title { */
-    /* position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 1; */
-    /* font-size: 3vw; */
-    /* font-size: 120%; */
-    /* background-color: rgb(0,49,83); */
-    /* background-color: rgb(0,49,83,0.9); */
-    /* background: linear-gradient(rgb(0, 83, 143), rgb(0,49,83)); */
-    /* background: linear-gradient(var(--lp_green), var(--p_blue)); */
-    /* width: 100%;
-} */
-
-/* .title:hover { */
-    /* background-color: rgb(0,49,83,0.9); */
-    /* background: linear-gradient(rgb(0, 107, 183, 0.9), rgb(0,49,83,0.9)); */
-    /* background: linear-gradient(rgb(127, 172, 133,0.7), rgb(0,49,83,0.7)); */
-/* } */

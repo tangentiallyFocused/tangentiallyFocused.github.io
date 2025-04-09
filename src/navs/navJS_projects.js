@@ -20,7 +20,7 @@ projects.forEach((project) => {
         // projects_html += '<span class="card_title">' + title + '</span>';
 
 
-        projects_html += '<div class="card_info">';
+        projects_html += '<div class="card_info" onclick="location.href=\'' + page_link + '\'";>';
                 
             projects_html += '<span class="card_title">' + title + '</span>';
             
@@ -30,7 +30,8 @@ projects.forEach((project) => {
                     projects_html += '<span class="key_materials">' + key_materials + '</span>';
                 projects_html += '</div>'
 
-                projects_html += '<div id="arrow" onclick="location.href=\'' + page_link + '\'";>&#8594;</div>'; //or should this be span?
+                projects_html += '<div id="arrow">&#8594;</div>';
+                // projects_html += '<div id="arrow" onclick="location.href=\'' + page_link + '\'";>&#8594;</div>'; //or should this be span?
             projects_html += '</div>';
         projects_html += '</div>'; // end div .card_info
         

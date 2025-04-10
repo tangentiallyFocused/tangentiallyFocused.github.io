@@ -91,7 +91,7 @@ body {
     gap: 1.25vw;
     flex-direction: row;
     flex-wrap: wrap;
-    color: var(--p_blue)
+    color: var(--p_blue);
 }
 
 .menu_btn {

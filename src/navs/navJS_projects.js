@@ -36,6 +36,7 @@ projects.forEach((project) => {
         projects_html += '</div>'; // end div .card_info
         
         projects_html += '<img class="pic" src="/public' + image + '" alt="' + image_alt + '">' + '</img>';
+        projects_html += '<div id="pic_overlay"></div>';
 
     projects_html += '</div>'; // end div .proj_card
 });

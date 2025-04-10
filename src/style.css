@@ -37,15 +37,15 @@ body {
 *, *::after, *::before {
   box-sizing: border-box;
   font-family: 'Recursive', "Trebuchet MS", Helvetica, sans-serif;
-    src: url('/fonts/Recursive_Web/woff2_variable/Recursive_VF_1.085.woff2') format('woff2-variations');
-    font-weight: 300 1000;
+  src: url('/fonts/Recursive_Web/woff2_variable/Recursive_VF_1.085.woff2') format('woff2-variations');
+  font-weight: 300 1000;
 }
 
 
 #cy {
   /* position: absolute; */
   left: 0;
-  width: 100vw;
+  /* width: 100vw; */
   height: 79vh;
 }
 

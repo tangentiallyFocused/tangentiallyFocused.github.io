@@ -33,7 +33,8 @@
 }
 
 body {
-    background-color: var(--c_background);
+    /* background-color: var(--c_background); */
+    /* background-color: var(--p_blue); */
     margin: 0 0.5px;
     display: flex;
     flex-direction: column;
@@ -42,6 +43,7 @@ body {
     /* justify-content: stretch; */
     justify-content: space-between;
     /* color: var(--p_blue); */
+    max-width: 100vw;
   }
 
 /* HEADER BAR */
@@ -63,7 +65,9 @@ body {
     position: sticky;
 
     background-color: var(--c_background);
-    width: 100vw;
+    background-image: url('/public/beige-paper.png');
+    /* width: 100vw; */
+    width: 100%;
 
     z-index: 2;
     top: 0;
@@ -83,6 +87,11 @@ body {
 
 #myName {
     margin-right: 1vw;
+    display: flex;
+    gap: 1.25vw;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: var(--p_blue)
 }
 
 .menu_btn {
@@ -234,7 +243,9 @@ a:hover, a:focus {
     position: relative;
 
     background-color: var(--c_background);
-    width: 100vw;
+    background-image: url('/public/beige-paper.png');
+    /* width: 100vw; */
+    width: 100%;
 
     padding-left: 2vw;
     padding-right: 2vw;
@@ -259,8 +270,8 @@ a:hover, a:focus {
 #linkedin {
     cursor: pointer;
     /* max-height: 40px; */
-    height: 40px;
-    max-height: 1vh;
+    max-height: 40px;
+    min-height: 1vh;
 }
 
 #linkedin:hover {
@@ -270,6 +281,6 @@ a:hover, a:focus {
 .all {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    /* height: 100vh; */
     justify-content: space-between;
 }

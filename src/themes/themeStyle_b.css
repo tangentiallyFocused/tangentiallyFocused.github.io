@@ -53,7 +53,17 @@ body {
 
 .pic {
     object-fit: cover;
-    width: 350px;
+    /* width: 350px;
+    height: 250px; */
+    /* width: 525px;
+    height: 375px; */
+    /* width: 437.5px; */
+    min-width: 350px;
+    /* width: 25vw; */
+    /* width: 20vw; */
+    /* width: 15vw; */
+    /* width: 22vw; */
+    /* width: 30vw; */
     height: 250px;
 }
 
@@ -68,7 +78,7 @@ body {
 
 .proj_card {
     position: relative;
-    max-width: fit-content;
+    /* max-width: fit-content; */
     margin: 3vh 0;
     /* border: solid black 3px; */
     cursor: pointer;
@@ -80,6 +90,8 @@ body {
     outline: thin solid var(--p_blue);
 
     transition: transform 500ms ease;
+
+    flex-basis: content;
 }
 
 .proj_card:hover, .proj_card:focus, .proj_card:active {

@@ -78,7 +78,10 @@ projects.forEach((project) => {
 document.getElementById("theme_projects").innerHTML = projects_html;
 document.getElementById("primary").innerHTML = primary_html;
 
-
+// let projSpots = document.getElementsByClassName("pic");
+// for(let pSpot = 0; pSpot < projSpots.length; pSpot++) {
+//     let picW = projSpots[pSpot].
+// }
 
 
 

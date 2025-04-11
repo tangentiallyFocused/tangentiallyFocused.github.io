@@ -1,7 +1,7 @@
 // import projects from '/src/jsons/projects.json';
 import projects from '/src/jsons/projects.json' with { type: "json" };
 
-let title, year, key_materials, image, image_alt, page_link, project_card = "";
+let title, year, key_materials, image, image_alt, page_link = "";
 
 let projects_html = "";
 projects.forEach((project) => {

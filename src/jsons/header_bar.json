@@ -1,0 +1,28 @@
+[
+    {
+        "name": "icon",
+        "image": "/public/logo.PNG",
+        "image_alt": "logo",
+        "on_click": "location.href = '/dist/'"
+    },
+    {
+        "name": "name_a",
+        "content": "Lara Baldez"
+    },
+    {
+        "name": "name_b",
+        "content": "Duque Ribeiro"
+    },
+    {
+        "name": "open_menu",
+        "image": "/public/open_menu.PNG",
+        "image_alt": "open",
+        "on_click": "javascript:void(0)"
+    },
+    {
+        "name": "close_menu",
+        "image": "/public/exit_menu.PNG",
+        "image_alt": "exit",
+        "on_click": "javascript:void(0)"
+    }
+]

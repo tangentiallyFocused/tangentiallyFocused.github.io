@@ -1,16 +1,16 @@
-let header_ids = "";
-header_ids += '<img id="icon">';
-header_ids += '<div class="spacer"></div>';
-header_ids += '<div id="my_name">';
-    header_ids += '<div id="name_a"></div>';
-    header_ids += '<div id="name_b"></div>';
-header_ids += '</div>';
-header_ids += '<img id="open_menu" class="menu_btn">';
+let header_html = "";
+header_html += '<img id="icon">';
+header_html += '<div class="spacer"></div>';
+header_html += '<div id="my_name">';
+    header_html += '<div id="name_a"></div>';
+    header_html += '<div id="name_b"></div>';
+header_html += '</div>';
+header_html += '<img id="open_menu" class="menu_btn">';
 
 let overlay_html = "";
 overlay_html += '<img id="close_menu" class="menu_btn">';
 
-document.getElementById("header_bar").innerHTML += header_ids;
+document.getElementById("header_bar").innerHTML += header_html;
 document.getElementById("overlay_menu").innerHTML += overlay_html + "\n";
 
 
@@ -95,3 +95,45 @@ document.getElementById("close_menu").addEventListener('click', closeNav);
 // linkedin.addEventListener("touchend", (ev) => {
 //     linkedin.style.color = rbg(0,49,83);
 // })
+
+
+
+
+
+let footer_html = "";
+footer_html += '<div id="copyright"></div>';
+footer_html += '<div class="spacer"></div>';
+footer_html += '<div id="footer_socials">';
+    footer_html += '<email id="email"></email>'
+footer_html += '</div>';
+document.getElementById("footer_bar").innerHTML += footer_html;
+
+import footer from '/src/jsons/footer_bar.json' with {type:"json"};
+
+const cycle_fids = ["copyright", "linkedin", "email"];
+
+for(let idNum = 0; idNum < cycle_ids.length; idNum++) {
+    let element_id = cycle_fids[idNum];
+
+    footer.forEach((part) => {
+        if(element_id == part.name) {
+            let element = document.getElementById(element_id);
+
+            if(element.nodeName == "DIV") {
+                element.innerText = part.content;
+            } 
+            // else if (element.nodeName == "svg") {
+            //     element.innerHTML = '<svg id="' + part.name + '" ' + part.content + '</svg>';
+            //     console.log(element.innerHTML);
+            // } 
+            else if (element.nodeName == "EMAIL") {
+                element.innerText = part.content;
+            }
+        }
+        if(part.name == "linkedin") {
+            document.getElementById("footer_socials").innerHTML += part.content;
+        }
+    })
+};
+
+console.log(document.getElementById("email").nodeName);

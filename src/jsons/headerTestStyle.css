@@ -33,7 +33,19 @@
     font-weight: 300 1000; */
 }
 
+/* body {
+    margin: 0 0.5px;
+    display: flex;
+    flex-direction: column;
+
+    max-width: 100vw;
+} */
+
 body {
+    margin: 0;
+}
+
+#all {
     margin: 0 0.5px;
     display: flex;
     flex-direction: column;
@@ -148,4 +160,8 @@ a:hover, a:focus {
 /* when the height of the screen is less than 450px, change link font-size and position to close button again, so they don't overlap */
 @media screen and (max-height: 450px) {
     a {font-size: 20px}
+}
+
+#linkedin {
+    color: var(--p_blue);
 }

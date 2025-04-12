@@ -104,7 +104,8 @@ let footer_html = "";
 footer_html += '<div id="copyright"></div>';
 footer_html += '<div class="spacer"></div>';
 footer_html += '<div id="footer_socials">';
-    footer_html += '<email id="email"></email>'
+    footer_html += '<span id="linkedin"></span> • ';
+    footer_html += '<email id="email"></email>';
 footer_html += '</div>';
 document.getElementById("footer_bar").innerHTML += footer_html;
 
@@ -122,18 +123,12 @@ for(let idNum = 0; idNum < cycle_ids.length; idNum++) {
             if(element.nodeName == "DIV") {
                 element.innerText = part.content;
             } 
-            // else if (element.nodeName == "svg") {
-            //     element.innerHTML = '<svg id="' + part.name + '" ' + part.content + '</svg>';
-            //     console.log(element.innerHTML);
-            // } 
+            else if (element.nodeName == "SPAN") {
+                element.innerHTML = part.content;
+            } 
             else if (element.nodeName == "EMAIL") {
                 element.innerText = part.content;
             }
         }
-        if(part.name == "linkedin") {
-            document.getElementById("footer_socials").innerHTML += part.content;
-        }
     })
 };
-
-console.log(document.getElementById("email").nodeName);

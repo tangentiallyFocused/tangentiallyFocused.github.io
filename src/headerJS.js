@@ -36,7 +36,7 @@ for(let idNum = 0; idNum < cycle_ids.length; idNum++) {
             } else if(element.nodeName == "IMG") {
                 element.src = part.image;
                 element.alt = part.image_alt;
-                element.onclick = function(){window.location.href = part.on_click;}
+                element.setAttribute('onclick', part.on_click);
             }
         }
     })

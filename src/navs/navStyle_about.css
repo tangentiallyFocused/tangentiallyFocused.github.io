@@ -27,7 +27,7 @@ body {
     justify-content: space-between;
 }
 
-#content {
+#upper {
     height: 100vh;
     /* display: flex;
     flex-direction: column; */
@@ -117,6 +117,8 @@ h1 {
     max-height: 700px;
     margin-top: 3vh;
     margin-bottom: 3vh;
+
+    /* justify-self: center; */
 }
 
 #dynamic_resume_section {
@@ -128,6 +130,8 @@ h1 {
     max-height: 700px;
     /* margin-top: 3vh; */
     margin-bottom: 3vh;
+
+    /* justify-self: center; */
 }
 
 #me_a {
@@ -138,7 +142,7 @@ h1 {
     max-width: 500px;
     max-height: 500px;
 
-    position: absolute;
+    /* position: absolute; */
     left: 10px;
     /* margin-top: 3vh; */
     margin: 3vh 0 0 0;
@@ -153,7 +157,7 @@ h1 {
     max-width: 200px;
     max-height: 200px;
 
-    position: absolute;
+    /* position: absolute; */
     /* top: 305px; */
     top: 37vh;
     /* left: -65px; */
@@ -170,7 +174,7 @@ h1 {
     max-width: 150px;
     max-height: 150px;
 
-    position: absolute;
+    /* position: absolute; */
     top: 410px;
     left: 80px;
     box-shadow: -4px 6px 5px 1px rgb(142,58,89,0.3);
@@ -222,4 +226,8 @@ h1 {
     margin-top: 3vh;
     margin-left: 3vw;
     line-height: 2.5rem;
+}
+
+#lower {
+    justify-items: center;
 }

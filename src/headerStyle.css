@@ -66,7 +66,7 @@ body {
 } */
 
 .content {
-    /* flex-grow: 1; */
+    margin-top: calc(70px + 3vh);
     flex-grow: 2;
 }
 
@@ -77,9 +77,9 @@ body {
 #header_bar {
     display: flex;
     flex-direction: row;
-    margin-bottom: 3vh;
-    position: sticky;
-    min-width: fit-content;
+    position: fixed;
+    width: 100%;
+    
 
     background-color: var(--c_background);
     background-image: url('/public/beige-paper.png');
@@ -89,6 +89,11 @@ body {
     align-items: center;
 
     justify-self: flex-start;
+
+    top: 0;
+
+    z-index: 1;
+    /* overflow: visible; */
 }
 
 #icon {

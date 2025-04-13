@@ -249,3 +249,7 @@ a:hover, a:focus {
     max-width: 100%;
     max-height: 100%;
 }
+
+#linkedin:hover {
+    color: var(--q_magenta);
+}

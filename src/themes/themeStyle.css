@@ -14,6 +14,17 @@ body {
 
 /*****************/
 
+:root {
+    --c_background: #FAF9F6;
+    --q_magenta: rgb(142,58,89);
+    --l_yellow: rgb(255,244,79);
+    --p_blue: rgb(0,49,83);
+
+    --qp_violet: rgb(71,54,86);
+    --lp_green: rgb(127, 172, 133);
+    --ql_orange: rgb(199,151,84);
+}
+
 *, *::after, *::before {
     box-sizing: border-box;
     font-family: 'Recursive', "Trebuchet MS", Helvetica, sans-serif;
@@ -21,7 +32,176 @@ body {
     font-weight: 300 1000;
 }
 
-h1, h2, h3, h4, h5, h6, i {
-    margin: 0;
-    padding: 0;
+.intro {
+    padding: 0 1vw;
+    text-align: center;
+    color: var(--c_background);
+}
+
+#theme_projects {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 10px;
+
+    /* width: 100vw; */
+    /* width: 100%; */
+    max-height: calc(100vw-80px);
+
+    justify-content: space-evenly;
+}
+
+.pic {
+    object-fit: cover;
+    /* width: 350px;
+    height: 250px; */
+    /* width: 525px;
+    height: 375px; */
+    /* width: 437.5px; */
+    min-width: 350px;
+    /* width: 25vw; */
+    /* width: 20vw; */
+    /* width: 15vw; */
+    /* width: 22vw; */
+    /* width: 30vw; */
+    height: 250px;
+}
+
+#pic_overlay {
+    background-color: var(--qp_violet);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    opacity: 25%;
+}
+
+.proj_card {
+    position: relative;
+    /* max-width: fit-content; */
+    margin: 3vh 0;
+    /* border: solid black 3px; */
+    cursor: pointer;
+    /* width: 350px; */
+    /* height: 250px; */
+    height: 250px;
+    border-radius: 5px;
+    overflow: hidden;
+    outline: thin solid var(--p_blue);
+
+    transition: transform 500ms ease;
+
+    flex-basis: content;
+}
+
+.proj_card:hover, .proj_card:focus, .proj_card:active {
+    transform: scale(1.10);
+    outline: thin solid var(--q_magenta);
+    /* box-shadow: 0px 6px 5px 2px var(--qp_violet); */
+    box-shadow: 0px 4px 5px 8px var(--qp_violet);
+}
+
+.card_info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    padding: 7.5px;
+    /* background: rgb(0,49,83, 0.7); */
+    background: linear-gradient(rgb(127, 172, 133,0), rgb(0,49,83,1));
+    /* height: 50%; */
+    width: 100%;
+    transform: translateY(55%);
+    transition: transform 500ms ease;
+}
+
+.card_info:hover #arrow, .card_info:focus #arrow, .card_info:active #arrow {
+    color: var(--c_background);
+    text-shadow: -3px 3px var(--q_magenta);
+}
+
+.proj_card:hover .card_info, .proj_card:focus .card_info, .proj_card:active .card_info {
+    transform: translateY(1.5%);
+    background: linear-gradient(rgb(127, 172, 133,0), rgb(0,49,83,1));
+}
+
+.card_title {
+    font-size: 115%;
+    position: relative;
+    color: white;
+    /* text-shadow: -2px 2px var(--p_blue); */
+    text-shadow: -3px 3px var(--p_blue);
+        /* MAKE IT SO THAT ON HOVER, THE TEXT SHADOW & THE LINE TURN MAGENTA */
+    padding-bottom: 5px;
+    width: fit-content;
+    font-weight: 800;
+}
+
+.proj_card:hover .card_title, .proj_card:focus .card_title, .proj_card:active .card_title {
+    /* text-shadow: -2px 2px var(--q_magenta); */
+    text-shadow: -3px 3px var(--q_magenta);
+}
+
+.proj_card:hover .card_title::after, .proj_card:focus .card_title::after, .proj_card:active .card_title::after {
+    content: "";
+    position: absolute;
+    background: var(--q_magenta);
+        /* MAKE IT SO THAT ON HOVER, THE TEXT SHADOW & THE LINE TURN MAGENTA */
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+}
+
+.card_title::after {
+    content: "";
+    position: absolute;
+    background: var(--p_blue);
+        /* MAKE IT SO THAT ON HOVER, THE TEXT SHADOW & THE LINE TURN MAGENTA */
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+}
+
+.bottom_info {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    color: var(--c_background);
+    /* padding-top: 1vh; */
+    padding-top: 1vh;
+}
+
+.info_left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+#arrow {
+    /* text-align: center; */
+    text-align: right;
+    padding-right: 5px;
+    /* position: absolute; */
+    position: relative;
+    width: 20%;
+    /* align-content: center; */
+    align-content: end;
+    font-size: 200%;
+    color: var(--q_magenta);
+}
+
+/* #arrow:hover {
+    color: var(--q_magenta);
+} */
+
+.key_materials {
+    font-size: 75%;
+    padding-top: 0.5vh;
 }

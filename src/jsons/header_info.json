@@ -1,9 +1,26 @@
 [
     {
         "name": "header_bar",
+        
         "logo": "/public/logo.PNG",
         "logo_alt": "logo",
-        "on_click": "location.href = '/dist/"
+        "logo_on_click": "location.href = '/dist/",
+        
+        "my_name": "Lara Baldez Duque Ribeiro",
+        "name_a": "Lara Baldez",
+        "name_b": "Duque Ribeiro",
+        
+        "open_menu": "/public/open_menu.PNG",
+        "open_menu_alt": "open menu",
+        "open_on_click": "javascript:void(0)"
+    },
+    {
+        "name": "overlay_content",
 
+        "close_menu": "/public/exit_menu.PNG",
+        "close_menu_alt": "close menu",
+        "close_on_click": "javascript:void(0)",
+
+        "projects_destination": "projects_link"
     }
 ]

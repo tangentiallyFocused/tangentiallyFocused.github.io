@@ -1,0 +1,17 @@
+[
+    {
+        "name": "projects_link",
+        "page": "Projects",
+        "redirect": "/src/navs/nav_projects.html"
+    },
+    {
+        "name": "about_link",
+        "page": "About",
+        "redirect": "/src/navs/nav_about.html"
+    },
+    {
+        "name": "contact_link",
+        "page": "Contact",
+        "redirect": "/src/navs/nav_contact.html"
+    }
+]

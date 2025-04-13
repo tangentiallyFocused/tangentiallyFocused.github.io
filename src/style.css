@@ -45,8 +45,15 @@ body {
 #cy {
   /* position: absolute; */
   left: 0;
-  /* width: 100vw; */
-  height: 79vh;
+  width: 100%;
+  /* height: 79vh; */
+  /* height: 84vh; */
+  height: 95%;
+  max-height: 100vh;
+}
+
+#footer_bar {
+  margin-top: 0 !important;
 }
 
 /* source: https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling */
@@ -78,14 +85,14 @@ input[type="checkbox"]:checked::before {
   visibility: visible;
 }
 
-#search_bar {
+/* #search_bar {
   margin-left: 2vw; 
   width: 25vw;
   color: var(--p_blue_09);
   border: solid 1px var(--p_blue);
   border-radius: 2px;
   background-color: rgb(127, 172, 133, 0.2);
-}
+} */
 
 #search_bar::placeholder {
   color: rgb(0,49,83,0.5);

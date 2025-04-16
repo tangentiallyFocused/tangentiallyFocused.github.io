@@ -208,7 +208,7 @@ body {
 }
 
 /* navigation links inside overlay */
-.overlay_menu a {
+a {
     text-decoration: none;
     font-size: 36px;
     color: pink;

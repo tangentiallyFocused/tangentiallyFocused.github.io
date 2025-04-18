@@ -190,6 +190,6 @@
 .panel {
     padding: 0 18px;
     background-color: darkorange;
-    display: none;
+    /* display: none; */
     overflow: hidden;
 }

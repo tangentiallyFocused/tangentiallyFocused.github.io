@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
-    <link rel="stylesheet" href="/src/navs/contactForm/contactStyle.css">
+    <!-- <link rel="stylesheet" href="/src/navs/contactForm/contactStyle.css"> -->
+    <link rel="stylesheet" href="/src/navs/navStyle_contact.css">
     <link rel="stylesheet" href="/src/headerStyle.css">
     <link rel="icon" type="image/png" href="/logo.PNG">
 </head>
@@ -20,23 +21,27 @@
         <!-- content -->
         <div class="content">
             <div class="contact-container">
-                <form action="" class="contact-left"> <!-- has the contact fields -->
-                    <div class="contact-left-title">
-                        <h2>Get in touch</h2>
-                        <hr>
+                <div id="upper_content">
+                    <form action="" class="contact-left"> <!-- has the contact fields -->
+                        <div class="contact-left-title">
+                            <h2>Get in touch</h2>
+                            <hr>
+                        </div>
+            
+                        <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required> <!-- input for getting user's name -->
+                        <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required> <!-- input for getting user's email -->
+                        <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea> <!-- message input area -->
+                        <button type="submit">Send <!-- insert image --> </button>
+                         <!-- <a href="mailto:lbduquer@gmail.com" class="button" type="submit">Submit</a> -->
+                    </form>
+                    <div class="contact-right">
+                        <!-- is the right column of the webpage -->
+                         [WIP]
                     </div>
-        
-                    <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required> <!-- input for getting user's name -->
-                    <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required> <!-- input for getting user's email -->
-                    <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea> <!-- message input area -->
-                    <button type="submit">Submit <!-- insert image --> </button>
-                     <!-- <a href="mailto:lbduquer@gmail.com" class="button" type="submit">Submit</a> -->
-                </form>
-                <div class="contact-right">
-                    <!-- is the right column of the webpage -->
-                     [WIP]
                 </div>
+                
                 <div class="contact-bottom">
+                    yoink
                     <!-- resume -->
                 </div>
         

@@ -139,6 +139,10 @@ console.log(edges);
 
   // { // dates
 
+// import constants from '/src/constants.css' with {type:'css'};
+// const constants = await import('/src/constants.css', {assert: { type:'css'}});
+// document.adoptedStyleSheets[constants.default];
+
 var cy = cytoscape({
   container: document.getElementById('cy'),
   elements: [ // list of graph elements to start with
@@ -151,9 +155,14 @@ var cy = cytoscape({
       selector: 'node',
       style: {
         // 'label': 'data(id)'
-        'font-family': '"Recursive", "Trebuchet MS", "Helvetica", "sans-serif"',
-        'src': "url('/fonts/Recursive_Web/woff2_variable/Recursive_VF_1.085.woff2') format('woff2-variations')",
-        'font-weight': '300 1000',
+        // '@import': "'/src/constants.css';",
+        // 'font-family': 'Fira Code VF !important',
+        // 'font-feature-settings': "'cv01', 'cv06', 'cv10'"
+        'font-family': 'monospace',
+        'font-feature-settings': "'cv01', 'cv06', 'cv10'"
+        // 'font-family': '"Recursive", "Trebuchet MS", "Helvetica", "sans-serif"',
+        // 'src': "url('/fonts/Recursive_Web/woff2_variable/Recursive_VF_1.085.woff2') format('woff2-variations')",
+        // 'font-weight': '300 1000',
         // 'src': "url('/src/fonts/Recursive_Web/woff2_variable/Recursive_VF_1.085.woff2') format('woff2-variations')",
         // 'font-weight': '300 1000',
       }

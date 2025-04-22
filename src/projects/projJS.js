@@ -38,9 +38,9 @@ for(let spot = 0; spot < titleSpots.length; spot++) {
 let dates = "";
 if((start_month != "-") && (start_year != end_year)) {
     dates += start_month + " " + start_year + " – ";
-} else if ((start_month != "-") && (start_year == end_year)) {
+} else if ((start_month != "-") && (start_month != end_month) && (start_year == end_year)) {
     dates += start_month + " – ";
-} else if ((start_month != end_month) && (start_year != end_year)) {
+} else if ((start_month == end_month) && (start_year != end_year)) {
     dates += start_year + " – ";
 } else {
     dates;

@@ -58,15 +58,35 @@ input[type="checkbox"]:checked::before {
   background-color: rgb(127, 172, 133, 0.2);
 } */
 
-#search_bar::placeholder {
-  color: rgb(0,49,83,0.5);
-}
-
 #search_bar {
   margin-left: min(1vw, 75px);
+  width: 300px;
+  height: fit-content;
+  position: relative;
+  /* height: 80px; */
   /* padding-left: 1vw; */
 }
 
+#search_bar_input {
+  font-family: 'Fira Code VF';
+  width: 100%;
+}
+
+#search_bar_input::placeholder {
+  font-family: 'Fira Code VF';
+  color: rgb(0,49,83,0.5);
+}
+
+#search_bar #clear {
+  /* width: 100%; */
+  position: absolute;
+  right: 7px;
+  color: rgb(0,49,83,0.5);
+  font-style: italic;
+  text-align: center;
+  line-height: fit-content;
+  font-family: 'Fira Code VF';
+}
 
 /* ACCORDION FORMAT */
 /* Style the buttons that are used to open and close the accordion panel */

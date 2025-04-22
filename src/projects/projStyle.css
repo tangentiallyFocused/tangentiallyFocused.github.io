@@ -2,10 +2,6 @@
 
 *, *::after, *::before {
     box-sizing: border-box;
-    /* font-family: 'Fira Code', monospace; */
-    /* font-family: 'Recursive', "Trebuchet MS", Helvetica, sans-serif;
-    src: url('/fonts/Recursive_Web/woff2_variable/Recursive_VF_1.085.woff2') format('woff2-variations');
-    font-weight: 300 1000; */
 }
 
 .content {
@@ -39,6 +35,11 @@
     max-height: 100vh;
 }
 
+.info b {
+    font-family: 'Recursive';
+    font-size: 1.05rem;
+}
+
 #works {
     max-width: 60vw;
     align-content: center;
@@ -69,6 +70,7 @@
     /* width: 100%; */
     /* width: fit-content; */
     /* max-width: 80vw; */
+    font-feature-settings: 'onum';
 }
 
 #main_title {
@@ -77,9 +79,11 @@
     margin: 0;
     left: 0;
     /* text-align: center; */
+    font-family: 'Recursive';
 }
 
 #dates {
     font-size: 1.5vw;
     /* text-align: center; */
+    /* font-feature-settings: 'onum'; */
 }

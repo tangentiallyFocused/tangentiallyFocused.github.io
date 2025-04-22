@@ -23,6 +23,7 @@
 }
 
 .intro h1 {
+    font-family: 'Recursive';
     font-size: 600%;
     /* font-size: 20vw; */
     color: var(--qp_violet);
@@ -125,6 +126,8 @@
     padding-bottom: 5px;
     width: fit-content;
     font-weight: 800;
+
+    font-feature-settings: 'ss05';
 }
 
 .proj_card:hover .card_title, .proj_card:focus .card_title, .proj_card:active .card_title {
@@ -161,6 +164,9 @@
     color: var(--c_background);
     /* padding-top: 1vh; */
     padding-top: 1vh;
+
+    font-feature-settings: 'onum';
+    /* font-family: */
 }
 
 .info_left {

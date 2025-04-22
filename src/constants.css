@@ -30,13 +30,13 @@
 
     /* font-feature-settings: "ss01", "ss02", "ss03", "ss04", "ss05", "ss06", "zero", "onum"; */
 
-    font-family: 'Fira Code VF', 'Recursive';
-    code { font-family: 'Fira Code VF', 'Recursive'; }
+    font-family: 'Fira Code VF', 'Recursive', monospace, sans-serif;
+    code { font-family: 'Fira Code VF', 'Recursive', monospace, sans-serif; }
     /* code { font-family: 'Fira Code', 'Recursive';}  */
     /* monospace; } */
 
     @supports (font-variation-settings: normal) {
-        font-family: 'Fira Code VF';
-        code { font-family: 'Fira Code VF', monospace; }
+        font-family: 'Fira Code VF', 'Recursive', monospace, sans-serif;
+        code { font-family: 'Fira Code VF', 'Recursive', monospace, sans-serif; }
     }
 }

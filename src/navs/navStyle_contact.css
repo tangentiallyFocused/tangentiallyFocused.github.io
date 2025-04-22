@@ -2,19 +2,7 @@
 
 *, *::after, *::before {
     box-sizing: border-box;
-    /* font-family: 'Recursive', "Trebuchet MS", Helvetica, sans-serif;
-    src: url('/fonts/Recursive_Web/woff2_variable/Recursive_VF_1.085.woff2') format('woff2-variations');
-    font-weight: 300 1000; */
 }
-
-h1, h2, h3, h4, h5, h6, i {
-    margin: 0;
-    padding: 0;
-}
-
-/* .content {
-    background-color: red;
-} */
 
 /* transferred */
 
@@ -26,7 +14,7 @@ h1, h2, h3, h4, h5, h6, i {
     align-items: center;
     justify-content: space-evenly;
 
-    background-color: aqua;
+    /* background-color: aqua; */
 
     margin: 0 1vw;
 
@@ -43,7 +31,7 @@ h1, h2, h3, h4, h5, h6, i {
     width: 100%;
     left: 0;
 
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
 }
 
 .contact-left {
@@ -52,9 +40,10 @@ h1, h2, h3, h4, h5, h6, i {
     align-items: start;
     gap: 20px;
 
-    width: 100%;
+    /* width: 100%; */
     justify-self: center;
     text-align: center;
+    padding-left: 25px;
 }
 
 .contact-left-title h2 {
@@ -66,26 +55,33 @@ h1, h2, h3, h4, h5, h6, i {
     color: blue;
     font-size: 40px;
     margin-bottom: 5px; */
+    font-family: 'Recursive';
+    font-weight: 1000;
 }
 
-.contact-left-title hr {
+/* .contact-left-title hr {
     border: none;
     width: 120px;
     height: 5px;
-    background-color: darkmagenta;
+    background-color: var(--q_magenta);
     border-radius: 10px;
     margin-bottom: 20px;
-}
+    margin-left: 0;
+} */
 
 .contact-inputs {
-    width: 400px;
+    width: min(125%, 500px);
     height: 50px;
     border: none;
     padding-left: 25px;
     font-weight: 500;
-    color: grey;
+    /* color: grey; */
+    color: var(--p_blue);
     border-radius: 50px;
-    /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+
+    font-family: 'Fira Code VF';
+    /* color: rgb(0,49,83,0.5); */
+    box-shadow: 0 2px 5px darkgrey;
 }
 
 .contact-left textarea {
@@ -99,7 +95,7 @@ h1, h2, h3, h4, h5, h6, i {
 }
 
 .contact-inputs::placeholder {
-    color: grey;
+    color: rgb(0,49,83,0.5);
 }
 
 .contact-left button {
@@ -115,7 +111,6 @@ h1, h2, h3, h4, h5, h6, i {
     background-color: var(--l_yellow);
     cursor: pointer;
 
-    /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
     @import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);
     font-family: 'Fira Code', monospace;
 }
@@ -127,6 +122,21 @@ h1, h2, h3, h4, h5, h6, i {
 }
 
 .contact-right {
-    width: 50vw;
-    justify-self: center;
+    width: 45vw;
+    text-align: center;
+    align-self: center;
+}
+
+#submit_btn {
+    box-shadow: 0 2px 5px darkgrey;
+}
+
+#submit_btn:hover {
+    background-color: rgb(233, 222, 71);
+}
+
+#submit_btn:active {
+    background-color: rgb(220, 209, 67);
+    box-shadow: 0 3px 5px #666;
+    transform: translateY(4px);
 }

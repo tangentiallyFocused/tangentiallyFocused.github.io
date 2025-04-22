@@ -152,10 +152,12 @@
 #resume_buttons {
     align-self: center;
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
+    flex-direction: column;
     flex-wrap: wrap;
     width: 100%;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
+    align-items: center;
 
     height: fit-content;
     
@@ -191,9 +193,10 @@
 
 .panel {
     padding: 0 18px;
-    background-color: darkorange;
-    /* display: none; */
+    /* background-color: darkorange; */
+    display: none;
     overflow: hidden;
+    width: 100%;
 }
 
 /* comment for test purposes */

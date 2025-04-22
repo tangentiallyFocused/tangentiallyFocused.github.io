@@ -73,33 +73,43 @@ var acc = document.getElementsByClassName("accordion");
 
 for (let i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function() {
-        if(i = 0) {
-            /* Toggle between adding and removing the "active" class,
-            to highlight the button that controls the panel */
-            this.classList.toggle("active");
+        this.classList.toggle("active");
 
             /* Toggle between hiding and showing the active panel */
-                // var panel = this.nextElementSibling;
-            let panel_a = document.getElementById("resume_panel");
+            var panel = this.nextElementSibling;
+            // let panel_a = document.getElementById("resume_panel");
             if (panel.style.display === "block") {
                 panel.style.display = "none";
             } else {
                 panel.style.display = "block";
             }
-        }
-        else if (i=1) {
-            /* Toggle between adding and removing the "active" class,
-            to highlight the button that controls the panel */
-            this.classList.toggle("active");
+        // if(i = 0) {
+        //     /* Toggle between adding and removing the "active" class,
+        //     to highlight the button that controls the panel */
+        //     this.classList.toggle("active");
 
-            /* Toggle between hiding and showing the active panel */
-                // var panel = this.nextElementSibling;
-            let panel_a = document.getElementById("dynamic_panel");
-            if (panel.style.display === "block") {
-                panel.style.display = "none";
-            } else {
-                panel.style.display = "block";
-            }
-        }
+        //     /* Toggle between hiding and showing the active panel */
+        //     var panel = this.nextElementSibling;
+        //     // let panel_a = document.getElementById("resume_panel");
+        //     if (panel.style.display === "block") {
+        //         panel.style.display = "none";
+        //     } else {
+        //         panel.style.display = "block";
+        //     }
+        // }
+        // else if (i=1) {
+        //     /* Toggle between adding and removing the "active" class,
+        //     to highlight the button that controls the panel */
+        //     this.classList.toggle("active");
+
+        //     /* Toggle between hiding and showing the active panel */
+        //         // var panel = this.nextElementSibling;
+        //     let panel_a = document.getElementById("dynamic_panel");
+        //     if (panel.style.display === "block") {
+        //         panel.style.display = "none";
+        //     } else {
+        //         panel.style.display = "block";
+        //     }
+        // }
     });
 }

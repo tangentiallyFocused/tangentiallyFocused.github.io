@@ -27,7 +27,7 @@ body {
     background-image: url("https://www.transparenttextures.com/patterns/black-linen.png"); */
 
     background-color: #FAF9F6;
-    background-image: url("https://www.transparenttextures.com/patterns/sandpaper.png");
+    /* background-image: url("https://www.transparenttextures.com/patterns/sandpaper.png"); */
 }
 
 #all {
@@ -86,6 +86,17 @@ body {
     cursor: pointer;
 }
 
+/* #icon:hover {
+    box-shadow: 0 5px 15px#DDDCDA;
+    clip-path: inset(0 -15px 0 0);
+} */
+
+#icon:hover {
+    /* box-shadow: 0 5px 5px#DDDCDA; */
+    box-shadow: 0 -5px 15px #FFFFFF;
+    clip-path: inset(0 -15px 0 0);
+}
+
 #header_bar .spacer {
     flex-grow: 1;
 }
@@ -103,13 +114,18 @@ body {
     font-family: 'Recursive';
     font-style: italic;
     font-feature-settings: 'cv01', 'cv06', 'cv10';
-    font-weight: 200;
+    font-weight: 600;
     font-size: calc(15px + 1vw);
+    text-shadow: 1px 1px 1px var(--p_blue_09);
 }
 
 #name_ab, #name_cd {
     display: flex;
     flex-direction: row;
+
+    /* background: linear-gradient(-45deg, var(--p_blue), var(--l_yellow), var(--q_magenta));
+    background-clip: text;
+    color: transparent; */
 }
 
 .name_part {
@@ -134,9 +150,6 @@ body {
 ****************** */
 
 #overlay_menu {
-    /* position: relative;
-    height: 100%;
-    width: 100%; */
     text-align: center;
 }
 
@@ -175,20 +188,42 @@ body {
 }
 
 /* navigation links inside overlay */
-a {
+/* a[id="projects_link"], a[id="about_link"], a[id="contact_link"] { */
+a[class="tab_btn"] {
     font-family: 'Recursive';
     font-weight: 600;
     text-decoration: none;
     font-size: 36px;
-    color: pink;
-    display: block; /* display block instead of inline */
-    transition: 0.3s; /* transition effects on hover (color) */
+    /* color: pink; */
+    /* color: rgb(107, 131, 86);
+    text-shadow: 0 2px 3px var(--qp_violet); */
+
+    display: block;
+        /* display block instead of inline */
+    /* transition: 0.3s; */
+    transition: 1.5s;
+        /* transition effects on hover (color) */
+}
+
+a[id="projects_link"], a[id="contact_link"] {
+    color: rgb(107, 131, 86);
+    text-shadow: 0 2px 3px var(--qp_violet);
+}
+
+a[id="about_link"] {
+    /* color: rgb(107, 131, 86); */
+    color: rgb(95, 106, 86);
+    /* color: rgb(103, 123, 86); */
+    /* text-shadow: 0 1px 3px var(--qp_violet); */
+    text-shadow: 0 1px 3px var(--qp_violet_09);
 }
 
 /* when you mouse over nav links, change color */
-a:hover, a:focus {
+a[class="tab_btn"]:hover, a[class="tab_btn"]:focus {
+    /* font-family: 'Fira Code VF'; */
     color: orange;
     opacity: 50%;
+    text-shadow: 1px 5px 5px rgb(48, 32, 63);
 }
 
 /* when the height of the screen is less than 450px, change link font-size and position to close button again, so they don't overlap */
@@ -203,12 +238,15 @@ a:hover, a:focus {
 #footer_bar {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap-reverse;
+        /* IF screen is smaller, then flex-grow = 0; screen smaller prob just literally means is in portrait mode */
+    justify-content: center;
     margin-top: 3vh;
     /* margin-bottom: 0; */
     min-width: fit-content;
     
     background-color: var(--c_background);
-    background-image: url('/public/beige-paper.png');
+    /* background-image: url('/public/beige-paper.png'); */
 
     align-items: center;
     align-content: center;
@@ -225,6 +263,8 @@ a:hover, a:focus {
     justify-self: flex-end;
 
     font-feature-settings: 'cv01', 'cv06', 'cv10', 'ss05';
+
+    font-size: calc(13px);
 }
 
 #footer_bar .spacer {

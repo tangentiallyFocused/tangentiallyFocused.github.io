@@ -1,14 +1,4 @@
 @import '/src/constants.css';
-/* :root {
-    --c_background: #FAF9F6;
-    --q_magenta: rgb(142,58,89);
-    --l_yellow: rgb(255,244,79);
-    --p_blue: rgb(0,49,83);
-
-    --qp_violet: rgb(71,54,86);
-    --lp_green: rgb(127, 172, 133);
-    --ql_orange: rgb(199,151,84);
-} */
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -24,8 +14,8 @@
 
 .intro h1 {
     font-family: 'Recursive';
-    font-size: 600%;
-    /* font-size: 20vw; */
+    /* font-size: max(50px, 10vw); */
+    font-size: max(70px, 10vw);
     color: var(--qp_violet);
     font-weight: 1000;
     /* font-style: oblique; */
@@ -34,6 +24,7 @@
     padding-right: 0; */
     /* margin: 0; */
     margin-bottom: 0;
+    text-shadow: 0 2px 5px var(--qp_violet_09);
 }
 
 #projects {
@@ -49,6 +40,10 @@
     justify-content: space-evenly;
 }
 
+/****************
+  PROJECT CARDS
+****************/
+
 .pic {
     object-fit: cover;
     width: 350px;
@@ -56,12 +51,14 @@
 }
 
 #pic_overlay {
-    background-color: var(--qp_violet);
+    /* background-color: var(--qp_violet); */
+    background: linear-gradient(transparent, var(--qp_violet));
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
-    opacity: 25%;
+    /* opacity: 25%; */
+    opacity: 45%;
 }
 
 .proj_card {
@@ -83,8 +80,6 @@
 .proj_card:hover, .proj_card:focus, .proj_card:active {
     transform: scale(1.10);
     outline: thin solid var(--q_magenta);
-    /* box-shadow: 0px 6px 5px 2px var(--qp_violet); */
-    /* box-shadow: 0px 4px 5px 8px var(--qp_violet); */
     box-shadow: 0px 4px 5px 8px rgb(71, 54, 86, 0.3);
 }
 
@@ -122,7 +117,6 @@
     color: white;
     /* text-shadow: -2px 2px var(--p_blue); */
     text-shadow: -3px 3px var(--p_blue);
-        /* MAKE IT SO THAT ON HOVER, THE TEXT SHADOW & THE LINE TURN MAGENTA */
     padding-bottom: 5px;
     width: fit-content;
     font-weight: 800;
@@ -139,7 +133,6 @@
     content: "";
     position: absolute;
     background: var(--q_magenta);
-        /* MAKE IT SO THAT ON HOVER, THE TEXT SHADOW & THE LINE TURN MAGENTA */
     bottom: 0;
     left: 0;
     height: 3px;
@@ -150,7 +143,6 @@
     content: "";
     position: absolute;
     background: var(--p_blue);
-        /* MAKE IT SO THAT ON HOVER, THE TEXT SHADOW & THE LINE TURN MAGENTA */
     bottom: 0;
     left: 0;
     height: 3px;

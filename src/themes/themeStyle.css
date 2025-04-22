@@ -15,11 +15,14 @@
 }
 
 .intro h1 {
-    font-size: 600%;
+    /* font-size: 600%; */
     color: var(--qp_violet);
     font-weight: 1000;
     margin-bottom: 0;
     font-family: 'Recursive';
+
+    font-size: max(70px, 10vw);
+    text-shadow: 0 1px 4px var(--qp_violet_09);
 }
 
 #theme_projects {
@@ -52,12 +55,12 @@
 }
 
 #pic_overlay {
-    background-color: var(--qp_violet);
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
-    opacity: 25%;
+    background: linear-gradient(transparent, var(--qp_violet));
+    opacity: 45%;
 }
 
 .proj_card {
@@ -119,10 +122,10 @@
     color: white;
     /* text-shadow: -2px 2px var(--p_blue); */
     text-shadow: -3px 3px var(--p_blue);
-        /* MAKE IT SO THAT ON HOVER, THE TEXT SHADOW & THE LINE TURN MAGENTA */
     padding-bottom: 5px;
     width: fit-content;
     font-weight: 800;
+    font-feature-settings: 'ss05';
 }
 
 .proj_card:hover .card_title, .proj_card:focus .card_title, .proj_card:active .card_title {
@@ -134,7 +137,6 @@
     content: "";
     position: absolute;
     background: var(--q_magenta);
-        /* MAKE IT SO THAT ON HOVER, THE TEXT SHADOW & THE LINE TURN MAGENTA */
     bottom: 0;
     left: 0;
     height: 3px;
@@ -145,7 +147,6 @@
     content: "";
     position: absolute;
     background: var(--p_blue);
-        /* MAKE IT SO THAT ON HOVER, THE TEXT SHADOW & THE LINE TURN MAGENTA */
     bottom: 0;
     left: 0;
     height: 3px;
@@ -159,6 +160,7 @@
     color: var(--c_background);
     /* padding-top: 1vh; */
     padding-top: 1vh;
+    font-feature-settings: 'onum';
 }
 
 .info_left {

@@ -159,7 +159,7 @@ var cy = cytoscape({
         // 'font-family': 'Fira Code VF !important',
         // 'font-feature-settings': "'cv01', 'cv06', 'cv10'"
         'font-family': 'monospace',
-        'font-feature-settings': "'cv01', 'cv06', 'cv10'"
+        'font-feature-settings': "'cv01', 'cv06', 'cv10', 'ss05'"
         // 'font-family': '"Recursive", "Trebuchet MS", "Helvetica", "sans-serif"',
         // 'src': "url('/fonts/Recursive_Web/woff2_variable/Recursive_VF_1.085.woff2') format('woff2-variations')",
         // 'font-weight': '300 1000',

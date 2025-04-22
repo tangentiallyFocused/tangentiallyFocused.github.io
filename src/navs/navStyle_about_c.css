@@ -1,3 +1,5 @@
+@import '/src/constants.css';
+
 *, *::before, *::after {
     box-sizing: outline-box;
 }

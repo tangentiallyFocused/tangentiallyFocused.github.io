@@ -1,41 +1,24 @@
-/* * {
-    box-sizing: border-box;
-    font-family: 'Recursive', "Trebuchet MS", Helvetica, sans-serif;
-    src: url('/fonts/Recursive_Web/woff2_variable/Recursive_VF_1.085.woff2') format('woff2-variations');
-    font-weight: 300 1000;
-    margin: 0;
-    justify-content: center;
-}
-
-body {
-    background-color: #FAF9F6;
-    margin: 0 0.5px;
-} */
-
-/*****************/
-
-:root {
-    --c_background: #FAF9F6;
-    --q_magenta: rgb(142,58,89);
-    --l_yellow: rgb(255,244,79);
-    --p_blue: rgb(0,49,83);
-
-    --qp_violet: rgb(71,54,86);
-    --lp_green: rgb(127, 172, 133);
-    --ql_orange: rgb(199,151,84);
-}
-
 *, *::after, *::before {
     box-sizing: border-box;
-    font-family: 'Recursive', "Trebuchet MS", Helvetica, sans-serif;
+    /* font-family: 'Recursive', "Trebuchet MS", Helvetica, sans-serif;
     src: url('/fonts/Recursive_Web/woff2_variable/Recursive_VF_1.085.woff2') format('woff2-variations');
-    font-weight: 300 1000;
+    font-weight: 300 1000; */
 }
 
 .intro {
     padding: 0 1vw;
     text-align: center;
-    color: var(--c_background);
+    /* color: var(--c_background); */
+    /* padding-bottom: 5vw !important; */
+    padding-bottom: 4vw !important;
+    color: var(--q_magenta);
+}
+
+.intro h1 {
+    font-size: 600%;
+    color: var(--qp_violet);
+    font-weight: 1000;
+    margin-bottom: 0;
 }
 
 #theme_projects {

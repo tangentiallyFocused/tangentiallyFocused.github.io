@@ -51,6 +51,9 @@ projects.forEach((project) => {
 
             projects_html += '</div>';
 
+            if(project.primary == tema) {
+                primary_html += project.name;
+            }
             // if(project.primary == tema) {
             //     primary_html += '<div class="proj_card">';
             //         primary_html += '<div class="card_info" onclick="location.href=\'' + page_link + '\'";>';
@@ -76,7 +79,7 @@ projects.forEach((project) => {
     })
 });
 document.getElementById("theme_projects").innerHTML = projects_html;
-document.getElementById("primary").innerHTML = primary_html;
+document.getElementById("primary").innerText = primary_html;
 
 // let projSpots = document.getElementsByClassName("pic");
 // for(let pSpot = 0; pSpot < projSpots.length; pSpot++) {

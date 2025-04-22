@@ -1,24 +1,7 @@
-/* * {
-    box-sizing: border-box;
-    font-family: 'Recursive', "Trebuchet MS", Helvetica, sans-serif;
-    src: url('/fonts/Recursive_Web/woff2_variable/Recursive_VF_1.085.woff2') format('woff2-variations');
-    font-weight: 300 1000;
-    margin: 0;
-    justify-content: center;
-}
-
-body {
-    background-color: #FAF9F6;
-    margin: 0 0.5px;
-} */
-
-/*****************/
+@import '/src/constants.css';
 
 *, *::before, *::after {
     box-sizing: border-box;
-    font-family: 'Recursive', "Trebuchet MS", Helvetica, sans-serif;
-    src: url('/fonts/Recursive_Web/woff2_variable/Recursive_VF_1.085.woff2') format('woff2-variations');
-    font-weight: 300 1000;
 }
 
 /* body {

@@ -2,9 +2,11 @@
 //import fs from 'fs';
 
 import cytoscape from 'cytoscape';
+import fcose from 'cytoscape-fcose';
 // import cola from 'cytoscape-cola';
 // import elk from 'cytoscape-elk';
  
+cytoscape.use(fcose);
 // cytoscape.use(elk);
 // cytoscape.use(cola);
 
@@ -343,25 +345,36 @@ var cy = cytoscape({
 
   // node layout
   layout: {
-    name: 'random',
+    // name: 'random',
 
-    // name: 'fcose',
-    // randomize: true,
-    // fit: true,
+    name: 'fcose',
+    randomize: true,
+    animationDuration: 50,
     // animate: false,
     // gravity: 1,
     // nestingFactor: 0.5,
+    gravity: 0.25,
+    nestingFactor: 0.05,
+    // nestingFactor: 0.1,
+    // nestingFactor: 0.5,
+    nestingFactor: 0.5,
     // edgeElasticity: edge => 0.1,
+    // edgeElasticity: edge => 0.25,
+    edgeElasticity: edge => 0.05,
+    // edgeElasticity: edge => 0.005,
+    // edgeElasticity: edge => 0,
     // nodeRepulsion: node => 9000,
-    // idealEdgeLength: edge => 40,
-    // // nodeSeparation: 2000,
-    // // boundingBox: {
-    // //   x1: 0,
-    // //   y1: 0,
-    // //   x2: 600,
-    // //   y2: 500
-    // // },
-    // // nodeOverlap: 10000,
+    // nodeRepulsion: node => 100000,
+    nodeRepulsion: node => 4500,
+    idealEdgeLength: edge => 50,
+    nodeSeparation: 2000,
+    // nodeSeparation: 75,
+    // nodeOverlap: 10000,
+    numIter: 2500,
+    fit: true,
+    packComponents: true,
+    samplingType: false,
+    nodeDimensionsIncludeLabels: true
   },
 });
 

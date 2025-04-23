@@ -12,7 +12,8 @@
     "vite": "^6.2.0"
   },
   "dependencies": {
-    "cytoscape": "^3.31.1"
+    "cytoscape": "^3.31.1",
+    "cytoscape-fcose": "^2.2.0"
   },
   "main": "vite.config.js",
   "repository": {

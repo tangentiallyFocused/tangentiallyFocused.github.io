@@ -41,7 +41,7 @@ body {
     /* background: url("/public/sand-ripple.png") no-repeat center center fixed; */
     /* background: url("/public/sand-dust.png") no-repeat center center fixed; */
     /* background: url("/public/sand-dust25.png") no-repeat center center fixed; */
-    background: url("/public/sand-dust10.png") no-repeat center center fixed;
+    /* background: url("/public/sand-dust10.png") no-repeat center center fixed; */
 }
 
 #all {
@@ -92,24 +92,13 @@ body {
     top: 0;
 
     z-index: 2;
-}
-
-#icon {
-    margin-left: 5px;
-    max-height: 70px;
-    cursor: pointer;
+    height: 70px;
 }
 
 /* #icon:hover {
     box-shadow: 0 5px 15px#DDDCDA;
     clip-path: inset(0 -15px 0 0);
 } */
-
-#icon:hover {
-    /* box-shadow: 0 5px 5px#DDDCDA; */
-    box-shadow: 0 -5px 15px #FFFFFF;
-    clip-path: inset(0 -15px 0 0);
-}
 
 #header_bar .spacer {
     flex-grow: 1;
@@ -124,6 +113,7 @@ body {
     /* margin-right: calc(12.8px  + 1vw); */
     margin-right: calc(6.4px  + 0.5vw);
     color: var(--p_blue);
+    margin-left: 5px;
 
     font-family: 'Recursive';
     font-style: italic;

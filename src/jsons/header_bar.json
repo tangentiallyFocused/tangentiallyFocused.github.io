@@ -1,11 +1,5 @@
 [
     {
-        "name": "icon",
-        "image": "/public/logo.PNG",
-        "image_alt": "logo",
-        "on_click": "location.href = '/dist/'"
-    },
-    {
         "name": "name_a",
         "content": "Lara"
     },

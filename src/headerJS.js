@@ -11,6 +11,9 @@ header_html += '<div id="my_name">';
         header_html += '<div id="name_d" class="name_part"></div>';
     header_html += '</div>';
 header_html += '</div>';
+
+// header_html += '<div class="spacer"></div>';
+
 header_html += '<img id="open_menu" class="menu_btn">';
 
 let overlay_html = "";

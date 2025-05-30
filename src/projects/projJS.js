@@ -72,11 +72,12 @@ if(themes.length > 0) {
         }
         themes_split += themes[themes.length-1].toString();
     } else if (themes.length == 2) {
-        themes_split += themes[0].toString() + " & " + themes[1].toString();
+        themes_split += "<a href='" + themes[0].toString() + " & " + themes[1].toString();
     } else {
         themes_split = themes[0].toString();
     }
-    document.getElementById("themes").innerText = themes_split;
+    // document.getElementById("themes").innerText = themes_split;
+    document.getElementById("themes").innerHTML = themes_split;
 }
 
 document.getElementById("collaborators").innerText = collaborators;

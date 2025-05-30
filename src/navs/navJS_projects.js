@@ -43,9 +43,48 @@ projects.forEach((project) => {
 });
 document.getElementById("projects").innerHTML = projects_html;
 
+
 // let card_counts = document.getElementsByClassName("proj_card");
 //     for(let count = 0; count < card_counts.length; count++) {
 //         // card_counts[count].innerText = materials_split;
 //         card_counts[count].style.backgroundImage = url(project.image);
 //         card_counts[count].style.backgroundSize = 'cover';
 //     }
+
+
+// let proj_card_overlay = document.getElementById('pic_overlay');
+// proj_card_overlay.addEventListener('click', () => {
+//     proj_card_overlay.classList.add('selected_card');
+// })
+
+// proj_card_overlay.forEach(overlay => {
+//     overlay.addEventListener('click', () => {
+//         overlay.classList.add('selected_card');
+//     })
+// })
+
+// let proj_card_overlay = document.querySelectorAll('.proj_card');
+// proj_cards.forEach(card => {
+//     card.addEventListener('click', () => {
+//         card.classList.add('selected_card');
+//     })
+// });
+
+
+
+
+
+// closes menu if user presses 'esc' key
+// document.addEventListener('keydown', (press) => {
+//     let closeBtn = document.getElement("proj_card");
+
+//     if((closeBtn && closeBtn.checkVisibility()) && (press.key === 'Escape')) {
+//         closeNav();
+//     }
+// })
+
+// .proj_card:hover, .proj_card:focus, .proj_card:active {
+//     transform: scale(1.10);
+//     outline: thin solid var(--q_magenta);
+//     box-shadow: 0px 4px 5px 8px rgb(71, 54, 86, 0.3);
+// }

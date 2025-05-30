@@ -27,7 +27,21 @@ body {
     background-image: url("https://www.transparenttextures.com/patterns/black-linen.png"); */
 
     background-color: #FAF9F6;
-    /* background-image: url("https://www.transparenttextures.com/patterns/sandpaper.png"); */
+    /* background-color: blue; */
+    /* background: url("/public/sand25blur.png") no-repeat center center fixed; */
+    /* background: url("/public/sand10filter.png") no-repeat center center fixed; */
+    /* background: url("/public/sand20filter.png") no-repeat center center fixed; */
+    /* background: url("/public/beach100blur.png") no-repeat center center fixed; */
+    /* background: url("/public/beach10filter.png") no-repeat center center fixed; */
+    /* background: url("/public/beach20filter.png") no-repeat center center fixed; */
+    /* background: url("/public/house150filter.png") no-repeat center center fixed; */
+    /* background: url("/public/splatter-motionblur.png") no-repeat center center fixed; */
+    /* background: url("/public/splatter-lighter.png") no-repeat center center fixed; */
+    /* background: url("/public/splatter-lighter2.png") no-repeat center center fixed; */
+    /* background: url("/public/sand-ripple.png") no-repeat center center fixed; */
+    /* background: url("/public/sand-dust.png") no-repeat center center fixed; */
+    /* background: url("/public/sand-dust25.png") no-repeat center center fixed; */
+    background: url("/public/sand-dust10.png") no-repeat center center fixed;
 }
 
 #all {
@@ -61,8 +75,8 @@ body {
     position: fixed;
     width: 100%;
     
-
     background-color: var(--c_background);
+    /* background-color: #dededc; */
     /* background-image: url('/public/beige-paper.png'); */
     /* background-image: url("https://www.transparenttextures.com/patterns/notebook.png"); */
     /* background-image: url("https://www.transparenttextures.com/patterns/paper.png"); */
@@ -240,6 +254,7 @@ a[class="tab_btn"]:hover, a[class="tab_btn"]:focus {
     min-width: fit-content;
     
     background-color: var(--c_background);
+    /* background-color: #c7c7c4; */
     /* background-image: url('/public/beige-paper.png'); */
 
     align-items: center;

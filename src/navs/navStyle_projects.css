@@ -51,6 +51,7 @@
 }
 
 #pic_overlay {
+/* .pic_overlay { */
     /* background-color: var(--qp_violet); */
     background: linear-gradient(transparent, var(--qp_violet));
     width: 100%;

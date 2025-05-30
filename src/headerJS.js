@@ -1,6 +1,6 @@
 let header_html = "";
-header_html += '<img id="icon">';
-header_html += '<div class="spacer"></div>';
+// header_html += '<img id="icon">';
+// header_html += '<div class="spacer"></div>';
 header_html += '<div id="my_name">';
     header_html += '<div id="name_ab">';
         header_html += '<div id="name_a" class="name_part"></div>';
@@ -12,9 +12,11 @@ header_html += '<div id="my_name">';
     header_html += '</div>';
 header_html += '</div>';
 
-// header_html += '<div class="spacer"></div>';
+header_html += '<div class="spacer"></div>';
 
-header_html += '<img id="open_menu" class="menu_btn">';
+
+
+// header_html += '<img id="open_menu" class="menu_btn">';
 
 let overlay_html = "";
 overlay_html += '<img id="close_menu" class="menu_btn">';
@@ -24,6 +26,7 @@ document.getElementById("overlay_menu").innerHTML += overlay_html + "\n";
 
 
 import header from '/src/jsons/header_bar.json' with {type:"json"};
+import menu from '/src/jsons/overlay_menu.json' with {type:"json"};
 
 const cycle_ids = ["icon", "name_a", "name_b", "name_c", "name_d", "open_menu", "close_menu"];
 
@@ -43,10 +46,17 @@ for(let idNum = 0; idNum < cycle_ids.length; idNum++) {
             }
         }
     })
+
+    let pages_html = "";
+
+    menu.forEach((tab) => {
+        pages_html = '<a id="' + tab.name + '"href="' + tab.redirect + '">' + tab.page + '</a>';
+        // document.getElementById("overlay_menu").innerHTML += overlay_html + "\n";
+    });
 };
 
 
-import menu from '/src/jsons/overlay_menu.json' with {type:"json"};
+// import menu from '/src/jsons/overlay_menu.json' with {type:"json"};
 
 // let overlay_html = "";
 menu.forEach((tab) => {

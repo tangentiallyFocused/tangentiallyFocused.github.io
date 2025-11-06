@@ -1,8 +1,6 @@
 *, *::after, *::before {
     box-sizing: border-box;
-    /* font-family: 'Recursive', "Trebuchet MS", Helvetica, sans-serif;
-    src: url('/fonts/Recursive_Web/woff2_variable/Recursive_VF_1.085.woff2') format('woff2-variations');
-    font-weight: 300 1000; */
+    font-family: var(--font-body);
 }
 
 .intro {
@@ -19,7 +17,7 @@
     color: var(--qp_violet);
     font-weight: 1000;
     margin-bottom: 0;
-    font-family: 'Recursive';
+    font-family: var(--font-heading);
 
     font-size: max(70px, 10vw);
     text-shadow: 0 1px 4px var(--qp_violet_09);

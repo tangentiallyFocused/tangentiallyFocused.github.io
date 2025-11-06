@@ -2,6 +2,7 @@
 
 *, *::after, *::before {
     box-sizing: border-box;
+    font-family: var(--font-body);
 }
 
 /* transferred */
@@ -55,7 +56,7 @@
     color: blue;
     font-size: 40px;
     margin-bottom: 5px; */
-    font-family: 'Recursive';
+    font-family: var(--font-heading);
     font-weight: 1000;
 }
 
@@ -79,7 +80,7 @@
     color: var(--p_blue);
     border-radius: 50px;
 
-    font-family: 'Fira Code VF';
+    font-family: var(--font-technical);
     /* color: rgb(0,49,83,0.5); */
     box-shadow: 0 2px 5px darkgrey;
 }
@@ -111,8 +112,9 @@
     background-color: var(--l_yellow);
     cursor: pointer;
 
-    @import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);
-    font-family: 'Fira Code', monospace;
+    /* @import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);
+    font-family: 'Fira Code', monospace; */
+    font-family: var(--font-technical);
 }
 
 @media (max-width:80vw) {

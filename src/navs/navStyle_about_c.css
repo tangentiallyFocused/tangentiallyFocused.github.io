@@ -2,6 +2,7 @@
 
 *, *::before, *::after {
     box-sizing: outline-box;
+    font-family: var(--font-body);
 }
 
 .content {

@@ -2,6 +2,7 @@
 
 *, *::after, *::before {
     box-sizing: border-box;
+    font-family: var(--font-body);
 }
 
 .content {
@@ -36,7 +37,7 @@
 }
 
 .info b {
-    font-family: 'Recursive';
+    /* font-family: 'Recursive'; */
     font-size: 1.05rem;
 }
 
@@ -79,7 +80,7 @@
     margin: 0;
     left: 0;
     /* text-align: center; */
-    font-family: 'Recursive';
+    font-family: var(--font-heading);
 }
 
 #dates {

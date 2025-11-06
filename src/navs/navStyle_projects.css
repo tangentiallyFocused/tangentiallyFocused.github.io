@@ -2,6 +2,7 @@
 
 *, *::before, *::after {
     box-sizing: border-box;
+    font-family: var(--font-body);
 }
 
 .intro {
@@ -13,7 +14,7 @@
 }
 
 .intro h1 {
-    font-family: 'Recursive';
+    font-family: var(--font-heading);
     /* font-size: max(50px, 10vw); */
     font-size: max(70px, 10vw);
     color: var(--qp_violet);

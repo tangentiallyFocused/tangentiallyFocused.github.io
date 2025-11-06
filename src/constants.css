@@ -1,16 +1,22 @@
 @import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Outfit:wght@100..900&display=swap');
 
-@font-face {
+/* @font-face {
     font-family: 'Recursive';
     src: url('/recursive/fonts/ArrowType-Recursive-1.085/Recursive_Web/woff2_variable/Recursive_VF_1.085.woff2') format('woff2-variations');
     font-weight: 300 1000;
-}
+} */
 
 /* font-family: 'Recursive', "Trebuchet MS", Helvetica, sans-serif;
     src: url('/fonts/Recursive_Web/woff2_variable/Recursive_VF_1.085.woff2') format('woff2-variations');
     font-weight: 300 1000; */
 
 :root {
+
+    --font-heading: 'Outfit', serif;
+    --font-body: 'Inter', serif;
+    --font-technical: 'JetBrains Mono', sans-serif;
+
     --c_background: #FAF9F6;
     --q_magenta: rgb(142,58,89);
     --q_magenta_09: rgb(142,58,89,0.9);
@@ -30,13 +36,13 @@
 
     /* font-feature-settings: "ss01", "ss02", "ss03", "ss04", "ss05", "ss06", "zero", "onum"; */
 
-    font-family: 'Fira Code VF', 'Recursive', monospace, sans-serif;
-    code { font-family: 'Fira Code VF', 'Recursive', monospace, sans-serif; }
+    /* font-family: 'Fira Code VF', 'Recursive', monospace, sans-serif;
+    code { font-family: 'Fira Code VF', 'Recursive', monospace, sans-serif; } */
     /* code { font-family: 'Fira Code', 'Recursive';}  */
     /* monospace; } */
 
-    @supports (font-variation-settings: normal) {
+    /* @supports (font-variation-settings: normal) {
         font-family: 'Fira Code VF', 'Recursive', monospace, sans-serif;
         code { font-family: 'Fira Code VF', 'Recursive', monospace, sans-serif; }
-    }
+    } */
 }

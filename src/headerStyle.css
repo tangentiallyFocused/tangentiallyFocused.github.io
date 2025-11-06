@@ -115,8 +115,7 @@ body {
     color: var(--p_blue);
     margin-left: 5px;
 
-    font-family: 'Recursive';
-    font-style: italic;
+    font-family: var(--font-heading); /* I WANT THIS TO OVERRIDE INTER */
     font-feature-settings: 'cv01', 'cv06', 'cv10';
     font-weight: 600;
     font-size: calc(15px + 1vw);
@@ -195,7 +194,7 @@ body {
 /* navigation links inside overlay */
 /* a[id="projects_link"], a[id="about_link"], a[id="contact_link"] { */
 a[class="tab_btn"] {
-    font-family: 'Recursive';
+    font-family: var(--font-heading);
     font-weight: 600;
     text-decoration: none;
     font-size: 36px;

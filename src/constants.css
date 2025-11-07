@@ -13,9 +13,9 @@
 
 :root {
 
-    --font-heading: 'Outfit', serif;
-    --font-body: 'Inter', serif;
-    --font-technical: 'JetBrains Mono', sans-serif;
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-technical: 'JetBrains Mono', monospace;
 
     --c_background: #FAF9F6;
     --q_magenta: rgb(142,58,89);

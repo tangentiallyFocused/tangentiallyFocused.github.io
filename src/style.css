@@ -68,12 +68,12 @@ input[type="checkbox"]:checked::before {
 }
 
 #search_bar_input {
-  font-family: var(--font-body);
+  /* font-family: var(--font-body); */
   width: 100%;
 }
 
 #search_bar_input::placeholder {
-  font-family: var(--font-body);
+  /* font-family: var(--font-body); */
   color: rgb(0,49,83,0.5);
 }
 
@@ -85,7 +85,7 @@ input[type="checkbox"]:checked::before {
   font-style: italic;
   text-align: center;
   line-height: fit-content;
-  font-family: var(--font-body);
+  /* font-family: var(--font-body); */
 }
 
 /* ACCORDION FORMAT */

@@ -14,7 +14,7 @@ cytoscape.use(fcose);
 
 // cyqtip( cytoscape ); // register extension
 
-let searchBar = document.getElementById("search_bar");
+// let searchBar = document.getElementById("search_bar");
 // document.getElementById('cy').style.backgroundColor = 'green';
 
 // const url = window.location.href;

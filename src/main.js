@@ -160,6 +160,7 @@ var cy = cytoscape({
         // '@import': "'/src/constants.css';",
         // 'font-family': 'Fira Code VF !important',
         // 'font-feature-settings': "'cv01', 'cv06', 'cv10'"
+        // 'font-family': 
         'font-family': 'monospace',
         'font-feature-settings': "'cv01', 'cv06', 'cv10', 'ss05'"
         // 'font-family': '"Recursive", "Trebuchet MS", "Helvetica", "sans-serif"',

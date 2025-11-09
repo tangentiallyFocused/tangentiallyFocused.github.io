@@ -263,6 +263,8 @@ a[class="tab_btn"]:hover, a[class="tab_btn"]:focus {
     font-feature-settings: 'cv01', 'cv06', 'cv10', 'ss05';
 
     font-size: calc(13px);
+
+    font-family: var(--font-body);
 }
 
 #footer_bar .spacer {

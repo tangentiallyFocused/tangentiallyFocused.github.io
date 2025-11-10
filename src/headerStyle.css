@@ -121,6 +121,7 @@ body {
     font-size: calc(15px + 1vw);
     /* text-shadow: 1px 1px 1px var(--p_blue_09); */
     text-shadow: 1px 0.5px 1px var(--p_blue_09);
+    text-decoration: none;
 }
 
 #name_ab, #name_cd {

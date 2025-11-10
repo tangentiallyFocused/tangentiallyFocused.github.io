@@ -1,5 +1,5 @@
 let header_html = "";
-header_html += '<div id="my_name">';
+header_html += '<a id="my_name" href="index.html">';
     header_html += '<div id="name_ab">';
         header_html += '<div id="name_a" class="name_part"></div>';
         header_html += '<div id="name_b" class="name_part"></div>';
@@ -8,7 +8,7 @@ header_html += '<div id="my_name">';
         header_html += '<div id="name_c" class="name_part"></div>';
         header_html += '<div id="name_d" class="name_part"></div>';
     header_html += '</div>';
-header_html += '</div>';
+header_html += '</a>';
 
 header_html += '<div class="spacer"></div>';
 

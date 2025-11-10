@@ -4,6 +4,10 @@
         "content": "Copyright © 2025 Lara Baldez Duque Ribeiro.\nAll rights reserved."
     },
     {
+        "name": "logo",
+        "content": "/public/logo.PNG"
+    },
+    {
         "name": "email",
         "content": "lbduquer@gmail.com"
     }

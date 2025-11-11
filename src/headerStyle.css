@@ -272,6 +272,10 @@ a[class="tab_btn"]:hover, a[class="tab_btn"]:focus {
     flex-grow: 1;
 }
 
+#copyright {
+    line-height: normal;
+}
+
 #footer_socials {
     display: flex;
     flex-direction: row;

@@ -115,7 +115,7 @@ document.getElementById("footer_bar").innerHTML += footer_html;
 
 import footer from '/src/jsons/footer_bar.json' with {type:"json"};
 
-const cycle_fids = ["copyright", "logo", "email"];
+const cycle_fids = ["copyright", "email"];
 
 for(let idNum = 0; idNum < cycle_ids.length; idNum++) {
     let element_id = cycle_fids[idNum];

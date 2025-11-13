@@ -135,6 +135,7 @@ body {
 
 .name_part {
     padding: 0 5px;
+    font-family: var(--font-heading);
 }
 
 .menu_btn {

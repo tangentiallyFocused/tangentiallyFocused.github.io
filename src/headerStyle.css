@@ -115,7 +115,7 @@ body {
     color: var(--p_blue);
     margin-left: 5px;
 
-    font-family: var(--font-heading); /* I WANT THIS TO OVERRIDE INTER */
+    font-family: var(--font-heading);
     font-feature-settings: 'cv01', 'cv06', 'cv10';
     font-weight: 600;
     font-size: calc(15px + 1vw);

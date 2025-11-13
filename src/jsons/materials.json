@@ -124,5 +124,14 @@
     },
     {
         "name": "Laser Cutter"
+    },
+    {
+        "name": "Claude"
+    },
+    {
+        "name": "Dribble"
+    },
+    {
+        "name": "Cursor"
     }
 ]

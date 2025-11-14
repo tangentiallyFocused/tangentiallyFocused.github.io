@@ -17,7 +17,7 @@
     --font-body: 'Atkinson Hyperlegible', 'Inter', sans-serif;
     --font-technical: 'JetBrains Mono', monospace;
 
-    --c_background: #FAF9F6;
+    --c_background: rgb(250, 248, 245);
     --q_magenta: rgb(142,58,89);
     --q_magenta_09: rgb(142,58,89,0.9);
     --l_yellow: rgb(255,244,79);

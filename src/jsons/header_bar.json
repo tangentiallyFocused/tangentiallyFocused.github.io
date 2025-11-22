@@ -16,15 +16,15 @@
         "content": "Ribeiro"
     },
     {
-        "name": "open_menu",
-        "image": "/public/open_menu.PNG",
-        "image_alt": "open",
-        "on_click": "javascript:void(0)"
+        "name": "education",
+        "content": "Wellesley '25"
     },
     {
-        "name": "close_menu",
-        "image": "/public/exit_menu.PNG",
-        "image_alt": "exit",
-        "on_click": "javascript:void(0)"
+        "name": "role_1",
+        "content": "Interaction Designer"
+    },
+    {
+        "name": "role_2",
+        "content": "Cognitive UX"
     }
 ]

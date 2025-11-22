@@ -46,39 +46,62 @@
         font-size: var(--font-size-5xl);
         font-family: var(--font-heading);
         margin: 0;
+        color: #003153;
     }
 
     h2 {
         font-size: var(--font-size-4xl);
         font-family: var(--font-heading);
         margin: 0;
+        color: #003153;
     }
 
     h3 {
         font-size: var(--font-size-3xl);
         margin: 0;
+        color: #003153;
     }
 
     h4 {
         font-size: var(--font-size-2xl);
         margin: 0;
+        color: #003153;
     }
     
     h5 {
         font-size: var(--font-size-sm);
         margin: 0;
+        color: #003153;
+        font-weight: 400;
     }
 
     h6 {
         font-size: var(--font-size-xs);
         /* font-family: var(--font-body); */
         margin: 0;
+        font-weight: 400;
+        color: #003153;
     }
 
     body {
         font-size: var(--font-size-md);
         font-family: var(--font-body);
         margin: 0;
+        color: #003153;
+    }
+
+    button {
+        background-color: rgb(248, 246, 243);
+    }
+
+    button:hover {
+        background-color: rgb(255, 244, 79);
+        /* color: rgb(40, 30, 0) !important; */
+    }
+
+    button:active {
+        background-color: #003153;
+        /* color: rgb(250, 248, 250) !important; */
     }
   
     /* font-family: 'Fira Code', 'Recursive'; */

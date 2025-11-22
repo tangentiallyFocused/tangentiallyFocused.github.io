@@ -135,3 +135,16 @@ body {
     padding: 0 5px;
     font-family: var(--font-heading);
 }
+
+#education {
+    padding-left: 7px;
+    font-family: var(--font-heading);
+}
+
+#roles {
+    text-align: right;
+}
+
+.role {
+    font-family: var(--font-heading);
+}

@@ -16,8 +16,8 @@ header_html += '</div>';
 header_html += '<div class="spacer"></div>';
 
 header_html += '<div id="roles">';
-header_html += '<h3 id="role_1"></h3>';
-header_html += '<h3 id="role_2"></h3>';
+header_html += '<h3 id="role_1" class="role"></h3>';
+header_html += '<h3 id="role_2" class="role"></h3>';
 header_html += '</div>';
 
 let overlay_html = "";
@@ -42,52 +42,3 @@ for(let idNum = 0; idNum < cycle_ids.length; idNum++) {
         }
     })
 };
-
-
-import menu from '/src/jsons/overlay_menu.json' with {type:"json"};
-
-// let overlay_html = "";
-menu.forEach((tab) => {
-    overlay_html = '<a id="' + tab.name + '" class="tab_btn" href="' + tab.redirect + '">' + tab.page + '</a>';
-    document.getElementById("overlay_menu").innerHTML += overlay_html + "\n";
-});
-
-// open menu on click
-function openNav() {
-    // document.getElementById("projects_link").style.width = "100vw";
-    // document.getElementById("about_link").style.width = "100vw";
-    // document.getElementById("contact_link").style.width = "100vw";
-    document.getElementById("projects_link").style.width = "100%";
-    document.getElementById("about_link").style.width = "100%";
-    document.getElementById("contact_link").style.width = "100%";
-  
-    // replace logo with x when nav is open
-    let menuBox = document.getElementById("open_menu");
-    menuBox.src = "/public/exit_menu.PNG";
-    menuBox.style.visibility = "hidden";
-    menuBox.style.zIndex = "-2";
-
-    let closeBox = document.getElementById("close_menu");
-    closeBox.style.visibility = "visible";
-    closeBox.style.zIndex = "15";
-    closeBox.alt = "close menu";
-}
-
-// close when someone clicks on the "x" symbol inside the overlay
-function closeNav() {
-    document.getElementById("projects_link").style.width = "0vw";
-    document.getElementById("about_link").style.width = "0vw";
-    document.getElementById("contact_link").style.width = "0vw";
-
-    // replace logo with + when nav is closed
-    let closeBox = document.getElementById("close_menu");
-    closeBox.style.visibility = "hidden";
-
-
-    let menuBox = document.getElementById("open_menu");
-    menuBox.src = "/public/open_menu.PNG";
-    menuBox.style.visibility = "visible";
-    menuBox.style.zIndex = "0";
-    menuBox.alt = "open menu";
-
-}

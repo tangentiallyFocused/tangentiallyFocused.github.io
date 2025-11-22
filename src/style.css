@@ -17,11 +17,12 @@
   gap: 1vw;
   padding: 0vw 1vw;
   /* height: 85vh; */
-  height: calc(100vh - 175px); /* help */
+  height: calc(100vh - 150px); /* help */
   /* height: calc(100vh - 80px); */
   align-items: center;
 
-  background-color: greenyellow;
+  /* background-color: greenyellow; */
+  margin-top: 25px;
 }
 
 .hero {
@@ -40,15 +41,27 @@
   width: 75vw;
   
 
-  background: lightpink;
+  background: rgb(240, 238, 235);
+  /* border: 1px solid rgb(200, 200, 205); */
 }
 
-#filters {
+#filter-sidebar {
   background: lavender;
+  min-width: 350px;
   width: 25vw;
+  max-width: 700px;
   height: 95%;
 
   padding: 1.38rem 1.25rem;
+}
+
+#filter-container {
+  background: lemonchiffon;
+  height: max-content;
+}
+
+#node-summary {
+  background-color:lightpink;
 }
 
 #about-site-section {
@@ -86,12 +99,35 @@
 
 #contact-section {
   width: 100vw;
-  /* height: 100vh; */
   height: calc(50vh - 80px);
-  border: 3px solid maroon;
+  /* border: 3px solid maroon; */
   margin: 0vw 1vw;
   align-self: center;
   padding: 0vw 1vw;
+}
+
+
+
+
+.filter-btns {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  display: flex;
+  /* flex-direction: column;
+  flex-wrap: wrap; */
+  padding: 0.625rem 0.75rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+
+  border-radius: 0.625rem;
+  border: 1px solid var(--colors-primary-navy-blue-navy-900_BASE, #003153);
+  fill: none;
 }
 
 
@@ -103,7 +139,7 @@
   flex-wrap: wrap;
   width: 100%;
   /* gap: 6.25rem; */
-  gap: 1%;
+  gap: 6vw;
   align-self: center;
   align-items: center;
   justify-self: center;
@@ -220,7 +256,6 @@
   }
 
   .card-title {
-    color: navy;
     font-family: Outfit;
     font-size: 1.5rem;
     font-style: normal;
@@ -230,7 +265,6 @@
   }
 
   .card-summary {
-    color: pink;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -249,7 +283,6 @@
   }
 
   .card-title {
-    color: navy;
     font-family: Outfit;
     font-size: 1.5rem;
     font-style: normal;
@@ -259,8 +292,6 @@
   }
 
   .card-summary {
-    color: pink;
-    font-family: Outfit;
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;
@@ -280,7 +311,6 @@
   }
 
   .card-title {
-    color: navy;
     font-family: Outfit;
     font-size: 1.5rem;
     font-style: normal;
@@ -290,8 +320,6 @@
   }
 
   .card-summary {
-    color: pink;
-    font-family: Outfit;
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;
@@ -424,13 +452,54 @@
     line-height: normal;
   }
 
-  #contact-btns {
+  #contact-btn-container {
       display: flex;
       flex-direction: row;
       gap: 4rem;
   }
   
 }
+
+.contact-btn-container {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.contact-btn {
+  height: fit-content;
+  padding: 0.625rem 0.75rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+
+  border-radius: 0.625rem;
+  border: 1px solid var(--colors-primary-navy-blue-navy-900_BASE, #003153);
+  background-color: #003153 !important;
+}
+
+.contact-btn:hover {
+  background-color: #8E3A59 !important;
+}
+
+.contact-link {
+  text-decoration: none;
+  color: rgb(250, 248, 250);
+  justify-content: center;
+}
+
+#email-icon {
+  margin: 0;
+  padding: 0;
+  min-width: 15px;
+  min-height: 15px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* #email-icon:hover {
+    color: var(--q_magenta);
+} */
 
 
 
@@ -441,46 +510,45 @@
 ****************** */
 
 #footer_bar {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap-reverse;
-        /* IF screen is smaller, then flex-grow = 0; screen smaller prob just literally means is in portrait mode */
-    justify-content: center;
-    margin-top: 3vh;
-    /* margin-bottom: 0; */
-    min-width: fit-content;
-    
-    background-color: var(--c_background);
-    /* background-color: #c7c7c4; */
-    /* background-image: url('/public/beige-paper.png'); */
+  margin-top: 0 !important;
 
-    align-items: center;
-    align-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+      /* IF screen is smaller, then flex-grow = 0; screen smaller prob just literally means is in portrait mode */
+  justify-content: center;
+  margin-top: 3vh;
+  /* margin-bottom: 0; */
+  min-width: fit-content;
 
-    /* padding: 0 5px; */
-    padding: 0 1vw;
+  align-items: center;
+  align-content: center;
 
+  color: var(--p_blue);
 
-    color: var(--p_blue);
-    box-shadow: 0px -2px 5px var(--p_blue);
+  line-height: 40px;
 
-    line-height: 40px;
+  justify-self: flex-end;
+  padding: 0.5rem 1rem;
 
-    justify-self: flex-end;
+}
 
-    font-feature-settings: 'cv01', 'cv06', 'cv10', 'ss05';
-
-    font-size: calc(13px);
-
-    font-family: var(--font-body);
+#copyright, #footer_socials {
+  width: 283px;
 }
 
 #footer_bar .spacer {
     flex-grow: 1;
 }
 
-#copyright {
-    line-height: normal;
+#logo-icon {
+  width: 60px;
+  height: 60px;
+}
+
+.footer-text {
+  font-family: var(--font-heading);
+  line-height: normal;
 }
 
 #footer_socials {
@@ -506,10 +574,6 @@
 
 #linkedin:hover {
     color: var(--q_magenta);
-}
-
-#footer_bar {
-  margin-top: 0 !important;
 }
 
 /* source: https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling */

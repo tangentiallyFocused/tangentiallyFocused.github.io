@@ -53,30 +53,79 @@
   height: 95%;
 
   padding: 1.38rem 1.25rem;
+
+  display: flex;
+  flex-direction: column;
 }
 
 #filter-container {
   background: lemonchiffon;
   height: max-content;
+  display: flex;
+  gap: 50px;
+  flex-direction: column;
+}
+
+#horizontal-filter-divider {
+  padding: 1rem 0;
 }
 
 #node-summary {
   background-color:lightpink;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 #about-site-section {
-  width: 100vw;
+  width: 100%;
   /* height: 100vh; */
   /* height: calc(100vh - 80px); */
   height: calc(100vh - 175px);
   border: 3px solid orange;
   margin: 0vw 1vw;
   align-self: center;
-  padding: 0vw 1vw;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+
+  padding: 0 12.5vw;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
 }
 
+#theme-card-container {
+  border: 1px solid forestgreen;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.theme-card {
+  background-color: lightgreen;
+  /* padding: 1.5vw; */
+  width: 7vw;
+  height: 9vh;
+  align-content: center;
+  text-align: center;
+  border-radius: 0.625rem;
+}
+
+#about-site-text {
+  width: 50vw;
+    border: 1px solid orange;
+    border-radius: 0.625rem;
+    padding: 1rem;
+}
+
+
+
+
+
 #featured-section {
-  width: 100vw;
+  width: 100%;
   /* height: 100vh; */
   height: calc(100vh - 175px);
   /* background-color: purple; */
@@ -88,7 +137,7 @@
 }
 
 #about-me-section {
-  width: 100vw;
+  width: 100%;
   /* height: 100vh; */
   height: calc(100vh - 175px);
   border: 3px solid hotpink;
@@ -98,7 +147,7 @@
 }
 
 #contact-section {
-  width: 100vw;
+  width: 100%;
   height: calc(50vh - 80px);
   /* border: 3px solid maroon; */
   margin: 0vw 1vw;
@@ -365,10 +414,19 @@
   align-items: center;
   gap: 2%;
 
-  #me-text {
+  #me-left-content {
     align-items: start;
     /* how to get height inherited from the image */
     width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  #me-text {
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
   }
 
   #me-header {
@@ -563,7 +621,7 @@
     justify-content: right;
 }
 
-#linkedin {
+#linkedin-footer-icon {
     margin: 0;
     padding: 0;
     min-width: 15px;
@@ -572,7 +630,7 @@
     max-height: 100%;
 }
 
-#linkedin:hover {
+#linkedin-footer-icon:hover {
     color: var(--q_magenta);
 }
 

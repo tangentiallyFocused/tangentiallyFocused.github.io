@@ -87,7 +87,7 @@ body {
 
     /* box-shadow: 0 2px 5px lightblue; */
     /* box-shadow: 0 2px 5px var(--p_blue_09); */
-    padding: 3rem 1rem;
+    padding: 0 1rem;
     align-items: center;
 
     justify-self: flex-start;

@@ -77,7 +77,7 @@ body {
     position: fixed;
     width: 100%;
     
-    background-color: var(--c_background);
+    background-color: var(--md-surface);
     /* background-color: #dededc; */
     /* background-image: url('/public/beige-paper.png'); */
     /* background-image: url("https://www.transparenttextures.com/patterns/notebook.png"); */

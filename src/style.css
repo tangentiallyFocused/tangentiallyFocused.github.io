@@ -5,6 +5,10 @@
   font-family: var(--font-body);
 }
 
+body {
+  background-color: var(--md-surface);
+}
+
 .content {
   display: flex;
   flex-direction: column;
@@ -122,7 +126,7 @@
 }
 
 #node-summary {
-  background: linear-gradient(-45deg, var(--md-primary-container), var(--md-tertiary-container));
+  background: var(--md-surface-container-low);
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -160,10 +164,10 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap-reverse;
+  gap: 3rem;
 }
 
 #theme-card-container {
-  border: 1px solid forestgreen;
   display: flex;
   flex-direction: column;
   /* gap: 50px; */
@@ -185,7 +189,6 @@
 
 #about-site-text {
   width: 50vw;
-  border: 1px solid orange;
   border-radius: 0.625rem;
   padding: 1rem;
 }
@@ -463,10 +466,6 @@
   font-weight: 600;
 }
 
-#horizontal-degree-divider {
-  margin: 0;
-}
-
 #me-right-content {
   position: relative;
   width: 370px;
@@ -532,12 +531,12 @@
   gap: 0.625rem;
 
   border-radius: 0.625rem;
-  border: 1px solid var(--colors-primary-navy-blue-navy-900_BASE, #003153);
-  background-color: #003153 !important;
+  border: 1px solid var(--md-tertiary);
+  background-color: var(--md-tertiary) !important;
 }
 
 .contact-btn:hover {
-  background-color: #8E3A59 !important;
+  background-color: var(--md-primary) !important;
 }
 
 .contact-link {
@@ -594,7 +593,7 @@
   align-items: center;
   align-content: center;
 
-  color: var(--p_blue);
+  color: var(--md-tertiary);
 
   line-height: 40px;
 
@@ -645,7 +644,7 @@
 }
 
 #linkedin-footer-icon:hover {
-    color: var(--q_magenta);
+    color: var(--md-primary);
 }
 
 

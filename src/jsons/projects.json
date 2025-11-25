@@ -13,11 +13,11 @@
         "materials": ["Unity Game Engine", "C#", "GitHub", "Blender", "Adobe Photoshop", "Google Workspace"],
         "des_materials": ["Unity Game Engine"],
         "key_materials": "Unity Game Engine, Blender, Photoshop",
-        "page": "/src/projects/proj.html#aeln",
         "image": ["/./aeln_a.PNG"],
         "image_alt": ["pic one"],
         "iframe": [],
-        "iframe_alt": []
+        "iframe_alt": [],
+        "description": "aeln description placeholder"
     },
     {
         "name": "Body Series",
@@ -33,11 +33,11 @@
         "materials": ["Wood", "Canvas", "Acrylic Gesso", "Acrylic Paint", "Oil Paint", "Plaster"],
         "des_materials": ["oil on canvas"],
         "key_materials": "Wood, Canvas, Oil Paint",
-        "page": "/src/projects/proj.html#bodySeries",
         "image": ["/./body_a.JPG"],
         "image_alt": ["garage bodies"],
         "iframe": [],
-        "iframe_alt": []
+        "iframe_alt": [],
+        "description": "bodyseries description placeholder"
     },
     {
         "name": "Churn/Score Dashboard",
@@ -53,11 +53,11 @@
         "materials": ["Figma", "Claude", "HTML", "CSS", "JS"],
         "des_materials": ["Figma"],
         "key_materials": "Figma",
-        "page": "/src/projects/proj.html#churnDashboard",
         "image": ["/./churn-dashboard.PNG"],
         "image_alt": ["figma ss"],
         "iframe": [],
-        "iframe_alt": []
+        "iframe_alt": [],
+        "description": "score description placeholder"
     },
     {
         "name": "Competitive Analysis",
@@ -73,11 +73,11 @@
         "materials": ["Figma", "Claude", "Cursor", "GitHub"],
         "des_materials": ["Figma"],
         "key_materials": "Figma",
-        "page": "/src/projects/proj.html#competitiveAnalysis",
         "image": ["/./competitive-analysis.PNG", "/./comp-analysis2.PNG"],
         "image_alt": ["figma ss"],
         "iframe": [],
-        "iframe_alt": []
+        "iframe_alt": [],
+        "description": "competitive description placeholder"
     },
     {
         "name": "Custom Nails",
@@ -93,11 +93,11 @@
         "materials": ["3D Scanner", "3D Printer", "PLA", "Blender", "Nail E-file", "Solid Builder Gel", "Gel Nail Polish"],
         "des_materials": ["gel polish on PLA"],
         "key_materials": "3D Technology, Blender, Gel Polish",
-        "page": "/src/projects/proj.html#cNails",
         "image": ["/./nails_a.jpg"],
         "image_alt": ["hand pic"],
         "iframe": [],
-        "iframe_alt": []
+        "iframe_alt": [],
+        "description": "... made custom 3d printed nails to combat lack of personalization issue..."
     },
     {
         "name": "House of Memory",
@@ -114,11 +114,11 @@
         "materials": ["Wood", "Mirrors", "Velcro", "Wire", "Plaster", "Cable Phones"],
         "des_materials": ["mirrors on wood with plaster and cable phones"],
         "key_materials": "Wood, Mirrors, Plaster, Cable Phones",
-        "page": "/src/projects/proj.html#houseOfMemory",
         "image": ["/./house_a.JPG"],
         "image_alt": ["house pic"],
         "iframe": [],
-        "iframe_alt": []
+        "iframe_alt": [],
+        "description": "house of memory description placeholder"
     },
     {
         "name": "Journals & Notebooks",
@@ -134,11 +134,11 @@
         "materials": ["Google Workspace"],
         "des_materials": ["Google Docs"],
         "key_materials": "Google Workspace",
-        "page": "/src/projects/proj.html#journalsNotebooks",
         "image": ["/./jn_a.PNG"],
         "image_alt": ["328 ss"],
         "iframe": [],
-        "iframe_alt": []
+        "iframe_alt": [],
+        "description": "journals description placeholder"
     },
     {
         "name": "Language Structures the Brain",
@@ -154,11 +154,11 @@
         "materials": ["Microsoft PowerPoint", "Google Workspace"],
         "des_materials": ["Microsoft PowerPoint"],
         "key_materials": "Microsoft PowerPoint",
-        "page": "/src/projects/proj.html#languageStructures",
         "image": ["/./language_a.PNG"],
         "image_alt": ["language ss"],
         "iframe": [],
-        "iframe_alt": []
+        "iframe_alt": [],
+        "description": "wei et al description placeholder"
     },
     {
         "name": "Mindmaps",
@@ -174,11 +174,11 @@
         "materials": ["XMind"],
         "des_materials": ["XMind"],
         "key_materials": "XMind",
-        "page": "/src/projects/proj.html#mindmaps",
         "image": ["/./mindmap.PNG"],
         "image_alt": ["mindmap ss"],
         "iframe": [],
-        "iframe_alt": []
+        "iframe_alt": [],
+        "description": "mindmaps description placeholder"
     },
     {
         "name": "Onboarding Training",
@@ -194,11 +194,11 @@
         "materials": ["Figma", "Claude", "Procreate"],
         "des_materials": ["Figma"],
         "key_materials": "Figma",
-        "page": "/src/projects/proj.html#onboarding",
         "image": ["/./onboarding-tutorial.mov"],
         "image_alt": ["onboarding"],
         "iframe": [],
-        "iframe_alt": []
+        "iframe_alt": [],
+        "description": "onboarding description placeholder"
     },
     {
         "name": "Pet Perspectives",
@@ -214,11 +214,11 @@
         "materials": ["Colored Pencils", "Paper"],
         "des_materials": ["colored pencils on paper"],
         "key_materials": "Colored Pencil, Paper",
-        "page": "/src/projects/proj.html#petPerspectives",
         "image": ["/./pet_perspective.JPG"],
         "image_alt": ["combined pets"],
         "iframe": [],
-        "iframe_alt": []
+        "iframe_alt": [],
+        "description": "pet perspectives description placeholder"
     },
     {
         "name": "Portfolio",
@@ -234,11 +234,11 @@
         "materials": ["Figma", "HTML", "CSS", "JS", "JSON", "GitHub", "Procreate", "Claude"],
         "des_materials": ["HTML, CSS, and JS"],
         "key_materials": "HTML, CSS, JS, GitHub",
-        "page": "/src/projects/proj.html#portfolio",
         "image": ["/./portfolio_a.PNG"],
         "image_alt": ["portfolio ss"],
         "iframe": [],
-        "iframe_alt": []
+        "iframe_alt": [],
+        "description": "portfolio description placeholder"
     },
     {
         "name": "'Snow White' Variants",
@@ -255,11 +255,11 @@
         "materials": ["ArcGIS"],
         "des_materials": ["ArcGIS"],
         "key_materials": "ArcGIS",
-        "page": "/src/projects/proj.html#snowWhite",
         "image": ["/./snow_white.PNG"],
         "image_alt": ["snow white ss"],
         "iframe": ["https://storymaps.arcgis.com/stories/c6bff788464d437eb51a1540cba36b7f?header"],
-        "iframe_alt": []
+        "iframe_alt": [],
+        "description": "snow white description placeholder"
     },
     {
         "name": "Study Spreadsheet",
@@ -275,11 +275,11 @@
         "materials": ["Google Workspace"],
         "des_materials": ["Google Sheets"],
         "key_materials": "Google Workspace",
-        "page": "/src/projects/proj.html#studySpread",
         "image": ["/./study-spreadsheet.PNG"],
         "image_alt": ["spreadsheet screenshot"],
         "iframe": ["https://docs.google.com/spreadsheets/d/e/2PACX-1vS28bCxBDux2F7rpVHDlhKB6kwYmDTCsQPCHymEC3fCdte8ROGIkjfAj7GN7NBJhcUmRVfBkTZ-06vV/pubhtml?widget=true&amp;headers=false"],
-        "iframe_alt": ["google doc sheet"]
+        "iframe_alt": ["google doc sheet"],
+        "description": "study spreadsheet description placeholder"
     },
     {
         "name": "Town H@ll",
@@ -295,11 +295,11 @@
         "materials": ["Figma", "Balsamiq", "Miro", "Procreate", "ChatGPT", "HTML", "CSS", "JS"],
         "des_materials": ["Figma"],
         "key_materials": "Figma",
-        "page": "/src/projects/proj.html#townHall",
         "image": ["/./townhall_a.PNG"],
         "image_alt": ["figma ss"],
         "iframe": [],
-        "iframe_alt": []
+        "iframe_alt": [],
+        "description": "town hall description placeholder"
     },
     {
         "name": "Use Your Inside Voice",
@@ -315,11 +315,11 @@
         "materials": ["Adobe Photoshop", "Paper", "Cardboard", "Jamovi", "Google Workspace", "Zotero", "PSYCInfo"],
         "des_materials": ["Google Docs"],
         "key_materials": "Photoshop, Jamovi, PSYCInfo",
-        "page": "/src/projects/proj.html#useInsideVoice",
         "image": ["/./use_inside_a.PNG"],
         "image_alt": ["docs ss"],
         "iframe": [],
-        "iframe_alt": []
+        "iframe_alt": [],
+        "description": "inside voice description placeholder"
     },
     {
         "name": "We're All Mad Here",
@@ -335,11 +335,11 @@
         "materials": ["PSYCInfo", "Zotero", "Google Workspace"],
         "des_materials": ["Google Docs"],
         "key_materials": "PSYCInfo, Google Workspace",
-        "page": "/src/projects/proj.html#wereMad",
         "image": ["/./were-mad.PNG"],
         "image_alt": ["docs ss"],
         "iframe": [],
-        "iframe_alt": []
+        "iframe_alt": [],
+        "description": "all mad here description placeholder"
     },
     {
         "name": "Worthix Hub",
@@ -355,11 +355,11 @@
         "materials": ["Figma", "Claude", "HTML", "CSS", "JS"],
         "des_materials": ["Figma"],
         "key_materials": "Figma",
-        "page": "/src/projects/proj.html#worthixHub",
         "image": [],
         "image_alt": [],
         "iframe": [],
-        "iframe_alt": []
+        "iframe_alt": [],
+        "description": "hub description placeholder"
     },
     {
         "name": "Worthix Style Guide",
@@ -375,10 +375,10 @@
         "materials": ["Figma", "Claude", "CSS"],
         "des_materials": ["Figma"],
         "key_materials": "Figma",
-        "page": "/src/projects/proj.html#worthixStyleGuide",
         "image": ["/./dark-mode.svg", "/./light-mode.svg"],
         "image_alt": ["figma ss"],
         "iframe": [],
-        "iframe_alt": []
+        "iframe_alt": [],
+        "description": "style guide description placeholder"
     }
 ]

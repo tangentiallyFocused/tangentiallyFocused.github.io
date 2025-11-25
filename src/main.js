@@ -21,14 +21,14 @@ cytoscape.use(fcose);
 // page nodes
 import projects from './jsons/projects.json';
 import themes from './jsons/themes.json';
-console.log(projects);
-console.log(themes);
+// console.log("projects: " + projects);
+// console.log("themes: " + themes);
 const nodes_formatted_for_cytoscape = projects.map((project) => {
   return {
     data: {
       id: project.name,
       type: "project",
-      page: project.page
+      description: project.description
     }
   }
 })
@@ -37,7 +37,6 @@ nodes_formatted_for_cytoscape.push(...themes.map((theme) => {
     data: {
       id: theme.name,
       type: "theme",
-      page: theme.page
     }
   }
 }))
@@ -45,8 +44,8 @@ nodes_formatted_for_cytoscape.push(...themes.map((theme) => {
 // highlighting nodes
 import formats from './jsons/formats.json';
 import materials from './jsons/materials.json';
-console.log(formats);
-console.log(materials);
+// console.log("formats: " + formats);
+// console.log("materials: " + materials);
 nodes_formatted_for_cytoscape.push(...formats.map((format) => {
   return {
     data: {
@@ -66,7 +65,7 @@ nodes_formatted_for_cytoscape.push(...materials.map((material) => {
 
 // .sort(() => .5 - Math.random());
 
-console.log(nodes_formatted_for_cytoscape);
+// console.log("nodes_formatted_for_cytoscape: " + nodes_formatted_for_cytoscape);
 
 const edges = projects.flatMap((project) => {
   return [
@@ -97,7 +96,7 @@ const edges = projects.flatMap((project) => {
   ]
 });
 
-console.log(edges);
+// console.log("edges: " + edges);
 
 
 // function materialFilter(jsonFile) {
@@ -191,7 +190,7 @@ var cy = cytoscape({
         // 'border-color': 'var(--theme-interaction, rgb(142,58,89))',
         // 'background-color': 'rgb(142,58,89)',
         'label': 'data(id)',
-        'color': 'rgb(0, 49, 83)', // --md-primary: rgb(0, 49, 83)
+        'color': 'rgb(0, 174, 239)', // --md-tertiary: rgb(0, 174, 239)
         // 'font-size': 13,
         'font-size': 24,
 
@@ -381,9 +380,9 @@ animate(); // END SECTION FROM CLAUDE AI
 cy.on('tap', 'node', function(evt) {
     const node = evt.target;           // The clicked node
     const nodeId = node.id();          // Get its ID (e.g., 'javascript')
-    const data = nodeData[nodeId];     // Look up detailed data
+    // const data = nodeData[nodeId];     // Look up detailed data
     
-    showSummary(data, node);           // Display it
+    // showSummary(data, node);           // Display it
 });
 
 // cy.nodes().noOverlap({padding: 15});
@@ -416,17 +415,29 @@ cy.on('tap', 'node', function(evt) {
 //   // })
 // });
 
+const nodeDescriptionDiv = document.querySelector("#node-summary");
+nodeDescriptionDiv.textContent = "Hover over a node to know more!";
+
 // FOR DESKTOP
 cy.on("mouseover", "node", (e) => {
   var sel = e.target;
-
   cy.elements().difference(sel.outgoers()).not(sel).addClass('semitransp');
   sel.addClass('theFocus').outgoers().addClass('theFocus');
+
+  const nodeId = sel.id();         
+  // const data = nodeData[nodeId];
+  // console.log(data);
+  // if (data.description) {
+    // nodeDescriptionDiv.textContent = sel.data.description;
+    
+  // }
+
   e.cy.container().style.cursor = "pointer"; // https://stackoverflow.com/questions/19532031/how-do-i-change-cursor-to-pointer-when-mouse-is-over-a-node
   
   // console.log("sel.width() = " + sel.width() + " sel.outerWidth() = " + sel.outerWidth());
   // console.log("sel.height() = " + sel.height() + " sel.outerHeight() = " + sel.outerHeight());
 });
+
 cy.on('mouseout', "node", (e) => {
   var sel = e.target;
 
@@ -453,73 +464,7 @@ cy.on('touchend', "node", (e) => {
   sel.removeClass('theFocus').outgoers().removeClass('theFocus');
   e.cy.container().style.cursor = "auto"; // https://stackoverflow.com/questions/19532031/how-do-i-change-cursor-to-pointer-when-mouse-is-over-a-node
 });
-
-/* project page nodes : click opens new PROJECT page */
-cy.nodes('node[type="project"]').forEach((node) => {
-  node.on('click', (e) => {
-    window.location.href = e.target.data("page");
-  })
-  node.on('tap', (e) => {
-    window.location.href = e.target.data("page");
-  })
-});
-
-/* theme page nodes : click opens new THEME page */
-cy.nodes('node[type="theme"]').forEach((node) => {
-  node.on('click', (e) => {
-    window.location.href = e.target.data("page");
-  })
-  node.on('tap', (e) => {
-    window.location.href = e.target.data("page");
-  })
-});
-
-      // cy.filter(edges.semitransp);
-      // cy.remove('node.semitransparent' && 'edge.semitransparent');
-      // removed.push(cy.remove('node.semitransp'));
-      // removed.push(cy.remove('edge.semitransp'));
-      // cy.elements('node#`{\'e\'}`, edge[source="`{\'e\'}`"]');
-      // cy.elements('node#Wood, edge[source="Wood"]');
-      // cy.elements('node#j, edge[source = "j"]');
-      // cy.filter('#some\\$funky\\@id');
-
-
-
-      // var sel = e.target;
-
-      // cy.elements().difference(sel.outgoers()).not(sel).addClass('highlightFocus');
-      // sel.addClass('highlightFocus').outgoers().addClass('highlightFocus');
-      // let notHighlight = cy.nodes(':not(.highlightFocus)');
-
-      // cy.nodes().filter(node => {
-      //   // console.log("node.data('id'): " + node.data("id"));
-      //   // if()
-
-      //   if((node.data("id") != sel) && (node.data() != sel.outgoers())) {
-      //     removed.push(cy.remove(node));
-      //   }
-      // })
-
-      // console.log("removed: " + removed);
-
-      // cy.elements().difference(sel.outgoers()).not(sel).addClass()
-
-      // cy.$('#j').outgoers();
-//     })
-//   }
-// )}
-
-// cy.on("click", "node", (e) => {
-//   if('node[type="material"]') {
-//     var sel = e.target;
-
-//     cy.elements().difference(sel.outgoers()).not(sel).addClass('highlightFocus');
-//     sel.addClass('highlightFocus').outgoers().addClass('highlightFocus');
-
-    
-//   }
-// });
-
+   
 cy.maxZoom(2);
 cy.minZoom(0.7);
 cy.center();
@@ -530,7 +475,7 @@ cy.center();
 cy.on('mouseout', 'node', (evt) => {
   var node = evt.target;
   // node.style("background-color", "green");
-  console.log(node.connectedEdges())
+  // console.log(node.connectedEdges())
   // node.connectedEdges().forEach((edge) => {
     // edge.style("line-color", "blue")
   // })

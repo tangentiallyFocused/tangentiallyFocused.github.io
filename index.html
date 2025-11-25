@@ -9,10 +9,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css"> -->
-    
     <link rel="icon" type="image/png" href="/logo.PNG">
 </head>
 <body>
@@ -36,6 +34,7 @@
             
             <div id="hero-section">
                 <div id="cy" class="hero"></div>
+                <!-- <div id="cy" class="hero"></div> -->
 
                 <div id="filter-sidebar" class="hero">
                     <div id="filter-container">
@@ -50,6 +49,27 @@
                                 </button>
                                 <button id="percept-btn" class="filter-btn">
                                     <h5>Perception</h5>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div id="discipline-filters" class="filter-group">
+                            <div class="filter-title">DISCIPLINE</div>
+                            <div id="discipline-btns" class="filter-btns">
+                                <button id="interactive-btn" class="filter-btn">
+                                    <h5>Interactive Media</h5>
+                                </button>
+                                <button id="dataviz-btn" class="filter-btn">
+                                    <h5>Data Visualization</h5>
+                                </button>
+                                <button id="ux-btn" class="filter-btn">
+                                    <h5>UX Research</h5>
+                                </button>
+                                <button id="coding-btn" class="filter-btn">
+                                    <h5>Creative Coding</h5>
+                                </button>
+                                <button id="art-btn" class="filter-btn">
+                                    <h5>Visual Art</h5>
                                 </button>
                             </div>
                         </div>
@@ -74,21 +94,6 @@
                                 </button>
                             </div>
                         </div>
-
-                        <div id="node-filters" class="filter-group">
-                            <div class="filter-title">NODES</div>
-                            <div id="node-btns" class="filter-btns">
-                                <button id="skill-btn" class="filter-btn">
-                                    <h5>Skills</h5>
-                                </button>
-                                <button id="project-btn" class="filter-btn">
-                                    <h5>Projects</h5>
-                                </button>
-                                <button id="theme-btn" class="filter-btn">
-                                    <h5>Themes</h5>
-                                </button>
-                            </div>
-                        </div>
                     </div>
 
                     <div id="horizontal-filter-divider">
@@ -96,63 +101,50 @@
                     </div>
 
                     <div id="node-summary">
-                        Click on a node to know more!
+                        Hover over a node to know more!
                     </div>
                 </div>
             </div> <!-- end hero section -->
 
             <div id="about-site-section">
-                <div id="theme-card-container">
-                    <div id="interact" class="theme-card">
-                        Interaction
-                    </div>
-                    <div id="interconnect" class="theme-card">
-                        Interconnectivity
-                    </div>
-                    <div id="percept" class="theme-card">
-                        Perception
-                    </div>
-                </div> <!-- end theme cards -->
+                <div id="about-site-content">
+                    <div id="theme-card-container">
+                        <div id="interact" class="theme-card">
+                            Interaction
+                        </div>
+                        <div id="interconnect" class="theme-card">
+                            Interconnectivity
+                        </div>
+                        <div id="percept" class="theme-card">
+                            Perception
+                        </div>
+                    </div> <!-- end theme cards -->
 
-                <div id="about-site-text">
-                    what do i say here
-
-                    <ul>
-                        <li>cmy palette; origins</li>
-                        <li>coded it myself</li>
-                        <li>took inspo from my work at worthix, my own previous work, and worked with claude ai, lovable, and replit for additional inspiration and feedback</li>
-                        <li>also spoke with people i know for feedback</li>
-                        <li>future plans for the site?</li>
-                    </ul>
-
-                    <br>
-
-                    This portfolio is more than a showcase—it's a visual argument for how I think about design, technology, and human experience. As someone who studied both the science of mind and the art of interaction, I believe the best solutions emerge when we understand how people think, not just what they need.
-
-                    <br>
-
-                    The force-directed graph you see below isn't just a creative flourish. It's a deliberate reflection of my three core themes—interconnectivity, interaction, and perception—working together. Each node represents a skill, project, or research theme, and the connections between them show how my work is truly interdisciplinary. Just like how memory works through associative networks in the brain, this portfolio lets you explore knowledge through relationships rather than rigid hierarchies.
-
-                    <br>
-
-                    Every design choice—from the CMYK-inspired color palette to the carefully selected typography—is intentional and grounded in principles of accessibility and cognitive science. If you're curious about the reasoning behind these decisions, click the  icon in the header to explore the full design system and philosophy.
-                </div> <!-- end about-site-text -->
+                    <div id="about-site-text">
+                        <p>
+                            This portfolio is more than a showcase—it's a visual argument for how I think about design, technology, and human experience. As someone who studied both the science of mind and the art of interaction, I believe the best solutions emerge when we understand how people think, not just what they need.
+                        </p>
+                        <p>
+                            The force-directed graph you see below isn't just a creative flourish. It's a deliberate reflection of my three core themes—interconnectivity, interaction, and perception—working together. Each node represents a skill, project, or research theme, and the connections between them show how my work is truly interdisciplinary. Just like how memory works through associative networks in the brain, this portfolio lets you explore knowledge through relationships rather than rigid hierarchies.
+                        </p>
+                        <p>
+                            Every design choice—from the CMYK-inspired color palette to the carefully selected typography—is intentional and grounded in principles of accessibility and cognitive science. If you're curious about the reasoning behind these decisions, click the  icon in the header to explore the full design system and philosophy.
+                        </p>
+                    </div> <!-- end about-site-text -->
+                </div>
             </div>
 
             <div id="featured-section">
                 <div id="projects">
                     <div id="worthix-score" class="featured-card">
-                        <div class="featured-pic">
-                            <img  src="public/churn-dashboard.PNG" alt="Churn/Score Dashboard">
-                            <div class="pic-overlay"></div>
+                        <div class="featured-pic-container">
+                            <img class="featured-pic" src="public/tinted/churn-thumbnail.png" alt="Churn/Score Dashboard">
                         </div>
                         <div class="card-info">
-                            <h5 class="card-theme">Interaction</h5>
+                            <h5 id="card-interaction" class="card-theme">Interaction</h5>
                             <h3 class="card-title">Churn/Score Dashboard</h3>
                             <div class="card-summary">
-                                Churn/Score Dashboard with AI Assistant lorem ipsum lorem ipsum 
-                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
-                                lorem ipsum.
+                                AI-powered dashboard helping Customer Success teams identify at-risk accounts and prevent churn through predictive analytics and actionable recommendations.
                             </div>
                             <div class="card-skills">
                                 <h6 class="card-skill">Figma</h6>
@@ -163,16 +155,14 @@
                     </div>
 
                     <div id="custom-nails" class="featured-card">
-                        <div class="featured-pic">
-                            <img src="public/nails_a.jpg" alt="3D rendering of my hand">
-                            <div class="pic-overlay"></div>
+                        <div class="featured-pic-container">
+                            <img class="featured-pic" src="public/tinted/nails-thumbnail-2.png" alt="3D rendering of my hand">
                         </div>
                         <div class="card-info">
-                            <h5 class="card-theme">Perception</h5>
+                            <h5 id="card-perception" class="card-theme">Perception</h5>
                             <h3 class="card-title">Custom 3D Printed Nails</h3>
                             <div class="card-summary">
-                                Custom 3D Printed Nails lorem ipsum lorem ipsum lorem ipsum 
-                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum.
+                                Personalized press-on nails designed to solve the fit problem of mass-produced products using 3D scanning, modeling, and iterative prototyping.
                             </div>
                             <div class="card-skills">
                                 <h6 class="card-skill">3D Scanning</h6>
@@ -183,16 +173,14 @@
                     </div>
 
                     <div id="worthix-competitive" class="featured-card">
-                        <div class="featured-pic">
-                            <img src="public/competitive-analysis.PNG" alt="Competitive Analysis Dashboard">
-                            <div class="pic-overlay"></div>
+                        <div class="featured-pic-container">
+                            <img class="featured-pic" src="public/tinted/comp-thumbnail.png" alt="Competitive Analysis Dashboard">
                         </div>
                         <div class="card-info">
-                            <h5 class="card-theme">Interconnectivity</h5>
+                            <h5 id="card-interconnectivity" class="card-theme">Interconnectivity</h5>
                             <h3 class="card-title">Competitive Analysis</h3>
                             <div class="card-summary">
-                                The Competitive Analysis dashboard with AI Assistant lorem ipsum lorem 
-                                ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum.
+                                Interactive dashboard enabling companies to benchmark performance against competitors through visual hierarchy, flexible filtering, and AI-generated insights.
                             </div>
                             <div class="card-skills">
                                 <h6 class="card-skill">Figma</h6>
@@ -205,7 +193,73 @@
                 </div>
             </div>
 
-            <div id="card-modal">
+            <dialog id="worthix-score-modal" class="modal-card">
+                <h2>Churn/Score Dashboard</h2>
+                Designing actionable insights under startup constraints
+                <!-- <img src="public/competitive-analysis.PNG" alt="Competitive Analysis dashboard"> -->
+
+                <br>
+                Role: Sole Product Designer
+                <br>
+                Company: Worthix (AI SaaS Startup)
+                <br>
+                Collaborators: Lara Baldez Duque Ribeiro, Worthix Team
+                <br>
+                Timeline: October 2025
+                <br>
+                Tools: Figma, Claude, Cursor, GitHub
+
+                <h3>Background</h3>
+                Worthix Hub is an AI-powered platform that scrapes and analyzes online reviews to help companies understand customer sentiment. The platform generates "Keep Doing" and "Do Better" summaries, but clients struggled to act on these insights without visual comparison tools.
+                
+                The challenge: Clients requested in-app data visualization capabilities to benchmark against competitors and industry trends, rather than exporting data to external tools like PowerBI.
+
+                <h3>The Problem</h3>
+                The initial prototype provided delivered insights but lacked:
+                No visual comparison - Clients couldn't see performance relative to competitors or industry averages
+                Poor information hierarchy - All data treated equally, making it difficult to identify priorities
+                Limited actionability - Users received analysis without clear next steps
+
+
+
+
+                <button class="close" id="close-score">close</button>
+            </dialog>
+            
+            <dialog id="custom-nails-modal" class="modal-card">
+                <h2>Custom 3D Printed Nails</h2>
+                Designing actionable insights under startup constraints
+                <!-- <img src="public/competitive-analysis.PNG" alt="Competitive Analysis dashboard"> -->
+
+                <br>
+                Role: Sole Product Designer
+                <br>
+                Company: Worthix (AI SaaS Startup)
+                <br>
+                Collaborators: Lara Baldez Duque Ribeiro, Worthix Team
+                <br>
+                Timeline: October 2025
+                <br>
+                Tools: Figma, Claude, Cursor, GitHub
+
+                <h3>Background</h3>
+                Worthix Hub is an AI-powered platform that scrapes and analyzes online reviews to help companies understand customer sentiment. The platform generates "Keep Doing" and "Do Better" summaries, but clients struggled to act on these insights without visual comparison tools.
+                
+                The challenge: Clients requested in-app data visualization capabilities to benchmark against competitors and industry trends, rather than exporting data to external tools like PowerBI.
+
+                <h3>The Problem</h3>
+                The initial prototype provided delivered insights but lacked:
+                No visual comparison - Clients couldn't see performance relative to competitors or industry averages
+                Poor information hierarchy - All data treated equally, making it difficult to identify priorities
+                Limited actionability - Users received analysis without clear next steps
+
+
+
+
+                <button class="close" id="close-nails">close</button>
+            </dialog>
+
+            <dialog id="worthix-competitive-modal" class="modal-card">
                 <h2>Competitive Analysis Dashboard</h2>
                 Designing actionable insights under startup constraints
                 <!-- <img src="public/competitive-analysis.PNG" alt="Competitive Analysis dashboard"> -->
@@ -235,8 +289,8 @@
 
 
 
-                <button id="close">close</button>
-            </div>
+                <button class="close" id="close-competitive">close</button>
+            </dialog>
 
             <div id="about-me-section">
                 <div id="me-left-content">
@@ -259,14 +313,27 @@
                     </div>
 
                     <div id="degrees">
-                        <div id="clsc" class="degree"><i class="ba">B.A.</i> Cognitive & Linguistic Sciences</div>
+                        <a id="clsc" class="degree" href="https://www.wellesley.edu/academics/program/cognitive-linguistic-sciences" target="_blank">
+                            <div class="degree-upper">
+                                <div class="degree-title">Cognitive & Linguistic Sciences</div>
+                                <h6 class="degree-concentration">Psychology concentration</h6>
+                            </div>
+                            <h6 class="degree-summary">Understanding how language affects thought/cognition</h6>
+
+                        </a>
                         <div id="horizontal-degree-divider-container"><hr id="horizontal-degree-divider"></div>
-                        <div id="mas" class="degree"><i class="ba">B.A.</i> Media Arts & Sciences</div>
+                        <a id="mas" class="degree" href="https://www.wellesley.edu/academics/program/media-arts-sciences" target="_blank">
+                            <div class="degree-upper">
+                                <div class="degree-title">Media Arts & Sciences</div>
+                                <h6 class="degree-concentration">Computer Science concentration</h6>
+                            </div>
+                            <h6 class="degree-summary">Investigating the intersection between art & technology</h6>
+                        </a>
                     </div>
                 </div>
-                <div id="me-pic">
-                    <img src="public/LaraTruckee.JPG" alt="Me">
-                    <div class="pic-overlay-adjust pic-overlay"></div>
+                <div id="me-right-content">
+                    <!-- <img id="me-pic" src="public/tinted/LaraTruckee.png" alt="Me"> -->
+                    <img id="me-pic" src="public/LaraTruckee.jpg" alt="Me">
                 </div>
                 
             </div>

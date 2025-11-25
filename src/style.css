@@ -81,7 +81,6 @@
 }
 
 #filter-container {
-  background: lemonchiffon;
   height: max-content;
   display: flex;
   gap: 50px;
@@ -245,6 +244,8 @@
 
   background-color: var(--md-surface-container-low);
 
+  /* box-shadow: 0px 0px 4px 6px var(--md-shadow); */
+  box-shadow: 3px 3px 3px var(--md-shadow);
 }
 
 .featured_card:hover, .featured_card:focus, .featured_card:active {
@@ -284,19 +285,16 @@
 
 #card-interaction {
   background: var(--theme-interaction, #8E3A59);
-  /* background: var(--colors-primary-deep-rose-rose-500_BASE, #8E3A59); */
   color: var(--theme-on-interaction);
 }
 
 #card-perception {
-  background: var(--theme-perception, #003153);
-  /* background: var(--colors-primary-navy-blue-navy-900_BASE, #003153); */
+  background: var(--theme-perception, rgb(0, 174, 239));
   color: var(--theme-on-perception);
 }
 
 #card-interconnectivity {
   background: var(--theme-interconnectivity, #7FAC85);
-  /* background: var(--colors-secondary-sage-green-sage-400_BASE, #7FAC85); */
   color: var(--theme-on-interconnectivity);
 }
 

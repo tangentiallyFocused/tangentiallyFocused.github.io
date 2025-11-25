@@ -212,7 +212,7 @@ var cy = cytoscape({
       selector: 'node[type = "format"]',
       style: {
         'background-color': 'rgb(255,244,79)',
-        'border-color': 'rgb(0,49,83)',
+        'border-color': 'rgb(0, 174, 239)',
           // changes & adds border color to prussian blue on hover
         'border-width': '2px',
         'color': 'rgb(40, 30, 0)', // --md-on-secondary: rgb(40, 30, 0)
@@ -240,7 +240,7 @@ var cy = cytoscape({
       selector: 'node[type = "material"]',
       style: {
         'background-color': 'rgb(255,244,79)',
-        'border-color': 'rgb(0,49,83)',
+        'border-color': 'rgb(0, 174, 239)',
           // changes & adds border color to prussian blue on hover
         'border-width': '2px',
         'width': 15,
@@ -267,7 +267,7 @@ var cy = cytoscape({
       selector: 'node.theFocus',
       style: {
         // 'background-color': 'rgb(0,49,83)',
-        'border-color': 'rgb(0,49,83)',
+        'border-color': 'rgb(0, 174, 239)',
           // changes & adds border color to prussian blue on hover
         'border-width': '2px',
         'z-index': '2', // brings the nodes forward so as to avoid any additional ndoes hiding/covering it
@@ -287,7 +287,7 @@ var cy = cytoscape({
       selector: 'edge.theFocus',
       style: {
         // 'mid-target-arrow-color': 'orange',
-        'line-color': "rgb(0,49,83)",
+        'line-color': 'rgb(0, 174, 239)',
         // 'target-arrow-color': 'rgb(0,49,83)',
         'z-index': '3',
         'opacity': '1'
@@ -377,6 +377,14 @@ function animate() {
 }
 
 animate(); // END SECTION FROM CLAUDE AI
+
+cy.on('tap', 'node', function(evt) {
+    const node = evt.target;           // The clicked node
+    const nodeId = node.id();          // Get its ID (e.g., 'javascript')
+    const data = nodeData[nodeId];     // Look up detailed data
+    
+    showSummary(data, node);           // Display it
+});
 
 // cy.nodes().noOverlap({padding: 15});
 

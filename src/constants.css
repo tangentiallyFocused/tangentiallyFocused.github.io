@@ -15,7 +15,7 @@
     /* ===== BRAND COLORS (CMYK-Inspired) ===== */
     --brand-deep-rose: rgb(142, 58, 89);        /* Magenta primary */
     --brand-lemon-yellow: rgb(255, 244, 79);    /* Yellow primary */
-    --brand-navy-blue: rgb(0, 49, 83);          /* Key/Black adapted */
+    --brand-cyan-blue: rgb(0, 174, 239);          /* Cyan primary ** 2nd option: #1B94ED */
     --brand-deep-purple: rgb(71, 54, 86);       /* Secondary */
     --brand-sage-green: rgb(127, 172, 133);     /* Secondary */
     --brand-warm-gold: rgb(199, 151, 84);       /* Secondary */
@@ -28,13 +28,14 @@
 
     /* ===== SECONDARY (Highlights & Emphasis) ===== */
     --md-secondary: var(--brand-lemon-yellow);
-    --md-on-secondary: var(--brand-navy-blue);
+    --md-on-secondary: var(--brand-cyan-blue);
     --md-on-secondary-alt: rgb(40, 30, 0);
     --md-secondary-container: rgb(255, 250, 200);
     --md-on-secondary-container: rgb(40, 30, 0);
 
     /* ===== TERTIARY (Structure & Perception Theme) ===== */
-    --md-tertiary: var(--brand-navy-blue);
+    /* --md-tertiary: var(--brand-navy-blue); */
+    --md-tertiary: rgb(0, 174, 239);
     --md-on-tertiary: rgb(250, 248, 250);
     --md-tertiary-container: rgb(200, 220, 235);
     --md-on-tertiary-container: rgb(0, 20, 35);
@@ -45,31 +46,30 @@
     --md-error-container: rgb(255, 218, 214);
     --md-on-error-container: rgb(65, 0, 2);
 
-    /* ===== SURFACE (Backgrounds - CHROMATIC PURPLE) ===== */
-    /* 6-point delta base: Subtle, sophisticated, professional */
-    --md-surface: rgb(248, 246, 252);           /* Body background (6pt delta) */
-    --md-surface-bright: rgb(252, 250, 255);    /* Brightest (5pt delta) */
-    --md-surface-dim: rgb(235, 230, 242);       /* Darker (12pt - masked by darkness) */
-    --md-on-surface: rgb(32, 30, 38);           /* Purple-black text (6pt delta) */
-    --md-on-surface-variant: rgb(92, 88, 98);   /* Purple-grey text (6pt delta) */
+    /* ===== SURFACE (CHROMATIC PURPLE - Dark Mode) ===== */
+    /* 5-6pt delta base: Subtle in darkness (eyes more sensitive) */
+    --md-surface: rgb(22, 20, 25);              /* Deep purple-black (5pt delta) */
+    --md-surface-bright: rgb(42, 38, 48);       /* Lighter purple-grey (6pt delta) */
+    --md-surface-dim: rgb(15, 12, 18);          /* Darkest purple-black (6pt delta) */
+    --md-on-surface: rgb(248, 245, 252);        /* Purple-white text (5-7pt delta) */
+    --md-on-surface-variant: rgb(188, 182, 195); /* Purple-grey text (7pt delta) */
 
-    /* ===== SURFACE CONTAINERS (Elevation Hierarchy) ===== */
-    /* Proper 8-15 value spacing for perceptible depth */
-    /* Proportional saturation: 5-21pt deltas (darker = more saturation masked) */
-    --md-surface-container-lowest: rgb(252, 250, 255);   /* Lightest - 5pt delta */
-    --md-surface-container-low: rgb(246, 242, 252);      /* Light - 10pt delta */
-    --md-surface-container: rgb(238, 234, 248);          /* Mid - 14pt delta */
-    --md-surface-container-high: rgb(230, 224, 242);     /* Higher - 18pt delta */
-    --md-surface-container-highest: rgb(220, 214, 235);  /* Highest - 21pt delta */
+    /* ===== SURFACE CONTAINERS (Dark Mode Elevation) ===== */
+    /* Proper spacing, proportional saturation (6-10pt deltas) */
+    --md-surface-container-lowest: rgb(15, 12, 18);   /* Darkest - 6pt delta */
+    --md-surface-container-low: rgb(26, 22, 30);      /* +11 lighter - 8pt delta */
+    --md-surface-container: rgb(34, 30, 40);          /* +8 lighter - 10pt delta */
+    --md-surface-container-high: rgb(42, 38, 48);     /* +8 lighter - 10pt delta */
+    --md-surface-container-highest: rgb(50, 46, 56);  /* +8 lighter - 10pt delta */
 
-    /* ===== INVERSE (Chromatic) ===== */
-    --md-inverse-surface: rgb(32, 30, 38);      /* Purple-black (6pt delta) */
-    --md-inverse-on-surface: rgb(248, 246, 252); /* Purple-white (6pt delta) */
-    --md-inverse-primary: rgb(255, 180, 200);
+    /* ===== INVERSE (Dark Mode) ===== */
+    --md-inverse-surface: rgb(248, 245, 252);
+    --md-inverse-on-surface: rgb(32, 30, 38);
+    --md-inverse-primary: var(--brand-deep-rose);
 
-    /* ===== OUTLINE (CHROMATIC PURPLE) ===== */
-    --md-outline: rgb(122, 118, 128);           /* Purple-grey borders (6pt delta) */
-    --md-outline-variant: rgb(202, 198, 208);   /* Light purple-grey (6pt delta) */
+    /* ===== OUTLINE (Dark Mode) ===== */
+    --md-outline: rgb(142, 138, 148);          /* Purple-grey borders (6pt delta) */
+    --md-outline-variant: rgb(72, 68, 78);     /* Dark purple-grey (6pt delta) */
 
     /* ===== PRIMARY FIXED (High Emphasis States) ===== */
     --md-primary-fixed: rgb(255, 217, 227);
@@ -105,12 +105,12 @@
     --theme-on-interaction: var(--md-on-primary);
     --theme-interconnectivity: var(--brand-sage-green);
     --theme-on-interconnectivity: var(--custom-on-sage);
-    --theme-perception: var(--brand-navy-blue);
+    --theme-perception: var(--brand-cyan-blue);
     --theme-on-perception: var(--md-on-tertiary);
 
     /* Node Colors (Network Graph) */
     --node-skill: var(--brand-lemon-yellow);
-    --node-skill-border: var(--brand-navy-blue);
+    --node-skill-border: var(--brand-cyan-blue);
     --node-project: var(--brand-deep-rose);
     --node-featured: var(--brand-warm-gold);
     --node-tool-border: var(--brand-deep-purple);

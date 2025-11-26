@@ -70,7 +70,7 @@ body {
   /* border: 1px solid var(--md-outline-variant); */
 }
 
-#filter-sidebar {
+#sidebar {
   /* background: lavender; */
   background: var(--md-surface-container-highest);
   min-width: 350px;
@@ -84,52 +84,27 @@ body {
   flex-direction: column;
 }
 
-#filter-container {
-  height: max-content;
-  display: flex;
-  gap: 50px;
-  flex-direction: column;
-}
-
-/* .filter-group {
-
-} */
-
-.filter-title {
-  font-weight: 600;
-}
-
-.filter-btns {
-  display: flex;
-  flex-direction: row;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-
-.filter-btn {
-  display: flex;
-  /* flex-direction: column;
-  flex-wrap: wrap; */
-  padding: 0.625rem 0.75rem;
-  justify-content: center;
-  align-items: center;
-  gap: 0.625rem;
-
-  border-radius: 0.625rem;
-  border: 1px solid var(--md-tertiary, #003153);
-  /* border: 1px solid var(--colors-primary-navy-blue-navy-900_BASE, #003153); */
-  /* fill: none; */
-}
-
-#horizontal-filter-divider {
-  padding: 1rem 0;
-}
-
 #node-summary {
-  background: var(--md-surface-container-low);
+  /* background: var(--md-surface-container-low); */
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  gap: 1rem;
+
+  text-align: center;
+  justify-content: center;
+}
+
+#node-image-container {
+  border: 3px solid hotpink;
+
+}
+
+#node-image {
+  /* IF NO IMAGE, THEN HIDE */
+  border: 1px solid cyan;
+  width: 100%;
+  aspect-ratio: 7 / 5;
 }
 
 
@@ -228,7 +203,10 @@ body {
 }
 
 .featured-card {
-  height: 100%;
+  /* height: 100%; */
+  /* min-height: calc(100vh - 300px);
+  max-height: calc(100vh - 250px); */
+  height: calc(100vh - 250px);
 
   position: relative;
   max-width: fit-content;
@@ -308,6 +286,8 @@ body {
   font-weight: 700;
   line-height: normal;
   padding: 0 0.625rem;
+  height: 2.5em;
+  width: 100%;
 }
 
 .card-summary {
@@ -368,6 +348,7 @@ body {
   /* display: none; */
   /* background-color: (127,172,133,1.0); */
   background-color: var(--md-surface-container-lowest);
+  color: var(--md-on-surface);
   border-radius: 10px;
   box-shadow: inset;
   padding: 30px 50px;
@@ -540,9 +521,14 @@ body {
 }
 
 .contact-link {
+  display: flex;
+  flex-direction: row;
+  gap: 0.2rem;
+
   text-decoration: none;
   color: rgb(250, 248, 250);
   justify-content: center;
+  align-items: center;
 }
 
 #email-icon {
@@ -554,21 +540,10 @@ body {
   max-height: 100%;
 }
 
-.pic-overlay {
-  /* background: var(--qp_violet); */
-  background: var(--custom-purple-overlay);
+#linkedin-contact-icon {
+  height: 1em;
   width: 100%;
-  height: 99%;
-  position: absolute;
-  bottom: 0;
-  opacity: 45%;
 }
-
-.pic-overlay-adjust {
-  border-radius: 0.625rem;
-  bottom: 4px;
-}
-
 
 
 

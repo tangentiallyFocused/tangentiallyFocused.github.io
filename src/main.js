@@ -28,7 +28,7 @@ const nodes_formatted_for_cytoscape = projects.map((project) => {
     data: {
       id: project.name,
       type: "project",
-      description: project.description
+      // description: project.description
     }
   }
 })
@@ -424,7 +424,8 @@ cy.on("mouseover", "node", (e) => {
   cy.elements().difference(sel.outgoers()).not(sel).addClass('semitransp');
   sel.addClass('theFocus').outgoers().addClass('theFocus');
 
-  const nodeId = sel.id();         
+  const nodeId = sel.id();   
+  console.log("sel.description: " + sel.description);      
   // const data = nodeData[nodeId];
   // console.log(data);
   // if (data.description) {

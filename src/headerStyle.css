@@ -18,6 +18,13 @@
     flex-grow: 2;
 }
 
+@media screen and (min-width: 992px) {
+    #header_bar {
+        padding: 0 1rem;
+        height: 150px;
+    }
+}
+
 /* ****************** 
     HEADER BAR 
 ****************** */
@@ -40,7 +47,8 @@
 
     /* box-shadow: 0 2px 5px lightblue; */
     /* box-shadow: 0 2px 5px var(--p_blue_09); */
-    padding: 0 1rem;
+    /* padding: 0 1rem; */
+    padding: 1rem;
     align-items: center;
 
     justify-self: flex-start;
@@ -50,7 +58,7 @@
     z-index: 2;
     /* height: 70px; */
     /* height: fit-content; */
-    height: 150px;
+    
 }
 
 #header_bar .spacer {

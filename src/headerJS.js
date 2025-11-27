@@ -1,6 +1,6 @@
 let header_html = "";
 header_html += '<div id="left-content">'
-    header_html += '<a id="my_name" href="index.html">';
+    header_html += '<a id="my_name" href="#hero-section">';
         header_html += '<h1 id="name_ab">';
             header_html += '<div id="name_a" class="name_part"></div>';
             header_html += '<div id="name_b" class="name_part"></div>';

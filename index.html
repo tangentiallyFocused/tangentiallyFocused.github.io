@@ -71,19 +71,19 @@
             <div id="about-site-section">
                 <div id="about-site-content">
                     <div id="theme-card-container">
-                        <div id="interact-card" class="theme-flip-card">
+                        <div id="interact-card" class="theme-flip-card interaction-theme">
                             <h4 class="theme-card-title">Interaction</h4>
                             <h6 class="theme-card-description">
                                 How things change through exposure to other factors, designing for feedback loops where systems & people mutually shape each other.
                             </h6>
                         </div>
-                        <div id="interconnect-card" class="theme-flip-card">
+                        <div id="interconnect-card" class="theme-flip-card interconnectivity-theme">
                             <h4 class="theme-card-title">Interconnectivity</h4>
                             <h6 class="theme-card-description">
                                 Revealing how meaning emerges from relationships between ideas, people, & technologies rather than from isolated elements.
                             </h6>
                         </div>
-                        <div id="percept-card" class="theme-flip-card">
+                        <div id="percept-card" class="theme-flip-card perception-theme">
                             <h4 class="theme-card-title">Perception</h4>
                             <h6 class="theme-card-description">
                                 Designing with awareness that we actively construct reality from sensory input, shaped by attention, memory, language, & what we're primed to notice.
@@ -113,7 +113,7 @@
                         </div>
                         <div class="card-info">
                             <div class="card-upper-text">
-                                <h5 id="card-interaction" class="card-theme">Interaction</h5>
+                                <h5 id="card-interaction" class="card-theme interaction-theme">Interaction</h5>
                                 <h3 class="card-title">Churn/Score Dashboard</h3>
                             </div>
                             <div class="card-lower-text">
@@ -135,7 +135,7 @@
                         </div>
                         <div class="card-info">
                             <div class="card-upper-text">
-                                <h5 id="card-perception" class="card-theme">Perception</h5>
+                                <h5 id="card-perception" class="card-theme perception-theme">Perception</h5>
                                 <h3 class="card-title">Custom 3D <br> Printed Nails</h3>
                             </div>
                             <div class="card-lower-text">
@@ -157,7 +157,7 @@
                         </div>
                         <div class="card-info">
                             <div class="card-upper-text">
-                                <h5 id="card-interconnectivity" class="card-theme">Interconnectivity</h5>
+                                <h5 id="card-interconnectivity" class="card-theme interconnectivity-theme">Interconnectivity</h5>
                                 <h3 class="card-title">Competitive <br> Analysis</h3>
                             </div>
                             <div class="card-lower-text">
@@ -190,16 +190,15 @@
                             </h5>
                         </div>
                         <div class="modal-tags">
-                            <div class="modal-theme modal-tag">Interaction</div>
-                            <!-- <div class="modal-role modal-tag"><b>Role:</b> Sole Product Designer</div> -->
-                            <div class="modal-role modal-tag">Sole Product Designer</div>
-                            <!-- <div class="modal-company modal-tag"><b>Company:</b> Worthix (AI SaaS Startup)</div> -->
-                            <div class="modal-company modal-tag">@ Worthix (AI SaaS Startup)</div>
-                            <!-- <div class="modal-collaborators modal-tag"><b>Collaborators:</b> Lara Baldez Duque Ribeiro & Worthix Team</div> -->
-                            <div class="modal-collaborators modal-tag">Lara Baldez Duque Ribeiro & Worthix Team</div>
-                            <div class="modal-timeline modal-tag">October – November 2025</div>
+                            <div class="top-modal-tags">
+                                <div class="modal-theme modal-tag interaction-theme">Interaction</div>
+                                <div class="modal-role modal-tag">Sole Product Designer</div>
+                                <div class="modal-timeline modal-tag">Oct – Nov 2025</div>
+                                <!-- <div class="modal-company modal-tag">@ Worthix (AI SaaS Startup)</div> -->
+                                <!-- <div class="modal-collaborators modal-tag">Lara Baldez Duque Ribeiro & Worthix Team</div> -->
+                            </div>
 
-                            <div class="card-skills">
+                            <div class="card-skills modal-skills">
                                 <h6 class="card-skill">Figma</h6>
                                 <h6 class="card-skill">Claude AI</h6>
                                 <h6 class="card-skill">HTML/CSS</h6>
@@ -207,46 +206,76 @@
                         </div>
                     </div>
 
-                    <div class="background-section">
+                    <div class="background-section card-section">
                         <h3>Background</h3>
                         <div class="background-text">
                             Worthix needed a dashboard to help Customer Success teams identify at-risk accounts before they churn, moving from reactive support to proactive retention strategy.
                         </div>
                     </div>
 
-                    <div class="problem-section">
+                    <div class="problem-section card-section">
                         <h3>The Problem</h3>
                         Customer Success teams lacked:
                         <div class="three-problem-points">
                             <div class="problem-a problem-point">
-                                <b>Early warning signals:</b> No visibility into at-risk accounts until too late.
+                                <div class="problem-title">
+                                    Early warning signals:
+                                </div>
+                                <h5>
+                                    No visibility into at-risk accounts until too late.
+                                </h5>
                             </div>
                             <div class="problem-b problem-point">
-                                <b>Prioritization framework:</b> All accounts treated equally despite varying churn risk & revenue impact.
+                                <div class="problem-title">
+                                    Prioritization framework:
+                                </div>
+                                <h5>
+                                    All accounts treated equally despite varying churn risk & revenue impact.
+                                </h5>
                             </div>
                             <div class="problem-c problem-point">
-                                <b>Actionable guidance:</b> No clear interventions when risks were identified.
+                                <div class="problem-title">
+                                    Actionable guidance:
+                                </div>
+                                <h5>
+                                    No clear interventions when risks were identified.
+                                </h5>
                             </div>
                         </div>
                     </div>
 
-                    <div class="solution-section">
+                    <div class="solution-section card-section">
                         <h3>Design Solution</h3>
                         <h4>Risk-Based Architecture</h4>
                         <div class="three-design-solutions">
                             <div class="solution-a design-solution">
-                                <b>Critical Metrics First</b> (e.g., total expected loss) provide companies with an immediate health check.
+                                <div class="solution-title">
+                                    Critical Metrics First
+                                </div>
+                                <h5>
+                                    (e.g., total expected loss) provide companies with an immediate health check
+                                </h5>
                             </div>
                             <div class="solution-b design-solution">
-                                <b>Risk Segmentation</b> (AKA grouping accounts by churn probability and highlighting revenue impact) makes prioritization clear.
+                                <div class="solution-title">
+                                    Risk Segmentation
+                                </div>
+                                <h5>
+                                    (AKA grouping accounts by churn probability & highlighting revenue impact) makes prioritization clear
+                                </h5>
                             </div>
                             <div class="solution-c design-solution">
-                                <b>AI Churn Assistant</b> provides proactive analysis in a clear, accessible, and user-friendly manner.
+                                <div class="solution-title">
+                                    AI Churn Assistant
+                                </div>
+                                <h5>
+                                    provides proactive analysis in a clear, accessible, and user-friendly manner
+                                </h5>
                             </div>
                         </div>
                     </div>
 
-                    <div class="outcome-section">
+                    <div class="outcome-section card-section">
                         <h3>Outcome</h3>
                         <div class="outcome-text">
                             Designs were delivered to product team and the AI assistant feature generated particular interest as a market differentiator.
@@ -274,61 +303,85 @@
                             </h5>
                         </div>
                         <div class="modal-tags">
-                            <div class="modal-theme modal-tag">Perception</div>
-                            <div class="modal-role modal-tag">Designer & Fabricator</div>
-                            <div class="modal-timeline">Jan – May 2025</div>
-                        </div>
+                            <div class="top-modal-tags">
+                                <div class="modal-theme modal-tag perception-theme">Perception</div>
+                                <div class="modal-role modal-tag">Designer & Fabricator</div>
+                                <div class="modal-timeline modal-tag">Jan – May 2025</div>
+                            </div>
+                        
 
-                        <div class="card-skills">
-                            <h6 class="card-skill">3D Scanner</h6>
-                            <h6 class="card-skill">Blender</h6>
-                            <h6 class="card-skill">3D Printer</h6>
-                            <h6 class="card-skill">Traditional Media</h6>
+                            <div class="card-skills modal-skills">
+                                <h6 class="card-skill">3D Scanner</h6>
+                                <h6 class="card-skill">Blender</h6>
+                                <h6 class="card-skill">3D Printer</h6>
+                                <h6 class="card-skill">PLA</h6>
+                                <h6 class="card-skill">Traditional Media: gel nail polish, solid builder gel, nail e-file</h6>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="problem-section">
+                    <div class="problem-section card-section">
                         <h3>The Problem</h3>
                         Generic press-on nails assume a standardized nail shape that doesn't take individual variation into consideration, resulting in poor fit, discomfort, & nails that pop off easily.
-                        <h4 class="the-challenge">The challenge:</h4> Make it fit to <i>my</i> nails.
-                        <div class="three-problem-points">
-                            <div class="problem-a problem-point">
-                                <b>problem bold:</b> alskdfj
-                            </div>
-                            <div class="problem-b problem-point">
-                                <b>problem bold:</b> alskdfj
-                            </div>
-                            <div class="problem-c problem-point">
-                                <b>problem bold:</b> alskdfj
-                            </div>
-                        </div>
                     </div>
 
-                    <div class="process-section">
+                    <div class="process-section card-section">
                         <h3>The Process</h3>
                         <div class="process-steps">
                             <div class="step-a process-step">
-                                <b>Digital Capture:</b> 3D scanned my fingers to capture exact nail geometry & surrounding skin contours.
+                                <div class="process-title">
+                                    <div class="process-step-number">
+                                        1.
+                                    </div>
+                                    Digital Capture
+                                </div>
+                                <h5>
+                                    3D scanned my fingers to capture exact nail geometry & surrounding skin contours.
+                                </h5>
                                 <div id="step-a-image-container">
                                     <img src="" alt="" id="step-a-image-one">
                                     <img src="" alt="" id="step-a-image-two">
                                 </div>
                             </div>
                             <div class="step-b process-step">
-                                <b>Modeling & Refinement:</b> Used Blender to clean up scans, isolate nail beds, & create custom-fit base shapes.
+                                <div class="process-title">
+                                    <div class="process-step-number">
+                                        2.
+                                    </div>
+                                    Modeling & Refinement
+                                </div>
+                                <h5>
+                                    Used Blender to clean up scans, isolate nail beds, & create custom-fit base shapes.
+                                </h5>
                                 <div id="step-b-image-container">
                                     <img src="" alt="" id="step-b-image-one">
                                 </div>
                             </div>
                             <div class="step-c process-step">
-                                <b>Iterative Prototyping:</b> 3D printed multiple test versions, refining curvature, thickness, & adhesion surface area.
+                                <div class="process-title">
+                                    <div class="process-step-number">
+                                        3.
+                                    </div>
+                                    Iterative Prototyping
+                                </div>
+                                <h5>
+                                    printed multiple test versions, refining curvature, thickness, & adhesion surface area.
+                                </h5>
                                 <div id="step-c-image-container">
                                     <img src="" alt="" id="step-c-image-one">
                                     <img src="" alt="" id="step-c-image-two">
                                 </div>
                             </div>
                             <div class="step-d process-step">
-                                <b>Hand Finishing</b> Added handpainted embellishments to final pieces, combining the modern digital with the traditional analog.
+                                <div class="process-title">
+                                    <div class="process-step-number">
+                                        4.
+                                    </div>
+                                    Hand Finishing
+                                </div>
+                                <h5>
+                                    Added handpainted embellishments to final pieces, combining the modern digital with the traditional analog.
+                                </h5>
                                 <div id="step-d-image-container">
                                     <img src="" alt="" id="step-d-image-one">
                                     <img src="" alt="" id="step-d-image-two">
@@ -337,7 +390,7 @@
                         </div>
                     </div>
 
-                    <div class="outcome-section">
+                    <div class="outcome-section card-section">
                         <h3>Outcome</h3>
                         <div class="outcome-text">
                             Successfully created custom-fit press-on nails that addressed the core fit problem of mass-produced alternatives. This project demonstrates end-to-end physical product development: identifying a real user need, prototyping through digital fabrication, & finishing with traditional techniques.
@@ -365,23 +418,25 @@
                             </h5>
                         </div>
                         <div class="modal-tags">
-                            <div class="modal-theme modal-tag">Interconnectivity</div>
-                            <div class="modal-role modal-tag">Sole Product Designer</div>
-                            <div class="modal-company modal-tag">Worthix (AI SaaS Startup)</div>
-                            <div class="modal-collaborators modal-tag">Lara Baldez Duque Ribeiro & Worthix Team</div>
-                            <div class="modal-timeline">October 2025</div>
-                        </div>
-
-                        <div class="card-skills">
-                            <h6 class="card-skill">Figma</h6>
-                            <h6 class="card-skill">Claude AI</h6>
-                            <h6 class="card-skill">Cursor AI</h6>
-                            <h6 class="card-skill">GitHub</h6>
-                            <h6 class="card-skill">HTML/CSS</h6>
+                            <div class="top-modal-tags">
+                                <div class="modal-theme modal-tag interconnectivity-theme">Interconnectivity</div>
+                                <div class="modal-role modal-tag">Sole Product Designer</div>
+                                <div class="modal-timeline modal-tag">Oct 2025</div>
+                                <!-- <div class="modal-company modal-tag">@ Worthix (AI SaaS Startup)</div>
+                                <div class="modal-collaborators modal-tag">Lara Baldez Duque Ribeiro & Worthix Team</div> -->
+                            </div>
+                        
+                            <div class="card-skills modal-skills">
+                                <h6 class="card-skill">Figma</h6>
+                                <h6 class="card-skill">Claude AI</h6>
+                                <h6 class="card-skill">Cursor AI</h6>
+                                <h6 class="card-skill">GitHub</h6>
+                                <h6 class="card-skill">HTML/CSS</h6>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="background-section">
+                    <div class="background-section card-section">
                         <h3>Background</h3>
                         <div class="background-text">
                             Worthix Hub is an AI-powered platform that scrapes and analyzes online reviews to help companies understand customer sentiment. The platform generates "Keep Doing" and "Do Better" summaries, but clients struggled to act on these insights without visual comparison tools.
@@ -390,40 +445,70 @@
                         </div>
                     </div>
 
-                    <div class="problem-section">
+                    <div class="problem-section card-section">
                         <h3>The Problem</h3>
                         The initial prototype provided delivered insights but lacked:
                         <div class="three-problem-points">
                             <div class="problem-a problem-point">
-                                <b>Visual comparison:</b> Clients couldn't see performance relative to competitors or industry averages.
+                                <div class="problem-title">
+                                    Visual comparison:
+                                </div>
+                                <h5>
+                                    Clients couldn't see performance relative to competitors or industry averages.
+                                </h5>
                             </div>
                             <div class="problem-b problem-point">
-                                <b>Good information hierarchy:</b> All data treated equally, making it difficult to identify priorities.
+                                <div class="problem-title">
+                                    Good information hierarchy:
+                                </div>
+                                <h5>
+                                    All data treated equally, making it difficult to identify priorities.
+                                </h5>
                             </div>
                             <div class="problem-c problem-point">
-                                <b>Varied actionability:</b> Users received analysis without clear next steps.
+                                <div class="problem-title">
+                                    Varied actionability:
+                                </div>
+                                <h5>
+                                    Received analysis without clear next steps.
+                                </h5>
                             </div>
                         </div>
                     </div>
 
-                    <div class="solution-section">
+                    <div class="solution-section card-section">
                         <h3>Design Solution</h3>
                         <h4>Information Architecture: Context Before Detail</h4>
                         I structured the dashboard to mirror how analysts approach competitive positioning:
                         <div class="three-design-solutions">
                             <div class="solution-a design-solution">
-                                <b>Industry Trends First</b> separated by topic, establishing baseline performance expectations.
+                                <div class="solution-title">
+                                    Industry Trends First
+                                </div>
+                                <h5>
+                                    separated by topic, establishing baseline performance expectations.
+                                </h5>
                             </div>
                             <div class="solution-b design-solution">
-                                <b>Topic Clustering</b> reveals how themes distribute across companies, making competitive positioning visible at a glance.
+                                <div class="solution-title">
+                                    Topic Clustering
+                                </div>
+                                <h5>
+                                    reveals how themes distribute across companies, making competitive positioning visible at a glance.
+                                </h5>
                             </div>
                             <div class="solution-c design-solution">
-                                <b>AI-Generated Insights</b> summarize strengths, weaknesses, and recommended next steps, keeping the customer from questioning what comes next.
+                                <div class="solution-title">
+                                    AI-Generated Insights
+                                </div>
+                                <h5>
+                                    strengths, weaknesses, and recommended next steps, keeping the customer from questioning what comes next.
+                                </h5>
                             </div>
                         </div>
                     </div>
 
-                    <div class="outcome-section">
+                    <div class="outcome-section card-section">
                         <h3>Outcome</h3>
                         <div class="outcome-text">
                             Designs delivered to product team within the 3-day timeline for phased implementation.

@@ -51,8 +51,11 @@
     --md-surface: rgb(22, 20, 25);              /* Deep purple-black (5pt delta) */
     --md-surface-bright: rgb(42, 38, 48);       /* Lighter purple-grey (6pt delta) */
     --md-surface-dim: rgb(15, 12, 18);          /* Darkest purple-black (6pt delta) */
-    --md-on-surface: rgb(248, 245, 252);        /* Purple-white text (5-7pt delta) */
+    /* --md-on-surface: rgb(248, 245, 252);        /* Purple-white text (5-7pt delta) */
+    --md-on-surface: rgb(232, 228, 240);        /* Purple-white text; softer alternative */
     --md-on-surface-variant: rgb(188, 182, 195); /* Purple-grey text (7pt delta) */
+    --large-on-surface-header: #9B7BA8;
+    --small-on-surface-header: #C4ADCE;
 
     /* ===== SURFACE CONTAINERS (Dark Mode Elevation) ===== */
     /* Proper spacing, proportional saturation (6-10pt deltas) */
@@ -162,32 +165,31 @@
         font-size: var(--font-size-5xl);
         font-family: var(--font-heading);
         margin: 0;
-        color: var(--md-tertiary);
+        color: var(--large-on-surface-header);
     }
 
     h2 {
         font-size: var(--font-size-4xl);
         font-family: var(--font-heading);
         margin: 0;
-        color: var(--md-tertiary);
+        color: var(--large-on-surface-header);
     }
 
     h3 {
         font-size: var(--font-size-3xl);
         margin: 0;
-        /* color: #003153; */
+        color: var(--small-on-surface-header);
     }
 
     h4 {
         font-size: var(--font-size-2xl);
         margin: 0;
-        /* color: #003153; */
+        /* color: var(--small-on-surface-header); */
     }
     
     h5 {
         font-size: var(--font-size-sm);
         margin: 0;
-        /* color: #003153; */
         font-weight: 400;
     }
 

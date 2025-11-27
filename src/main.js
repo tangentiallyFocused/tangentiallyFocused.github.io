@@ -23,12 +23,15 @@ import projects from './jsons/projects.json';
 import themes from './jsons/themes.json';
 // console.log("projects: " + projects);
 // console.log("themes: " + themes);
-const nodes_formatted_for_cytoscape = projects.map((project) => {
+const nodes_formatted_for_cytoscape = projects.map((project, index) => {
   return {
     data: {
       id: project.name,
       type: "project",
-      // description: project.description
+      description: project.description,
+      thumbnail: project.thumbnail,
+      thumbnail_alt: project.thumbnail_alt,
+      // name: project.name
     }
   }
 })
@@ -145,7 +148,8 @@ var cy = cytoscape({
       selector: 'edge',
       style: {
         'width': 1.5,
-        'line-color': '#ccc',
+        'line-color': 'rgb(142, 138, 148)', // --md-outline: rgb(142, 138, 148)
+        // 'line-color': '#ccc',
         // 'target-arrow-color': '#ccc',
         // 'target-arrow-shape': 'triangle',
         'curve-style': 'straight',
@@ -184,13 +188,14 @@ var cy = cytoscape({
     {
       selector: 'node[type = "theme"]',
       style: {
-        'border-width': '2',
-        'border-color': 'rgb(142,58,89)', // --md-primary: rgb(142,58,89)
-        'background-color': 'rgb(255, 253, 250)', // --md-surface-bright: rgb(255, 253, 250)
+        // 'border-width': '2',
+        // 'border-color': 'rgb(142,58,89)', // --md-primary: rgb(142,58,89)
+        'background-color': 'rgb(50, 46, 56)', // --md-surface-container-lowest: rgb(50, 46, 56)
+        // 'background-color': 'rgb(255, 253, 250)', // --md-surface-bright: rgb(255, 253, 250)
         // 'border-color': 'var(--theme-interaction, rgb(142,58,89))',
         // 'background-color': 'rgb(142,58,89)',
         'label': 'data(id)',
-        'color': 'rgb(0, 174, 239)', // --md-tertiary: rgb(0, 174, 239)
+        // 'color': 'rgb(0, 174, 239)', // --md-tertiary: rgb(0, 174, 239)
         // 'font-size': 13,
         'font-size': 24,
 
@@ -206,6 +211,43 @@ var cy = cytoscape({
         // 'font-size': '8'
       }
     },
+    {
+      selector: 'node[id = "Interconnectivity"]',
+      style: {
+        'border-width': '3',
+        'border-color': 'rgb(128, 209, 159)',
+        'color': 'rgb(128, 209, 159)',
+        'font-weight': '600',
+        // 'background-color': 'rgba(221, 250, 232, 1)'
+        'background-color': 'rgba(13, 78, 38, 1)'
+      }
+    },
+    {
+      selector: 'node[id = "Interaction"]',
+      style: {
+        'border-width': '3',
+        'border-color': 'rgb(142, 58, 89)',
+        'color': 'rgb(142, 58, 89)',
+        'font-weight': '600',
+        'background-color': 'rgb(255, 217, 227)'
+      }
+    },
+    {
+      selector: 'node[id = "Perception"]',
+      style: {
+        'border-width': '3',
+        'border-color': 'rgb(0, 174, 239)',
+        'color': 'rgb(0, 174, 239)',
+        'font-weight': '600',
+        // 'background-color': 'rgb(200, 220, 235)'
+        // 'background-color': 'rgba(216, 236, 251, 1)'
+        'background-color': 'rgba(9, 67, 111, 1)'
+      }
+    },
+
+
+
+
     //format node
     {
       selector: 'node[type = "format"]',
@@ -417,6 +459,8 @@ cy.on('tap', 'node', function(evt) {
 
 const nodeDescriptionDiv = document.querySelector("#node-summary");
 nodeDescriptionDiv.textContent = "Hover over a node to know more!";
+const nodeImageImg = document.querySelector("#node-image");
+nodeImageImg.classList.add("image-invisible");
 
 // FOR DESKTOP
 cy.on("mouseover", "node", (e) => {
@@ -424,14 +468,20 @@ cy.on("mouseover", "node", (e) => {
   cy.elements().difference(sel.outgoers()).not(sel).addClass('semitransp');
   sel.addClass('theFocus').outgoers().addClass('theFocus');
 
-  const nodeId = sel.id();   
-  console.log("sel.description: " + sel.description);      
-  // const data = nodeData[nodeId];
-  // console.log(data);
-  // if (data.description) {
-    // nodeDescriptionDiv.textContent = sel.data.description;
-    
-  // }
+  const description = sel.data().description;
+  if (description) {
+    nodeDescriptionDiv.textContent = description;  
+  }
+
+  const thumbnail = sel.data().thumbnail;
+  const thumbnail_alt = sel.data().thumbnail_alt;
+  if (thumbnail) {
+    nodeImageImg.src = thumbnail;
+    nodeImageImg.alt = thumbnail_alt;
+    nodeImageImg.classList.remove("image-invisible");
+  } else {
+    nodeImageImg.classList.add("image-invisible");
+  }
 
   e.cy.container().style.cursor = "pointer"; // https://stackoverflow.com/questions/19532031/how-do-i-change-cursor-to-pointer-when-mouse-is-over-a-node
   
@@ -454,6 +504,21 @@ cy.on("touchstart", "node", (e) => {
   cy.elements().difference(sel.outgoers()).not(sel).addClass('semitransp');
   sel.addClass('theFocus').outgoers().addClass('theFocus');
   e.cy.container().style.cursor = "pointer"; // https://stackoverflow.com/questions/19532031/how-do-i-change-cursor-to-pointer-when-mouse-is-over-a-node
+
+  const description = sel.data().description;
+  if (description) {
+    nodeDescriptionDiv.textContent = description;  
+  }
+
+  const thumbnail = sel.data().thumbnail;
+  const thumbnail_alt = sel.data().thumbnail_alt;
+  if (thumbnail) {
+    nodeImageImg.src = thumbnail;
+    nodeImageImg.alt = thumbnail_alt;
+    nodeImageImg.classList.remove("image-invisible");
+  } else {
+    nodeImageImg.classList.add("image-invisible");
+  }
   
   // console.log("sel.width() = " + sel.width() + " sel.outerWidth() = " + sel.outerWidth());
   // console.log("sel.height() = " + sel.height() + " sel.outerHeight() = " + sel.outerHeight());\

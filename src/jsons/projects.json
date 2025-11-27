@@ -339,7 +339,9 @@
         "image_alt": ["docs ss"],
         "iframe": [],
         "iframe_alt": [],
-        "description": "all mad here description placeholder"
+        "description": "all mad here description placeholder",
+        "thumbnail": "/were-mad.PNG",
+        "thumbnail_alt": "docs thumbnail ss"
     },
     {
         "name": "Worthix Hub",

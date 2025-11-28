@@ -181,52 +181,114 @@
     --font-size-4xl: 36px;
     --font-size-5xl: 48px;
 
-    h1 {
-        font-size: var(--font-size-5xl);
-        font-family: var(--font-heading);
-        margin: 0;
-        color: var(--large-on-surface-header);
-    }
+    /********************
+        FONT SIZES
+   ********************/
 
-    h2 {
-        font-size: var(--font-size-4xl);
-        font-family: var(--font-heading);
-        margin: 0;
-        color: var(--large-on-surface-header);
-    }
 
-    h3 {
-        font-size: var(--font-size-3xl);
-        margin: 0;
-        color: var(--small-on-surface-header);
-    }
+   /* mobile font sizes */
+   h1 {
+       font-size: 36px;
+       font-family: var(--font-heading);
+       margin: 0;
+       color: var(--large-on-surface-header);
+   }
+   h2 {
+       font-size: 28px;
+       font-family: var(--font-heading);
+       margin: 0;
+       color: var(--large-on-surface-header);
+   }
+   h3 {
+       font-size: 24px;
+       margin: 0;
+       color: var(--small-on-surface-header);
+   }
+   h4 {
+       font-size: 20px;
+       margin: 0;
+       /* color: var(--small-on-surface-header); */
+   }
 
-    h4 {
-        font-size: var(--font-size-2xl);
-        margin: 0;
-        /* color: var(--small-on-surface-header); */
-    }
-    
-    h5 {
-        font-size: var(--font-size-sm);
-        margin: 0;
-        font-weight: 400;
-    }
 
-    h6 {
-        font-size: var(--font-size-xs);
-        /* font-family: var(--font-body); */
-        margin: 0;
-        font-weight: 400;
-    }
+   /* tablet font sizes */
+   /* @media screen and (min-width: 768px) {
+      h1 {
+           font-size: 42px;
+           font-family: var(--font-heading);
+           margin: 0;
+           color: var(--large-on-surface-header);
+       }
+       h2 {
+           font-size: 32px;
+           font-family: var(--font-heading);
+           margin: 0;
+           color: var(--large-on-surface-header);
+       }
+       h3 {
+           font-size: 27px;
+           margin: 0;
+           color: var(--small-on-surface-header);
+       }
+       h4 {
+           font-size: 22px;
+           margin: 0;
+       }
+   } */
 
-    body {
-        font-size: var(--font-size-md);
-        font-family: var(--font-body);
-        margin: 0;
-        /* color: #003153; */
-        color: var(--md-on-surface);
-    }
+
+   /* desktop font sizes */
+   @media screen and (min-width: 992px) {
+      h1 {
+           font-size: 48px;
+           font-family: var(--font-heading);
+           margin: 0;
+           color: var(--large-on-surface-header);
+       }
+       h2 {
+           font-size: 36px;
+           font-family: var(--font-heading);
+           margin: 0;
+           color: var(--large-on-surface-header);
+       }
+       h3 {
+           font-size: 30px;
+           margin: 0;
+           color: var(--small-on-surface-header);
+       }
+       h4 {
+           font-size: 24px;
+           margin: 0;
+           /* color: var(--small-on-surface-header); */
+       }
+   }
+  
+   h5 {
+       font-size: var(--font-size-sm);
+       /* font-size: 14px; */
+       margin: 0;
+       font-weight: 400;
+   }
+
+
+   h6 {
+       font-size: var(--font-size-xs);
+       /* font-size: 12px; */
+       /* font-family: var(--font-body); */
+       margin: 0;
+       font-weight: 400;
+   }
+
+
+   body {
+       font-size: var(--font-size-md);
+       /* font-size: 16px; */
+       font-family: var(--font-body);
+       margin: 0;
+       /* color: #003153; */
+       color: var(--md-on-surface);
+   }
+
 
     button {
         background-color: var(--large-on-surface-header);

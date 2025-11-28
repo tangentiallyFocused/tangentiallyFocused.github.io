@@ -16,8 +16,23 @@
 <body>
     <div id="all">
         <!-- header bar -->
-        <div id="header_bar"></div>
-
+        <div id="header_bar">
+            <div id="name-container" class="header-item">
+                <a id="my_name" href="#hero-section">
+                    <h1 id="name">Lara Baldez Duque Ribeiro</h1>
+                </a>
+            </div>
+            <div id="role-a-container" class="header-item">
+                <!-- <h3 id="role-a" class="role">Interaction Design</h3> -->
+                <h4 id="role-a" class="role">Interaction Design</h4>
+            </div>
+            <div id="education-container" class="header-item">
+                <h4 id="education">Wellesley '25</h4>
+            </div>
+            <div id="role-b-container" class="header-item">
+                <!-- <h3 id="role-b" class="role">Cognitive UX</h3> -->
+                <h4 id="role-b" class="role">Cognitive UX</h4>
+            </div>
         </div>
 
         <!-- content -->
@@ -38,6 +53,8 @@
                     <div id="node-summary">
                         <div id="node-title"></div>
                         <div id="node-theme-container"></div>
+                        <div id="node-role"></div>
+                        <div id="node-date"></div>
                         <div id="node-text"></div>
                         <div id="node-skills"></div>
                     </div>
@@ -604,13 +621,13 @@
                 <br>
                 All rights reserved.
             </h5>
-            <div class="spacer"></div>
+            <!-- <div class="spacer"></div> -->
             <div id="logo-container">
                 <a href="#hero-section" id="logo-icon-link"> 
                     <img id="logo-icon" src="public/logo.PNG" alt="logo icon">
                 </a>
             </div>
-            <div class="spacer"></div>
+            <!-- <div class="spacer"></div> -->
             <div id="footer_socials">
                 <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-linkedin' viewBox='0 0 16 16' id='linkedin-footer-icon' onclick='javascript:window.open("https://linkedin.com/in/lara-bduquer-434297261/", "_blank");'> <path d='M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z'/></svg>
                 <h5 id="email" class="footer-text">lbduquer@gmail.com</h5>
@@ -619,7 +636,6 @@
     </div>
 </body>
 
-<script type="module" src="/src/headerJS.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.31.0/cytoscape.min.js"></script>
 <script type="module" src="/src/main.js"></script>
 <!-- <script type="module" src="/src/navs/navJS_projects.js"></script> -->

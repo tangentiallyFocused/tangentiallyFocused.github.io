@@ -28,6 +28,9 @@ const nodes_formatted_for_cytoscape = projects.map((project, index) => {
     data: {
       id: project.name,
       type: "project",
+      themes: project.themes,
+      role: project.role,
+      date: project.date,
       description: project.description,
       thumbnail: project.thumbnail,
       thumbnail_alt: project.thumbnail_alt,
@@ -457,9 +460,15 @@ cy.on('tap', 'node', function(evt) {
 //   // })
 // });
 
-const nodeDescriptionDiv = document.querySelector("#node-summary");
-nodeDescriptionDiv.textContent = "Hover over a node to know more!";
+const nodeTitleDiv = document.querySelector("#node-title");
+const nodeThemeDiv = document.querySelector("#node-theme-container");
+const nodeRoleDiv = document.querySelector("#node-role");
+const nodeDateDiv = document.querySelector("#node-date");
+const nodeDescriptionDiv = document.querySelector("#node-text");
+// const nodeSkillsDiv = document.querySelector("#node-skills");
 const nodeImageImg = document.querySelector("#node-image");
+
+nodeDescriptionDiv.textContent = "Hover over a node to know more!";
 nodeImageImg.classList.add("image-invisible");
 // const bottomSheetDiv = document.querySelector("#sidebar");
 
@@ -469,21 +478,26 @@ cy.on("mouseover", "node", (e) => {
   cy.elements().difference(sel.outgoers()).not(sel).addClass('semitransp');
   sel.addClass('theFocus').outgoers().addClass('theFocus');
 
+  const name = sel.data().id;
   const description = sel.data().description;
   if (description) {
+    nodeTitleDiv.textContent = name;
+    // nodeThemeDiv.textContent = themes;
+    // nodeRoleDiv.textContent = role;
+    nodeDateDiv.textContent = date;
     nodeDescriptionDiv.textContent = description;  
   }
 
   const thumbnail = sel.data().thumbnail;
   const thumbnail_alt = sel.data().thumbnail_alt;
   if (thumbnail) {
-    if(node[type = "project"]) {
+    if('node[type = "project"]') {
       nodeImageImg.src = thumbnail;
       nodeImageImg.alt = thumbnail_alt;
       nodeImageImg.classList.remove("image-invisible");
+    } else {
+      nodeImageImg.classList.add("image-invisible");
     }
-  } else {
-    nodeImageImg.classList.add("image-invisible");
   }
 
   e.cy.container().style.cursor = "pointer"; // https://stackoverflow.com/questions/19532031/how-do-i-change-cursor-to-pointer-when-mouse-is-over-a-node
@@ -516,14 +530,14 @@ cy.on("touchstart", "node", (e) => {
   const thumbnail = sel.data().thumbnail;
   const thumbnail_alt = sel.data().thumbnail_alt;
   if (thumbnail) {
-    if(node[type = "project"]) {
+    if('node[type = "project"]') {
       nodeImageImg.src = thumbnail;
       nodeImageImg.alt = thumbnail_alt;
       nodeImageImg.classList.remove("image-invisible");
       // bottomSheetDiv.style.transform = 'translateY(0);' /* Visible state */
+    } else {
+      nodeImageImg.classList.add("image-invisible");
     }
-  } else {
-    nodeImageImg.classList.add("image-invisible");
   }
   
   // console.log("sel.width() = " + sel.width() + " sel.outerWidth() = " + sel.outerWidth());

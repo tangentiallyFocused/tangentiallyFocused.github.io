@@ -75,6 +75,14 @@ body {
 }
 
 @media screen and (min-width: 768px) {
+  #hero-section {
+    margin-top: 9rem !important;
+  }
+  
+  #about-me-section {
+    flex-wrap: nowrap !important;
+  }
+
   #me-left-content {
     max-width: 50%;
   }
@@ -150,6 +158,13 @@ body {
   } */
 }
 
+@media screen and (min-width: 576px) {
+  #footer_socials {
+    gap: 0.5vw !important;
+    width: 290px;
+  }
+}
+
 
 /************************/
 
@@ -174,7 +189,7 @@ body {
   align-items: center;
 
   /* background-color: greenyellow; */
-  margin-top: 9rem;
+  margin-top: 8rem;
 }
 
 .hero {
@@ -213,14 +228,15 @@ body {
   justify-content: center;
 }
 
-#node-image-container {
+/* #node-image-container {
   border: 3px solid hotpink;
-}
+} */
 
 #node-image {
-  border: 3px solid cyan;
+  /* border: 3px solid cyan; */
   width: 100%;
   aspect-ratio: 7 / 5;
+  border-radius: 10px;
 }
 
 
@@ -237,7 +253,7 @@ body {
   /* height: 100vh; */
   /* height: calc(100vh - 80px); */
   /* height: calc(100vh - 175px); */
-  border: 3px solid orange;
+  /* border: 3px solid orange; */
   margin: 6rem 1vw;
   align-self: center;
 
@@ -326,7 +342,7 @@ body {
   /* height: 100vh; */
   /* height: calc(100vh - 175px); */
   /* background-color: purple; */
-  border: 3px solid purple;
+  /* border: 3px solid purple; */
   margin: 0vw 1vw;
   align-self: center;
   padding: 0vw 1vw;
@@ -666,8 +682,9 @@ body:has(dialog[open]) {
   width: 100%;
   /* height: 100vh; */
   /* height: calc(100vh - 175px); */
-  border: 3px solid hotpink;
-  margin: 6rem 1vw;
+  /* border: 3px solid hotpink; */
+  /* margin: 6rem 1vw; */
+  margin: 6rem 1vw 3rem 1vw;
   align-self: center;
   padding: 0vw 1vw;
 
@@ -712,6 +729,7 @@ body:has(dialog[open]) {
   gap: 0.625rem;
   /* border: 1px solid var(--md-outline); */
   border-radius: 0.625rem;
+  justify-content: center;
 }
 
 .degree {
@@ -771,9 +789,10 @@ body:has(dialog[open]) {
   width: 100%;
   /* height: calc(50vh - 80px); */
   /* border: 3px solid maroon; */
-  margin: 0vw 1vw;
+  /* margin: 0vw 1vw; */
+  margin: 3rem 1vw 6rem 1vw;
   align-self: center;
-  padding: 6vw 1vw;
+  padding: 0 1vw;
 
   justify-content: center;
   display: flex;
@@ -880,9 +899,14 @@ body:has(dialog[open]) {
 
   background-color: var(--md-surface);
 
+  justify-content: space-between;
 }
 
-#copyright, #footer_socials {
+/* #copyright, #footer_socials {
+  width: 290px;
+} */
+
+#copyright {
   width: 290px;
 }
 
@@ -904,7 +928,7 @@ body:has(dialog[open]) {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 0.5vw;
+    gap: 1vw;
 
 
     flex-wrap: wrap;

@@ -30,7 +30,7 @@
 ****************** */
 
 #header_bar {
-    background-color: coral;
+    height: calc(150px * 0.75);
 
     display: flex;
     flex-direction: row;
@@ -38,12 +38,6 @@
     width: 100%;
     
     background-color: var(--md-surface);
-    /* background-color: #dededc; */
-    /* background-image: url('/public/beige-paper.png'); */
-    /* background-image: url("https://www.transparenttextures.com/patterns/notebook.png"); */
-    /* background-image: url("https://www.transparenttextures.com/patterns/paper.png"); */
-    /* background-image: url("https://www.transparenttextures.com/patterns/textured-stripes.png"); */
-    
 
     /* box-shadow: 0 2px 5px lightblue; */
     /* box-shadow: 0 2px 5px var(--p_blue_09); */
@@ -96,12 +90,14 @@
 .name_part {
     padding: 0 5px;
     font-family: var(--font-heading);
+    /* font-size: calc(var(--font-size-5xl) * 0.75); */
 }
 
 #education {
     padding-left: 7px;
     font-family: var(--font-heading);
     color: var(--small-on-surface-header);
+    /* font-size: calc(var(--font-size-2xl) * 0.75); */
 }
 
 #roles {

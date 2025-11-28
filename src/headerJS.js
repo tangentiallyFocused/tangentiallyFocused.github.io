@@ -24,8 +24,6 @@ let overlay_html = "";
 overlay_html += '<img id="close_menu" class="menu_btn">';
 
 document.getElementById("header_bar").innerHTML += header_html;
-document.getElementById("overlay_menu").innerHTML += overlay_html + "\n";
-
 
 import header from '/src/jsons/header_bar.json' with {type:"json"};
 

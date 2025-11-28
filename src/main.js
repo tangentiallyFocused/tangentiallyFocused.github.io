@@ -461,6 +461,7 @@ const nodeDescriptionDiv = document.querySelector("#node-summary");
 nodeDescriptionDiv.textContent = "Hover over a node to know more!";
 const nodeImageImg = document.querySelector("#node-image");
 nodeImageImg.classList.add("image-invisible");
+// const bottomSheetDiv = document.querySelector("#sidebar");
 
 // FOR DESKTOP
 cy.on("mouseover", "node", (e) => {
@@ -476,9 +477,11 @@ cy.on("mouseover", "node", (e) => {
   const thumbnail = sel.data().thumbnail;
   const thumbnail_alt = sel.data().thumbnail_alt;
   if (thumbnail) {
-    nodeImageImg.src = thumbnail;
-    nodeImageImg.alt = thumbnail_alt;
-    nodeImageImg.classList.remove("image-invisible");
+    if(node[type = "project"]) {
+      nodeImageImg.src = thumbnail;
+      nodeImageImg.alt = thumbnail_alt;
+      nodeImageImg.classList.remove("image-invisible");
+    }
   } else {
     nodeImageImg.classList.add("image-invisible");
   }
@@ -513,9 +516,12 @@ cy.on("touchstart", "node", (e) => {
   const thumbnail = sel.data().thumbnail;
   const thumbnail_alt = sel.data().thumbnail_alt;
   if (thumbnail) {
-    nodeImageImg.src = thumbnail;
-    nodeImageImg.alt = thumbnail_alt;
-    nodeImageImg.classList.remove("image-invisible");
+    if(node[type = "project"]) {
+      nodeImageImg.src = thumbnail;
+      nodeImageImg.alt = thumbnail_alt;
+      nodeImageImg.classList.remove("image-invisible");
+      // bottomSheetDiv.style.transform = 'translateY(0);' /* Visible state */
+    }
   } else {
     nodeImageImg.classList.add("image-invisible");
   }

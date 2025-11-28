@@ -151,6 +151,26 @@
     --ql_orange: rgb(199,151,84);
     --ql_orange_09: rgb(199,151,84,0.9);
 
+    /* SCREEN WIDTHS */
+    /* xs */
+    /* --screen-width-max-xs: 576px; */
+    --screen-width-min-xs: 0px;
+    /* sm */
+    --screen-width-max-sm: 576px;
+    --screen-width-min-sm: 576px;
+    /* xs */
+    --screen-width-max-md: 576px;
+    --screen-width-min-md: 0px;
+    /* xs */
+    --screen-width-max-xs: 576px;
+    --screen-width-min-xs: 0px;
+    /* xs */
+    --screen-width-max-xs: 576px;
+    --screen-width-min-xs: 0px;
+    /* xs */
+    --screen-width-max-xs: 576px;
+    --screen-width-min-xs: 0px;
+
     --font-size-xs: 12px;
     --font-size-sm: 14px;
     --font-size-md: 16px;
@@ -198,7 +218,6 @@
         /* font-family: var(--font-body); */
         margin: 0;
         font-weight: 400;
-        /* color: #003153; */
     }
 
     body {
@@ -210,30 +229,29 @@
     }
 
     button {
-        background-color: rgb(248, 246, 243);
+        background-color: var(--large-on-surface-header);
+        color: var(--md-on-surface);
+        border: 1px solid var(--large-on-surface-header);
+        border-radius: 10px;
+
+        padding: 0.625rem 0.75rem;
+        justify-content: center;
+        align-items: center;
+        /* gap: 0.625rem; */
+        width: max-content;
     }
 
     button:hover {
         background-color: rgb(255, 244, 79);
-        /* color: rgb(40, 30, 0) !important; */
+        color: var(--md-on-secondary-alt);
+        border: 1px solid var(--large-on-surface-header);
+        border-radius: 10px;
     }
 
     button:focus {
-        background-color: #003153;
-        color: rgb(250, 248, 250) !important;
+        background-color: var(--large-on-surface-header);
+        color: var(--md-on-surface) !important;
+        border: 1px solid var(--large-on-surface-header);
+        border-radius: 10px;
     }
-  
-    /* font-family: 'Fira Code', 'Recursive'; */
-
-    /* font-feature-settings: "ss01", "ss02", "ss03", "ss04", "ss05", "ss06", "zero", "onum"; */
-
-    /* font-family: 'Fira Code VF', 'Recursive', monospace, sans-serif;
-    code { font-family: 'Fira Code VF', 'Recursive', monospace, sans-serif; } */
-    /* code { font-family: 'Fira Code', 'Recursive';}  */
-    /* monospace; } */
-
-    /* @supports (font-variation-settings: normal) {
-        font-family: 'Fira Code VF', 'Recursive', monospace, sans-serif;
-        code { font-family: 'Fira Code VF', 'Recursive', monospace, sans-serif; }
-    } */
 }

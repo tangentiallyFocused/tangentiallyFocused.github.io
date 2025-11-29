@@ -30,7 +30,7 @@ const nodes_formatted_for_cytoscape = projects.map((project, index) => {
       type: "project",
       themes: project.themes,
       role: project.role,
-      date: project.date,
+      timeline: project.date,
       description: project.description,
       thumbnail: project.thumbnail,
       thumbnail_alt: project.thumbnail_alt,
@@ -478,14 +478,21 @@ cy.on("mouseover", "node", (e) => {
   cy.elements().difference(sel.outgoers()).not(sel).addClass('semitransp');
   sel.addClass('theFocus').outgoers().addClass('theFocus');
 
+  // section text vars
   const name = sel.data().id;
+  // const themes = sel.data().themes;
+  const role = sel.data().role;
   const description = sel.data().description;
+  const timeline = sel.data().timeline;
+
+
   if (description) {
     nodeTitleDiv.textContent = name;
     // nodeThemeDiv.textContent = themes;
-    // nodeRoleDiv.textContent = role;
-    nodeDateDiv.textContent = date;
+    nodeRoleDiv.textContent = role;
+    nodeDateDiv.textContent = timeline;
     nodeDescriptionDiv.textContent = description;  
+    // ADD ONE FOR SKILLS
   }
 
   const thumbnail = sel.data().thumbnail;

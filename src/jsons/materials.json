@@ -120,9 +120,12 @@
         "name": "JSON"
     },
     {
-        "name": "Claude"
+        "name": "Claude AI"
     },
     {
         "name": "Cursor"
+    },
+    {
+        "name": "JSTOR"
     }
 ]

@@ -49,9 +49,9 @@ nodes_formatted_for_cytoscape.push(...themes.map((theme) => {
 
 // highlighting nodes
 import formats from './jsons/formats.json';
-import materials from './jsons/materials.json';
+import skills from './jsons/skills.json';
 // console.log("formats: " + formats);
-// console.log("materials: " + materials);
+// console.log("skills: " + skills);
 nodes_formatted_for_cytoscape.push(...formats.map((format) => {
   return {
     data: {
@@ -60,11 +60,11 @@ nodes_formatted_for_cytoscape.push(...formats.map((format) => {
     }
   }
 }))
-nodes_formatted_for_cytoscape.push(...materials.map((material) => {
+nodes_formatted_for_cytoscape.push(...skills.map((skill) => {
   return {
     data: {
-      id: material.name,
-      type: "material"
+      id: skill.name,
+      type: "skill"
     }
   }
 }))
@@ -91,45 +91,16 @@ const edges = projects.flatMap((project) => {
       {
         data: { id: `${theme}-${project.name}`, source: theme, target: project.name }
       }]),
-    // edge material : name --> material
-    ...project.materials.flatMap((material) => [{ // edge theme
-        data: { id: `${project.name}-${material}`, source: project.name, target: material }
+    // edge skill : name --> skill
+    ...project.skills.flatMap((skill) => [{ // edge theme
+        data: { id: `${project.name}-${skill}`, source: project.name, target: skill }
       },
-      // edge material : material --> name
+      // edge skill : skill --> name
       {
-        data: { id: `${material}-${project.name}`, source: material, target: project.name }
+        data: { id: `${skill}-${project.name}`, source: skill, target: project.name }
       }]),
   ]
 });
-
-// console.log("edges: " + edges);
-
-
-// function materialFilter(jsonFile) {
-//   // const materialFile = jsonFile;
-//   console.log(jsonFile.length);
-//   for(let grouping = 0; grouping < jsonFile.length; grouping++) {
-//     let materialObject = jsonFile[grouping];
-//     // const materialShort = materialText.split(" ").toLowerCase();
-//     let materialShort = materialObject.name;
-//     let mobj = materialObject.toString();
-//     let mstr = materialShort.toString();
-//     let mshrt = materialShort.replaceAll(' ', '').toString().toLowerCase().substring(0,10);
-//     let code = "<input type='checkbox' id='" + `${mshrt}` + "Filter' name='" + `${mstr}` + "'>\n<label for=" + mshrt + "Filter> " + mstr + "</label><br>\n";
-
-//     document.getElementById("test").innerHTML = code;
-   
-//     console.log(code);
-//   }
-  
-// }
-// console.log(materialFilter(materials));
-
-  // { // dates
-
-// import constants from '/src/constants.css' with {type:'css'};
-// const constants = await import('/src/constants.css', {assert: { type:'css'}});
-// document.adoptedStyleSheets[constants.default];
 
 var cy = cytoscape({
   container: document.getElementById('cy'),
@@ -279,9 +250,9 @@ var cy = cytoscape({
         // 'font-size': '8'
       }
     },
-    //material node
+    //skill node
     {
-      selector: 'node[type = "material"]',
+      selector: 'node[type = "skill"]',
       style: {
         'background-color': 'rgb(255,244,79)',
         'border-color': 'rgb(0, 174, 239)',

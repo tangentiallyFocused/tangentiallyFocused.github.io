@@ -19,7 +19,7 @@
         "iframe": [],
         "iframe_alt": [],
         "description": "Contributed asset development and systems design to a collaborative educational game exploring substance dependency. Proposed the Kowloon-inspired megastructure setting—dense, vertical, claustrophobic architecture mirroring addiction's psychological trap. Modeled environmental pieces and alien humanoid characters in Blender, textured in Photoshop, integrated into Unity. Co-designed mechanic-as-metaphor systems where \"drugs\" function as ability modifiers with compounding consequences: speed boosts followed by slower-than-baseline crashes, anxiety relief with escalating side effects. Worked with three teammates on concept documentation and C# implementation. Used alien protagonists for educational distance—acknowledging we weren't addiction professionals. Project remained in pre-production due to institutional disruption (campus strike, scheduling conflicts). Demonstrates 3D modeling, texturing workflows, game systems design, and collaborative development.",
-        "thumbnail": "tinted/summary-pics/aeln-summary.PNG",
+        "thumbnail": "/aeln-summary.png",
         "thumbnail_alt": "Screenshot of AELN draft on Unity Game Engine"
     },
     {
@@ -42,7 +42,7 @@
         "iframe": [],
         "iframe_alt": [],
         "description": "Built five canvases from scratch (cutting wood, assembling frames, stretching canvas) for a series of fragmented nude self-portraits using only CMY printer colors: quinacridone magenta, Prussian blue, and lemon yellow. 'Reproductions' references mechanical printing, biological reproduction, and the artistic process itself. Limiting myself to a printer's palette merged digital color systems with physical painting, exploring how constraint enhances perception. Prussian blue substitutes for cyan, creating unexpected shadow depth while maintaining vibrancy. Each painting isolates body segments without context, transforming flesh into color landscapes where magenta bleeds into blue and yellow creates sculptural highlights. Viewers oscillate between recognizing the body and seeing abstract color fields. This work examines the perceptual disconnect between experiencing your own body and being objectified by external gazes.",
-        "thumbnail": "tinted/summary-pics/body-series-summary.PNG",
+        "thumbnail": "/body-series-summary.png",
         "thumbnail_alt": "5 paintings of a woman's body"
     },
     {
@@ -65,7 +65,7 @@
         "iframe": [],
         "iframe_alt": [],
         "description": "Designed a churn prediction dashboard for Worthix's Customer Success teams. CS managers had no early warning system for at-risk accounts - they only learned about problems when clients were already leaving. I created a risk-based interface that segments accounts by churn probability and revenue impact, with an AI assistant that proactively flags urgent patterns (\"You have 141 high-risk accounts representing $16.2M in expected loss\"). The conversational AI translates complex data into actionable dialogue for non-technical users. Color-coded risk hierarchy and revenue-first metrics help teams prioritize interventions before accounts churn.",
-        "thumbnail": "tinted/summary-pics/score-dashboard-summary.PNG",
+        "thumbnail": "/score-dashboard-summary.PNG",
         "thumbnail_alt": "Dashboard highlighting key statistics and alerts related to customer churn"
     },
     {
@@ -88,7 +88,7 @@
         "iframe": [],
         "iframe_alt": [],
         "description": "Designed an in-app competitive analysis dashboard for Worthix, an AI SaaS startup. Their platform analyzes customer reviews but lacked visual benchmarking tools - clients were exporting data to external platforms just to compare against competitors. I created an interface that shows industry trends, topic clustering, and AI-generated strategic insights in a single view. The persistent sidebar delivers actionable recommendations without cluttering the exploration area. Designed in Figma with functional Claude prototypes, then handed off to the development team for implementation.",
-        "thumbnail": "tinted/summary-pics/comp-analysis-summary.PNG",
+        "thumbnail": "/comp-analysis-summary.PNG",
         "thumbnail_alt": "Competitive Analysis Dashboard"
     },
     {
@@ -111,7 +111,7 @@
         "iframe": [],
         "iframe_alt": [],
         "description": "Press-on nails are designed for a standardized nail shape that doesn't exist - they fit poorly, feel uncomfortable, and pop off constantly. I 3D scanned my own fingers to capture exact nail geometry and surrounding contours, then used Blender to model custom-fit bases. After iterative prototyping to refine curvature and adhesion surface area, I 3D printed the final pieces and added hand-painted embellishments. The result: press-on nails that actually fit. This project bridges digital fabrication and traditional craft: using scanning and parametric modeling to solve a fit problem that mass production ignores.",
-        "thumbnail": "tinted/summary-pics/custom-nails-summary.PNG",
+        "thumbnail": "/custom-nails-summary.PNG",
         "thumbnail_alt": "Prototype of nails being 3D printed"
     },
     {
@@ -135,7 +135,7 @@
         "iframe": [],
         "iframe_alt": [],
         "description": "Designed a site-specific installation exploring memory and human connection through physical and reflected space. Built a mirrored wooden structure housing two plaster casts of my own hands forming a heart shape, intended as a 'memory house' where students could deposit notes and mementos for future visitors. Positioned vintage cable phones connecting the hands, creating both literal connection and metaphor for bridging distance. The mirrors doubled the visual presence of the hands while fragmenting the viewer's perception of the surrounding lakeside environment—collapsing the boundaries between sculpture, nature, and observer. Installed temporarily at a secluded campus location; the piece was later removed due to campus installation policies. My sculpture philosophy: if work occupies 3D space, it should invite interaction, not passive observation.",
-        "thumbnail": "tinted/summary-pics/house-memory-summary.PNG",
+        "thumbnail": "/house-memory-summary.PNG",
         "thumbnail_alt": "Angled mirrors reflecting hands (that are holding corded phones) forming a heart"
     },
     {
@@ -158,7 +158,7 @@
         "iframe": [],
         "iframe_alt": [],
         "description": "Translated complex neurolinguistic research into an accessible presentation for undergraduates. The study showed how native language shapes brain structure—German speakers developed stronger dorsal pathway connectivity while Arabic speakers showed greater inter-hemispheric connections. Applied progressive disclosure to build from foundational concepts (what is the connectome?) through methodology (diffusion MRI, tractography) to findings. Designed clear information hierarchy to make abstract neurological concepts digestible: white matter tracts, hemispheric lateralization, and language-specific neural adaptations. The challenge: presenting technical neuroscience without oversimplifying, while connecting research to course themes students already understood.",
-        "thumbnail": "tinted/summary-pics/language-structures-summary.PNG",
+        "thumbnail": "/language-structures-summary.PNG",
         "thumbnail_alt": "Slide highlighting how language is processed in the brain"
     },
     {
@@ -181,7 +181,7 @@
         "iframe": [],
         "iframe_alt": [],
         "description": "Designed a decision tree flowchart solving a recurring problem in my statistics course: students couldn't determine which statistical test to use. The textbook organized tests by chapter, not decision logic—forcing guess-and-check across 14 chapters. I created a visual flowchart walking through the decision process (comparing means? vertical/horizontal? categorical DV? correlation/regression?) with each path leading to the specific test and chapter. Built in XMind and shared with my professor, who distributed it to the class as a study resource. Transformed a navigational problem into a visual decision-support tool.",
-        "thumbnail": "tinted/summary-pics/mindmap-summary.PNG",
+        "thumbnail": "/mindmap-summary.PNG",
         "thumbnail_alt": "ORPI Data Type Selection Chart"
     },
     {
@@ -204,7 +204,7 @@
         "iframe": [],
         "iframe_alt": [],
         "description": "Designed contextual onboarding tooltips for Worthix Hub to address new user navigation struggles. Created progressive disclosure flow with positioned modals highlighting specific UI elements—dataset creation, metric selection, upload workflows—while dimming background elements. Each tooltip includes back/next navigation for non-linear exploration. System teaches core functionality through visual hierarchy and contextual positioning rather than static documentation. Currently piloted via walkthrough video with interactive implementation planned. Focused on reducing time-to-value for Customer Success managers learning dataset management and metric navigation. Demonstrates progressive disclosure, contextual education, and multi-step flow design.",
-        "thumbnail": "tinted/summary-pics/onboarding-summary.PNG",
+        "thumbnail": "/onboarding-summary.PNG",
         "thumbnail_alt": "Still of the onboarding tutorial for Worthix Hub 1.0"
     },
     {
@@ -227,7 +227,7 @@
         "iframe": [],
         "iframe_alt": [],
         "description": "Using colored pencil palettes limited to each species' actual color vision—dichromatic blues/yellows for dogs, limited blues/yellows/greens/purples for cats—I created two perspective drawings exploring how non-human cognition shapes experience. The first depicts my three bulldogs looking up at a kitchen stove: human food labeled \"their food (not)\", cat food receiving no such optimism, oven chicken annotated \"a delicacy, a feast.\" The second shows my cat's perspective from the shower floor, waiting for water. Bottles: \"an unnecessary amount.\" Window: \"air.\" Shower accessories: \"that thing.\" Water droplets: \"a delicacy (or a horror; depending on how you look at it).\" The annotations function as interior monologue, translating perception into deadpan animal logic while the restricted palette ensures visual accuracy to their lived experience.",
-        "thumbnail": "tinted/summary-pics/pet-perspective-summary.PNG",
+        "thumbnail": "/pet-perspective-summary.PNG",
         "thumbnail_alt": "Image of both of my 'Pet Perspective' pieces"
     },
     {
@@ -250,7 +250,7 @@
         "iframe": [],
         "iframe_alt": [],
         "description": "Designed and developed a portfolio site integrating all three conceptual pillars: Interconnectivity (randomized force-directed network graph), Interaction (navigation hover states, progressive disclosure), and Perception (CMYK-inspired color system, cognitive load optimization). Built responsive HTML/CSS/JS implementation using Material Design 3 principles adapted for accessibility: chromatic-only palettes (no pure neutrals), warm-tinted whites, semantic color roles. Developed interactive network visualization with theme-based filtering, modal systems, and mobile adaptations. Established design system documented across multiple iterations (v1.0→v3.0) with typography pairings (Outfit headings, Atkinson Hyperlegible body text for low-vision accessibility). Used AI-assisted workflow for color generation and code optimization while maintaining design authority. Hosted on GitHub.",
-        "thumbnail": "tinted/summary-pics/portfolio-summary.PNG",
+        "thumbnail": "/portfolio-summary.PNG",
         "thumbnail_alt": "The most updated version of my portfolio (Nov 27, 2025)"
     },
     {
@@ -274,7 +274,7 @@
         "iframe": ["https://storymaps.arcgis.com/stories/c6bff788464d437eb51a1540cba36b7f?header"],
         "iframe_alt": [],
         "description": "Created an interactive map documenting 19 Snow White tale variants across six continents using ArcGIS StoryMaps. Applied Aarne-Thompson-Uther classification (tale-type 709) to investigate how narratives maintain structural DNA while motifs transform culturally: German mirrors become Moroccan maternal jealousy, Scottish trees, Chinese witches. Researched folklore databases and used interlibrary loan to compile variants from Tatar's The Fairest of Them All. Designed a dual-map interface: global view showing distribution patterns, plus regional zooms with expandable story cards containing tale excerpts and citations. Information architecture supports both geographic exploration and linear reading paths. Demonstrates folklore's core characteristic: widespread transmission and cultural adaptation without centralized authorship.",
-        "thumbnail": "tinted/summary-pics/snow-white-summary.PNG",
+        "thumbnail": "/snow-white-summary.PNG",
         "thumbnail_alt": "Screenshot of 'Snow White' Variants website displaying different regions of the world"
     },
     {
@@ -297,7 +297,7 @@
         "iframe": ["https://docs.google.com/spreadsheets/d/e/2PACX-1vS28bCxBDux2F7rpVHDlhKB6kwYmDTCsQPCHymEC3fCdte8ROGIkjfAj7GN7NBJhcUmRVfBkTZ-06vV/pubhtml?widget=true&amp;headers=false"],
         "iframe_alt": ["google doc sheet"],
         "description": "Designed a self-assessment system (in Google Sheets) transforming passive studying into active tracking. Students break content into components using a four-level scale: red (don't understand), orange :( (partially confused), yellow :) (nearly understand), green (fully understand). Splitting 'partially' with emotional indicators solved ambiguity in traditional scales. The spreadsheet tallies topics needing attention, converting vague goals into action items. Built instructions directly into the interface via bright yellow cells. Validated by a psychology professor for forcing active recall over passive review.",
-        "thumbnail": "tinted/summary-pics/study-spreadsheet-summary.PNG",
+        "thumbnail": "/study-spreadsheet-summary.PNG",
         "thumbnail_alt": "Screenshot of spreadsheet used for active recall studying"
     },
     {
@@ -320,7 +320,7 @@
         "iframe": [],
         "iframe_alt": [],
         "description": "Many residents want to engage with local government but can't attend town halls due to accessibility barriers, scheduling conflicts, or intimidation. Working with a team of three classmates, I interviewed community members who shared: \"I care about local issues but meetings conflict with my schedule\" and \"Town halls feel intimidating.\" We designed TownHall, a civic engagement app that lets residents stream live meetings, submit questions in real-time, message representatives directly, and set custom alerts. Created wireframes in Balsamiq and interactive prototypes in Figma, iterating based on peer and faculty feedback.",
-        "thumbnail": "tinted/summary-pics/townhall-summary.PNG",
+        "thumbnail": "/townhall-summary.PNG",
         "thumbnail_alt": "Screenshot of frames of Town H@ll in Figma"
     },
     {
@@ -343,7 +343,7 @@
         "iframe": [],
         "iframe_alt": [],
         "description": "Working with a research partner, I designed and conducted an experiment testing whether emotion vocabulary priming increases preschoolers' spontaneous use of emotion words. Created two versions of a children's book ('Mr. S' by Monica Arnaldo)—one with emotion words, one without—ensuring identical syllable counts to control for linguistic complexity. Researched typography to match the original book's font, then used Photoshop to seamlessly replace text on every page, matching color palettes and blending digitally altered elements. Printed and hand-bound both versions on cardstock and cardboard to maintain environmental consistency during testing. Conducted research sessions with preschool children and analyzed results in Jamovi. The design challenge: creating experimental stimuli that felt authentic enough not to disrupt children's reading experience.",
-        "thumbnail": "tinted/summary-pics/inside-voice-summary.PNG",
+        "thumbnail": "/inside-voice-summary.PNG",
         "thumbnail_alt": "Side-by-side comparison of 1 page from both testing conditions"
     },
     {
@@ -366,7 +366,7 @@
         "iframe": [],
         "iframe_alt": [],
         "description": "Audited Worthix's product ecosystem and identified critical brand inconsistency: every tool used different color variations—some purple, some bright blue, some muted orange/teal—eroding brand trust and recognition. Designed a unified color system maintaining the core orange/teal identity while establishing systematic palettes for light and dark modes. Applied chromatic-only color theory: no pure whites, blacks, or grays—all neutrals contain subtle color tints for visual depth and warmth. This principle, informed by fine arts training, prevents the muddy, flat appearance pure neutrals create. Generated color values through AI-assisted iteration, then structured implementation-ready CSS root file with semantic token naming for developer handoff. System provides cross-product visual consistency while future-proofing for dark mode implementation.",
-        "thumbnail": "tinted/summary-pics/worthix-styleguide-summary.PNG",
+        "thumbnail": "/worthix-styleguide-summary.PNG",
         "thumbnail_alt": "Light and darkmode palettes developed for Worthix"
     }
 ]

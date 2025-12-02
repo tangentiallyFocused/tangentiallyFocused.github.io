@@ -4,6 +4,6 @@ export default ({
   build: {
   //   outDir: '../',
     // assetsDir: 'public',
-    assetsInlineLimit: 22*1024*1024
+    // assetsInlineLimit: 22*1024*1024
   }
 })

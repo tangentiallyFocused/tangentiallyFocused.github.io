@@ -9,35 +9,607 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css"> -->
-    
     <link rel="icon" type="image/png" href="/logo.PNG">
 </head>
 <body>
     <div id="all">
         <!-- header bar -->
         <div id="header_bar">
-
-
-        </div>
-
-        <!-- overlay menu -->
-        <div id="overlay_menu">
-
-
+            <div id="name-container" class="header-item">
+                <a id="my_name" href="#hero-section">
+                    <h1 id="name">Lara Baldez Duque Ribeiro</h1>
+                </a>
+            </div>
+            <div id="role-a-container" class="header-item">
+                <!-- <h3 id="role-a" class="role">Interaction Design</h3> -->
+                <h4 id="role-a" class="role">Interaction Design</h4>
+            </div>
+            <div id="education-container" class="header-item">
+                <h4 id="education">Wellesley '25</h4>
+            </div>
+            <div id="role-b-container" class="header-item">
+                <!-- <h3 id="role-b" class="role">Cognitive UX</h3> -->
+                <h4 id="role-b" class="role">Cognitive UX</h4>
+            </div>
         </div>
 
         <!-- content -->
-        <div class="content">
+        <div id="content">
             <!-- <div id="search_bar"> -->
                 <!-- <input type="text" id="search_bar_input" placeholder="Search"> -->
                 <!-- width="300px" height="80px" -->
                 <!-- <span id="clear">x</span> -->
             <!-- </div> -->
             
-            <div id="cy"></div>
+            <div id="hero-section">
+                <div id="cy" class="hero"></div>
+                <!-- <div id="cy" class="hero"></div> -->
+
+                <div id="sidebar" class="hero">
+                    
+
+                    <div id="node-summary">
+                        <div id="node-header node-content">
+                            <h3 id="node-title" class="node-content"></h3>
+                            <div id="node-theme-container" class="node-tag node-content"></div>
+                            <div id="node-role" class="node-tag node-content"></div>
+                            <div id="node-date" class="node-tag node-content"></div>
+                        </div>
+                        <div id="node-text" class="node-content"></div>
+                        <div id="node-skills" class="node-content"></div>
+                    </div>
+
+                    <!-- 
+                        <div id="node-summary">
+                            <div id="node-title"></div>
+                            <div id="node-theme-container">
+                                <div id="x-theme" class="node-theme"></div>
+                            </div>
+                            <div id="node-text"></div>
+                            <div id="node-skills">
+                                <div id="x-skill" class="node-skill"></div>
+                            </div>
+                        </div>
+                    -->
+
+
+
+                    <div id="node-image-container">
+                        <img src="" alt="" id="node-image">
+                    </div>
+
+                </div>
+            </div> <!-- end hero section -->
+
+            <div id="about-site-section">
+                <div id="about-site-content">
+                    <div id="theme-card-container">
+                        <div id="interact-card" class="theme-flip-card interaction-theme">
+                            <h4 class="theme-card-title">Interaction</h4>
+                            <h6 class="theme-card-description">
+                                How things change through exposure to other factors, designing for feedback loops where systems & people mutually shape each other.
+                            </h6>
+                        </div>
+                        <div id="interconnect-card" class="theme-flip-card interconnectivity-theme">
+                            <h4 class="theme-card-title">Interconnectivity</h4>
+                            <h6 class="theme-card-description">
+                                Revealing how meaning emerges from relationships between ideas, people, & technologies rather than from isolated elements.
+                            </h6>
+                        </div>
+                        <div id="percept-card" class="theme-flip-card perception-theme">
+                            <h4 class="theme-card-title">Perception</h4>
+                            <h6 class="theme-card-description">
+                                Designing with awareness that we actively construct reality from sensory input, shaped by attention, memory, language, & what we're primed to notice.
+                            </h6>
+                        </div>
+                    </div> <!-- end theme cards -->
+
+                    <div id="about-site-text">
+                        <p>
+                            This portfolio is more than a showcase—it's a visual argument for how I think about design, technology, and human experience. As someone who studied both the science of mind and the art of interaction, I believe the best solutions emerge when we understand how people think, not just what they need.
+                        </p>
+                        <p>
+                            The force-directed graph you see below isn't just a creative flourish. It's a deliberate reflection of my three core themes—interconnectivity, interaction, and perception—working together. Each node represents a skill, project, or research theme, and the connections between them show how my work is truly interdisciplinary. Just like how memory works through associative networks in the brain, this portfolio lets you explore knowledge through relationships rather than rigid hierarchies.
+                        </p>
+                        <p>
+                            Every design choice—from the CMYK-inspired color palette to the carefully selected typography—is intentional and grounded in principles of accessibility and cognitive science. If you're curious about the reasoning behind these decisions, click the  icon in the header to explore the full design system and philosophy.
+                        </p>
+                    </div> <!-- end about-site-text -->
+                </div>
+            </div>
+
+            <div id="featured-section">
+                <div id="projects">
+                    <div id="worthix-score" class="featured-card">
+                        <div class="featured-pic-container">
+                            <img class="featured-pic" src="public/tinted/churn-thumbnail.png" alt="Churn/Score Dashboard">
+                        </div>
+                        <div class="card-info">
+                            <div class="card-upper-text">
+                                <h5 id="card-interaction" class="card-theme interaction-theme">Interaction</h5>
+                                <h3 class="card-title">Churn/Score Dashboard</h3>
+                            </div>
+                            <div class="card-lower-text">
+                                <div class="card-summary">
+                                    AI-assisted dashboard helping Customer Success teams identify at-risk accounts & prevent churn through predictive analytics & actionable recommendations.
+                                </div>
+                                <div class="card-skills">
+                                    <h6 class="card-skill">Figma</h6>
+                                    <h6 class="card-skill">Claude AI</h6>
+                                    <h6 class="card-skill">HTML/CSS</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="custom-nails" class="featured-card">
+                        <div class="featured-pic-container">
+                            <img class="featured-pic" src="public/tinted/nails-thumbnail-2.png" alt="3D rendering of my hand">
+                        </div>
+                        <div class="card-info">
+                            <div class="card-upper-text">
+                                <h5 id="card-perception" class="card-theme perception-theme">Perception</h5>
+                                <h3 class="card-title">Custom 3D <br> Printed Nails</h3>
+                            </div>
+                            <div class="card-lower-text">
+                                <div class="card-summary">
+                                    Personalized press-on nails designed to solve the fit problem of mass-produced products using 3D scanning, modeling, & iterative prototyping.
+                                </div>
+                                <div class="card-skills">
+                                    <h6 class="card-skill">3D Technology</h6>
+                                    <h6 class="card-skill">Blender</h6>
+                                    <h6 class="card-skill">Gel Polish</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="worthix-competitive" class="featured-card">
+                        <div class="featured-pic-container">
+                            <img class="featured-pic" src="public/tinted/comp-thumbnail.png" alt="Competitive Analysis Dashboard">
+                        </div>
+                        <div class="card-info">
+                            <div class="card-upper-text">
+                                <h5 id="card-interconnectivity" class="card-theme interconnectivity-theme">Interconnectivity</h5>
+                                <h3 class="card-title">Competitive Analysis Dashboard</h3>
+                            </div>
+                            <div class="card-lower-text">
+                                <div class="card-summary">
+                                    Interactive dashboard for benchmarking company performance against competitors with visual hierarchy, flexible filtering, & AI-generated insights.
+                                </div>
+                                <div class="card-skills">
+                                    <h6 class="card-skill">Figma</h6>
+                                    <h6 class="card-skill">Claude AI</h6>
+                                    <h6 class="card-skill">HTML/CSS</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+
+            <dialog id="worthix-score-modal" class="modal-card">
+                <div class="modal-image-container">
+                    <img class="modal-image" src="public/tinted/churn-thumbnail.png" alt="Competitive Analysis dashboard">
+                </div>
+
+                <div class="modal-text-content">
+                    <div class="modal-header">
+                        <div class="modal-titles">
+                            <h2>Churn/Score Dashboard</h2>
+                            <h5 class="modal-subtitle">
+                                Proactive retention through predictive analytics
+                            </h5>
+                        </div>
+                        <div class="modal-tags">
+                            <div class="top-modal-tags">
+                                <div class="modal-theme modal-tag interaction-theme">Interaction</div>
+                                <div class="modal-role modal-tag">Sole Product Designer</div>
+                                <div class="modal-timeline modal-tag">Oct – Nov 2025</div>
+                                <!-- <div class="modal-company modal-tag">@ Worthix (AI SaaS Startup)</div> -->
+                                <!-- <div class="modal-collaborators modal-tag">Lara Baldez Duque Ribeiro & Worthix Team</div> -->
+                            </div>
+
+                            <div class="card-skills modal-skills">
+                                <h6 class="card-skill">Figma</h6>
+                                <h6 class="card-skill">Claude AI</h6>
+                                <h6 class="card-skill">HTML/CSS</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="background-section card-section">
+                        <h3>Background</h3>
+                        <div class="background-text">
+                            Worthix needed a dashboard to help Customer Success teams identify at-risk accounts before they churn, moving from reactive support to proactive retention strategy.
+                        </div>
+                    </div>
+
+                    <div class="problem-section card-section">
+                        <h3>The Problem</h3>
+                        Customer Success teams lacked:
+                        <div class="three-problem-points">
+                            <div class="problem-a problem-point">
+                                <div class="problem-title">
+                                    Early warning signals:
+                                </div>
+                                <h5 class="problem-step-description">
+                                    No visibility into at-risk accounts until too late.
+                                </h5>
+                            </div>
+                            <div class="problem-b problem-point">
+                                <div class="problem-title">
+                                    Prioritization framework:
+                                </div>
+                                <h5 class="problem-step-description">
+                                    All accounts treated equally despite varying churn risk & revenue impact.
+                                </h5>
+                            </div>
+                            <div class="problem-c problem-point">
+                                <div class="problem-title">
+                                    Actionable guidance:
+                                </div>
+                                <h5 class="problem-step-description">
+                                    No clear interventions when risks were identified.
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="solution-section card-section">
+                        <h3>Design Solution</h3>
+                        <h4>Risk-Based Architecture</h4>
+                        <div class="three-design-solutions">
+                            <div class="solution-a design-solution">
+                                <div class="solution-title">
+                                    Critical Metrics First
+                                </div>
+                                <h5 class="solution-step-description">
+                                    (e.g., total expected loss) provide companies with an immediate health check
+                                </h5>
+                            </div>
+                            <div class="solution-b design-solution">
+                                <div class="solution-title">
+                                    Risk Segmentation
+                                </div>
+                                <h5 class="solution-step-description">
+                                    (AKA grouping accounts by churn probability & highlighting revenue impact) makes prioritization clear
+                                </h5>
+                            </div>
+                            <div class="solution-c design-solution">
+                                <div class="solution-title">
+                                    AI Churn Assistant
+                                </div>
+                                <h5 class="solution-step-description">
+                                    provides proactive analysis in a clear, accessible, and user-friendly manner
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="outcome-section card-section">
+                        <h3>Outcome</h3>
+                        <div class="outcome-text">
+                            Designs were delivered to product team and the AI assistant feature generated particular interest as a market differentiator.
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="close-container">
+                    <button class="close" id="close-score">Close</button>
+                </div>
+            </dialog>
+            
+            <dialog id="custom-nails-modal" class="modal-card">
+                <div class="modal-image-container">
+                    <img src="public/tinted/nails-thumbnail-2.png" alt="" class="modal-image">
+                </div>
+
+                <div class="modal-text-content">
+                    <div class="modal-header">
+                        <div class="modal-titles">
+                            <h2>Custom 3D Printed Press-On Nails</h2>
+                            <h5 class="modal-subtitle">
+                                Solving fit problems through personalized fabrication
+                            </h5>
+                        </div>
+                        <div class="modal-tags">
+                            <div class="top-modal-tags">
+                                <div class="modal-theme modal-tag perception-theme">Perception</div>
+                                <div class="modal-role modal-tag">Designer & Fabricator</div>
+                                <div class="modal-timeline modal-tag">Jan – May 2025</div>
+                            </div>
+                        
+
+                            <div class="card-skills modal-skills">
+                                <h6 class="card-skill">3D Scanner</h6>
+                                <h6 class="card-skill">Blender</h6>
+                                <h6 class="card-skill">3D Printer</h6>
+                                <h6 class="card-skill">PLA</h6>
+                                <!-- <h6 class="card-skill">Traditional Media: gel nail polish, solid builder gel, nail e-file</h6> -->
+                                <h6 class="card-skill">Traditional Media</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="problem-section card-section">
+                        <h3>The Problem</h3>
+                        Generic press-on nails assume a standardized nail shape that doesn't take individual variation into consideration, resulting in poor fit, discomfort, & nails that pop off easily.
+                    </div>
+
+                    <div class="process-section card-section">
+                        <h3>The Process</h3>
+                        <div class="process-steps">
+                            <div class="step-a process-step">
+                                <div class="process-title">
+                                    <div class="process-step-number">
+                                        1
+                                    </div>
+                                    Digital Capture
+                                </div>
+                                <h5 class="process-step-description">
+                                    3D scanned my fingers to capture exact nail geometry & surrounding skin contours.
+                                </h5>
+                                <div id="step-a-image-container" class="step-image-container">
+                                    <img src="public/tinted/nails_capture_one.png" alt="" id="step-a-image-one" class="step-image">
+                                    <img src="public/tinted/nails_capture_two.png" alt="" id="step-a-image-two" class="step-image">
+                                </div>
+                            </div>
+                            <div class="step-b process-step">
+                                <div class="process-title">
+                                    <div class="process-step-number">
+                                        2
+                                    </div>
+                                    Modeling & Refinement
+                                </div>
+                                <h5 class="process-step-description">
+                                    Used Blender to clean up scans, isolate nail beds, & create custom-fit base shapes.
+                                </h5>
+                                <div id="step-b-image-container" class="step-image-container">
+                                    <img src="" alt="" id="step-b-image-one" class="step-image">
+                                </div>
+                            </div>
+                            <div class="step-c process-step">
+                                <div class="process-title">
+                                    <div class="process-step-number">
+                                        3
+                                    </div>
+                                    Iterative Prototyping
+                                </div>
+                                <h5 class="process-step-description">
+                                    Printed multiple test versions, refining curvature, thickness, & adhesion surface area.
+                                </h5>
+                                <div id="step-c-image-container" class="step-image-container">
+                                    <img src="public/tinted/nails_prototype_one.png" alt="" id="step-c-image-one" class="step-image">
+                                    <img src="public/tinted/nails_prototype_two.png" alt="" id="step-c-image-two" class="step-image">
+                                </div>
+                            </div>
+                            <div class="step-d process-step">
+                                <div class="process-title">
+                                    <div class="process-step-number">
+                                        4
+                                    </div>
+                                    Hand Finishing
+                                </div>
+                                <h5 class="process-step-description">
+                                    Added handpainted embellishments to final pieces, combining the modern digital with the traditional analog.
+                                </h5>
+                                <div id="step-d-image-container" class="step-image-container">
+                                    <img src="public/tinted/nails_embellish_one.png" alt="" id="step-d-image-one" class="step-image">
+                                    <img src="public/tinted/nails_embellish_two.png" alt="" id="step-d-image-two" class="step-image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="outcome-section card-section">
+                        <h3>Outcome</h3>
+                        <div class="outcome-text">
+                            Successfully created custom-fit press-on nails that addressed the core fit problem of mass-produced alternatives. This project demonstrates end-to-end physical product development: identifying a real user need, prototyping through digital fabrication, & finishing with traditional techniques.
+                        </div>
+                    </div>
+
+                    <div class="close-container">
+                        <button class="close" id="close-nails">Close</button>
+                    </div>
+
+                </div>
+            </dialog>
+
+            <dialog id="worthix-competitive-modal" class="modal-card">
+                <div class="modal-image-container">
+                    <img src="public/tinted/comp-thumbnail.png" alt="" class="modal-image">
+                </div>
+
+                <div class="modal-text-content">
+                    <div class="modal-header">
+                        <div class="modal-titles">
+                            <h2>Competitive Analysis Dashboard</h2>
+                            <h5 class="modal-subtitle">
+                                Designing actionable insights under startup constraints
+                            </h5>
+                        </div>
+                        <div class="modal-tags">
+                            <div class="top-modal-tags">
+                                <div class="modal-theme modal-tag interconnectivity-theme">Interconnectivity</div>
+                                <div class="modal-role modal-tag">Sole Product Designer</div>
+                                <div class="modal-timeline modal-tag">Oct 2025</div>
+                                <!-- <div class="modal-company modal-tag">@ Worthix (AI SaaS Startup)</div>
+                                <div class="modal-collaborators modal-tag">Lara Baldez Duque Ribeiro & Worthix Team</div> -->
+                            </div>
+                        
+                            <div class="card-skills modal-skills">
+                                <h6 class="card-skill">Figma</h6>
+                                <h6 class="card-skill">Claude AI</h6>
+                                <h6 class="card-skill">Cursor AI</h6>
+                                <h6 class="card-skill">GitHub</h6>
+                                <h6 class="card-skill">HTML/CSS</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="background-section card-section">
+                        <h3>Background</h3>
+                        <div class="background-text">
+                            Worthix Hub is an AI-powered platform that scrapes and analyzes online reviews to help companies understand customer sentiment. The platform generates "Keep Doing" and "Do Better" summaries, but clients struggled to act on these insights without visual comparison tools.
+                        
+                            <h4 class="the-challenge">The challenge:</h4> Clients requested in-app data visualization capabilities to benchmark against competitors and industry trends, rather than exporting data to external tools like PowerBI.
+                        </div>
+                    </div>
+
+                    <div class="problem-section card-section">
+                        <h3>The Problem</h3>
+                        The initial prototype provided delivered insights but lacked:
+                        <div class="three-problem-points">
+                            <div class="problem-a problem-point">
+                                <div class="problem-title">
+                                    Visual comparison:
+                                </div>
+                                <h5 class="problem-step-description">
+                                    Clients couldn't see performance relative to competitors or industry averages.
+                                </h5>
+                            </div>
+                            <div class="problem-b problem-point">
+                                <div class="problem-title">
+                                    Good information hierarchy:
+                                </div>
+                                <h5 class="problem-step-description">
+                                    All data treated equally, making it difficult to identify priorities.
+                                </h5>
+                            </div>
+                            <div class="problem-c problem-point">
+                                <div class="problem-title">
+                                    Varied actionability:
+                                </div>
+                                <h5 class="problem-step-description">
+                                    Received analysis without clear next steps.
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="solution-section card-section">
+                        <h3>Design Solution</h3>
+                        <h4>Information Architecture: Context Before Detail</h4>
+                        I structured the dashboard to mirror how analysts approach competitive positioning:
+                        <div class="three-design-solutions">
+                            <div class="solution-a design-solution">
+                                <div class="solution-title">
+                                    Industry Trends First
+                                </div>
+                                <h5 class="solution-step-description">
+                                    separated by topic, establishing baseline performance expectations.
+                                </h5>
+                            </div>
+                            <div class="solution-b design-solution">
+                                <div class="solution-title">
+                                    Topic Clustering
+                                </div>
+                                <h5 class="solution-step-description">
+                                    reveals how themes distribute across companies, making competitive positioning visible at a glance.
+                                </h5>
+                            </div>
+                            <div class="solution-c design-solution">
+                                <div class="solution-title">
+                                    AI-Generated Insights
+                                </div>
+                                <h5 class="solution-step-description">
+                                    strengths, weaknesses, and recommended next steps, keeping the customer from questioning what comes next.
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="outcome-section card-section">
+                        <h3>Outcome</h3>
+                        <div class="outcome-text">
+                            Designs delivered to product team within the 3-day timeline for phased implementation.
+                            This project reinforced the importance of balancing user needs with technical feasibility, making strategic decisions with limited information, & designing systems that scale beyond initial requirements.
+
+                        </div>
+                    </div>
+
+                    <div class="close-container">
+                        <button class="close" id="close-competitive">Close</button>
+                    </div>
+                </div>
+            </dialog>
+
+            <div id="about-me-section">
+                <div id="me-left-content">
+                    <div id="me-text">
+                        <h2 id="me-header">
+                            Hi! I'm Lara
+                        </h2>
+                        <p>
+                            I'm a recent graduate from Wellesley College with a unique perspective shaped by two complementary fields: understanding how humans think and creating the technologies they interact with.
+                        </p>
+                        <p>
+                            My approach is rooted in a simple belief: nothing exists in isolation. Everything—systems, people, ideas—is in constant conversation. This is why I'm drawn to the intersection of cognitive science and interactive media, focusing on how we interact with systems, how systems interconnect, and how we perceive information.
+                        </p>
+                        <p>
+                            I'm also deeply influenced by the weak Sapir-Whorf hypothesis: language shapes thought. The way we present information—through interfaces, visualizations, or interactions—fundamentally affects how people understand it. Most things aren't inherently complicated; they become complicated when we present them poorly. That's why design, UX, and presentation matter.
+                        </p>
+                        <p>
+                            My work combines research-backed insights from cognitive psychology with technical execution, creating experiences that don't just function—they communicate clearly and adapt to how humans actually think.
+                        </p>
+                    </div>
+
+                    <div id="degrees">
+                        <a id="clsc" class="degree" href="https://www.wellesley.edu/academics/program/cognitive-linguistic-sciences" target="_blank">
+                            <div class="degree-upper">
+                                <div class="degree-title">Cognitive & Linguistic Sciences</div>
+                                <h6 class="degree-concentration">Psychology concentration</h6>
+                            </div>
+                            <h6 class="degree-summary">Understanding how language affects cognition</h6>
+
+                        </a>
+                        <a id="mas" class="degree" href="https://www.wellesley.edu/academics/program/media-arts-sciences" target="_blank">
+                            <div class="degree-upper">
+                                <div class="degree-title">Media Arts & Sciences</div>
+                                <h6 class="degree-concentration">Computer Science concentration</h6>
+                            </div>
+                            <h6 class="degree-summary">Investigating the intersection between art & technology</h6>
+                        </a>
+                    </div>
+                </div>
+                <div id="me-right-content">
+                    <!-- <img id="me-pic" src="public/tinted/LaraTruckee.png" alt="Me"> -->
+                    <img id="me-pic" src="public/LaraTruckee.jpg" alt="Me">
+                </div>
+                
+            </div>
+
+            <div id="contact-section">
+                <div id="contact-text">
+                    <h2 id="contact-header">
+                        Let's Connect
+                    </h2>
+                    I'm always open to discussing new opportunities, collaborations, or just connecting
+                </div>
+                <div id="contact-btn-container">
+                    <button id="email-btn" class="contact-btn">
+                        <a href="mailto:lbduquer@gmail.com" class="contact-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 640 640" id="email-icon" > <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--> <path d="M112 128C85.5 128 64 149.5 64 176C64 191.1 71.1 205.3 83.2 214.4L291.2 370.4C308.3 383.2 331.7 383.2 348.8 370.4L556.8 214.4C568.9 205.3 576 191.1 576 176C576 149.5 554.5 128 528 128L112 128zM64 260L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 260L377.6 408.8C343.5 434.4 296.5 434.4 262.4 408.8L64 260z"/></svg>
+                            Email Me
+                        </a>
+                    </button>
+                    <button id="linkedin-btn" class="contact-btn">
+                        <a href="https://linkedin.com/in/lara-bduquer-434297261/" target="_blank" class="contact-link">
+                            <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-linkedin' viewBox='0 0 16 16' id='linkedin-contact-icon'> <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--> <path d='M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z'/></svg>
+                            LinkedIn
+                        </a>
+                    </button>
+                </div>
+            </div>
+
+
+
+            
 
         </div>
         
@@ -46,12 +618,27 @@
 
         <!-- footer bar -->
         <div id="footer_bar">
-
+            <h5 id="copyright" class="footer-text">
+                Copyright © 2025 Lara Baldez Duque Ribeiro.
+                <br>
+                All rights reserved.
+            </h5>
+            <!-- <div class="spacer"></div> -->
+            <div id="logo-container">
+                <a href="#hero-section" id="logo-icon-link"> 
+                    <img id="logo-icon" src="public/logo.PNG" alt="logo icon">
+                </a>
+            </div>
+            <!-- <div class="spacer"></div> -->
+            <div id="footer_socials">
+                <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-linkedin' viewBox='0 0 16 16' id='linkedin-footer-icon' onclick='javascript:window.open("https://linkedin.com/in/lara-bduquer-434297261/", "_blank");'> <path d='M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z'/></svg>
+                <h5 id="email" class="footer-text">lbduquer@gmail.com</h5>
+            </div>
         </div>
     </div>
 </body>
 
-<script type="module" src="/src/headerJS.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.31.0/cytoscape.min.js"></script>
 <script type="module" src="/src/main.js"></script>
+<!-- <script type="module" src="/src/navs/navJS_projects.js"></script> -->
 </html>

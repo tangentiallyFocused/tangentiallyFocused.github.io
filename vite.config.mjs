@@ -1,7 +1,7 @@
 export default ({
   base: './',
-  // build: {
+  build: {
   //   outDir: '../',
-  //   assetsDir: 'disass',
-  // }
+    assetsDir: 'public',
+  }
 })

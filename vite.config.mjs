@@ -1,9 +1,9 @@
 export default ({
-  assetsInclude: ['**/*.png'],
+  // assetsInclude: ['**/*.png'],
   base: './',
   build: {
   //   outDir: '../',
-    assetsDir: 'public',
+    // assetsDir: 'public',
     assetsInlineLimit: 22*1024*1024
   }
 })

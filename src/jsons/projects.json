@@ -19,7 +19,7 @@
         "iframe": [],
         "iframe_alt": [],
         "description": "Contributed asset development and systems design to a collaborative educational game exploring substance dependency. Proposed the Kowloon-inspired megastructure setting—dense, vertical, claustrophobic architecture mirroring addiction's psychological trap. Modeled environmental pieces and alien humanoid characters in Blender, textured in Photoshop, integrated into Unity. Co-designed mechanic-as-metaphor systems where \"drugs\" function as ability modifiers with compounding consequences: speed boosts followed by slower-than-baseline crashes, anxiety relief with escalating side effects. Worked with three teammates on concept documentation and C# implementation. Used alien protagonists for educational distance—acknowledging we weren't addiction professionals. Project remained in pre-production due to institutional disruption (campus strike, scheduling conflicts). Demonstrates 3D modeling, texturing workflows, game systems design, and collaborative development.",
-        "thumbnail": "aeln-summary.png",
+        "thumbnail": "assets/aeln-summary.png",
         "thumbnail_alt": "Screenshot of AELN draft on Unity Game Engine"
     },
     {
@@ -42,7 +42,7 @@
         "iframe": [],
         "iframe_alt": [],
         "description": "Built five canvases from scratch (cutting wood, assembling frames, stretching canvas) for a series of fragmented nude self-portraits using only CMY printer colors: quinacridone magenta, Prussian blue, and lemon yellow. 'Reproductions' references mechanical printing, biological reproduction, and the artistic process itself. Limiting myself to a printer's palette merged digital color systems with physical painting, exploring how constraint enhances perception. Prussian blue substitutes for cyan, creating unexpected shadow depth while maintaining vibrancy. Each painting isolates body segments without context, transforming flesh into color landscapes where magenta bleeds into blue and yellow creates sculptural highlights. Viewers oscillate between recognizing the body and seeing abstract color fields. This work examines the perceptual disconnect between experiencing your own body and being objectified by external gazes.",
-        "thumbnail": "body-series-summary.png",
+        "thumbnail": "public/body-series-summary.png",
         "thumbnail_alt": "5 paintings of a woman's body"
     },
     {
@@ -65,7 +65,7 @@
         "iframe": [],
         "iframe_alt": [],
         "description": "Designed a churn prediction dashboard for Worthix's Customer Success teams. CS managers had no early warning system for at-risk accounts - they only learned about problems when clients were already leaving. I created a risk-based interface that segments accounts by churn probability and revenue impact, with an AI assistant that proactively flags urgent patterns (\"You have 141 high-risk accounts representing $16.2M in expected loss\"). The conversational AI translates complex data into actionable dialogue for non-technical users. Color-coded risk hierarchy and revenue-first metrics help teams prioritize interventions before accounts churn.",
-        "thumbnail": "score-dashboard-summary.PNG",
+        "thumbnail": "/score-dashboard-summary.PNG",
         "thumbnail_alt": "Dashboard highlighting key statistics and alerts related to customer churn"
     },
     {
@@ -88,7 +88,7 @@
         "iframe": [],
         "iframe_alt": [],
         "description": "Designed an in-app competitive analysis dashboard for Worthix, an AI SaaS startup. Their platform analyzes customer reviews but lacked visual benchmarking tools - clients were exporting data to external platforms just to compare against competitors. I created an interface that shows industry trends, topic clustering, and AI-generated strategic insights in a single view. The persistent sidebar delivers actionable recommendations without cluttering the exploration area. Designed in Figma with functional Claude prototypes, then handed off to the development team for implementation.",
-        "thumbnail": "comp-analysis-summary.PNG",
+        "thumbnail": "dist/assets/comp-analysis-summary.PNG",
         "thumbnail_alt": "Competitive Analysis Dashboard"
     },
     {

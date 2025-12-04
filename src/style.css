@@ -171,12 +171,15 @@ body {
 
 .perception-theme {
   background-color: var(--theme-perception) !important;
+  color: var(--theme-on-perception) !important;
 }
 .interconnectivity-theme {
   background-color: var(--theme-interconnectivity) !important;
+  color: var(--theme-on-interconnectivity) !important;
 }
 .interaction-theme {
   background-color: var(--theme-interaction) !important;
+  color: var(--theme-on-interaction) !important;
 }
 
 #hero-section {

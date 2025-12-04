@@ -189,11 +189,15 @@ var cy = cytoscape({
       selector: 'node[id = "Interconnectivity"]',
       style: {
         'border-width': '3',
-        'border-color': 'rgb(128, 209, 159)',
-        'color': 'rgb(128, 209, 159)',
+        // 'border-color': 'rgb(128, 209, 159)',
+        // 'color': 'rgb(128, 209, 159)',
+        'border-color': 'rgb(18, 35, 26)',
+        'color': 'rgb(18, 35, 26)',
         'font-weight': '600',
         // 'background-color': 'rgba(221, 250, 232, 1)'
-        'background-color': 'rgba(13, 78, 38, 1)'
+        // 'background-color': 'rgba(13, 78, 38, 1)'
+        // 'background-color': 'rgb(18, 35, 26)'
+        'background-color': 'rgb(128, 209, 159)'
       }
     },
     {
@@ -201,21 +205,27 @@ var cy = cytoscape({
       style: {
         'border-width': '3',
         'border-color': 'rgb(142, 58, 89)',
+        // 'border-color': 'rgb(255, 217, 227)',
         'color': 'rgb(142, 58, 89)',
+        // 'color': 'rgb(255, 217, 227)',
         'font-weight': '600',
         'background-color': 'rgb(255, 217, 227)'
+        // 'background-color': 'rgb(142, 58, 89)'
       }
     },
     {
       selector: 'node[id = "Perception"]',
       style: {
         'border-width': '3',
-        'border-color': 'rgb(0, 174, 239)',
-        'color': 'rgb(0, 174, 239)',
+        // 'border-color': 'rgb(0, 174, 239)',
+        // 'color': 'rgb(0, 174, 239)',
+        'border-color': ' rgb(0, 20, 35)',
+        'color': ' rgb(0, 20, 35)',
         'font-weight': '600',
         // 'background-color': 'rgb(200, 220, 235)'
         // 'background-color': 'rgba(216, 236, 251, 1)'
-        'background-color': 'rgba(9, 67, 111, 1)'
+        // 'background-color': 'rgba(9, 67, 111, 1)'
+        'background-color': 'rgb(0, 174, 239)'
       }
     },
 

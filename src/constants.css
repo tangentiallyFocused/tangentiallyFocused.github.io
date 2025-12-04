@@ -105,11 +105,14 @@
 
     /* Theme Colors for Network/Projects */
     --theme-interaction: var(--brand-deep-rose);
-    --theme-on-interaction: var(--md-on-primary);
+    /* --theme-on-interaction: var(--md-on-primary); */
+    --theme-on-interaction: rgb(255, 217, 227);
     --theme-interconnectivity: var(--brand-sage-green);
-    --theme-on-interconnectivity: var(--custom-on-sage);
+    /* --theme-on-interconnectivity: var(--custom-on-sage); */
+    --theme-on-interconnectivity: rgb(18, 35, 26);
     --theme-perception: var(--brand-cyan-blue);
-    --theme-on-perception: var(--md-on-tertiary);
+    /* --theme-on-perception: var(--md-on-tertiary); */
+    --theme-on-perception: rgb(0, 20, 35);
 
     /* Node Colors (Network Graph) */
     --node-skill: var(--brand-lemon-yellow);

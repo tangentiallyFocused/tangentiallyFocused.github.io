@@ -116,7 +116,7 @@ var cy = cytoscape({
     {
       selector: 'node',
       style: {
-        'font-family': 'Atkinson Hyperlegible',
+        'font-family': 'Atkinson Hyperlegible, Inter, sans-serif',
         // 'font-feature-settings': "'cv01', 'cv06', 'cv10', 'ss05'"
       }
     },
@@ -174,7 +174,7 @@ var cy = cytoscape({
         'label': 'data(id)',
         // 'color': 'rgb(0, 174, 239)', // --md-tertiary: rgb(0, 174, 239)
         // 'font-size': 13,
-        'font-size': 24,
+        'font-size': 28,
 
         'text-valign': 'center',
         'text-halign': 'center',
@@ -185,7 +185,6 @@ var cy = cytoscape({
         'text-justification': 'center',
         'shape': 'roundrectangle',
         'text-max-width': '125px',
-        // 'font-size': '8'
       }
     },
     {

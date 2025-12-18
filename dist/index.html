@@ -63,12 +63,16 @@
             <!-- </div> -->
             
             <div id="hero-section">
-                <div id="cy" class="hero"></div>
-                <!-- <div id="cy" class="hero"></div> -->
+                <div id="cy-container" class="hero">
+                    <div id="cy" class="hero"></div>
+                    <div id="cy-overlay" class="hero"></div>
+                    <div id="cy-status-chip" class="hero">
+                        <span id="cy-status-text" class="hero">Click to interact with graph</span>
+                        <!-- <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.<path d="M183.1 137.4C170.6 124.9 150.3 124.9 137.8 137.4C125.3 149.9 125.3 170.2 137.8 182.7L275.2 320L137.9 457.4C125.4 469.9 125.4 490.2 137.9 502.7C150.4 515.2 170.7 515.2 183.2 502.7L320.5 365.3L457.9 502.6C470.4 515.1 490.7 515.1 503.2 502.6C515.7 490.1 515.7 469.8 503.2 457.3L365.8 320L503.1 182.6C515.6 170.1 515.6 149.8 503.1 137.3C490.6 124.8 470.3 124.8 457.8 137.3L320.5 274.7L183.1 137.4z"/></svg> -->
+                    </div>
+                </div>
 
                 <div id="sidebar" class="hero">
-                    
-
                     <div id="node-summary">
                         <div id="node-header node-content">
                             <h3 id="node-title" class="node-content"></h3>
@@ -105,16 +109,16 @@
             <div id="about-site-section">
                 <div id="about-site-content">
                     <div id="theme-card-container">
-                        <div id="interact-card" class="theme-flip-card interaction-theme">
-                            <h4 class="theme-card-title">Interaction</h4>
-                            <h6 class="theme-card-description">
-                                How things change through exposure to other factors, designing for feedback loops where systems & people mutually shape each other.
-                            </h6>
-                        </div>
                         <div id="interconnect-card" class="theme-flip-card interconnectivity-theme">
                             <h4 class="theme-card-title">Interconnectivity</h4>
                             <h6 class="theme-card-description">
                                 Revealing how meaning emerges from relationships between ideas, people, & technologies rather than from isolated elements.
+                            </h6>
+                        </div>
+                        <div id="interact-card" class="theme-flip-card interaction-theme">
+                            <h4 class="theme-card-title">Interaction</h4>
+                            <h6 class="theme-card-description">
+                                How things change through exposure to other factors, designing for feedback loops where systems & people mutually shape each other.
                             </h6>
                         </div>
                         <div id="percept-card" class="theme-flip-card perception-theme">
@@ -128,20 +132,20 @@
                     <div id="about-site-text">
                         <p>
                             When I designed this portfolio, I wanted it to not only be a place of aesthetics, but one that 
-                            highlights exactly how I think. Specifically, how I think about design, technology, and human 
+                            <b class="bold-text">highlights exactly how I think</b>. Specifically, how I think about design, technology, and human 
                             experience. As someone who studied both the science of mind and the art of interaction, I believe 
-                            the best solutions emerge when we understand how people think, not just what they need.
+                            the best solutions emerge when we <b class="bold-text">understand how people think, not just what they need.</b>
                         </p>
                         <p>
-                            The force-directed graph you see above isn't just a creative flourish. It's a deliberate reflection 
-                            of my three core themes (interconnectivity, interaction, and perception) working together. Each node 
+                            The force-directed graph you see above isn't just a creative flourish. It's a deliberate <b class="bold-text">reflection 
+                            of my three core themes</b> (interconnectivity, interaction, and perception) working together. Each node 
                             represents a skill, project, or theme, and the connections between them highlight their truly 
                             interdisciplinary nature. Much like the brain, my network is composed of a series of associative networks, 
                             allowing you to explore in your own way, rather than rigid hierarchies.
 
                         </p>
                         <p>
-                            Every design choice, from the CMYK-inspired color palette to the carefully selected typography, is intentional and grounded in principles of accessibility and cognitive science. For example, each time the page is refreshed a new layout for the network appears, changing each user's perception of the site. 
+                            Every design choice, from the CMYK-inspired color palette to the carefully selected typography, is intentional and <b class="bold-text">grounded in principles of accessibility and cognitive science</b>. For example, each time the page is refreshed a new layout for the network appears, changing each user's perception of the site. 
                             Future plans for this site include adding more interactive annotations and explanations of my design 
                             decisions to this site, adding full modals for each project, and better responsiveness for mobile.
                         </p>
@@ -576,10 +580,10 @@
                             I'm a recent graduate from Wellesley College with a unique perspective shaped by two complementary fields: understanding how humans think and creating the technologies and tools they interact with.
                         </p>
                         <p>
-                            My approach is rooted in a simple belief: nothing exists in isolation. Everything, be it systems, people, or ideas, is in constant conversation. This is why I'm drawn to the intersection of cognitive science and interactive media, focusing on how we interact with systems, how systems interconnect, and how we perceive information.
+                            My approach is rooted in a simple belief: <b class="bold-text">nothing exists in isolation</b>. Everything, be it systems, people, or ideas, is in constant conversation. This is why I'm drawn to the intersection of cognitive science and interactive media, focusing on how we interact with systems, how systems interconnect, and how we perceive information.
                         </p>
                         <p>
-                            I'm also deeply influenced by the weak Sapir-Whorf hypothesis: language shapes thought. The way we present information, through interfaces, visualizations, or interactions, fundamentally affects how people understand it. Most things aren't inherently complicated; they become complicated when we present them poorly. That's why design, UX, and presentation matter.
+                            I'm also deeply influenced by the weak Sapir-Whorf hypothesis: language shapes thought. The way we present information, through interfaces, visualizations, or interactions, fundamentally affects how people understand it. <b class="bold-text">Most things aren't inherently complicated; they become complicated when we present them poorly.</b> That's why design, UX, and presentation matter.
                         </p>
                         <p>
                             My work combines research-backed insights from cognitive psychology with technical execution, creating experiences that don't just function, but communicate clearly and adapt to how individuals actually think.

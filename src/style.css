@@ -207,8 +207,12 @@ body {
   align-content: center;
 }
 
-#cy {
-  /* position: absolute; */
+/******
+  active/inactive overlay done with help from cursor ai
+**** */
+
+#cy-container {
+  position: relative;
   left: 0;
   /* width: 100%; */
   /* height: 79vh; */
@@ -219,10 +223,92 @@ body {
   width: 100vw;
   min-width: 65vw;
   
-
   background: var(--md-surface-container);
   /* border: 1px solid var(--md-outline-variant); */
 }
+
+#cy {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* height: 79vh; */
+  /* height: 84vh; */
+  /* min-height: 70%;
+  height: 95%;
+  max-height: 100vh;
+  width: 100vw;
+  min-width: 65vw; */
+  
+  background: var(--md-surface-container);
+  z-index: 1;
+  /* border: 1px solid var(--md-outline-variant); */
+}
+
+#cy-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  /* background-color: var(--md-scrim) opacity(0.3); */
+  cursor: pointer;
+  z-index: 10;
+  transition: opacity 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+  pointer-events: auto;
+  border-radius: 10px;
+  border: 2px solid var(--md-outline-variant);
+}
+
+#cy-overlay.active {
+  opacity: 0;
+  pointer-events: none;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+#cy-status-chip {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: var(--md-surface-container-highest);
+  color: var(--md-on-surface);
+  padding: 0.625rem 0.75rem;
+  border-radius: 6.25rem;
+  border: 1px solid var(--md-outline-variant);
+  z-index: 11;
+  font-size: 0.875rem;
+  font-family: var(--font-body);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  display: flex;
+}
+
+#cy-status-chip.active #close-icon {
+  display: block;
+  fill: var(--md-on-surface);
+}
+
+#cy-status-chip::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--md-tertiary);
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+#cy-status-chip.active::before {
+  background-color: var(--custom-sage-calm);
+}
+
+/* END CURSOR AI ASSISTANCE */
 
 #node-summary {
   /* background: var(--md-surface-container-low); */
@@ -1027,13 +1113,37 @@ input[type="checkbox"]:checked::before {
   transition: max-height 0.2s ease-out;
 }
 
- /* deadling with hover vs. no hover capabilities; these deal with the PRIMARY inputs */
- @media (hover: hover) {
-  /* targets ONLY devices that CAN hover */
+/* deadling with hover vs. no hover capabilities; these deal with the PRIMARY inputs */
+@media (hover: hover) {
+/* targets ONLY devices that CAN hover */
 
+}
+
+@media (hover: none) {
+/* targets ONLY devices that CANNOT hover */
+
+}
+
+ /* *********************** */
+
+ /* .percept-bold-text {
+  color: var(--theme-perception);
  }
 
- @media (hover: none) {
-  /* targets ONLY devices that CANNOT hover */
-  
- }
+ .interconnect-bold-text {
+  color: var(--theme-interconnectivity);
+ } */
+
+.bold-text {
+  color: var(--large-on-surface-header);
+  /* color: var(--md-secondary); */
+  /* color: var(--md-tertiary); */
+  font-family: var(--font-heading);
+  font-size: large;
+}
+
+#close-icon {
+  width: 14px;
+  height: 14px;
+  display: none;
+}

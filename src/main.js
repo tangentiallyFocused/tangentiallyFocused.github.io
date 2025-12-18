@@ -686,3 +686,55 @@ closeNailsModal.addEventListener('click', () => {
 closeCompetitiveModal.addEventListener('click', () => {
   worthixCompetitiveModal.close();
 })
+
+
+// DONE IN CONJUNCTION WITH CURSOR AI
+// Overlay toggle functionality for cytoscape graph
+const cyOverlay = document.getElementById('cy-overlay');
+const cyStatusChip = document.getElementById('cy-status-chip');
+const cyStatusText = document.getElementById('cy-status-text');
+let cyActive = false;
+
+function toggleCyActive() {
+  cyActive = !cyActive;
+  
+  if (cyActive) {
+    // Enable zoom and pan
+    cy.userZoomingEnabled(true);
+    cy.userPanningEnabled(true);
+    cy.boxSelectionEnabled(true);
+    
+    // Update UI
+    cyOverlay.classList.add('active');
+    cyStatusChip.classList.add('active');
+    cyStatusText.textContent = 'Graph active';
+  } else {
+    // Disable zoom and pan
+    cy.userZoomingEnabled(false);
+    cy.userPanningEnabled(false);
+    cy.boxSelectionEnabled(false);
+    
+    // Update UI
+    cyOverlay.classList.remove('active');
+    cyStatusChip.classList.remove('active');
+    cyStatusText.textContent = 'Click to interact with graph';
+  }
+}
+
+// Add click handler to overlay
+cyOverlay.addEventListener('click', toggleCyActive);
+
+// Also allow clicking the status chip to toggle
+cyStatusChip.addEventListener('click', (e) => {
+  e.stopPropagation(); // Prevent triggering overlay click
+  toggleCyActive();
+});
+// END CURSOR AI
+
+// click esc disables scroll again
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+      e.stopPropagation();
+      toggleCyActive();
+  }
+});

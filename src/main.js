@@ -165,17 +165,8 @@ var cy = cytoscape({
     {
       selector: 'node[type = "theme"]',
       style: {
-        // 'border-width': '2',
-        // 'border-color': 'rgb(142,58,89)', // --md-primary: rgb(142,58,89)
-        'background-color': 'rgb(50, 46, 56)', // --md-surface-container-lowest: rgb(50, 46, 56)
-        // 'background-color': 'rgb(255, 253, 250)', // --md-surface-bright: rgb(255, 253, 250)
-        // 'border-color': 'var(--theme-interaction, rgb(142,58,89))',
-        // 'background-color': 'rgb(142,58,89)',
         'label': 'data(id)',
-        // 'color': 'rgb(0, 174, 239)', // --md-tertiary: rgb(0, 174, 239)
-        // 'font-size': 13,
         'font-size': 28,
-
         'text-valign': 'center',
         'text-halign': 'center',
         'text-wrap': 'wrap',
@@ -185,49 +176,30 @@ var cy = cytoscape({
         'text-justification': 'center',
         'shape': 'roundrectangle',
         'text-max-width': '125px',
+        // 'text-transform': 'uppercase',
+        'font-family': 'Outfit, Inter, sans-serif',
+        'font-weight': '600',
+        'background-color': 'rgb(34, 30, 40)', //surface-container: rgb(34, 30, 40)
+        'border-width': 3,
+        'border-color': 'rgb(34, 30, 40)' //surface-container: rgb(34, 30, 40)
       }
     },
     {
       selector: 'node[id = "Interconnectivity"]',
       style: {
-        'border-width': '3',
-        // 'border-color': 'rgb(128, 209, 159)',
-        // 'color': 'rgb(128, 209, 159)',
-        'border-color': 'rgb(18, 35, 26)',
-        'color': 'rgb(18, 35, 26)',
-        'font-weight': '600',
-        // 'background-color': 'rgba(221, 250, 232, 1)'
-        // 'background-color': 'rgba(13, 78, 38, 1)'
-        // 'background-color': 'rgb(18, 35, 26)'
-        'background-color': 'rgb(128, 209, 159)'
+        'color': 'rgb(128, 209, 159)'
       }
     },
     {
       selector: 'node[id = "Interaction"]',
       style: {
-        'border-width': '3',
-        'border-color': 'rgb(142, 58, 89)',
-        // 'border-color': 'rgb(255, 217, 227)',
-        'color': 'rgb(142, 58, 89)',
-        // 'color': 'rgb(255, 217, 227)',
-        'font-weight': '600',
-        'background-color': 'rgb(255, 217, 227)'
-        // 'background-color': 'rgb(142, 58, 89)'
+        'color': 'rgb(142, 58, 89)'
       }
     },
     {
       selector: 'node[id = "Perception"]',
       style: {
-        'border-width': '3',
-        // 'border-color': 'rgb(0, 174, 239)',
-        // 'color': 'rgb(0, 174, 239)',
-        'border-color': ' rgb(0, 20, 35)',
-        'color': ' rgb(0, 20, 35)',
-        'font-weight': '600',
-        // 'background-color': 'rgb(200, 220, 235)'
-        // 'background-color': 'rgba(216, 236, 251, 1)'
-        // 'background-color': 'rgba(9, 67, 111, 1)'
-        'background-color': 'rgb(0, 174, 239)'
+        'color': 'rgb(0, 174, 239)'
       }
     },
 
@@ -695,6 +667,32 @@ closeCompetitiveModal.addEventListener('click', () => {
 const cyOverlay = document.getElementById('cy-overlay');
 const cyStatusChip = document.getElementById('cy-status-chip');
 const cyStatusText = document.getElementById('cy-status-text');
+
+const cyLegendChip = document.getElementById('cy-legend-chip');
+// const cyLegendText = document.getElementById('cy-legend-text');
+const cyLegendChevronUp = document.getElementById('chevron-up-icon');
+const cyLegendChevronDown = document.getElementById('chevron-down-icon');
+
+
+// Legend toggle functionality - starts open (not collapsed)
+let legendCollapsed = false;
+
+function toggleLegend(e) {
+  e.stopPropagation(); // Prevent event from bubbling to overlay
+
+  legendCollapsed = !legendCollapsed;
+
+  if (legendCollapsed) {
+    cyLegendChip.classList.add('collapsed');
+  } else {
+    cyLegendChip.classList.remove('collapsed');
+  }
+}
+
+// Add click handler to legend chip
+cyLegendChip.addEventListener('click', toggleLegend);
+
+
 let cyActive = false;
 
 function toggleCyActive() {

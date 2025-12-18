@@ -103,7 +103,7 @@ const edges = projects.flatMap((project) => {
 });
 
 var cy = cytoscape({
-  container: document.getElementById('cy'),
+  container: document.getElementById('cy-container'),
   elements: [ // list of graph elements to start with
     ...nodes_formatted_for_cytoscape, ...edges
   ],

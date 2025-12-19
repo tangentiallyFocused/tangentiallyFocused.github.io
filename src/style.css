@@ -615,7 +615,8 @@ body {
   /* min-height: calc(100vh - 300px);
   max-height: calc(100vh - 250px); */
   height: calc(100vh - 250px);
-  max-height: 600px;
+  height: 600px;
+  max-height: fit-content;
 
   position: relative;
   max-width: fit-content;

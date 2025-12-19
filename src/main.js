@@ -415,6 +415,7 @@ cy.on('tap', 'node', function(evt) {
 //   // })
 // });
 
+// const nodeSummary = document.getElementById("#node-summary");
 const nodeTitleDiv = document.querySelector("#node-title");
 const nodeThemeDiv = document.querySelector("#node-theme-container");
 const nodeRoleDiv = document.querySelector("#node-role");
@@ -423,7 +424,7 @@ const nodeDescriptionDiv = document.querySelector("#node-text");
 // const nodeSkillsDiv = document.querySelector("#node-skills");
 const nodeImageImg = document.querySelector("#node-image");
 
-nodeDescriptionDiv.textContent = "Hover over a node to know more!";
+// nodeDescriptionDiv.textContent = "Ready? Hover over any node to begin!";
 nodeImageImg.classList.add("image-invisible");
 // const bottomSheetDiv = document.querySelector("#sidebar");
 
@@ -440,7 +441,6 @@ cy.on("mouseover", "node", (e) => {
   const description = sel.data().description;
   const timeline = sel.data().timeline;
 
-
   if (description) {
     nodeTitleDiv.textContent = name;
     // nodeThemeDiv.textContent = themes;
@@ -448,6 +448,9 @@ cy.on("mouseover", "node", (e) => {
     nodeDateDiv.textContent = timeline;
     nodeDescriptionDiv.textContent = description;  
     // ADD ONE FOR SKILLS
+    // nodeSummary.classList.remove('centered');
+    nodeDescriptionDiv.classList.remove('centered');
+    // nodeSummary.classList.remove('centered');
   }
 
   const thumbnail = sel.data().thumbnail;
@@ -474,6 +477,7 @@ cy.on('mouseout', "node", (e) => {
   cy.elements().removeClass('semitransp');
   sel.removeClass('theFocus').outgoers().removeClass('theFocus');
   e.cy.container().style.cursor = "auto"; // https://stackoverflow.com/questions/19532031/how-do-i-change-cursor-to-pointer-when-mouse-is-over-a-node
+  // nodeDescriptionDiv.classList.add("centered");
 });
 
 // FOR MOBILE

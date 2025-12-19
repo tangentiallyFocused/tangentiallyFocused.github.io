@@ -1308,7 +1308,8 @@ input[type="checkbox"]:checked::before {
   color: var(--md-on-surface);
   padding: 0.625rem 0.75rem;
   /* border-radius: 6.25rem; */
-  border-radius: 1.25rem;
+  /* border-radius: 1.25rem; */
+  border-radius: 10px;
   border: 1px solid rgba(199, 151, 84, 0.3);
   font-size: 0.875rem;
   font-family: var(--font-body);

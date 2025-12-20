@@ -46,6 +46,7 @@
     top: 0;
     z-index: 20;
     align-items: center;
+    max-height: 125px;
 }
 
 #name-container {
@@ -98,6 +99,7 @@
     #header_bar {
         /* height: 150px; */
         height: max-content;
+        max-height: 155px;
         /* grid-template-columns: minmax(auto, 65vw) auto;  /* Changed from: 1fr auto */
         grid-template-columns: 1fr auto;
         grid-template-rows: auto auto;

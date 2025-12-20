@@ -30,7 +30,7 @@
    ========================================== */
 
 #header_bar {
-    height: calc(150px * 0.75);
+    /* height: calc(150px * 0.75); */
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:

@@ -873,7 +873,7 @@ body:has(dialog[open]) {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 1rem 0.5rem;
 }
 
@@ -1391,4 +1391,8 @@ input[type="checkbox"]:checked::before {
 #main-instructions {
   color: var(--small-on-surface-header);
   font-size: var(--font-size-2xl);
+}
+
+.card-section h4 {
+  margin-bottom: 0.5rem;
 }

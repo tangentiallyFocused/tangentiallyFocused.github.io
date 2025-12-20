@@ -18,111 +18,135 @@
     flex-grow: 2;
 }
 
-@media screen and (min-width: 1200px) {
-    #name-container {
-        width: 80vw !important;
-    }
-}
-
-@media screen and (min-width: 992px) {
-    #header_bar {
-        padding: 0 1rem;
-        height: 150px !important;
-    }
-
-    #name {
-        /* font-size: 48px !important; */
-        font-size: 48px;
-    }
-}
-
-/* @media screen and (min-width: 576px) { */
-@media screen and (min-width: 768px) {
-    #name-container {
-        flex-grow: 1;
-        /* width: 65vw !important; */
-        width: 65vw;
-        justify-content: start !important;
-    }
-
-    #education-container {
-        flex-grow: 1;
-    }
-
-    .role {
-        font-size: 30px !important;
-        font-size: var(--font-size-3xl);
-    }
-
-    #role-a-container {
-        /* flex-grow: 0 !important; */
-        flex-grow: 0;
-    }
-}
-
-@media screen and (max-width: 575.98px) {
-    #name-container {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-    
-    #name {
-        font-size: 7.25vw;
-    }
-
-    #role-a-container {
-        flex-grow: 1;
-    }
-}
-
-/* ****************** 
-    HEADER BAR 
-****************** */
-
-#header_bar {
-    height: calc(150px * 0.75);
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    position: fixed;
-    width: 100%;
-    
-    background-color: var(--md-surface);
-
-    /* box-shadow: 0 2px 5px lightblue; */
-    /* box-shadow: 0 2px 5px var(--p_blue_09); */
-    /* padding: 0 1rem; */
-    padding: 1rem;
-    align-items: center;
-
-    justify-self: flex-start;
-
-    top: 0;
-
-    z-index: 20;
-    justify-content: space-between;
-}
-
-#my_name {
-    /* font-size: calc(15px + 1vw); */
-    /* text-shadow: 1px 1px 1px var(--p_blue_09); */
-    /* text-shadow: 1px 0.5px 1px var(--p_blue_09); */
-    /* text-shadow: 1px 4px var(--qp_violet_09); */
+#my-name {
     text-decoration: none;
 }
 
+/* ==========================================
+   BASE STYLES (Mobile Portrait - Image 2)
+   Lara Baldez Duque Ribeiro (centered)
+   Interaction Design    Wellesley '25
+   Cognitive UX (centered below)
+   ========================================== */
+
+#header_bar {
+    height: calc(150px * 0.75);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "name name"
+        "role-a education"
+        "role-b role-b";
+    gap: 0.5rem 1rem;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    /* min-width: 470px; */
+    background-color: var(--md-surface);
+    top: 0;
+    z-index: 20;
+    align-items: center;
+}
+
+#name-container {
+    grid-area: name;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#role-a-container {
+    grid-area: role-a;
+}
+
+#education-container {
+    grid-area: education;
+    text-align: right;
+}
+
+#role-b-container {
+    grid-area: role-b;
+    display: flex;
+    /* justify-content: center; */
+}
+
+#name {
+    /* font-size: 7.25vw; */
+    font-size: clamp(var(--font-size-2_5xl), 5vw, var(--font-size-5xl));
+}
+
 #education {
-    /* font-size: 20px; */
     font-family: var(--font-heading);
     color: var(--small-on-surface-header);
-    /* font-size: calc(var(--font-size-2xl) * 0.75); */
+    font-size: clamp(var(--font-size-md), 3vw, var(--font-size-2xl));
 }
 
 .role {
-    /* font-size: 20px !important; */
-    /* font-size: 20px; */
     font-family: var(--font-heading);
     color: var(--small-on-surface-header);
+    font-size: clamp(var(--font-size-md), 3vw, var(--font-size-3xl)) !important;
+}
+
+
+/* ==========================================
+   TABLET & DESKTOP (768px+) - Image 1
+   Lara Baldez Duque Ribeiro  Interaction Design
+   Wellesley '25              Cognitive UX
+   ========================================== */
+
+@media screen and (min-width: 768px) {
+    #header_bar {
+        /* height: 150px; */
+        height: max-content;
+        /* grid-template-columns: minmax(auto, 65vw) auto;  /* Changed from: 1fr auto */
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "name role-a"
+            "education role-b";
+        /* padding: 0 1rem; */
+        gap: 0.5rem 2rem;
+    }
+
+    #name-container {
+        justify-content: flex-start;
+        flex-grow: 1;
+        width: max-content;
+        /* max-width: 65vw; */
+    }
+
+    #role-a-container,
+    #role-b-container {
+        text-align: right;
+        flex-grow: 0;
+        /* white-space: nowrap;  /* Force role-a to stay on one line */
+        justify-content: flex-end;
+    }
+
+    #education-container {
+        text-align: left;
+        flex-grow: 1;
+    }
+}
+
+
+/* ==========================================
+   LARGE DESKTOP (992px+)
+   ========================================== */
+
+/* @media screen and (min-width: 992px) {
+    #header_bar {
+        height: 150px;
+    }
+} */
+
+
+/* ==========================================
+   EXTRA LARGE DESKTOP (1200px+)
+   ========================================== */
+
+@media screen and (min-width: 1200px) {
+    #name-container {
+        width: 80vw;
+    }
 }

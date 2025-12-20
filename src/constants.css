@@ -177,9 +177,10 @@
     --font-size-xs: 12px;
     --font-size-sm: 14px;
     --font-size-md: 16px;
-    /* --font-size-lg: 18px;
-    --font-size-xl: 20px; */
+    /* --font-size-lg: 18px; */
+    --font-size-xl: 20px;
     --font-size-2xl: 24px;
+    --font-size-2_5xl: 28px;
     --font-size-3xl: 30px;
     --font-size-4xl: 36px;
     --font-size-5xl: 48px;
@@ -190,28 +191,27 @@
 
 
    /* mobile font sizes */
-   h1 {
-       font-size: 36px;
+   /* h1 {
+       font-size: var(--font-size-4xl);
        font-family: var(--font-heading);
        margin: 0;
        color: var(--large-on-surface-header);
    }
    h2 {
-       font-size: 28px;
+       font-size: var(--font-size-2_5xl);
        font-family: var(--font-heading);
        margin: 0;
        color: var(--large-on-surface-header);
    }
    h3 {
-       font-size: 24px;
+       font-size: var(--font-size-2xl);
        margin: 0;
        color: var(--small-on-surface-header);
    }
    h4 {
-       font-size: 20px;
+       font-size: var(--font-size-xl);
        margin: 0;
-       /* color: var(--small-on-surface-header); */
-   }
+   } */
 
 
    /* tablet font sizes */
@@ -241,30 +241,30 @@
 
 
    /* desktop font sizes */
-   @media screen and (min-width: 992px) {
+   /* @media screen and (min-width: 768px) { */
       h1 {
-           font-size: 48px;
+           font-size: var(--font-size-5xl); /* 48px */
            font-family: var(--font-heading);
            margin: 0;
            color: var(--large-on-surface-header);
        }
        h2 {
-           font-size: 36px;
+           font-size: var(--font-size-4xl); /* 36px */
            font-family: var(--font-heading);
            margin: 0;
            color: var(--large-on-surface-header);
        }
        h3 {
-           font-size: 30px;
+           font-size: var(--font-size-3xl); /* 30px */
            margin: 0;
            color: var(--small-on-surface-header);
        }
        h4 {
-           font-size: 24px;
+           font-size: var(--font-size-2xl); /* 24px */
            margin: 0;
            /* color: var(--small-on-surface-header); */
        }
-   }
+   /* } */
   
    h5 {
        font-size: var(--font-size-sm);

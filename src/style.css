@@ -80,6 +80,10 @@ body {
       max-width: 823px !important;
       /* width: clamp(60%, 75vw, 823px) !important; */
   }
+
+  .modal-text-content {
+    padding: 1rem 50px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -105,6 +109,15 @@ body {
 
   .modal-card {
       width: 75vw !important;
+  }
+
+  .problem-point, .design-solution {
+    width: calc(100% / 3) !important;
+  }
+
+  /* .three-problem-points, .three-design-solutions, .process-steps { */
+  .three-problem-points, .three-design-solutions {
+    flex-direction: row !important;
   }
 }
 
@@ -819,7 +832,8 @@ body:has(dialog[open]) {
 }
 
 .modal-text-content {
-  padding: 1rem 50px;
+  /* padding: 1rem 50px; */
+  padding: 1rem 15px;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -831,8 +845,9 @@ body:has(dialog[open]) {
 
 /* .three-problem-points, .three-design-solutions, .process-steps { */
 .three-problem-points, .three-design-solutions {
+  /* flex-direction: row; */
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 10px;
 
   text-align: center;
@@ -849,7 +864,8 @@ body:has(dialog[open]) {
 
 /* .problem-point, .design-solution, .process-step { */
 .problem-point, .design-solution {
-  width: calc(100% / 3);
+  /* width: calc(100% / 3); */
+  width: auto;
   background-color: var(--md-surface-container);
   border-radius: 10px;
   padding: 0.5rem;
@@ -907,7 +923,7 @@ body:has(dialog[open]) {
 
 /* .problem-step-description, .solution-step-description, .process-step-description { */
 .problem-step-description, .solution-step-description {
-  height: 5.5em;
+  /* height: 5.5em; */
   align-items: start;
 }
 

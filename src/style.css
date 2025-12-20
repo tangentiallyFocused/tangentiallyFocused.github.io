@@ -74,6 +74,12 @@ body {
     width: calc(100% / 3);
     width: 16rem;
   }
+
+  .modal-card {
+      min-width: 60% !important;
+      max-width: 823px !important;
+      /* width: clamp(60%, 75vw, 823px) !important; */
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -95,6 +101,10 @@ body {
 
   #theme-card-container {
     flex-wrap: nowrap !important;
+  }
+
+  .modal-card {
+      width: 75vw !important;
   }
 }
 
@@ -767,8 +777,9 @@ body:has(dialog[open]) {
   /* padding: 30px 50px; */
   padding: 0 0 30px 0;
   /* width: 600px; */
-  width: 60%;
-  max-width: 90%;
+  /* min-width: 60%;
+  max-width: 90%; */
+  width: 90%;
   /* text-align: center; */
 }
 

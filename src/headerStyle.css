@@ -147,8 +147,8 @@
    EXTRA LARGE DESKTOP (1200px+)
    ========================================== */
 
-@media screen and (min-width: 1200px) {
+/* @media screen and (min-width: 1200px) {
     #name-container {
         width: 80vw;
     }
-}
+} */

@@ -61,6 +61,19 @@ body {
     overflow-y: scroll;
   }
 
+  /* WITH CURSOR AI ASSISTANCE */
+  /* Hide bottom sheet on desktop */
+  .bottom-sheet {
+    display: none;
+  }
+
+  /* Hide mobile skip chip on desktop */
+  #mobile-skip-chip {
+    display: none;
+  }
+  /* END CURSOR AI ASSISTANCE */
+
+
   #about-site-content {
     gap: 3rem;
     flex-wrap: nowrap !important;
@@ -163,6 +176,200 @@ body {
   /* .about-site-content {
     flex-wrap: wrap-reverse;
   } */
+
+  /* CURSOR AI ASSISTANCE */
+  /* Bottom sheet styling (Google Maps style) */
+  .bottom-sheet {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-height: 70vh;
+    background-color: var(--md-surface-container-highest);
+    border-radius: 1.25rem 1.25rem 0 0;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    overflow-y: auto;
+    /* -webkit-overflow-scrolling: touch; */
+  }
+
+  .bottom-sheet.visible {
+    transform: translateY(0);
+  }
+
+  .bottom-sheet.dragging {
+    transition: none !important;
+  }
+
+  .drag-handle {
+    width: calc(100%/3);
+    max-width: 130px;
+    height: 6px;
+    background-color: var(--md-outline-variant);
+    border-radius: 2px;
+    /* margin: 0.75rem auto; */
+    cursor: grab;
+    touch-action: none;
+    /* Increase touch target area - larger invisible hitbox */
+    /* padding: 0.75rem; */
+    margin: 0.75rem auto 0.75rem auto;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Ensure handle doesn't overlap content below */
+    /* flex-shrink: 0; */
+  }
+  
+  /* Visual indicator bar */
+  .drag-handle::after {
+    /* content: ''; */
+    /* width: 40px;
+    height: 4px; */
+    background-color: var(--md-outline-variant);
+    border-radius: 2px;
+    display: block;
+  }
+
+  .drag-handle:active {
+    cursor: grabbing;
+  }
+
+  /* Make the top area of the card easier to drag - but only in the handle area */
+  .card-content {
+    position: relative;
+    /* Ensure content starts below the drag handle */
+    padding-top: 0;
+  }
+
+  /* Invisible drag area only in the top portion, not overlapping image */
+  .card-content::before {
+    content: '';
+    position: absolute;
+    top: -2.5rem;
+    left: 0;
+    right: 0;
+    height: 2.5rem;
+    touch-action: none;
+    /* Only allow dragging in this area, not over content */
+    pointer-events: auto;
+  }
+  
+  .card-content {
+    padding: 0 1.25rem 1.5rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    /* Ensure content doesn't overlap with drag handle above */
+    margin-top: 0;
+    position: relative;
+  }
+
+  #mobile-node-image-container {
+    width: 100%;
+    border-radius: 0.625rem;
+    overflow: hidden;
+    /* Ensure image container has proper spacing and isn't overlapped */
+    margin-top: 0;
+    position: relative;
+    z-index: 0;
+  }
+
+  #mobile-node-image {
+    width: 100%;
+    aspect-ratio: 7 / 5;
+    object-fit: cover;
+    display: none;
+  }
+
+  #mobile-node-image.visible {
+    display: block;
+  }
+
+  #mobile-node-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  #mobile-node-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  #mobile-node-title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--md-on-surface);
+    margin: 0;
+  }
+
+  .mobile-node-tag {
+    background-color: var(--md-surface-container);
+    padding: 0.5rem 0.75rem;
+    border-radius: 6.25rem;
+    font-size: 0.875rem;
+    color: var(--md-on-surface-variant);
+    width: max-content;
+    border: 1px solid var(--md-outline-variant);
+  }
+
+  #mobile-node-text {
+    color: var(--md-on-surface);
+    line-height: 1.6;
+  }
+
+  #mobile-text-content {
+    font-size: 0.9375rem;
+  }
+
+  /* Floating mobile skip chip */
+  #mobile-skip-chip {
+    position: fixed;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    background-color: var(--md-surface-container-highest);
+    color: var(--md-on-surface);
+    padding: 0.625rem 0.75rem;
+    border-radius: 20px;
+    border: 1px solid rgba(199, 151, 84, 0.3);
+    font-size: 0.875rem;
+    font-family: var(--font-body);
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    width: max-content;
+    text-decoration: none;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  #mobile-skip-chip:active {
+    background-color: rgb(58,52,57); /* background-color: rgba(199, 151, 84, 0.05); THIS IS THE SAME JUST SHEER */
+    border: 1px solid var(--brand-warm-gold);
+    color: var(--custom-on-gold);
+  }
+
+  #mobile-skip-chip:active #down-arrow-icon {
+    fill: var(--custom-on-gold);
+  }
+
+  #mobile-skip-chip.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-50%) translateY(20px);
+    pointer-events: none;
+  }
+  /* END CURSOR AI ASSISTANCE */
 
 }
 
@@ -680,7 +887,7 @@ body {
 }
 
 .card-info {
-  margin: 2vw 0.5vw 0.5vw 0.5vw;
+  margin: 20px 0.5vw 0.5vw 0.5vw;
   
   display: flex;
   padding: 0 0.625rem;
@@ -1358,7 +1565,7 @@ input[type="checkbox"]:checked::before {
 }
 
 #featured-projects-chip:hover {
-  background-color: rgba(199, 151, 84, 0.05);
+  background-color: rgba(199, 151, 84, 0.05); /* background-color: rgb(58,52,57); THIS IS THE SAME JUST OPAQUE */
   border: 1px solid var(--brand-warm-gold);
   color: var(--custom-on-gold);
   /* transform: translateY(-2px) scale(1.02); /* Subtle grow */

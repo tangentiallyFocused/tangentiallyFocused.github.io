@@ -73,7 +73,8 @@
 
 #name {
     /* font-size: 7.25vw; */
-    font-size: clamp(var(--font-size-2_5xl), 5vw, var(--font-size-5xl));
+    /* font-size: clamp(var(--font-size-2_5xl), 5vw, var(--font-size-5xl)); */
+    font-size: clamp(27px, 5vw, var(--font-size-5xl));
 }
 
 #education {

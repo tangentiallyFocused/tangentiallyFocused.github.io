@@ -133,7 +133,7 @@
                                 <b id="main-instructions">Hover any node to begin!</b>
                             </div>
 
-                            <a id="featured-projects-chip" href="#featured-section">
+                            <a id="featured-projects-chip" class="featured-chip" href="#featured-section">
                                 <span id="featured-chip-text">Skip to Featured Projects</span>
                                 <svg id="down-arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M297.4 566.6C309.9 579.1 330.2 579.1 342.7 566.6L502.7 406.6C515.2 394.1 515.2 373.8 502.7 361.3C490.2 348.8 469.9 348.8 457.4 361.3L352 466.7L352 96C352 78.3 337.7 64 320 64C302.3 64 288 78.3 288 96L288 466.7L182.6 361.3C170.1 348.8 149.8 348.8 137.3 361.3C124.8 373.8 124.8 394.1 137.3 406.6L297.3 566.6z"/></svg>
                             </a>
@@ -163,26 +163,58 @@
                 </div>
             </div> <!-- end hero section -->
 
+            <a id="mobile-skip-chip" class="featured-chip floating-cta" href="#featured-section">
+                <span id="featured-chip-text">Skip to Featured Projects</span>
+                <svg id="down-arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M297.4 566.6C309.9 579.1 330.2 579.1 342.7 566.6L502.7 406.6C515.2 394.1 515.2 373.8 502.7 361.3C490.2 348.8 469.9 348.8 457.4 361.3L352 466.7L352 96C352 78.3 337.7 64 320 64C302.3 64 288 78.3 288 96L288 466.7L182.6 361.3C170.1 348.8 149.8 348.8 137.3 361.3C124.8 373.8 124.8 394.1 137.3 406.6L297.3 566.6z"/></svg>
+            </a>
+
+            <!-- Project info card (hidden by default) -->
+            <div id="mobile-project-card" class="bottom-sheet">
+                <div class="drag-handle"></div>
+                <div class="card-content">
+                    <div id="mobile-node-image-container">
+                        <img src="" alt="" id="mobile-node-image">
+                    </div>
+                    <div id="mobile-node-summary">
+                        <div id="mobile-node-header">
+                            <h3 id="mobile-node-title" class="mobile-node-content"></h3>
+                            <div id="mobile-node-theme-container" class="mobile-node-tag mobile-node-content"></div>
+                            <div id="mobile-node-role" class="mobile-node-tag mobile-node-content"></div>
+                            <div id="mobile-node-date" class="mobile-node-tag mobile-node-content"></div>
+                        </div>
+                        <div id="mobile-node-text" class="mobile-node-content">
+                            <div id="mobile-text-content"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div id="about-site-section">
                 <div id="about-site-content">
                     <div id="theme-card-container">
                         <div id="interconnect-card" class="theme-flip-card interconnectivity-theme">
                             <h4 class="theme-card-title">Interconnectivity</h4>
-                            <h6 class="theme-card-description">
-                                Revealing how meaning emerges from relationships between ideas, people, & technologies rather than from isolated elements.
-                            </h6>
+                            <!-- <h6 class="theme-card-description"> -->
+                            <h5 class="theme-card-description">
+                                Revealing how <b class="theme-card-bold">meaning emerges from relationships</b> between ideas, people, & technologies rather than from isolated elements.
+                            <!-- </h6> -->
+                            </h5>
                         </div>
                         <div id="interact-card" class="theme-flip-card interaction-theme">
                             <h4 class="theme-card-title">Interaction</h4>
-                            <h6 class="theme-card-description">
-                                How things change through exposure to other factors, designing for feedback loops where systems & people mutually shape each other.
-                            </h6>
+                            <!-- <h6 class="theme-card-description"> -->
+                            <h5 class="theme-card-description">
+                                How <b class="theme-card-bold">things change through exposure</b> to other factors, designing for feedback loops where systems & people mutually shape each other.
+                            <!-- </h6> -->
+                            </h5>
                         </div>
                         <div id="percept-card" class="theme-flip-card perception-theme">
                             <h4 class="theme-card-title">Perception</h4>
-                            <h6 class="theme-card-description">
-                                Designing with awareness that we actively construct reality from sensory input, shaped by attention, memory, language, & what we're primed to notice.
-                            </h6>
+                            <!-- <h6 class="theme-card-description"> -->
+                            <h5 class="theme-card-description">
+                                Designing with awareness that <b class="theme-card-bold">we actively construct reality</b> from sensory input, shaped by attention, memory, language, & what we're primed to notice.
+                            <!-- </h6> -->
+                            </h5>
                         </div>
                     </div> <!-- end theme cards -->
 

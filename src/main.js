@@ -227,6 +227,7 @@ var cy = cytoscape({
         'text-wrap': 'wrap',
         'width': 'label',
         'height': 'label',
+        // 'compound-sizing-wrt-labels': 'include',
         'padding': '5px',
         'text-justification': 'center',
         'shape': 'roundrectangle',
@@ -240,7 +241,7 @@ var cy = cytoscape({
       style: {
         'background-color': 'rgb(255,244,79)',
         'border-color': 'rgb(0, 174, 239)',
-          // changes & adds border color to prussian blue on hover
+          // changes & adds border color to prussian/cyan blue on hover
         'border-width': '2px',
         'width': 15,
         'height': 15,
@@ -377,13 +378,33 @@ function animate() {
 
 animate(); // END SECTION FROM CLAUDE AI
 
+// WITH ASSISTANCE FROM CURSOR AI
+// Handle tap/click on nodes - show bottom sheet for project nodes on mobile
 cy.on('tap', 'node', function(evt) {
-    const node = evt.target;           // The clicked node
-    const nodeId = node.id();          // Get its ID (e.g., 'javascript')
+    //const node = evt.target;           // The clicked node
+    //const nodeId = node.id();          // Get its ID (e.g., 'javascript')
     // const data = nodeData[nodeId];     // Look up detailed data
     
-    // showSummary(data, node);           // Display it
+    const node = evt.target;
+    const nodeType = node.data('type');
+    
+    // Only show bottom sheet for project nodes on mobile
+    if (nodeType === 'project' && isMobile()) {
+      showBottomSheet(node.data());
+    }
 });
+
+// Also handle click event as fallback
+cy.on('click', 'node', function(evt) {
+    const node = evt.target;
+    const nodeType = node.data('type');
+
+    // Only show bottom sheet for project nodes on mobile
+    if (nodeType === 'project' && isMobile()) {
+      showBottomSheet(node.data());
+    }
+});
+// END CURSOR AI ASSISTANCE
 
 // cy.nodes().noOverlap({padding: 15});
 
@@ -480,7 +501,255 @@ cy.on('mouseout', "node", (e) => {
   // nodeDescriptionDiv.classList.add("centered");
 });
 
-// FOR MOBILE
+// FOR MOBILE; WITH ASSISTANCE FROM CURSOR AI
+// Mobile bottom sheet elements
+const mobileProjectCard = document.getElementById('mobile-project-card');
+const mobileNodeTitle = document.getElementById('mobile-node-title');
+const mobileNodeThemeContainer = document.getElementById('mobile-node-theme-container');
+const mobileNodeRole = document.getElementById('mobile-node-role');
+const mobileNodeDate = document.getElementById('mobile-node-date');
+const mobileNodeText = document.getElementById('mobile-text-content');
+const mobileNodeImage = document.getElementById('mobile-node-image');
+
+// Function to show bottom sheet with node data
+function showBottomSheet(nodeData) {
+  if (!mobileProjectCard) return;
+  
+  // Only show bottom sheet for project nodes
+  const nodeType = nodeData.type;
+  if (nodeType !== 'project') {
+    return;
+  }
+  
+  const name = nodeData.id;
+  const description = nodeData.description;
+  const role = nodeData.role;
+  const timeline = nodeData.timeline;
+  const themes = nodeData.themes;
+  const thumbnail = nodeData.thumbnail;
+  const thumbnail_alt = nodeData.thumbnail_alt;
+
+  // Populate title
+  mobileNodeTitle.textContent = name || '';
+
+  // Populate description
+  if (description) {
+    mobileNodeText.textContent = description;
+  } else {
+    mobileNodeText.textContent = '';
+  }
+
+  // Populate role
+  if (role) {
+    mobileNodeRole.textContent = role;
+    mobileNodeRole.style.display = 'block';
+  } else {
+    mobileNodeRole.style.display = 'none';
+  }
+
+  // Populate date
+  if (timeline) {
+    mobileNodeDate.textContent = timeline;
+    mobileNodeDate.style.display = 'block';
+  } else {
+    mobileNodeDate.style.display = 'none';
+  }
+
+  // Populate themes
+  if (themes && Array.isArray(themes) && themes.length > 0) {
+    mobileNodeThemeContainer.innerHTML = '';
+    themes.forEach(theme => {
+      const themeTag = document.createElement('div');
+      themeTag.className = 'mobile-node-tag';
+      themeTag.textContent = theme;
+      
+      // Add theme color classes
+      if (theme === 'Interconnectivity') {
+        themeTag.classList.add('interconnectivity-theme');
+      } else if (theme === 'Interaction') {
+        themeTag.classList.add('interaction-theme');
+      } else if (theme === 'Perception') {
+        themeTag.classList.add('perception-theme');
+      }
+      
+      mobileNodeThemeContainer.appendChild(themeTag);
+    });
+    mobileNodeThemeContainer.style.display = 'flex';
+    mobileNodeThemeContainer.style.flexWrap = 'wrap';
+    mobileNodeThemeContainer.style.gap = '0.5rem';
+  } else {
+    mobileNodeThemeContainer.style.display = 'none';
+  }
+
+  // Populate image
+  if (thumbnail && nodeType === 'project') {
+    mobileNodeImage.src = thumbnail;
+    mobileNodeImage.alt = thumbnail_alt || '';
+    mobileNodeImage.classList.add('visible');
+  } else {
+    mobileNodeImage.classList.remove('visible');
+  }
+
+  // Show bottom sheet and reset any transform
+  mobileProjectCard.style.transform = '';
+  mobileProjectCard.classList.remove('dragging');
+  mobileProjectCard.classList.add('visible');
+}
+
+// Function to hide bottom sheet
+function hideBottomSheet() {
+  if (!mobileProjectCard) return;
+  mobileProjectCard.classList.remove('visible');
+  // Reset transform when hiding
+  mobileProjectCard.style.transform = '';
+}
+
+// Drag handle functionality for bottom sheet
+const dragHandle = document.querySelector('.drag-handle');
+let isDragging = false;
+let startY = 0;
+let currentY = 0;
+let initialTransform = 0;
+
+function handleDragStart(e) {
+  if (!mobileProjectCard || !mobileProjectCard.classList.contains('visible')) return;
+  
+  isDragging = true;
+  startY = e.touches[0].clientY;
+  // Get current transform value
+  const currentTransform = mobileProjectCard.style.transform;
+  if (currentTransform && currentTransform !== 'translateY(0)') {
+    const match = currentTransform.match(/translateY\(([^)]+)\)/);
+    initialTransform = match ? parseFloat(match[1]) : 0;
+  } else {
+    initialTransform = 0;
+  }
+  
+  mobileProjectCard.classList.add('dragging');
+  e.preventDefault();
+}
+
+function handleDragMove(e) {
+  if (!isDragging || !mobileProjectCard || !mobileProjectCard.classList.contains('visible')) return;
+  
+  currentY = e.touches[0].clientY;
+  const deltaY = currentY - startY;
+  
+  // Only allow dragging down (positive deltaY)
+  if (deltaY > 0) {
+    const newTransform = initialTransform + deltaY;
+    mobileProjectCard.style.transform = `translateY(${newTransform}px)`;
+  }
+  
+  e.preventDefault();
+}
+
+function handleDragEnd(e) {
+  if (!isDragging) return;
+  
+  isDragging = false;
+  mobileProjectCard.classList.remove('dragging');
+  
+  const deltaY = currentY - startY;
+  const threshold = 100; // Pixels to drag before closing
+  
+  if (deltaY > threshold) {
+    // Close the sheet
+    hideBottomSheet();
+  } else {
+    // Snap back to original position
+    mobileProjectCard.style.transform = '';
+  }
+}
+
+if (dragHandle && mobileProjectCard) {
+  // Touch events for drag handle
+  dragHandle.addEventListener('touchstart', handleDragStart, { passive: false });
+  dragHandle.addEventListener('touchmove', handleDragMove, { passive: false });
+  dragHandle.addEventListener('touchend', handleDragEnd);
+  dragHandle.addEventListener('touchcancel', handleDragEnd);
+
+  // Also allow dragging from the top area of the card (for easier interaction)
+  const cardContent = document.querySelector('.card-content');
+  if (cardContent) {
+    let headerStartY = 0;
+    let headerInitialTransform = 0;
+    let isHeaderDragging = false;
+
+    cardContent.addEventListener('touchstart', (e) => {
+      // Only allow dragging if touch starts near the top of the card (first 80px)
+      if (!mobileProjectCard.classList.contains('visible')) return;
+      
+      const touchY = e.touches[0].clientY;
+      const cardRect = mobileProjectCard.getBoundingClientRect();
+      const touchRelativeY = touchY - cardRect.top;
+      
+      // Check if touch is in the top 80px of the card (drag handle area)
+      if (touchRelativeY < 80) {
+        isHeaderDragging = true;
+        headerStartY = touchY;
+        const currentTransform = mobileProjectCard.style.transform;
+        if (currentTransform && currentTransform !== 'translateY(0)') {
+          const match = currentTransform.match(/translateY\(([^)]+)\)/);
+          headerInitialTransform = match ? parseFloat(match[1]) : 0;
+        } else {
+          headerInitialTransform = 0;
+        }
+        mobileProjectCard.classList.add('dragging');
+        e.preventDefault();
+      }
+    }, { passive: false });
+
+    cardContent.addEventListener('touchmove', (e) => {
+      if (!isHeaderDragging || !mobileProjectCard.classList.contains('visible')) return;
+      
+      const touchY = e.touches[0].clientY;
+      const deltaY = touchY - headerStartY;
+      
+      // Only allow dragging down
+      if (deltaY > 0) {
+        const newTransform = headerInitialTransform + deltaY;
+        mobileProjectCard.style.transform = `translateY(${newTransform}px)`;
+      }
+      
+      e.preventDefault();
+    }, { passive: false });
+
+    cardContent.addEventListener('touchend', (e) => {
+      if (!isHeaderDragging) return;
+      
+      isHeaderDragging = false;
+      mobileProjectCard.classList.remove('dragging');
+      
+      const touchY = e.changedTouches[0].clientY;
+      const deltaY = touchY - headerStartY;
+      const threshold = 100;
+      
+      if (deltaY > threshold) {
+        hideBottomSheet();
+      } else {
+        mobileProjectCard.style.transform = '';
+      }
+    });
+
+    cardContent.addEventListener('touchcancel', (e) => {
+      if (isHeaderDragging) {
+        isHeaderDragging = false;
+        mobileProjectCard.classList.remove('dragging');
+        mobileProjectCard.style.transform = '';
+      }
+    });
+  }
+}
+
+// Check if we're on mobile (sidebar is hidden)
+function isMobile() {
+  return window.innerWidth <= 990;
+}
+
+// END CURSOR AI ASSISTANCE
+
+// FOR MOBILE - touchstart for visual feedback
 cy.on("touchstart", "node", (e) => {
   var sel = e.target;
 
@@ -495,6 +764,8 @@ cy.on("touchstart", "node", (e) => {
 
   const thumbnail = sel.data().thumbnail;
   const thumbnail_alt = sel.data().thumbnail_alt;
+  // const nodeType = sel.data('type');
+  // if (thumbnail && 'node[type = "project"]') {
   if (thumbnail) {
     if('node[type = "project"]') {
       nodeImageImg.src = thumbnail;
@@ -733,6 +1004,81 @@ cyStatusChip.addEventListener('click', (e) => {
   e.stopPropagation(); // Prevent triggering overlay click
   toggleCyActive();
 });
+
+// Scroll detection to hide bottom sheet and mobile skip chip when scrolling past hero section
+const heroSection = document.getElementById('hero-section');
+const mobileSkipChip = document.getElementById('mobile-skip-chip');
+let scrollTimeout;
+
+function handleScroll() {
+  if (!isMobile() || !heroSection) return;
+  
+  // Clear any existing timeout
+  clearTimeout(scrollTimeout);
+  
+  // Use requestAnimationFrame for smoother performance
+  requestAnimationFrame(() => {
+    const scrollPosition = window.scrollY || window.pageYOffset;
+    const heroRect = heroSection.getBoundingClientRect();
+    const heroHeight = heroRect.height;
+    
+    // Calculate hero section's top position relative to document
+    const heroTop = scrollPosition + heroRect.top;
+    
+    // Calculate how far we've scrolled into the hero section
+    const scrollIntoHero = scrollPosition - heroTop;
+    
+    // Calculate scroll progress as a percentage (0 to 1)
+    // If scrollIntoHero is negative, we're above the hero section
+    let scrollProgress = 0;
+    if (scrollIntoHero > 0 && heroHeight > 0) {
+      scrollProgress = scrollIntoHero / heroHeight;
+    }
+    
+    // Handle bottom sheet
+    const scrollThreshold = 0.5; // 0.5 = 50%, 0.25 = 25%
+    if (mobileProjectCard && scrollProgress > scrollThreshold && mobileProjectCard.classList.contains('visible')) {
+      hideBottomSheet();
+    }
+    
+    // Handle mobile skip chip - hide when scrolled past 25% of hero section
+    if (mobileSkipChip) {
+      if (scrollProgress > 0.25) {
+        // Hide when past 25%
+        if (!mobileSkipChip.classList.contains('hidden')) {
+          mobileSkipChip.classList.add('hidden');
+        }
+      } else {
+        // Show when at or above 25%, or before hero section
+        if (mobileSkipChip.classList.contains('hidden')) {
+          mobileSkipChip.classList.remove('hidden');
+        }
+      }
+    }
+  });
+}
+
+// Throttled scroll listener for better performance
+let ticking = false;
+window.addEventListener('scroll', () => {
+  if (!ticking) {
+    window.requestAnimationFrame(() => {
+      handleScroll();
+      ticking = false;
+    });
+    ticking = true;
+  }
+}, { passive: true });
+
+// Set initial state on page load
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => {
+    handleScroll();
+  });
+} else {
+  // DOM is already loaded
+  handleScroll();
+}
 // END CURSOR AI
 
 // click esc disables scroll again

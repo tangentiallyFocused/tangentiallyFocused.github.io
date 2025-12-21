@@ -64,9 +64,10 @@
         "image_alt": ["figma ss"],
         "iframe": [],
         "iframe_alt": [],
-        "description": "Designed a churn prediction dashboard for Worthix's Customer Success teams. CS managers had no early warning system for at-risk accounts - they only learned about problems when clients were already leaving. I created a risk-based interface that segments accounts by churn probability and revenue impact, with an AI assistant that proactively flags urgent patterns (\"You have 141 high-risk accounts representing $16.2M in expected loss\"). The conversational AI translates complex data into actionable dialogue for non-technical users. Color-coded risk hierarchy and revenue-first metrics help teams prioritize interventions before accounts churn.",
+        "description": "Designed a churn prediction dashboard for Worthix's Customer Success teams. CS managers had no early warning system for at-risk accounts - they only learned about problems when clients were already leaving. I created a risk-based interface that segments accounts by churn probability and revenue impact, with an AI assistant that proactively flags urgent patterns (\"You have 141 high-risk accounts representing $16.2M in expected loss\"). The conversational AI translates complex data into actionable dialogue for non-technical users. Color-coded risk hierarchy and revenue-first metrics help teams prioritize interventions before accounts churn. Read more about it in the featured section below.",
         "thumbnail": "./assets/score-dashboard-summary.PNG",
-        "thumbnail_alt": "Dashboard highlighting key statistics and alerts related to customer churn"
+        "thumbnail_alt": "Dashboard highlighting key statistics and alerts related to customer churn",
+        "featured": "Featured"
     },
     {
         "name": "Competitive Analysis Dashboard",
@@ -87,9 +88,10 @@
         "image_alt": ["figma ss"],
         "iframe": [],
         "iframe_alt": [],
-        "description": "Designed an in-app competitive analysis dashboard for Worthix, an AI SaaS startup. Their platform analyzes customer reviews but lacked visual benchmarking tools - clients were exporting data to external platforms just to compare against competitors. I created an interface that shows industry trends, topic clustering, and AI-generated strategic insights in a single view. The persistent sidebar delivers actionable recommendations without cluttering the exploration area. Designed in Figma with functional Claude prototypes, then handed off to the development team for implementation.",
+        "description": "Designed an in-app competitive analysis dashboard for Worthix, an AI SaaS startup. Their platform analyzes customer reviews but lacked visual benchmarking tools - clients were exporting data to external platforms just to compare against competitors. I created an interface that shows industry trends, topic clustering, and AI-generated strategic insights in a single view. The persistent sidebar delivers actionable recommendations without cluttering the exploration area. Designed in Figma with functional Claude prototypes, then handed off to the development team for implementation. Read more about it in the featured section below.",
         "thumbnail": "./assets/comp-analysis-summary.PNG",
-        "thumbnail_alt": "Competitive Analysis Dashboard"
+        "thumbnail_alt": "Competitive Analysis Dashboard",
+        "featured": "Featured"
     },
     {
         "name": "Custom 3D Printed Nails",
@@ -110,9 +112,10 @@
         "image_alt": ["hand pic"],
         "iframe": [],
         "iframe_alt": [],
-        "description": "Press-on nails are designed for a standardized nail shape that doesn't exist - they fit poorly, feel uncomfortable, and pop off constantly. I 3D scanned my own fingers to capture exact nail geometry and surrounding contours, then used Blender to model custom-fit bases. After iterative prototyping to refine curvature and adhesion surface area, I 3D printed the final pieces and added hand-painted embellishments. The result: press-on nails that actually fit. This project bridges digital fabrication and traditional craft: using scanning and parametric modeling to solve a fit problem that mass production ignores.",
+        "description": "Press-on nails are designed for a standardized nail shape that doesn't exist - they fit poorly, feel uncomfortable, and pop off constantly. I 3D scanned my own fingers to capture exact nail geometry and surrounding contours, then used Blender to model custom-fit bases. After iterative prototyping to refine curvature and adhesion surface area, I 3D printed the final pieces and added hand-painted embellishments. The result: press-on nails that actually fit. This project bridges digital fabrication and traditional craft: using scanning and parametric modeling to solve a fit problem that mass production ignores. Read more about it in the featured section below.",
         "thumbnail": "./assets/custom-nails-summary.PNG",
-        "thumbnail_alt": "Prototype of nails being 3D printed"
+        "thumbnail_alt": "Prototype of nails being 3D printed",
+        "featured": "Featured"
     },
     {
         "name": "House of Memory",

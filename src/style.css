@@ -118,6 +118,11 @@ body {
 
   #theme-card-container {
     flex-wrap: nowrap !important;
+    padding: 1rem 0 !important;
+  }
+
+  #about-site-section {
+    padding: 0 12.5vw !important;
   }
 
   .modal-card {
@@ -131,6 +136,23 @@ body {
   /* .three-problem-points, .three-design-solutions, .process-steps { */
   .three-problem-points, .three-design-solutions {
     flex-direction: row !important;
+  }
+
+  .node-tag {
+    background-color: var(--md-surface-container);
+    padding: 0.5rem 0.75rem;
+    border-radius: 6.25rem;
+    font-size: 0.875rem;
+    color: var(--md-on-surface-variant);
+    width: max-content;
+    /* border: 1px solid var(--md-outline-variant); */
+  }
+
+  #node-theme-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 6px;
   }
 }
 
@@ -214,7 +236,8 @@ body {
     touch-action: none;
     /* Increase touch target area - larger invisible hitbox */
     /* padding: 0.75rem; */
-    margin: 0.75rem auto 0.75rem auto;
+    /* margin: 0.75rem auto 0.75rem auto; */
+    margin: 1.5rem auto 1.5rem auto;
     position: relative;
     z-index: 1;
     display: flex;
@@ -295,12 +318,6 @@ body {
     gap: 1rem;
   }
 
-  #mobile-node-header {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-
   #mobile-node-title {
     font-family: var(--font-heading);
     font-size: 1.5rem;
@@ -316,7 +333,14 @@ body {
     font-size: 0.875rem;
     color: var(--md-on-surface-variant);
     width: max-content;
-    border: 1px solid var(--md-outline-variant);
+    /* border: 1px solid var(--md-outline-variant); */
+  }
+
+  #mobile-node-theme-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 6px;
   }
 
   #mobile-node-text {
@@ -739,7 +763,7 @@ body {
   flex-direction: row;
   flex-wrap: wrap-reverse;
 
-  padding: 0 12.5vw;
+  padding: 0; /* for mobile */
   align-items: center;
   justify-content: center;
   /* gap: 3rem; */
@@ -765,7 +789,7 @@ body {
   flex-wrap: wrap;
   /* gap: 50px; */
   gap: 1.5rem;
-  padding: 1rem 0;
+  padding: 0 12.5vw; /* for mobile */
   justify-content: center;
 }
 
@@ -1602,4 +1626,25 @@ input[type="checkbox"]:checked::before {
 
 .card-section h4 {
   margin-bottom: 0.5rem;
+}
+
+.nodes-additional {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.featured-tag {
+  background: var(--brand-warm-gold);
+  color: var(--custom-on-gold);
+}
+
+.node-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.invisible-header {
+  display: none;
 }

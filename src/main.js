@@ -33,6 +33,7 @@ const nodes_formatted_for_cytoscape = projects.map((project, index) => {
       type: "project",
       themes: project.themes,
       role: project.role,
+      featured: project.featured,
       timeline: project.date,
       description: project.description,
       thumbnail: project.thumbnail,
@@ -440,10 +441,12 @@ cy.on('click', 'node', function(evt) {
 const nodeTitleDiv = document.querySelector("#node-title");
 const nodeThemeDiv = document.querySelector("#node-theme-container");
 const nodeRoleDiv = document.querySelector("#node-role");
+const nodeFeaturedDiv = document.querySelector("#node-featured");
 const nodeDateDiv = document.querySelector("#node-date");
 const nodeDescriptionDiv = document.querySelector("#node-text");
 // const nodeSkillsDiv = document.querySelector("#node-skills");
 const nodeImageImg = document.querySelector("#node-image");
+const nodeHeaderDiv = document.querySelector(".node-header");
 
 // nodeDescriptionDiv.textContent = "Ready? Hover over any node to begin!";
 nodeImageImg.classList.add("image-invisible");
@@ -457,8 +460,9 @@ cy.on("mouseover", "node", (e) => {
 
   // section text vars
   const name = sel.data().id;
-  // const themes = sel.data().themes;
+  const themes = sel.data().themes;
   const role = sel.data().role;
+  const featured = sel.data().featured;
   const description = sel.data().description;
   const timeline = sel.data().timeline;
 
@@ -466,12 +470,48 @@ cy.on("mouseover", "node", (e) => {
     nodeTitleDiv.textContent = name;
     // nodeThemeDiv.textContent = themes;
     nodeRoleDiv.textContent = role;
+    nodeFeaturedDiv.textContent = featured;
     nodeDateDiv.textContent = timeline;
     nodeDescriptionDiv.textContent = description;  
     // ADD ONE FOR SKILLS
     // nodeSummary.classList.remove('centered');
     nodeDescriptionDiv.classList.remove('centered');
     // nodeSummary.classList.remove('centered');
+    nodeHeaderDiv.classList.remove('invisible-header');
+
+    // Populate featured
+    if (featured) {
+      nodeFeaturedDiv.textContent = featured;
+      nodeFeaturedDiv.style.display = 'block';
+    } else {
+      nodeFeaturedDiv.style.display = 'none';
+    }
+
+     // Populate themes
+    if (themes && Array.isArray(themes) && themes.length > 0) {
+      nodeThemeDiv.innerHTML = '';
+      themes.forEach(theme => {
+        const themeTag = document.createElement('div');
+        themeTag.className = 'node-tag';
+        themeTag.textContent = theme;
+        
+        // Add theme color classes
+        if (theme === 'Interconnectivity') {
+          themeTag.classList.add('interconnectivity-theme');
+        } else if (theme === 'Interaction') {
+          themeTag.classList.add('interaction-theme');
+        } else if (theme === 'Perception') {
+          themeTag.classList.add('perception-theme');
+        }
+        
+        nodeThemeDiv.appendChild(themeTag);
+      });
+      nodeThemeDiv.style.display = 'flex';
+      nodeThemeDiv.style.flexWrap = 'wrap';
+      nodeThemeDiv.style.gap = '0.5rem';
+    } else {
+      nodeThemeDiv.style.display = 'none';
+    }
   }
 
   const thumbnail = sel.data().thumbnail;
@@ -507,6 +547,7 @@ const mobileProjectCard = document.getElementById('mobile-project-card');
 const mobileNodeTitle = document.getElementById('mobile-node-title');
 const mobileNodeThemeContainer = document.getElementById('mobile-node-theme-container');
 const mobileNodeRole = document.getElementById('mobile-node-role');
+const mobileNodeFeatured = document.getElementById('mobile-node-featured');
 const mobileNodeDate = document.getElementById('mobile-node-date');
 const mobileNodeText = document.getElementById('mobile-text-content');
 const mobileNodeImage = document.getElementById('mobile-node-image');
@@ -524,6 +565,7 @@ function showBottomSheet(nodeData) {
   const name = nodeData.id;
   const description = nodeData.description;
   const role = nodeData.role;
+  const featured = nodeData.featured;
   const timeline = nodeData.timeline;
   const themes = nodeData.themes;
   const thumbnail = nodeData.thumbnail;
@@ -545,6 +587,14 @@ function showBottomSheet(nodeData) {
     mobileNodeRole.style.display = 'block';
   } else {
     mobileNodeRole.style.display = 'none';
+  }
+
+  // Populate featured
+  if (featured) {
+    mobileNodeFeatured.textContent = featured;
+    mobileNodeFeatured.style.display = 'block';
+  } else {
+    mobileNodeFeatured.style.display = 'none';
   }
 
   // Populate date

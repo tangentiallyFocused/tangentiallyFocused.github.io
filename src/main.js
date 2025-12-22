@@ -444,7 +444,7 @@ const nodeRoleDiv = document.querySelector("#node-role");
 const nodeFeaturedDiv = document.querySelector("#node-featured");
 const nodeDateDiv = document.querySelector("#node-date");
 const nodeDescriptionDiv = document.querySelector("#node-text");
-// const nodeSkillsDiv = document.querySelector("#node-skills");
+const nodeSkillsDiv = document.querySelector("#node-skills");
 const nodeImageImg = document.querySelector("#node-image");
 const nodeHeaderDiv = document.querySelector(".node-header");
 
@@ -465,10 +465,10 @@ cy.on("mouseover", "node", (e) => {
   const featured = sel.data().featured;
   const description = sel.data().description;
   const timeline = sel.data().timeline;
+  // const skills = sel.data().skills;
 
   if (description) {
     nodeTitleDiv.textContent = name;
-    // nodeThemeDiv.textContent = themes;
     nodeRoleDiv.textContent = role;
     nodeFeaturedDiv.textContent = featured;
     nodeDateDiv.textContent = timeline;
@@ -481,13 +481,14 @@ cy.on("mouseover", "node", (e) => {
 
     // Populate featured
     if (featured) {
-      nodeFeaturedDiv.textContent = featured;
+      // nodeFeaturedDiv.textContent = featured;
+      nodeFeaturedDiv.innerHTML = featured;
       nodeFeaturedDiv.style.display = 'block';
     } else {
       nodeFeaturedDiv.style.display = 'none';
     }
 
-     // Populate themes
+    // Populate themes
     if (themes && Array.isArray(themes) && themes.length > 0) {
       nodeThemeDiv.innerHTML = '';
       themes.forEach(theme => {

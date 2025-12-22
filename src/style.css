@@ -1648,3 +1648,9 @@ input[type="checkbox"]:checked::before {
 .invisible-header {
   display: none;
 }
+
+.star-icon {
+  width: 16px;
+  height: 16px;
+  fill: var(--custom-on-gold);
+}

@@ -663,7 +663,8 @@ body {
 
 .skill-indicator {
   background-color: rgb(255, 244, 79); /* --md-secondary / skill color */
-  border: 2px solid rgb(0, 174, 239); /* --md-tertiary / skill border */
+  /* border: 2px solid rgb(0, 174, 239); /* --md-tertiary / skill border */
+  border: 2px solid rgb(0, 49, 83); /* --md-tertiary / skill border */
 }
 
 #cy-legend-theme-container {
@@ -675,7 +676,8 @@ body {
 .theme-indicator {
   /* background: linear-gradient(to right, rgb(128, 209, 159), rgb(0, 174, 239)); /* interconnectivity to perception */
   /* color: var(--md-on-surface); */
-  background: linear-gradient(to right, rgb(142, 58, 89), rgb(128, 209, 159), rgb(0, 174, 239)); /* interconnectivity to perception */
+  /* OG!!! background: linear-gradient(to right, rgb(142, 58, 89), rgb(128, 209, 159), rgb(0, 174, 239)); /* interconnectivity to perception */
+  background: linear-gradient(to right, rgb(142, 58, 89), rgb(128, 209, 159), rgb(0, 49, 83)); /* interconnectivity to perception */
   /* background: linear-gradient(to right, rgb(128, 209, 159), rgb(142, 58, 89), rgb(0, 174, 239)); /* interconnectivity to perception */
   background-clip: text;
   color: transparent;

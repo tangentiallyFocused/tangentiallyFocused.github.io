@@ -34,8 +34,8 @@
     --md-on-secondary-container: rgb(40, 30, 0);
 
     /* ===== TERTIARY (Structure & Perception Theme) ===== */
-    /* --md-tertiary: var(--brand-navy-blue); */
-    --md-tertiary: rgb(0, 174, 239);
+    --md-tertiary: var(--brand-cyan-blue);
+    /* --md-tertiary: rgb(0, 174, 239); */
     --md-on-tertiary: rgb(250, 248, 250);
     --md-tertiary-container: rgb(200, 220, 235);
     --md-on-tertiary-container: rgb(0, 20, 35);

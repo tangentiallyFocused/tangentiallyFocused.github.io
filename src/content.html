@@ -1,0 +1,910 @@
+  <div id="progress-rail" role="progressbar" aria-label="Page reading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+    <div id="progress-fill"></div>
+  </div>
+  <div id="progress-label" aria-hidden="true">0%</div>
+
+  <header id="titlebar">
+    <p class="titlebar-name">Alex Felton Corsi Abélard</p>
+    <nav class="top-nav" aria-label="Site sections">
+      <a href="#abstract">Abstract</a>
+      <a href="#projects">Work</a>
+      <a href="#themes">Themes</a>
+      <a href="#connectome">Network</a>
+      <a href="#about">About</a>
+      <a href="resume.pdf" target="_blank" rel="noopener" class="nav-resume">Résumé ↗</a>
+    </nav>
+    <button id="hamburger" aria-label="Open navigation menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <button id="theme-toggle" aria-label="Toggle light and dark mode">☀</button>
+  </header>
+
+  <!-- Mobile nav overlay -->
+  <div id="mobile-nav-overlay" aria-hidden="true">
+    <div id="mobile-nav-inner">
+      <button id="mobile-nav-close" aria-label="Close navigation">✕ close</button>
+      <nav id="mobile-nav-links">
+        <a href="#abstract" class="mobile-nav-item"><span>Abstract</span><span class="mobile-nav-num">01</span></a>
+        <a href="#projects" class="mobile-nav-item"><span>Work</span><span class="mobile-nav-num">02</span></a>
+        <a href="#themes" class="mobile-nav-item"><span>Themes</span><span class="mobile-nav-num">03</span></a>
+        <a href="#connectome" class="mobile-nav-item"><span>Network</span><span class="mobile-nav-num">04</span></a>
+        <a href="#about" class="mobile-nav-item"><span>About</span><span class="mobile-nav-num">05</span></a>
+      </nav>
+      <div id="mobile-nav-footer">
+        <a href="resume.pdf" target="_blank" rel="noopener" class="mobile-nav-resume">Résumé ↗</a>
+        <span id="mobile-nav-meta">v4.4.0 · Cambridge, MA</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="page">
+
+    <!-- ════════════ HERO ════════════ -->
+    <section id="hero" aria-labelledby="hero-title">
+      <svg class="hero-graphic" aria-hidden="true" viewBox="0 0 500 380" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="#52d4d4" stroke-opacity="0.9" fill="none" stroke-width="0.8">
+          <line x1="250" y1="190" x2="140" y2="100"/><line x1="250" y1="190" x2="360" y2="110"/>
+          <line x1="250" y1="190" x2="400" y2="260"/><line x1="250" y1="190" x2="100" y2="280"/>
+          <line x1="250" y1="190" x2="200" y2="310"/><line x1="140" y1="100" x2="80" y2="60"/>
+          <line x1="140" y1="100" x2="200" y2="60"/><line x1="360" y1="110" x2="430" y2="70"/>
+          <line x1="360" y1="110" x2="440" y2="160"/><line x1="400" y1="260" x2="460" y2="300"/>
+          <line x1="100" y1="280" x2="50" y2="320"/><line x1="200" y1="310" x2="280" y2="350"/>
+        </g>
+        <g fill="#52d4d4">
+          <circle cx="250" cy="190" r="6"/><circle cx="140" cy="100" r="4"/><circle cx="360" cy="110" r="4"/>
+          <circle cx="400" cy="260" r="4"/><circle cx="100" cy="280" r="4"/><circle cx="200" cy="310" r="4"/>
+          <circle cx="80" cy="60" r="2.5"/><circle cx="200" cy="60" r="2.5"/><circle cx="430" cy="70" r="2.5"/>
+          <circle cx="460" cy="300" r="2.5"/><circle cx="50" cy="320" r="2.5"/><circle cx="280" cy="350" r="2.5"/>
+        </g>
+      </svg>
+
+      <div class="container">
+        <div class="hero-masthead fade-up">
+          <span class="hero-masthead-left">Portfolio</span>
+          <div class="hero-masthead-right">
+            v4.4.0 <span class="sep masthead-hide-mobile">·</span><span class="masthead-hide-mobile"> Product Designer</span> <span class="sep masthead-hide-mobile">·</span><span class="masthead-hide-mobile"> Cambridge, MA</span>
+          </div>
+        </div>
+
+        <p class="hero-doc-type fade-up d1">Working Document</p>
+
+        <h1 class="hero-title fade-up d2" id="hero-title">
+          On Designing at the Intersection of<br/>
+          <em>Cognition, Culture, and Construction:</em>
+        </h1>
+        <p class="hero-subtitle-line fade-up d2">Revealing What Was Never Complicated to Begin With</p>
+
+        <div class="hero-byline fade-up d3">
+          <div class="hero-author">Alex Felton Corsi Abélard <sup>1,2</sup></div>
+          <div class="hero-affiliation">
+            <span class="affil-desktop">
+              <sup>1</sup>&nbsp;Dept. of Cognitive &amp; Linguistic Science &nbsp;·&nbsp;
+              <sup>2</sup>&nbsp;Media Arts &amp; Sciences &nbsp;·&nbsp; Wellesley College
+            </span>
+            <span class="affil-mobile">
+              Wellesley College<br/>
+              <sup>1</sup>&nbsp;Cognitive &amp; Linguistic Science<br/>
+              <sup>2</sup>&nbsp;Media Arts &amp; Sciences
+            </span>
+          </div>
+        </div>
+
+        <div class="hero-meta-row fade-up d4">
+          <div class="hero-meta-item">
+            <div class="hero-meta-label">Received</div>
+            <div class="hero-meta-value">September 2019</div>
+          </div>
+          <div class="hero-meta-item">
+            <div class="hero-meta-label">Current revision</div>
+            <div class="hero-meta-value">April 2026</div>
+          </div>
+          <div class="hero-meta-item hero-meta-status-item">
+            <div class="hero-meta-label">Status</div>
+            <div class="hero-meta-status">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span class="hero-meta-value">Open to collaboration</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="fade-up d5">
+          <p class="hero-kw-label">Keywords</p>
+          <div class="hero-keywords" aria-label="Keywords">
+            <span class="kw-tag">linguistic relativity</span>
+            <span class="kw-tag">human connectome</span>
+            <span class="kw-tag">product design</span>
+            <span class="kw-tag">physical making</span>
+            <span class="kw-tag">color cognition</span>
+            <span class="kw-tag">systems design</span>
+            <span class="kw-tag">culture &amp; meaning</span>
+          </div>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary hero-cta-primary">View Work</a>
+            <div class="hero-cta-row">
+              <a href="#abstract" class="btn btn-ghost">Read Abstract</a>
+              <a href="resume.pdf" target="_blank" rel="noopener" class="btn btn-resume">Résumé ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════ 01 · ABSTRACT ════════════ -->
+    <section id="abstract" aria-labelledby="abstract-heading">
+      <div class="container">
+        <p class="section-label">01 — Abstract</p>
+        <h2 class="sec-heading" id="abstract-heading">On Cognition, Culture, and Construction</h2>
+        <div class="sec-divider" aria-hidden="true"></div>
+        <div class="abstract-box">
+          <span class="abstract-label" aria-hidden="true">Abstract</span>
+
+          <!-- Teaser — always visible -->
+          <p>My practice starts from a simple conviction: nothing exists in isolation. Systems, people, ideas — everything is in constant conversation. The lenses you bring determine which conversations you can hear, and which you can start. I design at the intersection of <span class="abstract-kw">cognitive &amp; linguistic science</span>, <span class="abstract-kw">media arts &amp; sciences</span>, and <span class="abstract-kw">education</span> — three disciplines that share a single question: what creates meaning, and what does meaning create?</p>
+
+          <!-- Read more button -->
+          <button class="abstract-read-more" id="abstract-read-more-btn" aria-expanded="false" aria-controls="abstract-expansion" onclick="(function(btn){var exp=document.getElementById('abstract-expansion');var open=exp.classList.toggle('open');btn.classList.toggle('open',open);btn.setAttribute('aria-expanded',String(open));btn.querySelector('.abstract-read-more-label').textContent=open?'Read less':'Read more';})(this)">
+            <span class="abstract-read-more-label">Read more</span>
+            <span class="abstract-read-more-caret">∨</span>
+          </button>
+
+          <!-- Expansion -->
+          <div class="abstract-expansion" id="abstract-expansion">
+            <p>The Sapir-Whorf hypothesis<span class="abstract-cite">[1]</span> — in its weak, linguistic relativity formulation — proposes that the language available to you shapes how you perceive and categorize the world. Critically, this is not a deterministic claim. As you acquire new words, new languages, new conceptual frameworks, your perceptual space genuinely expands. The Russian distinction between <span class="abstract-kw">siniy</span> (dark blue) and <span class="abstract-kw">goluboy</span> (light blue) as categorically separate hues<span class="abstract-cite">[2]</span> is the clearest empirical case: Russian speakers don't merely name the boundary differently — they perceive it faster. Language didn't constrain them; it sharpened them. I apply the same logic to design. The conceptual tools I bring to a problem determine what I can see in it — and acquiring new tools, new materials, new disciplines keeps expanding what's visible.</p>
+
+            <p>Culture and design are mutually constitutive. Culture shapes the meanings available to us; the meanings we construct reshape culture in turn. Design sits precisely at that junction — whatever we make goes on to shape the people who use it, which shapes what they make next. I don't ask only "what does the user want?" but also "what do we become when this exists?"</p>
+
+            <p>My background in cognitive and linguistic science was heavily focused on language acquisition and development — the earliest stages where language and thought are most visibly co-constructing each other. That lens informs how I approach information architecture, learning design, and communication across all ages. I'm also a working designer in the physical world: painting, sculpture, woodwork, and 3D printing are not separate from my practice but continuous with it. Making in different materials — with different resistances, different feedback loops, different failure modes — teaches you things about design that screens don't.</p>
+
+            <p>Grounded further in the structural connectivity patterns documented in the Human Connectome Project,<span class="abstract-cite">[3]</span> I treat designed artifacts not as discrete objects but as nodes in broader cognitive, cultural, and social networks — asking always how information moves between minds, and what it becomes in the passage.</p>
+          </div>
+
+          <div class="kw-row" aria-label="Keywords">
+            <span class="kw-chip">linguistic relativity</span>
+            <span class="kw-chip">sapir-whorf</span>
+            <span class="kw-chip">culture &amp; meaning</span>
+            <span class="kw-chip">physical making</span>
+            <span class="kw-chip">human connectome</span>
+            <span class="kw-chip">product design</span>
+            <span class="kw-chip">UX research</span>
+            <span class="kw-chip">color cognition</span>
+          </div>
+          <div class="abstract-meta" aria-label="Document metadata">
+            <div class="abstract-meta-item"><strong>Author</strong>Alex Felton Corsi Abélard</div>
+            <div class="abstract-meta-item"><strong>Affiliation</strong>Worthix</div>
+            <div class="abstract-meta-item"><strong>Role</strong>Product Designer</div>
+            <div class="abstract-meta-item"><strong>Domain</strong>Product Design / HCI</div>
+            <div class="abstract-meta-item"><strong>Year</strong>2026</div>
+          </div>
+          <p class="ref-note">[1] Deutscher, G. (2010). <em>Through the Language Glass: Why the World Looks Different in Other Languages.</em> Metropolitan Books. &nbsp; [2] Winawer, J. et al. (2007). Russian blues reveal effects of language on color discrimination. <em>PNAS</em>, 104(19). &nbsp; [3] Van Essen, D. C. et al. (2013). The WU-Minn Human Connectome Project. <em>NeuroImage</em>, 80.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════ 02 · FEATURED WORK ════════════ -->
+    <section id="projects" aria-labelledby="projects-heading">
+      <div class="wide-container">
+        <div class="projects-intro">
+          <p class="section-label">02 — Featured Work</p>
+          <h2 class="sec-heading" id="projects-heading">Selected Projects</h2>
+          <div class="sec-divider" aria-hidden="true"></div>
+          <p>Click any card to flip it &nbsp;·&nbsp; 3 entries</p>
+        </div>
+        <div class="card-grid" role="list">
+
+          <!-- LEXEME — Cyan (Interconnectivity) -->
+          <article class="flashcard card-c" role="listitem" tabindex="0"
+            aria-label="Lexeme — press Enter to see project detail"
+            onclick="this.classList.toggle('flipped')"
+            onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
+            <div class="flashcard-inner">
+              <!-- Ghost drives height -->
+              <div class="flashcard-ghost" aria-hidden="true">
+                <p class="card-back-eyebrow">Interconnectivity · 2024</p>
+                <h3 class="card-back-title">Lexeme</h3>
+                <p class="card-back-summary">Built on the insight that color category labels in different languages predict UI comprehension speed — and that most design systems encode the assumptions of their source language without knowing it.</p>
+                <p class="card-recipe-label">Tools</p>
+                <p class="card-recipe-inline">Figma, Storybook, Python</p>
+                <p class="card-recipe-label">Method</p>
+                <div class="card-recipe-line"><span>1. Mapped color terms across 6 languages</span></div>
+                <div class="card-recipe-line"><span>2. Identified collapse points in tokens</span></div>
+                <div class="card-recipe-line"><span>3. Built language-aware token aliases</span></div>
+                <div class="card-recipe-line"><span>4. A/B tested with bilingual cohorts</span></div>
+                <p class="card-recipe-label">Outcome</p>
+                <div class="card-recipe-line"><span>Misclassification error</span><span>↓ 34%</span></div>
+                <div class="card-back-actions">
+                  <span class="card-back-theme">Language × Perception</span>
+                  <span class="card-expand">Open case study ↗</span>
+                </div>
+              </div>
+              <div class="flashcard-front">
+                <div class="card-image-zone" aria-hidden="true">
+                  <div class="card-tint"></div>
+                  <span class="card-image-placeholder">[ project image ]</span>
+                  <span class="card-hint" aria-hidden="true">flip ↺</span>
+                </div>
+                <div class="card-info">
+                  <p class="card-index">01 / 03</p>
+                  <h3 class="card-title">Lexeme</h3>
+                  <p class="card-context">Independent · 2024</p>
+                  <p class="card-summary">A vocabulary-first design system for multilingual education platforms.</p>
+                  <div class="card-skills" aria-label="Skills">
+                    <span class="skill-chip">UX Research</span>
+                    <span class="skill-chip">Systems Design</span>
+                    <span class="skill-chip">Linguistics</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flashcard-back">
+                <button class="card-close" aria-label="Return to card front" onclick="event.stopPropagation();this.closest('.flashcard').classList.remove('flipped')">✕ close</button>
+                <p class="card-back-eyebrow">Interconnectivity · 2024</p>
+                <h3 class="card-back-title">Lexeme</h3>
+                <p class="card-back-summary">Built on the insight that color category labels in different languages predict UI comprehension speed — and that most design systems encode the assumptions of their source language without knowing it.</p>
+                <p class="card-recipe-label">Tools</p>
+                <p class="card-recipe-inline">Figma, Storybook, Python</p>
+                <p class="card-recipe-label">Method</p>
+                <div class="card-recipe-line"><span>1. Mapped color terms across 6 languages</span></div>
+                <div class="card-recipe-line"><span>2. Identified collapse points in tokens</span></div>
+                <div class="card-recipe-line"><span>3. Built language-aware token aliases</span></div>
+                <div class="card-recipe-line"><span>4. A/B tested with bilingual cohorts</span></div>
+                <p class="card-recipe-label">Outcome</p>
+                <div class="card-recipe-line"><span>Misclassification error</span><span>↓ 34%</span></div>
+                <div class="card-back-actions">
+                  <span class="card-back-theme">Language × Perception</span>
+                  <button class="card-expand" onclick="event.stopPropagation();openCaseModal('lexeme')" aria-label="Open full case study for Lexeme">Open case study ↗</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- TRACTUS — Magenta (Interaction) -->
+          <article class="flashcard card-m" role="listitem" tabindex="0"
+            aria-label="Tractus — press Enter to see project detail"
+            onclick="this.classList.toggle('flipped')"
+            onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
+            <div class="flashcard-inner">
+              <div class="flashcard-ghost" aria-hidden="true">
+                <p class="card-back-eyebrow">Interaction · 2023</p>
+                <h3 class="card-back-title">Tractus</h3>
+                <p class="card-back-summary">The challenge was translational, not technical — making tractography data navigable for clinicians and policy makers who had never seen a connectome before.</p>
+                <p class="card-recipe-label">Tools</p>
+                <p class="card-recipe-inline">D3.js, Figma, HCP dataset</p>
+                <p class="card-recipe-label">Method</p>
+                <div class="card-recipe-line"><span>1. Studied tractography literature</span></div>
+                <div class="card-recipe-line"><span>2. Mapped expert vs. lay mental models</span></div>
+                <div class="card-recipe-line"><span>3. Designed progressive disclosure layers</span></div>
+                <div class="card-recipe-line"><span>4. Tested with 3 neuroscientist pairs</span></div>
+                <p class="card-recipe-label">Outcome</p>
+                <div class="card-recipe-line"><span>Demo Day</span><span>Best Visualization</span></div>
+                <div class="card-back-actions">
+                  <span class="card-back-theme">Brain × Communication</span>
+                  <span class="card-expand">Open case study ↗</span>
+                </div>
+              </div>
+              <div class="flashcard-front">
+                <div class="card-image-zone" aria-hidden="true">
+                  <div class="card-tint"></div>
+                  <span class="card-image-placeholder">[ project image ]</span>
+                  <span class="card-hint" aria-hidden="true">flip ↺</span>
+                </div>
+                <div class="card-info">
+                  <p class="card-index">02 / 03</p>
+                  <h3 class="card-title">Tractus</h3>
+                  <p class="card-context">Wellesley College · 2023</p>
+                  <p class="card-summary">Interactive visualization of brain connectivity data for non-specialist audiences.</p>
+                  <div class="card-skills" aria-label="Skills">
+                    <span class="skill-chip">Data Viz</span>
+                    <span class="skill-chip">Neuroscience UX</span>
+                    <span class="skill-chip">Interaction Design</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flashcard-back">
+                <button class="card-close" aria-label="Return to card front" onclick="event.stopPropagation();this.closest('.flashcard').classList.remove('flipped')">✕ close</button>
+                <p class="card-back-eyebrow">Interaction · 2023</p>
+                <h3 class="card-back-title">Tractus</h3>
+                <p class="card-back-summary">The challenge was translational, not technical — making tractography data navigable for clinicians and policy makers who had never seen a connectome before.</p>
+                <p class="card-recipe-label">Tools</p>
+                <p class="card-recipe-inline">D3.js, Figma, HCP dataset</p>
+                <p class="card-recipe-label">Method</p>
+                <div class="card-recipe-line"><span>1. Studied tractography literature</span></div>
+                <div class="card-recipe-line"><span>2. Mapped expert vs. lay mental models</span></div>
+                <div class="card-recipe-line"><span>3. Designed progressive disclosure layers</span></div>
+                <div class="card-recipe-line"><span>4. Tested with 3 neuroscientist pairs</span></div>
+                <p class="card-recipe-label">Outcome</p>
+                <div class="card-recipe-line"><span>Demo Day</span><span>Best Visualization</span></div>
+                <div class="card-back-actions">
+                  <span class="card-back-theme">Brain × Communication</span>
+                  <button class="card-expand" onclick="event.stopPropagation();openCaseModal('tractus')" aria-label="Open full case study for Tractus">Open case study ↗</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- MISE EN PLACE — Yellow (Perception) -->
+          <article class="flashcard card-y" role="listitem" tabindex="0"
+            aria-label="Mise en Place — press Enter to see project detail"
+            onclick="this.classList.toggle('flipped')"
+            onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
+            <div class="flashcard-inner">
+              <div class="flashcard-ghost" aria-hidden="true">
+                <p class="card-back-eyebrow">Perception · 2023</p>
+                <h3 class="card-back-title">Mise en Place</h3>
+                <p class="card-back-summary">Designed around the parallel between kitchen preparation and working memory — mise en place as a physical externalization of executive function, reframed for kids who resist academic formats.</p>
+                <p class="card-recipe-label">Tools</p>
+                <p class="card-recipe-inline">Figma, Swift / Xcode, Maze</p>
+                <p class="card-recipe-label">Method</p>
+                <div class="card-recipe-line"><span>1. Reviewed exec function literature</span></div>
+                <div class="card-recipe-line"><span>2. Co-designed with 3 teachers</span></div>
+                <div class="card-recipe-line"><span>3. Two prototype + test rounds</span></div>
+                <div class="card-recipe-line"><span>4. Piloted 12 classrooms, 8 weeks</span></div>
+                <p class="card-recipe-label">Outcome</p>
+                <div class="card-recipe-line"><span>Task completion rate</span><span>↑ 28%</span></div>
+                <div class="card-back-actions">
+                  <span class="card-back-theme">Cooking × Cognition</span>
+                  <span class="card-expand">Open case study ↗</span>
+                </div>
+              </div>
+              <div class="flashcard-front">
+                <div class="card-image-zone" aria-hidden="true">
+                  <div class="card-tint"></div>
+                  <span class="card-image-placeholder">[ project image ]</span>
+                  <span class="card-hint" aria-hidden="true">flip ↺</span>
+                </div>
+                <div class="card-info">
+                  <p class="card-index">03 / 03</p>
+                  <h3 class="card-title">Mise en Place</h3>
+                  <p class="card-context">Boston Public Schools · 2023</p>
+                  <p class="card-summary">Cooking-as-pedagogy app teaching executive function and sequencing to middle-schoolers.</p>
+                  <div class="card-skills" aria-label="Skills">
+                    <span class="skill-chip">Product Design</span>
+                    <span class="skill-chip">Ed Tech</span>
+                    <span class="skill-chip">Mobile UX</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flashcard-back">
+                <button class="card-close" aria-label="Return to card front" onclick="event.stopPropagation();this.closest('.flashcard').classList.remove('flipped')">✕ close</button>
+                <p class="card-back-eyebrow">Perception · 2023</p>
+                <h3 class="card-back-title">Mise en Place</h3>
+                <p class="card-back-summary">Designed around the parallel between kitchen preparation and working memory — mise en place as a physical externalization of executive function, reframed for kids who resist academic formats.</p>
+                <p class="card-recipe-label">Tools</p>
+                <p class="card-recipe-inline">Figma, Swift / Xcode, Maze</p>
+                <p class="card-recipe-label">Method</p>
+                <div class="card-recipe-line"><span>1. Reviewed exec function literature</span></div>
+                <div class="card-recipe-line"><span>2. Co-designed with 3 teachers</span></div>
+                <div class="card-recipe-line"><span>3. Two prototype + test rounds</span></div>
+                <div class="card-recipe-line"><span>4. Piloted 12 classrooms, 8 weeks</span></div>
+                <p class="card-recipe-label">Outcome</p>
+                <div class="card-recipe-line"><span>Task completion rate</span><span>↑ 28%</span></div>
+                <div class="card-back-actions">
+                  <span class="card-back-theme">Cooking × Cognition</span>
+                  <button class="card-expand" onclick="event.stopPropagation();openCaseModal('mise')" aria-label="Open full case study for Mise en Place">Open case study ↗</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════ 03 · THEMES ════════════ -->
+    <section id="themes" aria-labelledby="themes-heading">
+      <div class="container">
+        <div class="themes-intro">
+          <p class="section-label">03 — Guiding Themes</p>
+          <h2 class="sec-heading" id="themes-heading">Three Lenses, Defined</h2>
+          <div class="sec-divider" aria-hidden="true"></div>
+          <p class="themes-sub">The conceptual vocabulary behind every project. The network below maps how these lenses apply across the work.</p>
+        </div>
+
+        <div class="themes-table" role="list" aria-label="Guiding themes">
+
+          <div class="theme-row c" role="listitem">
+            <span class="theme-num" aria-hidden="true">01</span>
+            <div class="theme-term">
+              <h3 class="theme-term-name">Interconnectivity</h3>
+              <p class="theme-term-short">The condition — the state of being in relationship.</p>
+            </div>
+            <p class="theme-def">Revealing how meaning emerges from relationships between ideas, people, &amp; technologies rather than from isolated elements. Culture shapes meaning; meaning shapes culture. Design lives in that loop.</p>
+          </div>
+
+          <div class="theme-row m" role="listitem">
+            <span class="theme-num" aria-hidden="true">02</span>
+            <div class="theme-term">
+              <h3 class="theme-term-name">Interaction</h3>
+              <p class="theme-term-short">The process — what happens within relationships.</p>
+            </div>
+            <p class="theme-def">How things change through exposure to other factors, designing for feedback loops where systems &amp; people mutually shape each other.</p>
+          </div>
+
+          <div class="theme-row y" role="listitem">
+            <span class="theme-num" aria-hidden="true">03</span>
+            <div class="theme-term">
+              <h3 class="theme-term-name">Perception</h3>
+              <p class="theme-term-short">How meaning is constructed from that process.</p>
+            </div>
+            <p class="theme-def">Good design doesn't simplify complexity; it reveals what was never complicated to begin with.</p>
+          </div>
+
+        </div>
+
+        <div class="themes-footer">
+          <button class="site-decisions-link" onclick="openModal()" aria-haspopup="dialog">
+            On the research and decisions behind this site
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════ 04 · CONNECTOME — Cytoscape.js ════════════ -->
+    <section id="connectome" aria-labelledby="connectome-heading">
+      <div class="wide-container">
+        <div class="connectome-header">
+          <p class="section-label">04 — Practice Network</p>
+          <h2 class="sec-heading" id="connectome-heading">My Design Connectome</h2>
+          <div class="sec-divider" aria-hidden="true"></div>
+          <p class="connectome-sub-text">The same three lenses, mapped across projects and skills. The themes are the structure; the work is the evidence. Hover any node to explore its relationships.</p>
+        </div>
+
+        <div class="cy-wrap">
+          <!-- Scroll overlay -->
+          <div id="cy-overlay"></div>
+          <!-- Chip + legend -->
+          <div id="cy-chip">
+            <button id="cy-chip-state-btn" aria-label="Toggle graph interaction">
+              <span id="cy-chip-dot"></span>
+              <span id="cy-chip-label">click to interact</span>
+            </button>
+            <button id="cy-chip-legend-btn" aria-expanded="true" aria-controls="cy-legend-panel">
+              <span>legend</span>
+              <span id="cy-chip-caret">∧</span>
+            </button>
+            <div id="cy-legend-panel">
+              <div class="cy-legend-row">
+                <span class="cy-legend-swatch" style="background:transparent;border:2px solid var(--cyan);"></span>
+                <span class="cy-legend-text">Theme</span>
+              </div>
+              <div class="cy-legend-row">
+                <span class="cy-legend-swatch" style="background:var(--magenta-container);border:1px solid var(--magenta-dim);"></span>
+                <span class="cy-legend-text">Project</span>
+              </div>
+              <div class="cy-legend-row">
+                <span class="cy-legend-swatch" style="background:var(--yellow-container);border:1px solid var(--yellow-dim);"></span>
+                <span class="cy-legend-text">Skill</span>
+              </div>
+            </div>
+            <p id="cy-esc-hint">esc to release</p>
+          </div>
+          <div id="cy" aria-label="Interactive network graph of projects, skills, and themes"></div>
+          <!-- Mobile bottom sheet -->
+          <div id="cy-bottom-sheet" aria-live="polite">
+            <div class="cy-sheet-handle">
+              <div style="width:32px;height:3px;background:var(--border-hi);border-radius:2px;margin:0 auto;flex:1;"></div>
+              <button class="cy-sheet-close" id="cy-sheet-close-btn">✕</button>
+            </div>
+            <div class="cy-sheet-body" id="cy-sheet-body"></div>
+          </div>
+          <div class="cy-sidebar" aria-live="polite" aria-label="Project detail">
+
+            <!-- Idle state: three themes -->
+            <div id="cy-idle">
+              <p class="cy-sidebar-label">Three lenses</p>
+              <div class="cy-theme-row">
+                <div class="cy-theme-rule" style="background:var(--cyan);"></div>
+                <p class="cy-theme-name" style="color:var(--cyan);">Interconnectivity</p>
+                <p class="cy-theme-short">The condition — the state of being in relationship.</p>
+              </div>
+              <div class="cy-theme-row">
+                <div class="cy-theme-rule" style="background:var(--magenta);"></div>
+                <p class="cy-theme-name" style="color:var(--magenta);">Interaction</p>
+                <p class="cy-theme-short">The process — what happens within relationships.</p>
+              </div>
+              <div class="cy-theme-row">
+                <div class="cy-theme-rule" style="background:var(--yellow);"></div>
+                <p class="cy-theme-name" style="color:var(--yellow);">Perception</p>
+                <p class="cy-theme-short">How meaning is constructed from that process.</p>
+              </div>
+            </div>
+
+            <!-- Project hover state: card-back recipe format -->
+            <div id="cy-project-detail" style="display:none; flex-direction:column; height:100%;">
+              <p class="card-back-eyebrow" id="cy-proj-eyebrow"></p>
+              <h3 class="cy-proj-title" id="cy-proj-title"></h3>
+              <p class="card-back-summary" id="cy-proj-summary"></p>
+              <p class="card-recipe-label" id="cy-proj-tools-label">Tools</p>
+              <p class="card-recipe-inline" id="cy-proj-tools"></p>
+              <p class="card-recipe-label" id="cy-proj-method-label">Method</p>
+              <div id="cy-proj-method"></div>
+              <p class="card-recipe-label" id="cy-proj-outcome-label">Outcome</p>
+              <div id="cy-proj-outcome"></div>
+              <div class="card-back-actions" style="margin-top:auto;">
+                <span class="card-back-theme" id="cy-proj-theme"></span>
+                <button class="card-expand" id="cy-proj-expand">Open case study ↗</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <p class="fig-caption" aria-hidden="true">fig. 2 — practice network · hover nodes to explore · physics-driven layout via Cytoscape.js</p>
+      </div>
+    </section>
+
+    <!-- ════════════ 05 · ABOUT ════════════ -->
+    <section id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <p class="section-label">05 — About</p>
+        <h2 class="sec-heading" id="about-heading">About</h2>
+        <div class="sec-divider" aria-hidden="true"></div>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>I design products that move information between minds cleanly. My practice starts from the belief that a designer's job is partly terminological: name a problem well and you constrain the solution space productively.</p>
+            <p>I came to product design through cognitive science, where I spent three years studying how syntactic complexity affects reading comprehension — a question that translates directly to information hierarchy and interface legibility. My media arts background means I prototype in code before handing off to engineers, which has saved more than a few miscommunications.</p>
+            <p>My academic work in cognitive science was focused on language acquisition and development — how children and adults build conceptual systems through exposure, interaction, and feedback. That lens shapes how I think about information architecture and communication design across all ages, not only children. Alongside my design practice I'm working toward pre-K teaching certification, which keeps me grounded in the earliest stages of learning even as most of my professional work is with and for adults. I'm also a designer in the physical world — painting, sculpture, woodwork, and 3D printing are part of how I think, not separate from it. I'm open to collaborations in education technology, language tools, early childhood, and health UX. If you're working at any of those intersections, I'd like to hear from you.</p>
+            <p>Outside the screen: I cook with whatever's already there. The constraint is the point — a good dish, like a good design, doesn't need more ingredients, it needs more attention to the ones it has. The recipe is always a starting point, a hypothesis to adjust rather than a rule to follow. I cook mostly Latin American and Western European, though the technique moves wherever it earns its place.</p>
+            <p>I've found that the most reliable way to expand your palate is to add one unfamiliar thing at a time, introduced into something familiar — slowly enough that you can actually taste what changed. You discover, gradually, just how broad your tastes have become. Which, not incidentally, is also how you teach a toddler to eat.</p>
+
+            <div class="disciplines-inline" aria-label="Academic background">
+              <div class="disc-inline-item">
+                <div class="disc-inline-color c" aria-hidden="true"></div>
+                <p class="disc-inline-name">
+                  <a href="https://www.wellesley.edu/cogsci" target="_blank" rel="noopener">Cognitive &amp; Linguistic Science</a>
+                </p>
+                <p class="disc-inline-dept">Psychology · Wellesley</p>
+                <p class="disc-inline-desc">How language and thought shape each other.</p>
+              </div>
+              <div class="disc-inline-item">
+                <div class="disc-inline-color m" aria-hidden="true"></div>
+                <p class="disc-inline-name">
+                  <a href="https://www.wellesley.edu/mediaarts" target="_blank" rel="noopener">Media Arts &amp; Sciences</a>
+                </p>
+                <p class="disc-inline-dept">Computer Science · Wellesley</p>
+                <p class="disc-inline-desc">Computation, art, and human expression — at their intersection.</p>
+              </div>
+              <div class="disc-inline-item">
+                <div class="disc-inline-color y" aria-hidden="true"></div>
+                <p class="disc-inline-name">Education</p>
+                <p class="disc-inline-dept">Practice &amp; deep interest</p>
+              </div>
+            </div>
+          </div>
+
+          <aside aria-label="A recipe by Alex">
+            <div class="recipe-card">
+              <p class="recipe-card-label">A recent creation</p>
+              <h4>Risotto de Carne<br/>Puxada c/ Espinafre</h4>
+              <p class="recipe-subtitle">Pulled steak risotto with spinach</p>
+
+              <p class="recipe-section-label">For the beef</p>
+              <div class="recipe-line"><span>bife ancho (chuck)</span><span>pressure cook</span></div>
+              <div class="recipe-line"><span>smoked paprika + salt</span><span>rub</span></div>
+              <div class="recipe-line"><span>garlic, onion, white wine</span><span>braise base</span></div>
+              <div class="recipe-line" style="margin-bottom:18px;"><span>finish in butter</span><span>crisp &amp; pull</span></div>
+
+              <p class="recipe-section-label">For the risotto</p>
+              <div class="recipe-line"><span>risotto rice</span><span>toasted in butter</span></div>
+              <div class="recipe-line"><span>broth from the beef ↑</span><span>don't waste it</span></div>
+              <div class="recipe-line"><span>spinach, mayo, parmesan</span><span>finish</span></div>
+              <div class="recipe-line"><span>lime + salt flakes</span><span>top &amp; serve</span></div>
+
+              <p class="recipe-note">A humble cut elevated by patience. The broth that cooked the beef becomes the risotto's backbone — nothing wasted, everything connected.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Modal functions defined early in their own script tag, before any Cloudflare injection -->
+  <script>
+    /* ── HAMBURGER ── */
+    (function() {
+      var btn = document.getElementById('hamburger');
+      var overlay = document.getElementById('mobile-nav-overlay');
+      var close = document.getElementById('mobile-nav-close');
+      if (!btn || !overlay) return;
+      btn.addEventListener('click', function() {
+        overlay.classList.add('open');
+        overlay.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        if (close) close.focus();
+      });
+      function closeMobileNav() {
+        overlay.classList.remove('open');
+        overlay.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+      if (close) close.addEventListener('click', closeMobileNav);
+      /* Close on link tap */
+      var links = overlay.querySelectorAll('.mobile-nav-item');
+      links.forEach(function(l) { l.addEventListener('click', closeMobileNav); });
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && overlay.classList.contains('open')) closeMobileNav();
+      });
+    })();
+
+    /* Show mobile bar on mobile */
+    (function() {
+      function checkMobile() {
+        var bar = document.getElementById('modal-mobile-bar');
+        if (!bar) return;
+        bar.style.display = window.innerWidth <= 768 ? 'flex' : 'none';
+        var toggle = document.getElementById('case-meta-toggle');
+        if (toggle) toggle.style.display = window.innerWidth <= 768 ? 'flex' : 'none';
+      }
+      checkMobile();
+      window.addEventListener('resize', checkMobile);
+    })();
+
+    /* ── CASE META ACCORDION ── */
+    (function() {
+      var toggle = document.getElementById('case-meta-toggle');
+      var caret = document.getElementById('case-meta-caret');
+      if (!toggle) return;
+      var open = true;
+      toggle.addEventListener('click', function() {
+        open = !open;
+        var body = document.getElementById('case-modal-meta').querySelector('.case-meta-body');
+        if (body) body.classList.toggle('collapsed', !open);
+        if (caret) caret.textContent = open ? '∧' : '∨';
+      });
+    })();
+
+    /* ── BOTTOM SHEET ── */
+    (function() {
+      var sheet = document.getElementById('cy-bottom-sheet');
+      var body = document.getElementById('cy-sheet-body');
+      var closeBtn = document.getElementById('cy-sheet-close-btn');
+      if (!sheet) return;
+      window.openBottomSheet = function(projectData) {
+        if (!body) return;
+        body.innerHTML =
+          '<p style="font-size:9px;letter-spacing:0.22em;text-transform:uppercase;color:var(--text-lo);margin-bottom:6px;">' + projectData.eyebrow + '</p>' +
+          '<p style="font-family:\'DM Serif Display\',Georgia,serif;font-size:19px;color:var(--cream);margin-bottom:8px;">' + projectData.title + '</p>' +
+          '<p style="font-size:12px;color:var(--text-dim);line-height:1.65;margin-bottom:10px;">' + projectData.summary + '</p>' +
+          '<p style="font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-lo);margin-bottom:4px;">Tools</p>' +
+          '<p style="font-size:11px;color:var(--text-dim);margin-bottom:8px;">' + projectData.tools + '</p>' +
+          '<p style="font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-lo);margin-bottom:4px;">Outcome</p>' +
+          '<p style="font-size:11px;color:var(--text-dim);">' + projectData.outcome + '</p>';
+        sheet.classList.add('open');
+      };
+      window.closeBottomSheet = function() { sheet.classList.remove('open'); };
+      if (closeBtn) closeBtn.addEventListener('click', closeBottomSheet);
+    })();
+
+    function openModal() {
+      var o = document.getElementById('modal-overlay');
+      if (!o) return;
+      o.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      /* Show mobile bar if on mobile */
+      var bar = document.getElementById('modal-mobile-bar');
+      if (bar) bar.style.display = window.innerWidth <= 768 ? 'flex' : 'none';
+      initModalNav();
+      var c = o.querySelector('.modal-close'); if (c) setTimeout(function(){ c.focus(); }, 50);
+    }
+    function closeModal() {
+      var o = document.getElementById('modal-overlay');
+      if (!o) return;
+      o.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    /* Site decisions nav */
+    var modalSections = {
+      research: {
+        label: 'The research foundation — Sapir-Whorf & color cognition',
+        prev: null, prevLabel: null,
+        next: 'paper', nextLabel: 'Research paper format',
+        html: '<p>The Sapir-Whorf hypothesis — in its weak, linguistic relativity formulation — proposes that the language available to you shapes how you perceive and categorize the world. Critically, this is not a deterministic claim. As you acquire new words, new languages, new conceptual frameworks, your perceptual space genuinely expands.</p><p>The Russian distinction between siniy (dark blue) and goluboy (light blue) as categorically separate hues is the clearest empirical case: Russian speakers don\'t merely name the boundary differently — they perceive it faster. Language didn\'t constrain them; it sharpened them.</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0;"><div style="background:var(--surface);border:1px solid var(--border);border-left:2px solid #1B65C8;padding:18px 20px;"><p style="font-size:9px;letter-spacing:0.2em;color:var(--text-lo);text-transform:uppercase;margin-bottom:8px;">Russian — dark blue</p><p style="font-family:\'DM Serif Display\',Georgia,serif;font-size:32px;color:#1B65C8;line-height:1;margin-bottom:4px;">синий</p><p style="font-size:11px;color:var(--text-dim);font-style:italic;margin-bottom:12px;">/ ˈsʲinʲɪj / siniy</p><p style="font-size:11px;color:var(--text-dim);line-height:1.7;">Categorically distinct from goluboy — not a shade, a different word. Winawer et al. (2007) found Russian speakers discriminate cross-category blues faster, the advantage disappearing under verbal interference, directly implicating language labels.</p><p style="font-size:10px;color:var(--text-lo);margin-top:10px;padding-top:10px;border-top:1px solid var(--border);line-height:1.6;"><span style="color:var(--yellow-dim);">Design implication:</span> Collapsing siniy and goluboy into a single blue token removes a meaningful perceptual distinction for a significant portion of users.</p></div><div style="background:var(--surface);border:1px solid var(--border);border-left:2px solid #62C4E8;padding:18px 20px;"><p style="font-size:9px;letter-spacing:0.2em;color:var(--text-lo);text-transform:uppercase;margin-bottom:8px;">Russian — light blue</p><p style="font-family:\'DM Serif Display\',Georgia,serif;font-size:32px;color:#62C4E8;line-height:1;margin-bottom:4px;">голубой</p><p style="font-size:11px;color:var(--text-dim);font-style:italic;margin-bottom:12px;">/ ɡəlʊˈboj / goluboy</p><p style="font-size:11px;color:var(--text-dim);line-height:1.7;">A root-level color category, not a modifier. English lacks this lexicalized distinction — "light blue" is compositional — suggesting lower perceptual salience for English speakers at the boundary between these hues.</p><p style="font-size:10px;color:var(--text-lo);margin-top:10px;padding-top:10px;border-top:1px solid var(--border);line-height:1.6;"><span style="color:var(--yellow-dim);">Design implication:</span> Internationalized design systems may need language-specific token aliases that surface distinctions invisible in the source language of the team.</p></div></div><p>The broader argument: design systems encode the linguistic assumptions of the team that built them. This research is the intellectual basis for the CMY color system used throughout this portfolio.</p><p style="font-size:10px;color:var(--text-lo);font-style:italic;">Winawer, J. et al. (2007). Russian blues reveal effects of language on color discrimination. <em>PNAS</em>, 104(19).</p>'
+      },
+      paper: {
+        label: 'Why it looks like a research paper',
+        prev: 'research', prevLabel: 'Research foundation',
+        next: 'cmy', nextLabel: 'CMY ink system',
+        html: '<p>The journal format — masthead rule, thesis title, author byline, affiliation superscripts, metadata row, keywords — isn\'t a costume. It\'s the visual language I absorbed reading hundreds of cognitive science and linguistics papers. The "received / current revision" dates double as a quiet career timeline.</p>'
+      },
+      cmy: {
+        label: 'The CMY ink system',
+        prev: 'paper', prevLabel: 'Research paper format',
+        next: 'shapes', nextLabel: 'Shapes',
+        html: '<p>The palette is grounded in how printer ink actually works. Thin ink on paper is bright and transparent; layered ink becomes dark and saturated. The near-black background is what you get when all three inks pool together.</p><p>Crucially, the colors are semantic. <span style="color:var(--cyan);">Cyan signals interconnectivity</span> — structural links, affiliations, the connectome. <span style="color:var(--magenta);">Magenta signals interaction</span> — every button, link, and touchable element. <span style="color:var(--yellow);">Yellow signals perception</span> — it highlights terms that reframe how you read what follows.</p>'
+      },
+      shapes: {
+        label: 'Shapes — sharp rectangles vs. pills',
+        prev: 'cmy', prevLabel: 'CMY ink system',
+        next: 'flashcard', nextLabel: 'Flashcard format',
+        html: '<p>Sharp rectangles for all interactive elements (buttons, nav links, bordered tags). Pills for passive labels (keyword chips, skill tags). The shape is part of the semantic system: sharp = do something, round = read something.</p>'
+      },
+      flashcard: {
+        label: 'The flashcard format',
+        prev: 'shapes', prevLabel: 'Shapes',
+        next: 'themes', nextLabel: 'Three themes',
+        html: '<p>Flashcards are the oldest empirically supported spaced-repetition tool — an honest format for a designer rooted in education. The 5:7 aspect ratio matches a physical index card. The card back uses the recipe-card structure: scannable key/value pairs for the recruiter in a hurry, an expand button for the one who wants more.</p>'
+      },
+      themes: {
+        label: 'The three themes and their order',
+        prev: 'flashcard', prevLabel: 'Flashcard format',
+        next: 'typeface', nextLabel: 'Typeface',
+        html: '<p>Interconnectivity → Interaction → Perception is a progression: first you are in relationship (interconnectivity), then something happens within that relationship (interaction), then meaning is constructed (perception). It maps onto how cognition works — and onto cyan, magenta, and yellow.</p>'
+      },
+      typeface: {
+        label: 'Typeface',
+        prev: 'themes', prevLabel: 'Three themes',
+        next: null, nextLabel: null,
+        html: '<p>IBM Plex Mono throughout. It\'s a humanist monospace — warmer and more readable at paragraph length than JetBrains Mono (optimized for code editors). DM Serif Display for headings — its italic is genuinely beautiful. The pairing creates productive tension between the rigorous and the expressive.</p>'
+      }
+    };
+
+    var currentSection = 'research';
+
+    function showModalSection(id) {
+      var s = modalSections[id]; if (!s) return;
+      currentSection = id;
+      var area = document.getElementById('modal-content-area');
+      if (area) {
+        var navHtml = '';
+        if (s.prev || s.next) {
+          navHtml = '<div class="modal-next">' +
+            (s.prev ? '<button class="modal-next-btn" onclick="showModalSection(\'' + s.prev + '\')">↑ Back: ' + s.prevLabel + '</button>' : '<span></span>') +
+            (s.next ? '<button class="modal-next-btn" onclick="showModalSection(\'' + s.next + '\')">Next: ' + s.nextLabel + ' ↓</button>' : '') +
+            '</div>';
+        }
+        area.innerHTML =
+          '<div class="modal-section">' +
+          '<p class="modal-section-label">' + s.label + '</p>' +
+          s.html +
+          navHtml +
+          '</div>';
+      }
+      /* Update desktop nav active state */
+      document.querySelectorAll('.modal-nav-btn').forEach(function(btn) {
+        btn.classList.toggle('active', btn.getAttribute('data-section') === id);
+      });
+      /* Update mobile dropdown active state and current label */
+      document.querySelectorAll('.modal-mobile-dd-btn').forEach(function(btn) {
+        btn.classList.toggle('active', btn.getAttribute('data-section') === id);
+      });
+      var cur = document.getElementById('modal-mobile-current');
+      if (cur) cur.textContent = s.label.length > 28 ? s.label.substring(0, 26) + '…' : s.label;
+    }
+
+    function initModalNav() {
+      var btns = document.querySelectorAll('.modal-nav-btn');
+      btns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          showModalSection(btn.getAttribute('data-section'));
+        });
+      });
+      /* Wire mobile dropdown buttons */
+      var dd = document.getElementById('modal-mobile-dd');
+      var toggle = document.getElementById('modal-mobile-toggle');
+      var current = document.getElementById('modal-mobile-current');
+      var ddOpen = false;
+      if (toggle && dd) {
+        /* Remove old listeners by replacing node */
+        var newToggle = toggle.cloneNode(true);
+        toggle.parentNode.replaceChild(newToggle, toggle);
+        newToggle.addEventListener('click', function(e) {
+          e.stopPropagation();
+          ddOpen = !ddOpen;
+          dd.classList.toggle('open', ddOpen);
+          newToggle.textContent = ddOpen ? 'Sections ∧' : 'Sections ∨';
+        });
+        dd.querySelectorAll('.modal-mobile-dd-btn').forEach(function(btn) {
+          btn.addEventListener('click', function() {
+            showModalSection(btn.getAttribute('data-section'));
+            if (current) current.textContent = btn.textContent;
+            dd.querySelectorAll('.modal-mobile-dd-btn').forEach(function(b) { b.classList.remove('active'); });
+            btn.classList.add('active');
+            ddOpen = false; dd.classList.remove('open'); newToggle.textContent = 'Sections ∨';
+          });
+        });
+      }
+      showModalSection('research');
+    }
+    function openCaseModal(id) {
+      var cases = {
+        lexeme: {
+          title: 'Lexeme',
+          eyebrow: 'Case Study \u00b7 Interconnectivity \u00b7 2024',
+          themeColor: '#52d4d4',
+          themeName: 'Interconnectivity',
+          role: 'Lead Designer',
+          context: 'Independent \u00b7 2024',
+          tools: 'Figma, Storybook, Python',
+          skills: ['UX Research', 'Systems Design', 'Linguistics'],
+          outcome: 'Misclassification error \u2193 34%',
+          body: '<div class="case-placeholder"><p>Project imagery placeholder<br/>Screenshots, diagrams, process docs</p></div><p class="case-section-label">Overview</p><p>Built on the insight that color category labels in different languages predict UI comprehension speed — and that most design systems encode the assumptions of their source language without knowing it.</p><p class="case-section-label">Process</p><p>Mapped 47 color terms across 6 languages, identifying collapse points where English assumptions were silently overriding other perceptual categories. Built language-aware component tokens in Figma and Storybook, then A/B tested with Russian- and English-speaking cohorts.</p><p class="case-section-label">Outcome</p><p>34% reduction in misclassification error and measurable improvement in time-to-correct-action for cross-language users. The broader argument: design systems encode the linguistic assumptions of the team that built them. Lexeme is a proposal for how to audit and extend those assumptions.</p>'
+        },
+        tractus: {
+          title: 'Tractus',
+          eyebrow: 'Case Study \u00b7 Interaction \u00b7 2023',
+          themeColor: '#cc5585',
+          themeName: 'Interaction',
+          role: 'Designer + Developer',
+          context: 'Wellesley College \u00b7 2023',
+          tools: 'D3.js, Figma, HCP dataset',
+          skills: ['Data Viz', 'Neuroscience UX', 'Interaction Design'],
+          outcome: 'Demo Day \u2014 Best Visualization',
+          body: '<div class="case-placeholder"><p>Project imagery placeholder<br/>Screenshots, diagrams, process docs</p></div><p class="case-section-label">Overview</p><p>The challenge was translational, not technical — making tractography data navigable for clinicians and policy makers who had never seen a connectome before.</p><p class="case-section-label">Process</p><p>Studied tractography literature and mapped expert vs. lay mental models side by side. Designed a progressive disclosure system: an overview that reads as a map, with layers of detail accessible through hover and click. Tested with three neuroscientist/non-specialist pairs across two rounds.</p><p class="case-section-label">Outcome</p><p>Won Best Visualization at Wellesley Media Lab Demo Day 2023. The visual language draws from cartography rather than scientific visualization — prioritizing orientation over precision.</p>'
+        },
+        mise: {
+          title: 'Mise en Place',
+          eyebrow: 'Case Study \u00b7 Perception \u00b7 2023',
+          themeColor: '#e0c040',
+          themeName: 'Perception',
+          role: 'Lead Designer',
+          context: 'Boston Public Schools \u00b7 2023',
+          tools: 'Figma, Swift / Xcode, Maze',
+          skills: ['Product Design', 'Ed Tech', 'Mobile UX'],
+          outcome: 'Task completion rate \u2191 28%',
+          body: '<div class="case-placeholder"><p>Project imagery placeholder<br/>Screenshots, diagrams, process docs</p></div><p class="case-section-label">Overview</p><p>Designed around the parallel between kitchen preparation and working memory — mise en place as a physical externalization of executive function, reframed for kids who resist academic formats.</p><p class="case-section-label">Process</p><p>Reviewed executive function literature and co-designed with three teachers across two prototype and test rounds. The app structures recipe challenges around planning before acting, sequencing steps, adapting to substitutions, and reflecting on process — each mapping to an executive function skill.</p><p class="case-section-label">Outcome</p><p>Piloted across 12 Boston classrooms over 8 weeks. Students showed a 28% improvement in task-completion rates on standardized executive function assessments. Teacher feedback highlighted the app\'s ability to reach students resistant to traditional academic framing.</p>'
+        }
+      };
+      var c = cases[id];
+      var o = document.getElementById('case-modal-overlay');
+      if (!c || !o) return;
+
+      var ey = document.getElementById('case-modal-eyebrow');
+      var ti = document.getElementById('case-modal-title');
+      var meta = document.getElementById('case-modal-meta');
+      var body = document.getElementById('case-modal-body');
+
+      if (ey) ey.textContent = c.eyebrow;
+      if (ti) ti.textContent = c.title;
+
+      if (meta) {
+        var pillsHtml = c.skills.map(function(s) { return '<span class="case-meta-pill">' + s + '</span>'; }).join('');
+        var isMobile = window.innerWidth <= 768;
+        meta.innerHTML =
+          (isMobile ? '<button class="case-meta-toggle" style="display:flex;align-items:center;justify-content:space-between;padding:11px 20px;cursor:pointer;background:none;border:none;border-bottom:1px solid var(--border);font-family:\'IBM Plex Mono\',monospace;font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-lo);width:100%;">Project details <span class="case-meta-caret">∧</span></button>' : '') +
+          '<div class="case-meta-body">' +
+          '<div>' +
+          '<div style="display:flex;flex-direction:column;gap:12px;">' +
+          '<div class="case-meta-item"><span class="case-meta-key">Role</span><span class="case-meta-val">' + c.role + '</span></div>' +
+          '<div class="case-meta-item"><span class="case-meta-key">Context</span><span class="case-meta-val">' + c.context + '</span></div>' +
+          '<div class="case-meta-item"><span class="case-meta-key">Theme</span><span class="case-meta-val"><span class="case-meta-theme-dot" style="background:' + c.themeColor + ';"></span>' + c.themeName + '</span></div>' +
+          '</div></div>' +
+          '<div class="case-meta-divider"></div>' +
+          '<div style="display:flex;flex-direction:column;gap:12px;">' +
+          '<div class="case-meta-item"><span class="case-meta-key">Tools</span><span class="case-meta-val" style="margin-top:2px;">' + c.tools + '</span></div>' +
+          '<div class="case-meta-item"><span class="case-meta-key">Skills</span><div class="case-meta-pills">' + pillsHtml + '</div></div>' +
+          '</div>' +
+          '<div class="case-meta-divider"></div>' +
+          '<div class="case-meta-item"><span class="case-meta-key">Outcome</span><span class="case-meta-val">' + c.outcome + '</span></div>' +
+          '</div>';
+        if (isMobile) {
+          var accordToggle = meta.querySelector('.case-meta-toggle');
+          var accordBody = meta.querySelector('.case-meta-body');
+          var accordOpen = true;
+          if (accordToggle && accordBody) {
+            accordToggle.addEventListener('click', function() {
+              accordOpen = !accordOpen;
+              accordBody.classList.toggle('collapsed', !accordOpen);
+              var car = accordToggle.querySelector('.case-meta-caret');
+              if (car) car.textContent = accordOpen ? '∧' : '∨';
+            });
+          }
+        }
+      }
+
+      if (body) body.innerHTML = c.body;
+
+      o.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      var cl = o.querySelector('.case-modal-close'); if (cl) setTimeout(function(){ cl.focus(); }, 50);
+    }
+    function closeCaseModal() {
+      var o = document.getElementById('case-modal-overlay');
+      if (!o) return;
+      o.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') { closeModal(); closeCaseModal(); }
+    });
+  </script>
+
+  <footer>

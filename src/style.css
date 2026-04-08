@@ -156,7 +156,7 @@
        LAYOUT
     ========================================================= */
     .page { padding-top: 50px; position: relative; z-index: 1; }
-    .container      { max-width: 860px;  margin: 0 auto; padding: 0 28px; }
+    .container      { margin: 0 80px; padding: 0 28px; }
     .wide-container { max-width: 1180px; margin: 0 auto; padding: 0 28px; }
     .section-label { font-size: 10px; color: var(--text-lo); letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 8px; }
     .sec-heading { font-family: 'DM Serif Display', Georgia, serif; font-size: clamp(26px, 4.5vw, 44px); color: var(--cream); }
@@ -193,7 +193,7 @@
       font-family: 'DM Serif Display', Georgia, serif;
       font-size: clamp(26px, 4vw, 48px); color: var(--cream);
       line-height: 1.2; font-weight: 400; margin-bottom: 6px;
-      letter-spacing: -0.01em; max-width: 700px;
+      letter-spacing: -0.01em; max-width: 800px;
     }
     .hero-title em { font-style: italic; color: var(--yellow); }
     .hero-subtitle-line {
@@ -260,7 +260,7 @@
     .abstract-cite { font-size: 9px; color: var(--text-dim); vertical-align: super; }
     /* Read more */
     .abstract-expansion { display: none; }
-    .abstract-expansion.open { display: block; }
+    .abstract-expansion.open { display: block; margin-top: 1rem; }
     .abstract-read-more {
       background: none; border: none; cursor: pointer;
       font-family: 'IBM Plex Mono', monospace;
@@ -279,7 +279,7 @@
     .abstract-meta { display: flex; gap: 28px; flex-wrap: wrap; margin-top: 24px; padding-top: 22px; border-top: 1px solid var(--border); position: relative; z-index: 1; }
     .abstract-meta-item { font-size: 11px; color: var(--text-lo); }
     .abstract-meta-item strong { display: block; color: var(--text-dim); font-weight: 500; margin-bottom: 2px; }
-    .ref-note { margin-top: 20px; font-size: 10px; color: var(--text-lo); font-style: italic; line-height: 1.7; position: relative; z-index: 1; }
+    .ref-note { margin-top: 20px; font-size: 10px !important; color: var(--text-lo); font-style: italic; line-height: 1.7; position: relative; z-index: 1; }
 
     /* =========================================================
        PROJECTS — FLASHCARDS
@@ -794,6 +794,8 @@
     /* Mobile ≤768px */
     @media (max-width: 768px) {
 
+      .container, .wide-container { margin: 0 16px; padding: 0 16px; }
+
       nav.top-nav { display: none; }
       .masthead-hide-mobile { display: none; }
 
@@ -929,5 +931,5 @@
 
     @media (max-width: 400px) {
       .hero-title { font-size: clamp(20px, 6vw, 28px); }
-      .container, .wide-container { padding: 0 16px; }
+      .container, .wide-container { margin: 0 auto; padding: 0 16px; }
     }

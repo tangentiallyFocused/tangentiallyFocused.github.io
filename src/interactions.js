@@ -1,9 +1,13 @@
 export function initInteractions() {
+  console.log('initInteractions called');
   initThemeToggle();
   initScrollProgress();
   initHamburgerMenu();
   initEmailCopy();
   initModals();
+  console.log('All interactions initialized');
+  console.log('window.openModal:', typeof window.openModal);
+  console.log('window.openCaseModal:', typeof window.openCaseModal);
 }
 
 function initThemeToggle() {
@@ -112,16 +116,122 @@ function initSiteDecisionsModal() {
       label: 'The research foundation — Sapir-Whorf & color cognition',
       prev: null, prevLabel: null,
       next: 'paper', nextLabel: 'Research paper format',
-      html: `<p>The Sapir-Whorf hypothesis — in its weak, linguistic relativity formulation — proposes that the language available to you shapes how you perceive and categorize the world...</p>`
+      html: '<p>The Sapir-Whorf hypothesis — in its weak, linguistic relativity formulation — proposes that the language available to you shapes how you perceive and categorize the world. Critically, this is not a deterministic claim. As you acquire new words, new languages, new conceptual frameworks, your perceptual space genuinely expands.</p><p>The Russian distinction between siniy (dark blue) and goluboy (light blue) as categorically separate hues is the clearest empirical case: Russian speakers don\'t merely name the boundary differently — they perceive it faster. Language didn\'t constrain them; it sharpened them.</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0;"><div style="background:var(--surface);border:1px solid var(--border);border-left:2px solid #1B65C8;padding:18px 20px;"><p style="font-size:9px;letter-spacing:0.2em;color:var(--text-lo);text-transform:uppercase;margin-bottom:8px;">Russian — dark blue</p><p style="font-family:\'DM Serif Display\',Georgia,serif;font-size:32px;color:#1B65C8;line-height:1;margin-bottom:4px;">синий</p><p style="font-size:11px;color:var(--text-dim);font-style:italic;margin-bottom:12px;">/ ˈsʲinʲɪj / siniy</p><p style="font-size:11px;color:var(--text-dim);line-height:1.7;">Categorically distinct from goluboy — not a shade, a different word. Winawer et al. (2007) found Russian speakers discriminate cross-category blues faster, the advantage disappearing under verbal interference, directly implicating language labels.</p><p style="font-size:10px;color:var(--text-lo);margin-top:10px;padding-top:10px;border-top:1px solid var(--border);line-height:1.6;"><span style="color:var(--yellow-dim);">Design implication:</span> Collapsing siniy and goluboy into a single blue token removes a meaningful perceptual distinction for a significant portion of users.</p></div><div style="background:var(--surface);border:1px solid var(--border);border-left:2px solid #62C4E8;padding:18px 20px;"><p style="font-size:9px;letter-spacing:0.2em;color:var(--text-lo);text-transform:uppercase;margin-bottom:8px;">Russian — light blue</p><p style="font-family:\'DM Serif Display\',Georgia,serif;font-size:32px;color:#62C4E8;line-height:1;margin-bottom:4px;">голубой</p><p style="font-size:11px;color:var(--text-dim);font-style:italic;margin-bottom:12px;">/ ɡəlʊˈboj / goluboy</p><p style="font-size:11px;color:var(--text-dim);line-height:1.7;">A root-level color category, not a modifier. English lacks this lexicalized distinction — "light blue" is compositional — suggesting lower perceptual salience for English speakers at the boundary between these hues.</p><p style="font-size:10px;color:var(--text-lo);margin-top:10px;padding-top:10px;border-top:1px solid var(--border);line-height:1.6;"><span style="color:var(--yellow-dim);">Design implication:</span> Internationalized design systems may need language-specific token aliases that surface distinctions invisible in the source language of the team.</p></div></div><p>The broader argument: design systems encode the linguistic assumptions of the team that built them. This research is the intellectual basis for the CMY color system used throughout this portfolio.</p><p style="font-size:10px;color:var(--text-lo);font-style:italic;">Winawer, J. et al. (2007). Russian blues reveal effects of language on color discrimination. <em>PNAS</em>, 104(19).</p>'
     },
-    // Add other sections...
+    paper: {
+      label: 'Why it looks like a research paper',
+      prev: 'research', prevLabel: 'Research foundation',
+      next: 'cmy', nextLabel: 'CMY ink system',
+      html: '<p>The journal format — masthead rule, thesis title, author byline, affiliation superscripts, metadata row, keywords — isn\'t a costume. It\'s the visual language I absorbed reading hundreds of cognitive science and linguistics papers. The "received / current revision" dates double as a quiet career timeline.</p>'
+    },
+    cmy: {
+      label: 'The CMY ink system',
+      prev: 'paper', prevLabel: 'Research paper format',
+      next: 'shapes', nextLabel: 'Shapes',
+      html: '<p>The palette is grounded in how printer ink actually works. Thin ink on paper is bright and transparent; layered ink becomes dark and saturated. The near-black background is what you get when all three inks pool together.</p><p>Crucially, the colors are semantic. <span style="color:var(--cyan);">Cyan signals interconnectivity</span> — structural links, affiliations, the connectome. <span style="color:var(--magenta);">Magenta signals interaction</span> — every button, link, and touchable element. <span style="color:var(--yellow);">Yellow signals perception</span> — it highlights terms that reframe how you read what follows.</p>'
+    },
+    shapes: {
+      label: 'Shapes — sharp rectangles vs. pills',
+      prev: 'cmy', prevLabel: 'CMY ink system',
+      next: 'flashcard', nextLabel: 'Flashcard format',
+      html: '<p>Sharp rectangles for all interactive elements (buttons, nav links, bordered tags). Pills for passive labels (keyword chips, skill tags). The shape is part of the semantic system: sharp = do something, round = read something.</p>'
+    },
+    flashcard: {
+      label: 'The flashcard format',
+      prev: 'shapes', prevLabel: 'Shapes',
+      next: 'themes', nextLabel: 'Three themes',
+      html: '<p>Flashcards are the oldest empirically supported spaced-repetition tool — an honest format for a designer rooted in education. The 5:7 aspect ratio matches a physical index card. The card back uses the recipe-card structure: scannable key/value pairs for the recruiter in a hurry, an expand button for the one who wants more.</p>'
+    },
+    themes: {
+      label: 'The three themes and their order',
+      prev: 'flashcard', prevLabel: 'Flashcard format',
+      next: 'typeface', nextLabel: 'Typeface',
+      html: '<p>Interconnectivity → Interaction → Perception is a progression: first you are in relationship (interconnectivity), then something happens within that relationship (interaction), then meaning is constructed (perception). It maps onto how cognition works — and onto cyan, magenta, and yellow.</p>'
+    },
+    typeface: {
+      label: 'Typeface',
+      prev: 'themes', prevLabel: 'Three themes',
+      next: null, nextLabel: null,
+      html: '<p>IBM Plex Mono throughout. It\'s a humanist monospace — warmer and more readable at paragraph length than JetBrains Mono (optimized for code editors). DM Serif Display for headings — its italic is genuinely beautiful. The pairing creates productive tension between the rigorous and the expressive.</p>'
+    }
   };
 
   let currentSection = 'research';
 
+  window.showModalSection = function(id) {
+    const s = modalSections[id];
+    if (!s) return;
+    currentSection = id;
+    const area = document.getElementById('modal-content-area');
+    if (area) {
+      let navHtml = '';
+      if (s.prev || s.next) {
+        navHtml = '<div class="modal-next">' +
+          (s.prev ? '<button class="modal-next-btn" onclick="showModalSection(\'' + s.prev + '\')">↑ Back: ' + s.prevLabel + '</button>' : '<span></span>') +
+          (s.next ? '<button class="modal-next-btn" onclick="showModalSection(\'' + s.next + '\')">Next: ' + s.nextLabel + ' ↓</button>' : '') +
+          '</div>';
+      }
+      area.innerHTML = '<div class="modal-section">' +
+        '<p class="modal-section-label">' + s.label + '</p>' +
+        s.html +
+        navHtml +
+        '</div>';
+    }
+
+    document.querySelectorAll('.modal-nav-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('data-section') === id);
+    });
+    document.querySelectorAll('.modal-mobile-dd-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('data-section') === id);
+    });
+    const cur = document.getElementById('modal-mobile-current');
+    if (cur) cur.textContent = s.label.length > 28 ? s.label.substring(0, 26) + '…' : s.label;
+  };
+
+  function initModalNav() {
+    const btns = document.querySelectorAll('.modal-nav-btn');
+    btns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        window.showModalSection(btn.getAttribute('data-section'));
+      });
+    });
+
+    const dd = document.getElementById('modal-mobile-dd');
+    const toggle = document.getElementById('modal-mobile-toggle');
+    const current = document.getElementById('modal-mobile-current');
+    let ddOpen = false;
+    if (toggle && dd) {
+      const newToggle = toggle.cloneNode(true);
+      toggle.parentNode.replaceChild(newToggle, toggle);
+      newToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        ddOpen = !ddOpen;
+        dd.classList.toggle('open', ddOpen);
+        newToggle.textContent = ddOpen ? 'Sections ∧' : 'Sections ∨';
+      });
+      dd.querySelectorAll('.modal-mobile-dd-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          window.showModalSection(btn.getAttribute('data-section'));
+          if (current) current.textContent = btn.textContent;
+          dd.querySelectorAll('.modal-mobile-dd-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          ddOpen = false;
+          dd.classList.remove('open');
+          newToggle.textContent = 'Sections ∨';
+        });
+      });
+    }
+    window.showModalSection('research');
+  }
+
   window.openModal = function() {
+    console.log('openModal called');
     const o = document.getElementById('modal-overlay');
-    if (!o) return;
+    console.log('modal-overlay element:', o);
+    if (!o) {
+      console.error('modal-overlay not found!');
+      return;
+    }
     o.classList.add('open');
     document.body.style.overflow = 'hidden';
     const bar = document.getElementById('modal-mobile-bar');
@@ -129,6 +239,7 @@ function initSiteDecisionsModal() {
     initModalNav();
     const c = o.querySelector('.modal-close');
     if (c) setTimeout(() => c.focus(), 50);
+    console.log('Modal opened successfully');
   };
 
   window.closeModal = function() {
@@ -144,10 +255,6 @@ function initSiteDecisionsModal() {
       window.closeCaseModal();
     }
   });
-
-  function initModalNav() {
-    // Modal navigation logic
-  }
 }
 
 function initCaseStudyModals() {
@@ -191,9 +298,14 @@ function initCaseStudyModals() {
   };
 
   window.openCaseModal = function(id) {
+    console.log('openCaseModal called with id:', id);
     const c = cases[id];
     const o = document.getElementById('case-modal-overlay');
-    if (!c || !o) return;
+    console.log('case:', c, 'overlay:', o);
+    if (!c || !o) {
+      console.error('Case or overlay not found!', 'case:', c, 'overlay:', o);
+      return;
+    }
 
     const ey = document.getElementById('case-modal-eyebrow');
     const ti = document.getElementById('case-modal-title');

@@ -4,6 +4,7 @@ export function initInteractions() {
   initScrollProgress();
   initHamburgerMenu();
   initEmailCopy();
+  initContactEmail();
   initModals();
   console.log('All interactions initialized');
   console.log('window.openModal:', typeof window.openModal);
@@ -96,11 +97,37 @@ function initHamburgerMenu() {
 function initEmailCopy() {
   const el = document.getElementById('email-copy-link');
   if (!el) return;
-  const addr = ['alex', 'example.com'].join('@');
+  const addr = ['lbduquer', 'gmail.com'].join('@');
   el.addEventListener('click', function(e) {
     e.preventDefault();
     if (navigator.clipboard) navigator.clipboard.writeText(addr);
   });
+}
+
+function initContactEmail() {
+  const btn = document.getElementById('footer-email-btn');
+  if (!btn) return;
+  const addr = ['lbduquer', 'gmail.com'].join('@');
+
+  btn.addEventListener('click', function() {
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(addr);
+      showCopiedFlash(btn);
+    }
+  });
+}
+
+function showCopiedFlash(button) {
+  const flash = document.getElementById('email-copied-flash');
+  if (!flash) return;
+
+  // Show the flash message
+  flash.classList.add('show');
+
+  // Hide after animation
+  setTimeout(() => {
+    flash.classList.remove('show');
+  }, 1500);
 }
 
 function initModals() {

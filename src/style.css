@@ -317,6 +317,10 @@
       font-size: 11px; color: var(--text-lo); letter-spacing: 0.1em;
       position: relative; z-index: 1;
     }
+    .card-image {
+      width: 100%; height: 100%; object-fit: cover;
+      position: absolute; top: 0; left: 0;
+    }
     /* The tint overlay — sits above image, below placeholder text */
     .card-tint {
       position: absolute; inset: 0; z-index: 0;

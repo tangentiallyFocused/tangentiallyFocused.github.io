@@ -1,73 +1,12 @@
-export function initCytoscapeGraph(cytoscape) {
+import { getCytoscapeData } from './cytoscape-data.js';
+
+export async function initCytoscapeGraph(cytoscape) {
   if (!document.getElementById('cy')) return;
 
   const isDark = () => document.documentElement.getAttribute('data-theme') === 'dark';
 
-  // Project sidebar data
-  const projectSidebarData = {
-    'p-lx': {
-      eyebrow: 'Interconnectivity · 2024',
-      title: 'Lexeme',
-      summary: 'Built on the insight that color category labels in different languages predict UI comprehension speed — and that most design systems encode the assumptions of their source language without knowing it.',
-      tools: 'Figma, Storybook, Python',
-      method: ['1. Mapped color terms across 6 languages', '2. Identified collapse points in tokens', '3. Built language-aware token aliases', '4. A/B tested with bilingual cohorts'],
-      outcome: 'Misclassification error ↓ 34%',
-      theme: 'Language × Perception',
-      themeColor: 'var(--cyan-dim)',
-      caseId: 'lexeme'
-    },
-    'p-tr': {
-      eyebrow: 'Interaction · 2023',
-      title: 'Tractus',
-      summary: 'The challenge was translational, not technical — making tractography data navigable for clinicians and policy makers who had never seen a connectome before.',
-      tools: 'D3.js, Figma, HCP dataset',
-      method: ['1. Studied tractography literature', '2. Mapped expert vs. lay mental models', '3. Designed progressive disclosure layers', '4. Tested with 3 neuroscientist pairs'],
-      outcome: 'Demo Day — Best Visualization',
-      theme: 'Brain × Communication',
-      themeColor: 'var(--magenta-dim)',
-      caseId: 'tractus'
-    },
-    'p-mp': {
-      eyebrow: 'Perception · 2023',
-      title: 'Mise en Place',
-      summary: 'Designed around the parallel between kitchen preparation and working memory — mise en place as a physical externalization of executive function, reframed for kids who resist academic formats.',
-      tools: 'Figma, Swift / Xcode, Maze',
-      method: ['1. Reviewed exec function literature', '2. Co-designed with 3 teachers', '3. Two prototype + test rounds', '4. Piloted 12 classrooms, 8 weeks'],
-      outcome: 'Task completion rate ↑ 28%',
-      theme: 'Cooking × Cognition',
-      themeColor: 'var(--yellow-dim)',
-      caseId: 'mise'
-    }
-  };
-
-  // Node and edge data
-  const nodeData = [
-    { id: 't-ic', label: 'Interconnectivity', type: 'theme', color: 'cyan' },
-    { id: 't-in', label: 'Interaction',        type: 'theme', color: 'magenta' },
-    { id: 't-pe', label: 'Perception',         type: 'theme', color: 'yellow' },
-    { id: 'p-lx', label: 'Lexeme',             type: 'project' },
-    { id: 'p-tr', label: 'Tractus',            type: 'project' },
-    { id: 'p-mp', label: 'Mise en Place',      type: 'project' },
-    { id: 's-ux', label: 'UX Research',        type: 'skill' },
-    { id: 's-dv', label: 'Data Viz',           type: 'skill' },
-    { id: 's-sy', label: 'Systems Design',     type: 'skill' },
-    { id: 's-et', label: 'Ed Tech',            type: 'skill' },
-    { id: 's-li', label: 'Linguistics',        type: 'skill' },
-    { id: 's-ix', label: 'Interaction Design', type: 'skill' },
-  ];
-
-  const edgeData = [
-    { source: 'p-lx', target: 't-ic' }, { source: 'p-tr', target: 't-in' },
-    { source: 'p-mp', target: 't-pe' }, { source: 'p-lx', target: 't-pe' },
-    { source: 'p-mp', target: 't-in' }, { source: 's-ux', target: 'p-lx' },
-    { source: 's-ux', target: 'p-mp' }, { source: 's-dv', target: 'p-tr' },
-    { source: 's-dv', target: 'p-lx' }, { source: 's-sy', target: 'p-lx' },
-    { source: 's-et', target: 'p-mp' }, { source: 's-li', target: 'p-lx' },
-    { source: 's-ix', target: 'p-tr' }, { source: 's-ix', target: 'p-mp' },
-    { source: 's-li', target: 't-ic' }, { source: 's-sy', target: 't-ic' },
-    { source: 's-ix', target: 't-in' }, { source: 's-ux', target: 't-pe' },
-    { source: 's-et', target: 't-pe' },
-  ];
+  // Load data from JSON files
+  const { nodeData, edgeData, projectSidebarData } = await getCytoscapeData();
 
   function buildStyle() {
     const d = isDark();

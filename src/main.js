@@ -31,8 +31,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // Import and initialize modules
   const { initInteractions } = await import('./interactions.js');
+  const { initFeaturedProjects } = await import('./projects.js');
   const { initCytoscapeGraph } = await import('./cytoscape-graph.js');
 
   initInteractions();
-  initCytoscapeGraph(cytoscape);
+  await initFeaturedProjects();
+  await initCytoscapeGraph(cytoscape);
 });

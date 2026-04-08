@@ -69,7 +69,7 @@
     html { scroll-behavior: smooth; }
     body {
       background: var(--bg); color: var(--text);
-      font-family: 'IBM Plex Mono', 'Courier New', monospace;
+      font-family: 'JetBrains Mono', 'IBM Plex Mono', 'Courier New', monospace; /* not sure if I want JetBrains Mono or IBM Plex Mono */
       font-size: 14px; line-height: 1.7; overflow-x: hidden;
       transition: background 0.3s ease, color 0.3s ease;
     }
@@ -279,7 +279,8 @@
     .abstract-meta { display: flex; gap: 28px; flex-wrap: wrap; margin-top: 24px; padding-top: 22px; border-top: 1px solid var(--border); position: relative; z-index: 1; }
     .abstract-meta-item { font-size: 11px; color: var(--text-lo); }
     .abstract-meta-item strong { display: block; color: var(--text-dim); font-weight: 500; margin-bottom: 2px; }
-    .ref-note { margin-top: 20px; font-size: 10px !important; color: var(--text-lo); font-style: italic; line-height: 1.7; position: relative; z-index: 1; }
+    .ref-note { margin-top: 20px; font-size: 10px !important; color: var(--text-lo); /* font-style: italic; */ line-height: 1.7; position: relative; z-index: 1; }
+    /* .ref-num { font-family: 'DM Serif Display'; font-weight: bold; font-size: 15px } */
 
     /* =========================================================
        PROJECTS — FLASHCARDS
@@ -626,8 +627,8 @@
     .disc-inline-name { font-size: 12px; color: var(--text-dim); line-height: 1.5; margin-bottom: 4px; min-height: 2.8em; }
     .disc-inline-name a { color: var(--text-dim); text-decoration: none; border-bottom: 1px solid var(--border-hi); transition: color 0.2s, border-color 0.2s; }
     .disc-inline-name a:hover { color: var(--magenta); border-bottom-color: var(--magenta); opacity: 1; text-decoration: none; }
-    .disc-inline-desc { font-size: 10px; color: var(--text-lo); font-style: italic; line-height: 1.6; margin-bottom: 0; }
-    .disc-inline-dept { font-size: 10px; color: var(--text-lo); letter-spacing: 0.08em; margin-bottom: 4px; }
+    .disc-inline-desc { font-size: 10px !important; color: var(--text-lo); font-style: italic; line-height: 1.6; margin-bottom: 0; }
+    .disc-inline-dept { font-size: 11px !important; color: var(--text-lo); letter-spacing: 0.08em; margin-bottom: 4px; }
     .recipe-card { background: var(--surface); border: 1px solid var(--border-hi); border-radius: 0; padding: 22px; position: relative; overflow: hidden; }
     .recipe-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--yellow), var(--magenta), var(--cyan)); }
     .recipe-card-label { font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--yellow-dim); margin-bottom: 14px; margin-top: 8px; }

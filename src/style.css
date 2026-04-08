@@ -17,7 +17,7 @@
       --cyan-lo:      #102e2e;
       --cyan-container: #0e2828;
       --magenta:      #cc5585;
-      --magenta-dim:  #722a48;
+      --magenta-dim:  #a84068; /* replacement for og magenta-dim (#722a48) to meet accessibility standards */
       --magenta-lo:   #280e1a;
       --magenta-container: #200a14;
       --yellow:       #e0c040;
@@ -26,7 +26,7 @@
       --yellow-container: #221a06;
       --text:      #d8e8ec;
       --text-dim:  #6a92a2;
-      --text-lo:   #324c58;
+      --text-lo:   #52788a; /* replacement for og text-lo (#324c58) to meet accessibility standards */
       --cream:     #ece6d8;
       --dot-opacity: 0.018;
       --hero-wash-c: rgba(82,212,212,0.06);
@@ -118,7 +118,11 @@
       display: flex; align-items: center; padding: 0 20px 0 28px; z-index: 999;
       transition: background 0.3s ease, border-color 0.3s ease;
     }
-    .titlebar-name { font-size: 11px; color: var(--text-dim); letter-spacing: 0.06em; flex: 1; }
+    .titlebar-name {
+      font-size: 11px; color: var(--text-dim); letter-spacing: 0.06em; flex: 1;
+      text-decoration: none; cursor: pointer; transition: color 0.2s;
+    }
+    .titlebar-name:hover { color: var(--text); text-decoration: none; opacity: 1; }
     nav.top-nav { display: flex; gap: 22px; align-items: center; }
     nav.top-nav a {
       font-size: 10px; color: var(--magenta-dim);
@@ -666,7 +670,7 @@
       font-family: 'JetBrains Mono', 'IBM Plex Mono', monospace; padding: 0; text-align: left;
     }
     .footer-email-large:hover { opacity: 0.75; }
-    .footer-email-hint { font-size: 10px; color: var(--text-lo); letter-spacing: 0.1em; margin-bottom: 8px; }
+    .footer-email-hint { font-size: 10px; color: var(--text-lo); letter-spacing: 0.1em; margin-bottom: 8px; font-style: italic; }
     .email-copied-flash {
       display: block; min-height: 15px;
       font-size: 11px; color: var(--cyan); letter-spacing: 0.08em;

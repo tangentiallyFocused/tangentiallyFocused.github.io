@@ -3,6 +3,7 @@ export function initInteractions() {
   initThemeToggle();
   initScrollProgress();
   initHamburgerMenu();
+  initScrollToTop();
   initEmailCopy();
   initContactEmail();
   initModals();
@@ -91,6 +92,16 @@ function initHamburgerMenu() {
 
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape' && overlay.classList.contains('open')) closeMobileNav();
+  });
+}
+
+function initScrollToTop() {
+  const scrollBtn = document.getElementById('scroll-to-top');
+  if (!scrollBtn) return;
+
+  scrollBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }
 

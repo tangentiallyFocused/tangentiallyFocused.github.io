@@ -39,9 +39,14 @@ export async function initCytoscapeGraph(cytoscape) {
           'border-width': 3,
           // should i make the border fallback color the on-surface color too?
           'font-family': 'JetBrains Mono, IBM Plex Mono, monospace',
-          'width': 42,
-          // 'width': 'data(label).length', // THIS DIDN'T WORK
-          'height': 42,
+          'width': ele => {
+            const label = ele.data('label');
+            return Math.max(60, label.length * 16); // 16px per character for font-size 28
+          },
+          'height': ele => {
+            const label = ele.data('label');
+            return Math.max(60, label.length);
+          },
           // 'text-margin-y': 6,
           'font-weight': '900'
 
@@ -71,12 +76,18 @@ export async function initCytoscapeGraph(cytoscape) {
           'padding': '12px',
           'text-justification': 'center',
           'shape': 'roundrectangle',
-          'text-max-width': '125px',
-          'border-width': 3,
-          'border-color': magC,
-          'width': 30,
-          'height': 30,
-          
+          'text-max-width': '165px',
+          'border-width': 1,
+          'border-color': magD,
+          'width': ele => {
+            const label = ele.data('label');
+            return Math.max(50, label.length * 10); // 10px per character for font-size 18
+          },
+          'height': ele => {
+            const label = ele.data('label');
+            return Math.max(30, label.length);
+          },
+
         }
       },
       {
@@ -94,11 +105,17 @@ export async function initCytoscapeGraph(cytoscape) {
           'text-justification': 'center',
           'shape': 'roundrectangle',
           'text-max-width': '125px',
-          'border-width': 3, // og says 2px
-          'border-color': yellC,
-          'width': 22,
-          'height': 22,
-          
+          'border-width': 1, // og says 2px
+          'border-color': yellD,
+          'width': ele => {
+            const label = ele.data('label');
+            return Math.max(20, label.length * 8); // 8px per character for font-size 14
+          },
+          'height': ele => {
+            const label = ele.data('label');
+            return Math.max(20, label.length);
+          },
+
         }
       },
       {

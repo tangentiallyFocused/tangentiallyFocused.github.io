@@ -327,7 +327,7 @@
     }
     /* The tint overlay — sits above image, below placeholder text */
     .card-tint {
-      position: absolute; inset: 0; z-index: 0;
+      position: absolute; inset: 0; z-index: 1;
     }
     /* Single-theme tints */
     .card-c .card-tint { background: linear-gradient(135deg, rgba(82,212,212,0.42) 0%, rgba(82,212,212,0.28) 100%); }

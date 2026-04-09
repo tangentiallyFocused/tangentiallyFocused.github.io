@@ -5,26 +5,37 @@ export async function getCytoscapeData() {
   const projects = await loadProjects();
   const skills = await loadSkills();
 
-  // Fixed theme nodes
+  // Fixed theme nodes with calculated dimensions
   const themeNodes = [
     { id: 't-ic', label: 'Interconnectivity', type: 'theme', color: 'cyan' },
     { id: 't-in', label: 'Interaction', type: 'theme', color: 'magenta' },
     { id: 't-pe', label: 'Perception', type: 'theme', color: 'yellow' },
-  ];
-
-  // Generate project nodes
-  const projectNodes = projects.map((p, i) => ({
-    id: `p-${i}`,
-    label: p.name.replace(/\n/g, ' '), // Remove line breaks
-    type: 'project',
-    projectData: p // Store full project data for sidebar
+  ].map(node => ({
+    ...node,
+    width: Math.max(60, node.label.length * 16),
+    height: Math.max(60, node.label.length)
   }));
 
-  // Generate skill nodes
+  // Generate project nodes with calculated dimensions
+  const projectNodes = projects.map((p, i) => {
+    const label = p.name.replace(/\n/g, ' '); // Remove line breaks
+    return {
+      id: `p-${i}`,
+      label,
+      type: 'project',
+      width: Math.max(50, label.length * 10),
+      height: Math.max(30, label.length),
+      projectData: p // Store full project data for sidebar
+    };
+  });
+
+  // Generate skill nodes with calculated dimensions
   const skillNodes = skills.map((s, i) => ({
     id: `s-${i}`,
     label: s.name,
-    type: 'skill'
+    type: 'skill',
+    width: Math.max(20, s.name.length * 8),
+    height: Math.max(20, s.name.length)
   }));
 
   const nodeData = [...themeNodes, ...projectNodes, ...skillNodes];

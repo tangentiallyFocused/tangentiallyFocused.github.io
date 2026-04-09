@@ -39,14 +39,8 @@ export async function initCytoscapeGraph(cytoscape) {
           'border-width': 3,
           // should i make the border fallback color the on-surface color too?
           'font-family': 'JetBrains Mono, IBM Plex Mono, monospace',
-          'width': ele => {
-            const label = ele.data('label');
-            return Math.max(60, label.length * 16); // 16px per character for font-size 28
-          },
-          'height': ele => {
-            const label = ele.data('label');
-            return Math.max(60, label.length);
-          },
+          'width': 'data(width)',
+          'height': 'data(height)',
           // 'text-margin-y': 6,
           'font-weight': '900'
 
@@ -79,14 +73,8 @@ export async function initCytoscapeGraph(cytoscape) {
           'text-max-width': '165px',
           'border-width': 1,
           'border-color': magD,
-          'width': ele => {
-            const label = ele.data('label');
-            return Math.max(50, label.length * 10); // 10px per character for font-size 18
-          },
-          'height': ele => {
-            const label = ele.data('label');
-            return Math.max(30, label.length);
-          },
+          'width': 'data(width)',
+          'height': 'data(height)',
 
         }
       },
@@ -107,14 +95,8 @@ export async function initCytoscapeGraph(cytoscape) {
           'text-max-width': '125px',
           'border-width': 1, // og says 2px
           'border-color': yellD,
-          'width': ele => {
-            const label = ele.data('label');
-            return Math.max(20, label.length * 8); // 8px per character for font-size 14
-          },
-          'height': ele => {
-            const label = ele.data('label');
-            return Math.max(20, label.length);
-          },
+          'width': 'data(width)',
+          'height': 'data(height)',
 
         }
       },

@@ -27,18 +27,33 @@ export async function initCytoscapeGraph(cytoscape) {
         selector: 'node[type="theme"]',
         style: {
           'background-color': surf2,
-          'border-width': 2,
+          // should i make the font fallback color the on-surface color?
           'label': 'data(label)',
-          'font-family': 'IBM Plex Mono, monospace',
-          'font-size': 11,
-          'text-valign': 'bottom',
+          'font-size': 28,
+          'text-valign': 'center',
           'text-halign': 'center',
-          'text-margin-y': 6,
+          'padding': '15px',
+          'text-justification': 'center',
+          'shape': 'roundrectangle',
+          // 'text-max-width': '125px',
+          'border-width': 3,
+          // should i make the border fallback color the on-surface color too?
+          'font-family': 'JetBrains Mono, IBM Plex Mono, monospace',
           'width': 42,
+          // 'width': 'data(label).length', // THIS DIDN'T WORK
           'height': 42,
-          'shape': 'ellipse',
+          // 'text-margin-y': 6,
+          'font-weight': '900'
+
         }
       },
+      // theme node specifics
+      // {
+      //   selector: 'node[label = "Interconnectivity"]',
+      //   style: {
+      //     'color': cyan
+      //   }
+      // },
       { selector: 'node[color="cyan"]', style: { 'border-color': cyan, 'color': cyanD }},
       { selector: 'node[color="magenta"]', style: { 'border-color': mag, 'color': magD }},
       { selector: 'node[color="yellow"]', style: { 'border-color': yell, 'color': yellD }},
@@ -46,43 +61,51 @@ export async function initCytoscapeGraph(cytoscape) {
         selector: 'node[type="project"]',
         style: {
           'background-color': magC,
-          'border-color': magD,
-          'border-width': 1,
-          'label': 'data(label)',
           'color': magD,
-          'font-family': 'IBM Plex Mono, monospace',
-          'font-size': 10,
-          'text-valign': 'bottom',
+          'font-family': 'JetBrains Mono, IBM Plex Mono, monospace',
+          'label': 'data(label)',
+          'font-size': 18,
+          'text-valign': 'center',
           'text-halign': 'center',
-          'text-margin-y': 5,
+          'text-wrap': 'wrap',
+          'padding': '12px',
+          'text-justification': 'center',
+          'shape': 'roundrectangle',
+          'text-max-width': '125px',
+          'border-width': 3,
+          'border-color': magC,
           'width': 30,
           'height': 30,
-          'shape': 'ellipse',
+          
         }
       },
       {
         selector: 'node[type="skill"]',
         style: {
           'background-color': yellC,
-          'border-color': yellD,
-          'border-width': 1,
-          'label': 'data(label)',
           'color': yellD,
-          'font-family': 'IBM Plex Mono, monospace',
-          'font-size': 10,
-          'text-valign': 'bottom',
+          'font-family': 'JetBrains Mono, IBM Plex Mono, monospace',
+          'label': 'data(label)',
+          'font-size': 14,
+          'text-valign': 'center',
           'text-halign': 'center',
-          'text-margin-y': 5,
+          'text-wrap': 'wrap',
+          'padding': '10px',
+          'text-justification': 'center',
+          'shape': 'roundrectangle',
+          'text-max-width': '125px',
+          'border-width': 3, // og says 2px
+          'border-color': yellC,
           'width': 22,
           'height': 22,
-          'shape': 'ellipse',
+          
         }
       },
       {
         selector: 'edge',
         style: {
           'line-color': border,
-          'width': 1,
+          'width': 1.5,
           'curve-style': 'bezier',
           'opacity': 0.5
         }
@@ -98,13 +121,22 @@ export async function initCytoscapeGraph(cytoscape) {
     },
     style: buildStyle(),
     layout: {
+      // from og code
       name: 'fcose',
-      animate: false,
-      nodeRepulsion: () => 8000,
-      idealEdgeLength: () => 80,
-      gravity: 0.3,
-      numIter: 500,
-      padding: 32
+      randomize: true,
+      animationDuration: 50,
+      gravity: 0.25,
+      nestingFactor: 0.05,
+      // nestingFactor: 0.5,
+      edgeElasticity: edge => 0.05,
+      nodeRepulsion: node => 4500,
+      idealEdgeLength: edge => 50,
+      nodeSeparation: 2000,
+      numIter: 2500,
+      fit: true,
+      packComponents: true,
+      samplingType: false,
+      nodeDimensionsIncludeLabels: true
     },
     userZoomingEnabled: false,
     userPanningEnabled: false,

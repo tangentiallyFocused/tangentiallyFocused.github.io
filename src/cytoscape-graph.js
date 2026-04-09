@@ -182,6 +182,12 @@ export async function initCytoscapeGraph(cytoscape) {
     setLegend(true);
   }
 
+  cy.maxZoom(2);
+  // cy.minZoom(0.3);
+  cy.minZoom(0.5);
+  // cy.minZoom(0.7);
+  // cy.center();
+
   if (statBtn) {
     statBtn.addEventListener('click', (e) => {
       e.stopPropagation();

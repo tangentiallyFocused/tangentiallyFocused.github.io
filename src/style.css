@@ -526,7 +526,7 @@
 
     .cy-wrap {
       display: grid; grid-template-columns: 1fr 280px; gap: 1px;
-      background: var(--border); border: 1px solid var(--border); height: 520px;
+      background: var(--border); border: 1px solid var(--border); height: 650px;
       position: relative;
     }
     @media (max-width: 720px) { .cy-wrap { grid-template-columns: 1fr; height: auto; } }

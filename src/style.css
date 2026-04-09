@@ -335,12 +335,30 @@
     .card-y .card-tint { background: linear-gradient(135deg, rgba(224,192,64,0.42) 0%, rgba(224,192,64,0.28) 100%); }
     /* Split tints for multi-theme */
     .card-cm .card-tint { background: linear-gradient(135deg, rgba(82,212,212,0.42) 0%, rgba(204,85,133,0.42) 100%); }
+    .card-mc .card-tint { background: linear-gradient(135deg, rgba(204,85,133,0.42) 0%, rgba(82,212,212,0.42) 100%); }
     .card-my .card-tint { background: linear-gradient(135deg, rgba(204,85,133,0.42) 0%, rgba(224,192,64,0.42) 100%); }
+    .card-ym .card-tint { background: linear-gradient(135deg, rgba(224,192,64,0.42) 0%, rgba(204,85,133,0.42) 100%); }
     .card-cy .card-tint { background: linear-gradient(135deg, rgba(82,212,212,0.42) 0%, rgba(224,192,64,0.42) 100%); }
+    .card-yc .card-tint { background: linear-gradient(135deg, rgba(224,192,64,0.42) 0%, rgba(82,212,212,0.42) 100%); }
+    /* Three-theme gradients */
+    .card-cmy .card-tint, .card-cym .card-tint, .card-mcy .card-tint,
+    .card-myc .card-tint, .card-ycm .card-tint, .card-ymc .card-tint {
+      background: linear-gradient(135deg, rgba(82,212,212,0.42) 0%, rgba(204,85,133,0.42) 50%, rgba(224,192,64,0.42) 100%);
+    }
     /* Light mode — slightly stronger tint needed for visibility */
     [data-theme="light"] .card-c .card-tint { background: linear-gradient(135deg, rgba(26,128,128,0.48) 0%, rgba(26,128,128,0.32) 100%); }
     [data-theme="light"] .card-m .card-tint { background: linear-gradient(135deg, rgba(160,48,96,0.48) 0%, rgba(160,48,96,0.32) 100%); }
     [data-theme="light"] .card-y .card-tint { background: linear-gradient(135deg, rgba(140,100,0,0.48) 0%, rgba(140,100,0,0.32) 100%); }
+    [data-theme="light"] .card-cm .card-tint { background: linear-gradient(135deg, rgba(26,128,128,0.48) 0%, rgba(160,48,96,0.48) 100%); }
+    [data-theme="light"] .card-mc .card-tint { background: linear-gradient(135deg, rgba(160,48,96,0.48) 0%, rgba(26,128,128,0.48) 100%); }
+    [data-theme="light"] .card-my .card-tint { background: linear-gradient(135deg, rgba(160,48,96,0.48) 0%, rgba(140,100,0,0.48) 100%); }
+    [data-theme="light"] .card-ym .card-tint { background: linear-gradient(135deg, rgba(140,100,0,0.48) 0%, rgba(160,48,96,0.48) 100%); }
+    [data-theme="light"] .card-cy .card-tint { background: linear-gradient(135deg, rgba(26,128,128,0.48) 0%, rgba(140,100,0,0.48) 100%); }
+    [data-theme="light"] .card-yc .card-tint { background: linear-gradient(135deg, rgba(140,100,0,0.48) 0%, rgba(26,128,128,0.48) 100%); }
+    [data-theme="light"] .card-cmy .card-tint, [data-theme="light"] .card-cym .card-tint, [data-theme="light"] .card-mcy .card-tint,
+    [data-theme="light"] .card-myc .card-tint, [data-theme="light"] .card-ycm .card-tint, [data-theme="light"] .card-ymc .card-tint {
+      background: linear-gradient(135deg, rgba(26,128,128,0.48) 0%, rgba(160,48,96,0.48) 50%, rgba(140,100,0,0.48) 100%);
+    }
 
     /* Card front info strip — flex: 1 so it fills remaining height equally across all cards */
     .card-info { flex: 1; padding: 14px 16px 16px; background: var(--bg-2); border-top: 1px solid var(--border); display: flex; flex-direction: column; justify-content: flex-start; }

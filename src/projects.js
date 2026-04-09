@@ -17,9 +17,9 @@ export async function initFeaturedProjects() {
 }
 
 function generateCard(project, index, total) {
-  // Determine primary theme for card styling
+  // Determine theme class based on all themes (supports multi-colored overlays)
+  const themeClass = getThemeClass(project.themes);
   const primaryTheme = project.themes[0];
-  const themeClass = getThemeClass(primaryTheme);
   const themeColor = getThemeColor(primaryTheme);
 
   // Format theme label

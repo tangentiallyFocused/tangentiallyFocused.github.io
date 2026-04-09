@@ -35,12 +35,21 @@ export function getThemeColor(themeName) {
   return colorMap[themeName];
 }
 
-// Get theme class
-export function getThemeClass(themeName) {
-  const classMap = {
-    'Interconnectivity': 'card-c',
-    'Interaction': 'card-m',
-    'Perception': 'card-y'
+// Get theme class - handles single or multiple themes
+export function getThemeClass(themes) {
+  // Convert theme names to letter codes
+  const themeToLetter = {
+    'Interconnectivity': 'c',
+    'Interaction': 'm',
+    'Perception': 'y'
   };
-  return classMap[themeName];
+
+  // If it's a single theme string (for backwards compatibility)
+  if (typeof themes === 'string') {
+    return `card-${themeToLetter[themes]}`;
+  }
+
+  // If it's an array, combine the letters in order
+  const letters = themes.map(t => themeToLetter[t]).join('');
+  return `card-${letters}`;
 }

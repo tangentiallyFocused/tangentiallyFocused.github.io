@@ -9,10 +9,17 @@ export async function loadSkills() {
   return await response.json();
 }
 
-// Get featured projects only
+// Get featured projects only, sorted by featured order
 export async function getFeaturedProjects() {
   const projects = await loadProjects();
-  return projects.filter(p => p.featured === 'Featured');
+  return projects
+    .filter(p => p.featured && p.featured.startsWith('Yes'))
+    .sort((a, b) => {
+      // Extract the number from "Yes 1", "Yes 2", etc.
+      const numA = parseInt(a.featured.split(' ')[1]) || 0;
+      const numB = parseInt(b.featured.split(' ')[1]) || 0;
+      return numA - numB;
+    });
 }
 
 // Get theme mapping

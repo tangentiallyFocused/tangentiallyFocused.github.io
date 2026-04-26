@@ -388,12 +388,21 @@
     .card-recipe-inline { font-size: 11px; color: var(--text-dim); margin-bottom: 2px; }
     /* Recipe rows on back */
     .card-recipe-line {
-      display: flex; justify-content: space-between; align-items: baseline;
+      display: flex; justify-content: space-between; align-items: flex-start;
       gap: 8px; padding: 3px 0; border-bottom: 1px dashed var(--border); font-size: 11px;
     }
     .card-recipe-line:last-of-type { border-bottom: none; }
-    .card-recipe-line span:first-child { color: var(--text-dim); }
-    .card-recipe-line span:last-child { color: var(--text-lo); text-align: right; flex-shrink: 0; }
+    .card-recipe-line span {
+      color: var(--text-dim);
+      flex: 1 1 auto;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      max-width: 100%;
+      padding-left: 12px;
+      text-indent: -12px;
+    }
+    .card-recipe-line span:only-child { flex: 1; }
+    .card-recipe-line span:last-child:not(:only-child) { color: var(--text-lo); text-align: right; flex: 0 0 auto; }
     /* Card back footer */
     .card-back-actions {
       margin-top: auto; padding-top: 10px; border-top: 1px solid var(--border);

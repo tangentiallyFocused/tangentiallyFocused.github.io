@@ -228,6 +228,7 @@ export async function initCytoscapeGraph(cytoscape) {
     if (el('cy-proj-title')) el('cy-proj-title').textContent = p.title;
     if (el('cy-proj-summary')) el('cy-proj-summary').textContent = p.summary;
     if (el('cy-proj-tools')) el('cy-proj-tools').textContent = p.tools;
+    if (el('cy-proj-method-label')) el('cy-proj-method-label').textContent = p.methodConcept || 'Method';
 
     const methodEl = el('cy-proj-method');
     if (methodEl) {
@@ -245,12 +246,17 @@ export async function initCytoscapeGraph(cytoscape) {
     const outcomeEl = el('cy-proj-outcome');
     if (outcomeEl) {
       outcomeEl.innerHTML = '';
-      const row = document.createElement('div');
-      row.className = 'card-recipe-line';
-      const s = document.createElement('span');
-      s.textContent = p.outcome;
-      row.appendChild(s);
-      outcomeEl.appendChild(row);
+      if (p.outcome && p.outcome.length >= 2) {
+        const row = document.createElement('div');
+        row.className = 'card-recipe-line';
+        const s1 = document.createElement('span');
+        s1.textContent = p.outcome[0];
+        const s2 = document.createElement('span');
+        s2.textContent = p.outcome[1];
+        row.appendChild(s1);
+        row.appendChild(s2);
+        outcomeEl.appendChild(row);
+      }
     }
 
     const themeEl = el('cy-proj-theme');

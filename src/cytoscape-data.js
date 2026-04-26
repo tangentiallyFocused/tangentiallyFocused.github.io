@@ -75,28 +75,31 @@ export async function getCytoscapeData() {
     });
   });
 
-  // Skill to project edges
+  // Skill to project edges (using all_skills)
   projects.forEach((p, pIndex) => {
-    p.skills.forEach(skillName => {
-      const skillIndex = skills.findIndex(s => s.name === skillName);
-      if (skillIndex !== -1) {
-        edges.push({ source: `s-${skillIndex}`, target: `p-${pIndex}` });
-      }
-    });
+    if (p.all_skills && p.all_skills.length > 0) {
+      p.all_skills.forEach(skillName => {
+        const skillIndex = skills.findIndex(s => s.name === skillName);
+        if (skillIndex !== -1) {
+          edges.push({ source: `s-${skillIndex}`, target: `p-${pIndex}` });
+        }
+      });
+    }
   });
 
-  // Generate project sidebar data
+  // Generate project sidebar data (formatted like card backs)
   const projectSidebarData = {};
   projects.forEach((p, i) => {
     const id = `p-${i}`;
     projectSidebarData[id] = {
-      eyebrow: `${p.themes.join(', ')} · ${p.date}`,
+      eyebrow: `${p.themes.join(', ')} · ${p.end_year}`,
       title: p.name.replace(/\n/g, ' '),
-      summary: p.description.split('.').slice(0, 2).join('.') + '.',
-      tools: p.des_materials.join(', '),
-      method: [], // Could parse from description if needed
-      outcome: p.collaboration || '',
-      theme: p.format,
+      summary: p.med_desc,
+      tools: p.key_tools && p.key_tools.length > 0 ? p.key_tools.join(', ') : '',
+      methodConcept: p.method_concept || 'Method',
+      method: p.short_mept || [],
+      outcome: p.short_outcome || [],
+      theme: p.tags,
       themeColor: 'var(--cyan-dim)', // Could map based on primary theme
       caseId: id
     };

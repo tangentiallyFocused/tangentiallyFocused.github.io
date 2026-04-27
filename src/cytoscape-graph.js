@@ -206,11 +206,24 @@ export async function initCytoscapeGraph(cytoscape) {
 
   document.addEventListener('click', (e) => {
     const wrap = document.querySelector('.cy-wrap');
-    if (wrap && !wrap.contains(e.target) && graphActive) deactivateGraph();
+    const mediaModal = document.getElementById('media-carousel-overlay');
+    const clickedInsideModal = mediaModal && mediaModal.contains(e.target);
+    const modalIsOpen = mediaModal && mediaModal.classList.contains('open');
+
+    // Don't deactivate graph if clicking inside modal or if modal is open
+    if (wrap && !wrap.contains(e.target) && graphActive && !clickedInsideModal && !modalIsOpen) {
+      deactivateGraph();
+    }
   });
 
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && graphActive) deactivateGraph();
+    const mediaModal = document.getElementById('media-carousel-overlay');
+    const modalIsOpen = mediaModal && mediaModal.classList.contains('open');
+
+    // Don't deactivate graph on Escape if modal is open (let modal handle it)
+    if (e.key === 'Escape' && graphActive && !modalIsOpen) {
+      deactivateGraph();
+    }
   });
 
   // Sidebar
@@ -283,8 +296,10 @@ export async function initCytoscapeGraph(cytoscape) {
     // Media link
     const mediaLink = el('cy-proj-media-link');
     const mediaCount = el('cy-media-count');
-    if (mediaLink && p.mediaFiles && p.mediaFiles.length > 0) {
-      mediaLink.style.display = '';
+    // Check if mediaFiles exists, has items, and contains at least one non-empty string
+    const hasValidMedia = p.mediaFiles && p.mediaFiles.length > 0 && p.mediaFiles.some(file => file && file.trim() !== '');
+    if (mediaLink && hasValidMedia) {
+      mediaLink.style.display = 'block';
       if (mediaCount) mediaCount.textContent = p.mediaFiles.length;
       // Store media data globally for carousel
       window.currentProjectMedia = {

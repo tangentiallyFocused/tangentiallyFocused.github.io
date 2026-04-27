@@ -222,7 +222,18 @@
     .status-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--cyan); flex-shrink: 0; animation: blink 2.8s ease-in-out infinite; }
     @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0.2; } }
     .hero-kw-label { font-size: 9px; color: var(--text-lo); letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 8px; }
-    .hero-keywords { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 32px; }
+    /* Note: Semicolons are used instead of commas to separate keywords because keywords are multi-word phrases (e.g., "linguistic relativity", "culture & meaning") — standard academic convention */
+    .hero-keywords { font-size: 11px; color: var(--text-dim); line-height: 1.6; margin-bottom: 32px; }
+    /* Keyword separator styling options (for future reference):
+       Option 1: Alternating italics - creates strong rhythm but may make some keywords easier to ignore
+       Option 2: Dimmed semicolons with extra spacing - subtle, treats all keywords equally
+       Option 3: Subtle color alternation between --text-dim and --text */
+    /* .hero-keywords .kw-alt { font-style: italic; } */
+
+    /* Active: Option 4 - All keywords italicized, semicolons roman */
+    .hero-keywords.kw-all-italic { font-style: italic; }
+    .hero-keywords .kw-item { white-space: nowrap; } /* Prevent keywords from breaking mid-phrase */
+    .hero-keywords .kw-sep { color: var(--text-lo); padding-right: 4px; font-style: normal; }
     /* Pills — passive labels */
     .kw-tag { font-size: 10px; padding: 3px 10px; border: 1px solid var(--yellow-dim); color: var(--yellow-dim); border-radius: 999px; background: var(--yellow-lo); }
     [data-theme="dark"] .kw-tag { border-color: var(--yellow-lo); background: var(--yellow-lo); }
@@ -413,7 +424,7 @@
     /* Card back footer */
     .card-back-actions {
       margin-top: auto; padding-top: 10px; border-top: 1px solid var(--border);
-      display: flex; justify-content: space-between; align-items: center;
+      display: flex; justify-content: space-between; align-items: flex-start;
     }
     .card-back-theme { font-size: 9px; letter-spacing: 0.08em; }
     .card-c .card-back-theme  { color: var(--cyan-dim); }
@@ -628,7 +639,7 @@
 
     /* Sidebar */
     .cy-sidebar {
-      background: var(--bg-2); padding: 22px 20px;
+      background: var(--bg-2); padding: 22px 20px 20px 20px;
       display: flex; flex-direction: column; overflow-y: auto;
     }
     .cy-sidebar-label {
@@ -852,13 +863,22 @@
        MEDIA CAROUSEL MODAL
     ========================================================= */
     .cy-media-link {
-      font-size: 10px; color: var(--magenta-dim);
+      font-size: 9px; color: var(--magenta-dim);
       background: none; border: none; cursor: pointer;
       font-family: 'JetBrains Mono', 'IBM Plex Mono', monospace;
       letter-spacing: 0.08em; transition: color 0.2s;
-      padding: 0; margin-top: 12px;
+      padding: 0; white-space: nowrap;
     }
     .cy-media-link:hover { color: var(--magenta); }
+
+    .card-media-link {
+      font-size: 9px; color: var(--magenta-dim);
+      background: none; border: none; cursor: pointer;
+      font-family: 'JetBrains Mono', 'IBM Plex Mono', monospace;
+      letter-spacing: 0.08em; transition: color 0.2s;
+      padding: 0; white-space: nowrap;
+    }
+    .card-media-link:hover { color: var(--magenta); }
 
     #media-carousel-overlay {
       position: fixed; inset: 0; z-index: 2500;

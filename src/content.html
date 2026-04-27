@@ -34,7 +34,7 @@
       </nav>
       <div id="mobile-nav-footer">
         <a href="resume.pdf" target="_blank" rel="noopener" class="mobile-nav-resume">Résumé ↗</a>
-        <span id="mobile-nav-meta">v9.9.0 · Boston, MA</span>
+        <span id="mobile-nav-meta">v9.9.1 · Boston, MA</span>
       </div>
     </div>
   </div>
@@ -64,7 +64,7 @@
         <div class="hero-masthead fade-up">
           <span class="hero-masthead-left">Portfolio</span>
           <div class="hero-masthead-right">
-            v9.9.0 <span class="sep masthead-hide-mobile">·</span><span class="masthead-hide-mobile"> Product Designer</span> <span class="sep masthead-hide-mobile">·</span><span class="masthead-hide-mobile"> Boston, MA</span>
+            v9.9.1 <span class="sep masthead-hide-mobile">·</span><span class="masthead-hide-mobile"> Product Designer</span> <span class="sep masthead-hide-mobile">·</span><span class="masthead-hide-mobile"> Boston, MA</span>
           </div>
         </div>
 
@@ -80,7 +80,7 @@
           <div class="hero-author">Lara Baldez Duque Ribeiro <sup>1,2</sup></div>
           <div class="hero-affiliation">
             <span class="affil-desktop">
-              <sup>1</sup>&nbsp;Dept. of Cognitive &amp; Linguistic Sciences &nbsp;·&nbsp;
+              <sup>1</sup>&nbsp;Cognitive &amp; Linguistic Sciences &nbsp;·&nbsp;
               <sup>2</sup>&nbsp;Media Arts &amp; Sciences &nbsp;·&nbsp; Wellesley College
             </span>
             <span class="affil-mobile">
@@ -111,15 +111,14 @@
 
         <div class="fade-up d5">
           <p class="hero-kw-label">Keywords</p>
-          <div class="hero-keywords" aria-label="Keywords">
-            <span class="kw-tag">linguistic relativity</span>
-            <span class="kw-tag">human connectome</span>
-            <span class="kw-tag">product design</span>
-            <span class="kw-tag">physical making</span>
-            <span class="kw-tag">color cognition</span>
-            <span class="kw-tag">systems design</span>
-            <span class="kw-tag">culture &amp; meaning</span>
-          </div>
+          <!-- Option 1: Alternating italics -->
+          <!-- <p class="hero-keywords" aria-label="Keywords"><span>linguistic relativity</span>; <span class="kw-alt">human connectome</span>; <span>product design</span>; <span class="kw-alt">physical making</span>; <span>color cognition</span>; <span class="kw-alt">systems design</span>; <span>culture &amp; meaning</span></p> -->
+
+          <!-- Option 2: Styled semicolons -->
+          <!-- <p class="hero-keywords" aria-label="Keywords">linguistic relativity<span class="kw-sep">;</span> human connectome<span class="kw-sep">;</span> product design<span class="kw-sep">;</span> physical making<span class="kw-sep">;</span> color cognition<span class="kw-sep">;</span> systems design<span class="kw-sep">;</span> culture &amp; meaning</p> -->
+
+          <!-- Option 4: All keywords italicized -->
+          <p class="hero-keywords kw-all-italic" aria-label="Keywords"><span class="kw-item">linguistic relativity</span><span class="kw-sep">;</span> <span class="kw-item">human connectome</span><span class="kw-sep">;</span> <span class="kw-item">product design</span><span class="kw-sep">;</span> <span class="kw-item">physical making</span><span class="kw-sep">;</span> <span class="kw-item">color cognition</span><span class="kw-sep">;</span> <span class="kw-item">systems design</span><span class="kw-sep">;</span> <span class="kw-item">culture &amp; meaning</span></p>
           <div class="hero-cta">
             <a href="#projects" class="btn btn-primary hero-cta-primary">View Work</a>
             <div class="hero-cta-row">
@@ -150,6 +149,9 @@
           </button>
 
           <!-- Expansion -->
+          <!-- Note: Citations use [1], [2], [3] (bracketed numbers) rather than [a], [b], [c] (letters) to follow standard academic convention.
+               Affiliations use ¹, ² (superscript numbers) in the hero section. While both use numbers, the visual distinction
+               (superscript vs. bracketed) and contextual separation (hero vs. abstract) prevent confusion. -->
           <div class="abstract-expansion" id="abstract-expansion">
             <p>The Sapir-Whorf hypothesis<span class="abstract-cite">[1]</span> — in its weak, linguistic relativity formulation — proposes that the language available to you shapes how you perceive and categorize the world. Critically, this is not a deterministic claim. As you acquire new words, new languages, new conceptual frameworks, your perceptual space genuinely expands. The Russian distinction between <span class="abstract-kw">siniy</span> (dark blue) and <span class="abstract-kw">goluboy</span> (light blue) as categorically separate hues<span class="abstract-cite">[2]</span> is the clearest empirical case: Russian speakers don't merely name the boundary differently — they perceive it faster. Language didn't constrain them; it sharpened them. I apply the same logic to design. The conceptual tools I bring to a problem determine what I can see in it — and acquiring new tools, new materials, new disciplines keeps expanding what's visible.</p>
 
@@ -158,6 +160,13 @@
             <p>My background in cognitive and linguistic science was heavily focused on language acquisition and development — the earliest stages where language and thought are most visibly co-constructing each other. That lens informs how I approach information architecture, learning design, and communication across all ages. I'm also a working designer in the physical world: painting, sculpture, woodwork, and 3D printing are not separate from my practice but continuous with it. Making in different materials — with different resistances, different feedback loops, different failure modes — teaches you things about design that screens don't.</p>
 
             <p>Grounded further in the structural connectivity patterns documented in the Human Connectome Project,<span class="abstract-cite">[3]</span> I treat designed artifacts not as discrete objects but as nodes in broader cognitive, cultural, and social networks — asking always how information moves between minds, and what it becomes in the passage.</p>
+
+            <p class="ref-note">
+              <span class="ref-num">[1]</span> Deutscher, G. (2010). <em>Through the Language Glass: Why the World Looks Different in Other Languages.</em> Metropolitan Books. &nbsp;
+              <br>
+              <span class="ref-num">[2]</span> Winawer, J. et al. (2007). Russian blues reveal effects of language on color discrimination. <em>PNAS</em>, 104(19). &nbsp;
+              <br>
+              <span class="ref-num">[3]</span> Van Essen, D. C. et al. (2013). The WU-Minn Human Connectome Project. <em>NeuroImage</em>, 80.</p>
           </div>
 
           <div class="abstract-meta" aria-label="Document metadata">
@@ -167,12 +176,6 @@
             <div class="abstract-meta-item"><strong>Domain</strong>Product Design / HCI</div>
             <div class="abstract-meta-item"><strong>Year</strong>2026</div>
           </div>
-          <p class="ref-note">
-            <span class="ref-num">[1]</span> Deutscher, G. (2010). <em>Through the Language Glass: Why the World Looks Different in Other Languages.</em> Metropolitan Books. &nbsp; 
-            <br>
-            <span class="ref-num">[2]</span> Winawer, J. et al. (2007). Russian blues reveal effects of language on color discrimination. <em>PNAS</em>, 104(19). &nbsp; 
-            <br>
-            <span class="ref-num">[3]</span> Van Essen, D. C. et al. (2013). The WU-Minn Human Connectome Project. <em>NeuroImage</em>, 80.</p>
         </div>
       </div>
     </section>
@@ -323,9 +326,9 @@
               <div id="cy-proj-method"></div>
               <p class="card-recipe-label" id="cy-proj-outcome-label">Outcome</p>
               <div id="cy-proj-outcome"></div>
-              <button class="cy-media-link" id="cy-proj-media-link" style="display:none;" onclick="window.openMediaCarousel()">View media (<span id="cy-media-count">0</span>) ↗</button>
               <div class="card-back-actions" style="margin-top:auto;">
                 <span class="card-back-theme" id="cy-proj-theme"></span>
+                <button class="cy-media-link" id="cy-proj-media-link" style="display:none;" onclick="window.openMediaCarousel()">View media (<span id="cy-media-count">0</span>) ↗</button>
                 <!-- NOTE: "Open case study" button commented out for now -->
                 <!-- <button class="card-expand" id="cy-proj-expand">Open case study ↗</button> -->
               </div>
@@ -424,12 +427,12 @@
           <p class="footer-meta">Product Designer &nbsp;·&nbsp; Boston, MA</p>
         </div>
         <nav class="footer-links" aria-label="External links">
-          <a href="#">LinkedIn</a>
-          <a href="#">GitHub</a>
+          <a href="https://www.linkedin.com/in/lara-bduquer-434297261" target="_blank">LinkedIn</a>
+          <a href="https://github.com/tangentiallyFocused" target="_blank">GitHub</a>
           <a href="#" id="email-copy-link" aria-label="Copy email address">Email</a>
           <a href="resume.pdf" target="_blank" rel="noopener">Résumé ↗</a>
         </nav>
-        <p class="footer-version">2026 · v9.9.0 · <span style="color:var(--text-lo);">in collaboration with Claude AI</span></p>
+        <p class="footer-version">2026 · v9.9.1 · <span style="color:var(--text-lo);">in collaboration with Claude AI</span></p>
       </div>
     </div>
   </footer>

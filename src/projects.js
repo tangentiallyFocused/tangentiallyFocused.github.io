@@ -26,6 +26,11 @@ function generateCard(project, index, total) {
   // Card index
   const cardIndex = `${String(index + 1).padStart(2, '0')} / ${String(total).padStart(2, '0')}`;
 
+  // Check for valid media files
+  const hasValidMedia = project.modal_files && project.modal_files.length > 0 &&
+                        project.modal_files.some(file => file && file.trim() !== '');
+  const mediaCount = hasValidMedia ? project.modal_files.length : 0;
+
   return `
     <!-- ${project.name} -->
     <article class="flashcard ${themeClass}" role="listitem" tabindex="0"
@@ -52,6 +57,7 @@ function generateCard(project, index, total) {
           ` : ''}
           <div class="card-back-actions">
             <span class="card-back-theme">${project.tags}</span>
+            ${hasValidMedia ? `<button class="card-media-link" onclick="event.stopPropagation();window.currentProjectMedia={files:${JSON.stringify(project.modal_files)},alt:${JSON.stringify(project.modal_files_alt || [])},title:'${project.name.replace(/'/g, "\\'")}'}; window.openMediaCarousel();">View media (${mediaCount}) ↗</button>` : ''}
           </div>
         </div>
         <div class="flashcard-front">
@@ -94,6 +100,7 @@ function generateCard(project, index, total) {
           ` : ''}
           <div class="card-back-actions">
             <span class="card-back-theme">${project.tags}</span>
+            ${hasValidMedia ? `<button class="card-media-link" onclick="event.stopPropagation();window.currentProjectMedia={files:${JSON.stringify(project.modal_files)},alt:${JSON.stringify(project.modal_files_alt || [])},title:'${project.name.replace(/'/g, "\\'")}'}; window.openMediaCarousel();">View media (${mediaCount}) ↗</button>` : ''}
           </div>
         </div>
       </div>

@@ -227,6 +227,21 @@ export async function initCytoscapeGraph(cytoscape) {
     if (el('cy-proj-eyebrow')) el('cy-proj-eyebrow').textContent = p.eyebrow;
     if (el('cy-proj-title')) el('cy-proj-title').textContent = p.title;
     if (el('cy-proj-summary')) el('cy-proj-summary').textContent = p.summary;
+
+    // Populate skills pills
+    const skillsEl = el('cy-proj-skills');
+    if (skillsEl) {
+      skillsEl.innerHTML = '';
+      if (p.skills && p.skills.length > 0) {
+        p.skills.forEach(skill => {
+          const chip = document.createElement('span');
+          chip.className = 'skill-chip';
+          chip.textContent = skill;
+          skillsEl.appendChild(chip);
+        });
+      }
+    }
+
     if (el('cy-proj-tools')) el('cy-proj-tools').textContent = p.tools;
     if (el('cy-proj-method-label')) el('cy-proj-method-label').textContent = p.methodConcept || 'Method';
 
@@ -265,15 +280,36 @@ export async function initCytoscapeGraph(cytoscape) {
       themeEl.style.color = p.themeColor;
     }
 
-    const expandEl = el('cy-proj-expand');
-    if (expandEl && window.openCaseModal) {
-      expandEl.onclick = () => window.openCaseModal(p.caseId);
+    // Media link
+    const mediaLink = el('cy-proj-media-link');
+    const mediaCount = el('cy-media-count');
+    if (mediaLink && p.mediaFiles && p.mediaFiles.length > 0) {
+      mediaLink.style.display = '';
+      if (mediaCount) mediaCount.textContent = p.mediaFiles.length;
+      // Store media data globally for carousel
+      window.currentProjectMedia = {
+        files: p.mediaFiles,
+        alt: p.mediaAlt,
+        title: p.title
+      };
+    } else if (mediaLink) {
+      mediaLink.style.display = 'none';
     }
+
+    // NOTE: "Open case study" functionality commented out for now
+    // const expandEl = el('cy-proj-expand');
+    // if (expandEl && window.openCaseModal) {
+    //   expandEl.onclick = () => window.openCaseModal(p.caseId);
+    // }
   }
 
   function hideProject() {
     if (idleEl) idleEl.style.display = '';
     if (detailEl) detailEl.style.display = 'none';
+
+    // Reset media link display
+    const mediaLink = document.getElementById('cy-proj-media-link');
+    if (mediaLink) mediaLink.style.display = 'none';
   }
 
   cy.on('mouseover', 'node', (e) => {

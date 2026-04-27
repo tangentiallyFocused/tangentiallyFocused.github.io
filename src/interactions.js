@@ -97,12 +97,21 @@ function initHamburgerMenu() {
 
 function initScrollToTop() {
   const scrollBtn = document.getElementById('scroll-to-top');
-  if (!scrollBtn) return;
+  const footerScrollBtn = document.getElementById('footer-scroll-to-top');
 
-  scrollBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
+  if (scrollBtn) {
+    scrollBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  if (footerScrollBtn) {
+    footerScrollBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
 }
 
 function initEmailCopy() {
@@ -146,6 +155,7 @@ function initModals() {
   initCaseStudyModals();
   initBottomSheet();
   initMobileMetaAccordion();
+  initMediaCarousel();
 }
 
 function initSiteDecisionsModal() {
@@ -416,4 +426,144 @@ function initMobileMetaAccordion() {
   }
   checkMobile();
   window.addEventListener('resize', checkMobile);
+}
+
+function initMediaCarousel() {
+  let currentMediaIndex = 0;
+
+  window.openMediaCarousel = function() {
+    const overlay = document.getElementById('media-carousel-overlay');
+    const title = document.getElementById('media-carousel-title');
+    if (!overlay || !window.currentProjectMedia) return;
+
+    currentMediaIndex = 0;
+    if (title && window.currentProjectMedia.title) {
+      title.textContent = window.currentProjectMedia.title;
+    }
+
+    updateMediaDisplay();
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  };
+
+  window.closeMediaCarousel = function() {
+    const overlay = document.getElementById('media-carousel-overlay');
+    if (!overlay) return;
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  };
+
+  window.nextMedia = function() {
+    if (!window.currentProjectMedia) return;
+    if (currentMediaIndex < window.currentProjectMedia.files.length - 1) {
+      currentMediaIndex++;
+      updateMediaDisplay();
+    }
+  };
+
+  window.prevMedia = function() {
+    if (currentMediaIndex > 0) {
+      currentMediaIndex--;
+      updateMediaDisplay();
+    }
+  };
+
+  function getMediaType(file) {
+    // Check if it's a URL
+    if (file.startsWith('http://') || file.startsWith('https://')) {
+      return 'iframe';
+    }
+
+    // Check file extension
+    const ext = file.split('.').pop().toLowerCase();
+    const imageExts = ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg'];
+    const pdfExts = ['pdf'];
+    const videoExts = ['mp4', 'webm', 'ogg'];
+
+    if (imageExts.includes(ext)) return 'image';
+    if (pdfExts.includes(ext)) return 'pdf';
+    if (videoExts.includes(ext)) return 'video';
+
+    // Default to iframe for unknown types (can handle PowerPoint via Google Docs viewer)
+    return 'iframe';
+  }
+
+  function updateMediaDisplay() {
+    if (!window.currentProjectMedia) return;
+
+    const container = document.querySelector('.media-carousel-main');
+    const counter = document.getElementById('media-carousel-counter');
+    const prevBtn = document.getElementById('media-nav-prev');
+    const nextBtn = document.getElementById('media-nav-next');
+
+    const files = window.currentProjectMedia.files;
+    const alts = window.currentProjectMedia.alt;
+    const currentFile = files[currentMediaIndex];
+    const mediaType = getMediaType(currentFile);
+
+    // Clear existing content and rebuild based on media type
+    if (container) {
+      const existingMedia = container.querySelector('img, iframe, video');
+      if (existingMedia) existingMedia.remove();
+
+      let mediaElement;
+
+      if (mediaType === 'image') {
+        mediaElement = document.createElement('img');
+        mediaElement.id = 'media-carousel-img';
+        mediaElement.src = currentFile;
+        mediaElement.alt = alts[currentMediaIndex] || '';
+      } else if (mediaType === 'video') {
+        mediaElement = document.createElement('video');
+        mediaElement.id = 'media-carousel-video';
+        mediaElement.src = currentFile;
+        mediaElement.controls = true;
+      } else if (mediaType === 'pdf') {
+        mediaElement = document.createElement('iframe');
+        mediaElement.id = 'media-carousel-iframe';
+        mediaElement.src = currentFile;
+        mediaElement.title = alts[currentMediaIndex] || 'PDF document';
+      } else if (mediaType === 'iframe') {
+        mediaElement = document.createElement('iframe');
+        mediaElement.id = 'media-carousel-iframe';
+        mediaElement.src = currentFile;
+        mediaElement.title = alts[currentMediaIndex] || 'External content';
+      }
+
+      if (mediaElement) {
+        container.insertBefore(mediaElement, counter);
+      }
+    }
+
+    if (counter) {
+      counter.textContent = `${currentMediaIndex + 1} / ${files.length}`;
+    }
+
+    if (prevBtn) {
+      prevBtn.disabled = currentMediaIndex === 0;
+    }
+
+    if (nextBtn) {
+      nextBtn.disabled = currentMediaIndex === files.length - 1;
+    }
+  }
+
+  // Close on Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      window.closeMediaCarousel();
+    }
+  });
+
+  // Arrow key navigation
+  document.addEventListener('keydown', function(e) {
+    const overlay = document.getElementById('media-carousel-overlay');
+    if (overlay && overlay.classList.contains('open')) {
+      if (e.key === 'ArrowLeft') {
+        window.prevMedia();
+      } else if (e.key === 'ArrowRight') {
+        window.nextMedia();
+      }
+    }
+  });
 }

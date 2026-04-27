@@ -34,7 +34,7 @@
       </nav>
       <div id="mobile-nav-footer">
         <a href="resume.pdf" target="_blank" rel="noopener" class="mobile-nav-resume">Résumé ↗</a>
-        <span id="mobile-nav-meta">v9.8.0 · Boston, MA</span>
+        <span id="mobile-nav-meta">v9.9.0 · Boston, MA</span>
       </div>
     </div>
   </div>
@@ -64,7 +64,7 @@
         <div class="hero-masthead fade-up">
           <span class="hero-masthead-left">Portfolio</span>
           <div class="hero-masthead-right">
-            v9.8.0 <span class="sep masthead-hide-mobile">·</span><span class="masthead-hide-mobile"> Product Designer</span> <span class="sep masthead-hide-mobile">·</span><span class="masthead-hide-mobile"> Boston, MA</span>
+            v9.9.0 <span class="sep masthead-hide-mobile">·</span><span class="masthead-hide-mobile"> Product Designer</span> <span class="sep masthead-hide-mobile">·</span><span class="masthead-hide-mobile"> Boston, MA</span>
           </div>
         </div>
 
@@ -160,16 +160,6 @@
             <p>Grounded further in the structural connectivity patterns documented in the Human Connectome Project,<span class="abstract-cite">[3]</span> I treat designed artifacts not as discrete objects but as nodes in broader cognitive, cultural, and social networks — asking always how information moves between minds, and what it becomes in the passage.</p>
           </div>
 
-          <div class="kw-row" aria-label="Keywords">
-            <span class="kw-chip">linguistic relativity</span>
-            <span class="kw-chip">sapir-whorf</span>
-            <span class="kw-chip">culture &amp; meaning</span>
-            <span class="kw-chip">physical making</span>
-            <span class="kw-chip">human connectome</span>
-            <span class="kw-chip">product design</span>
-            <span class="kw-chip">UX research</span>
-            <span class="kw-chip">color cognition</span>
-          </div>
           <div class="abstract-meta" aria-label="Document metadata">
             <div class="abstract-meta-item"><strong>Author</strong>Lara Baldez Duque Ribeiro</div>
             <div class="abstract-meta-item"><strong>Affiliation</strong>Worthix</div>
@@ -326,15 +316,18 @@
               <p class="card-back-eyebrow" id="cy-proj-eyebrow"></p>
               <h3 class="cy-proj-title" id="cy-proj-title"></h3>
               <p class="card-back-summary" id="cy-proj-summary"></p>
+              <div class="card-skills" id="cy-proj-skills" aria-label="Skills"></div>
               <p class="card-recipe-label" id="cy-proj-tools-label">Tools</p>
               <p class="card-recipe-inline" id="cy-proj-tools"></p>
               <p class="card-recipe-label" id="cy-proj-method-label">Method</p>
               <div id="cy-proj-method"></div>
               <p class="card-recipe-label" id="cy-proj-outcome-label">Outcome</p>
               <div id="cy-proj-outcome"></div>
+              <button class="cy-media-link" id="cy-proj-media-link" style="display:none;" onclick="window.openMediaCarousel()">View media (<span id="cy-media-count">0</span>) ↗</button>
               <div class="card-back-actions" style="margin-top:auto;">
                 <span class="card-back-theme" id="cy-proj-theme"></span>
-                <button class="card-expand" id="cy-proj-expand">Open case study ↗</button>
+                <!-- NOTE: "Open case study" button commented out for now -->
+                <!-- <button class="card-expand" id="cy-proj-expand">Open case study ↗</button> -->
               </div>
             </div>
 
@@ -427,7 +420,7 @@
     <div class="container">
       <div class="footer-inner">
         <div>
-          <p class="footer-name">Lara Baldez Duque Ribeiro</p>
+          <a href="#" class="footer-name" id="footer-scroll-to-top">Lara Baldez Duque Ribeiro</a>
           <p class="footer-meta">Product Designer &nbsp;·&nbsp; Boston, MA</p>
         </div>
         <nav class="footer-links" aria-label="External links">
@@ -436,7 +429,7 @@
           <a href="#" id="email-copy-link" aria-label="Copy email address">Email</a>
           <a href="resume.pdf" target="_blank" rel="noopener">Résumé ↗</a>
         </nav>
-        <p class="footer-version">2026 · v9.8.0 · <span style="color:var(--text-lo);">in collaboration with Claude AI</span></p>
+        <p class="footer-version">2026 · v9.9.0 · <span style="color:var(--text-lo);">in collaboration with Claude AI</span></p>
       </div>
     </div>
   </footer>
@@ -458,6 +451,24 @@
           </button>
         </aside>
         <div class="case-modal-body" id="case-modal-body"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════ MEDIA CAROUSEL MODAL ════════════ -->
+  <div id="media-carousel-overlay" role="dialog" aria-modal="true" aria-labelledby="media-carousel-title" onclick="if(event.target===this)closeMediaCarousel()">
+    <div id="media-carousel">
+      <div class="media-carousel-header">
+        <h2 class="media-carousel-title" id="media-carousel-title">Project Media</h2>
+        <button class="media-carousel-close" onclick="closeMediaCarousel()" aria-label="Close media carousel">✕ close</button>
+      </div>
+      <div class="media-carousel-content">
+        <button class="media-nav-btn media-nav-prev" id="media-nav-prev" aria-label="Previous media" onclick="prevMedia()">‹</button>
+        <div class="media-carousel-main">
+          <!-- Media element created dynamically by JavaScript -->
+          <p class="media-carousel-counter" id="media-carousel-counter">1 / 1</p>
+        </div>
+        <button class="media-nav-btn media-nav-next" id="media-nav-next" aria-label="Next media" onclick="nextMedia()">›</button>
       </div>
     </div>
   </div>

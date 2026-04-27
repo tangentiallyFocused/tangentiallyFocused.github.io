@@ -119,18 +119,18 @@
       transition: background 0.3s ease, border-color 0.3s ease;
     }
     .titlebar-name {
-      font-size: 11px; color: var(--text-dim); letter-spacing: 0.06em; flex: 1;
+      font-size: 12px; color: var(--text-dim); letter-spacing: 0.06em; flex: 1;
       text-decoration: none; cursor: pointer; transition: color 0.2s;
     }
     .titlebar-name:hover { color: var(--text); text-decoration: none; opacity: 1; }
     nav.top-nav { display: flex; gap: 22px; align-items: center; }
     nav.top-nav a {
-      font-size: 10px; color: var(--magenta-dim);
+      font-size: 11px; color: var(--magenta-dim);
       letter-spacing: 0.1em; text-transform: uppercase; transition: color 0.2s;
     }
     nav.top-nav a:hover { color: var(--magenta); text-decoration: none; opacity: 1; }
     .nav-resume {
-      font-size: 10px; color: var(--magenta-dim) !important;
+      font-size: 11px; color: var(--magenta-dim) !important;
       letter-spacing: 0.1em; text-transform: uppercase;
       border: 1px solid var(--magenta-dim); padding: 3px 9px; border-radius: 0;
       transition: color 0.2s, border-color 0.2s !important;
@@ -207,7 +207,7 @@
       max-width: 680px; line-height: 1.5;
     }
     .hero-byline { margin-bottom: 26px; }
-    .hero-author { font-size: 15px; color: var(--text); letter-spacing: 0.02em; margin-bottom: 7px; display: flex; align-items: baseline; gap: 7px; }
+    .hero-author { font-size: clamp(15px, 2vw, 18px); color: var(--text); letter-spacing: 0.02em; margin-bottom: 7px; display: flex; align-items: baseline; gap: 7px; }
     .hero-author sup { font-size: 9px; color: var(--cyan); }
     .hero-affiliation { font-size: 11px; color: var(--text-lo); line-height: 1.75; }
     .hero-affiliation sup { font-size: 9px; color: var(--cyan-dim); }
@@ -270,7 +270,7 @@
       font-family: 'JetBrains Mono', 'IBM Plex Mono', monospace;
       font-size: 11px; color: var(--magenta-dim);
       letter-spacing: 0.08em; padding: 0;
-      margin-top: 16px; display: inline-flex; align-items: center; gap: 6px;
+      margin-top: 8px; display: inline-flex; align-items: center; gap: 6px;
       transition: color 0.2s; position: relative; z-index: 1;
     }
     .abstract-read-more:hover { color: var(--magenta); }
@@ -385,11 +385,12 @@
     .card-cm .card-recipe-label { color: var(--cyan-dim); }
     .card-my .card-recipe-label { color: var(--magenta-dim); }
     .card-cy .card-recipe-label { color: var(--cyan-dim); }
-    .card-recipe-inline { font-size: 11px; color: var(--text-dim); margin-bottom: 2px; }
+    /* NOTE: 10px font-size is intentional — content was written and tested at this size */
+    .card-recipe-inline { font-size: 10px; color: var(--text-dim); margin-bottom: 2px; }
     /* Recipe rows on back */
     .card-recipe-line {
       display: flex; justify-content: space-between; align-items: flex-start;
-      gap: 8px; padding: 3px 0; border-bottom: 1px dashed var(--border); font-size: 11px;
+      gap: 8px; padding: 3px 0; border-bottom: 1px dashed var(--border); font-size: 10px;
     }
     .card-recipe-line:last-of-type { border-bottom: none; }
     .card-recipe-line span {
@@ -398,11 +399,17 @@
       word-wrap: break-word;
       overflow-wrap: break-word;
       max-width: 100%;
-      padding-left: 12px;
-      text-indent: -12px;
     }
-    .card-recipe-line span:only-child { flex: 1; }
+    /* Hanging indent for method/concept bullets only (single-span lines) */
+    .card-recipe-line span:only-child {
+      flex: 1;
+      padding-left: 24px;
+      text-indent: -24px;
+    }
+    /* No indent for outcome rows (two-span lines) */
     .card-recipe-line span:last-child:not(:only-child) { color: var(--text-lo); text-align: right; flex: 0 0 auto; }
+    /* Add space above outcome section */
+    .card-recipe-label-outcome { margin-top: 20px; }
     /* Card back footer */
     .card-back-actions {
       margin-top: auto; padding-top: 10px; border-top: 1px solid var(--border);
@@ -714,7 +721,16 @@
     ========================================================= */
     footer { padding: 52px 0 44px; }
     .footer-inner { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 24px; }
-    .footer-name { font-family: 'DM Serif Display', Georgia, serif; font-size: 22px; color: var(--cream); }
+    .footer-name {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 22px;
+      color: var(--cream);
+      text-decoration: none;
+      cursor: pointer;
+      transition: color 0.2s;
+      display: block;
+    }
+    .footer-name:hover { color: var(--text); text-decoration: none; }
     .footer-meta { font-size: 11px; color: var(--text-lo); margin-top: 6px; }
     .footer-links { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; }
     .footer-links a { font-size: 11px; color: var(--magenta-dim); letter-spacing: 0.08em; transition: color 0.2s; }
@@ -831,6 +847,90 @@
     .d1 { animation-delay: 0.05s; } .d2 { animation-delay: 0.15s; }
     .d3 { animation-delay: 0.28s; } .d4 { animation-delay: 0.42s; }
     .d5 { animation-delay: 0.56s; }
+
+    /* =========================================================
+       MEDIA CAROUSEL MODAL
+    ========================================================= */
+    .cy-media-link {
+      font-size: 10px; color: var(--magenta-dim);
+      background: none; border: none; cursor: pointer;
+      font-family: 'JetBrains Mono', 'IBM Plex Mono', monospace;
+      letter-spacing: 0.08em; transition: color 0.2s;
+      padding: 0; margin-top: 12px;
+    }
+    .cy-media-link:hover { color: var(--magenta); }
+
+    #media-carousel-overlay {
+      position: fixed; inset: 0; z-index: 2500;
+      background: rgba(9,12,16,0.92);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none; transition: opacity 0.25s ease;
+      padding: 60px 24px;
+    }
+    [data-theme="light"] #media-carousel-overlay { background: rgba(30,26,20,0.85); }
+    #media-carousel-overlay.open { opacity: 1; pointer-events: all; }
+
+    #media-carousel {
+      max-width: 1000px; width: 100%;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      padding: 28px 32px;
+      transform: translateY(12px);
+      transition: transform 0.25s ease;
+    }
+    #media-carousel-overlay.open #media-carousel { transform: translateY(0); }
+
+    .media-carousel-header {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 28px; padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .media-carousel-title {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 24px; color: var(--cream); margin: 0;
+    }
+    .media-carousel-close {
+      font-size: 10px; color: var(--magenta-dim); cursor: pointer;
+      letter-spacing: 0.1em; background: none; border: none;
+      font-family: 'JetBrains Mono', 'IBM Plex Mono', monospace;
+      transition: color 0.2s;
+    }
+    .media-carousel-close:hover { color: var(--magenta); }
+
+    .media-carousel-content {
+      display: flex; align-items: center; gap: 24px;
+      justify-content: center;
+    }
+    .media-carousel-main {
+      flex: 1; display: flex; flex-direction: column; align-items: center;
+      max-width: 800px;
+    }
+    #media-carousel-img,
+    #media-carousel-video {
+      width: 100%; height: auto; max-height: 60vh;
+      object-fit: contain; border: 1px solid var(--border);
+      background: var(--surface);
+    }
+    #media-carousel-iframe {
+      width: 100%; height: 60vh; min-height: 500px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+    }
+    .media-carousel-counter {
+      font-size: 11px; color: var(--text-lo); margin-top: 12px;
+      font-family: 'JetBrains Mono', 'IBM Plex Mono', monospace;
+    }
+
+    .media-nav-btn {
+      background: none; border: none; cursor: pointer;
+      font-size: 48px; color: var(--magenta-dim);
+      transition: color 0.2s; padding: 12px 20px;
+      line-height: 1;
+    }
+    .media-nav-btn:hover { color: var(--magenta); }
+    .media-nav-btn:disabled {
+      color: var(--text-lo); opacity: 0.3; cursor: not-allowed;
+    }
 
     /* Accessibility */
     :focus-visible { outline: 2px solid var(--magenta); outline-offset: 3px; }

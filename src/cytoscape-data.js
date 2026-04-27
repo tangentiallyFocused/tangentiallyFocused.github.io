@@ -95,13 +95,16 @@ export async function getCytoscapeData() {
       eyebrow: `${p.themes.join(', ')} · ${p.end_year}`,
       title: p.name.replace(/\n/g, ' '),
       summary: p.med_desc,
+      skills: p.key_skills || [],
       tools: p.key_tools && p.key_tools.length > 0 ? p.key_tools.join(', ') : '',
       methodConcept: p.method_concept || 'Method',
       method: p.short_mept || [],
       outcome: p.short_outcome || [],
       theme: p.tags,
       themeColor: 'var(--cyan-dim)', // Could map based on primary theme
-      caseId: id
+      caseId: id,
+      mediaFiles: p.modal_files || [],
+      mediaAlt: p.modal_files_alt || []
     };
   });
 

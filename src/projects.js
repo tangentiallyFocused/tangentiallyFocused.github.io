@@ -47,7 +47,7 @@ function generateCard(project, index, total) {
           ${project.short_mept.map(step => `<div class="card-recipe-line"><span>${step}</span></div>`).join('\n          ')}
           ` : ''}
           ${project.short_outcome && project.short_outcome.length >= 2 ? `
-          <p class="card-recipe-label">Outcome</p>
+          <p class="card-recipe-label card-recipe-label-outcome">Outcome</p>
           <div class="card-recipe-line"><span>${project.short_outcome[0]}</span><span>${project.short_outcome[1]}</span></div>
           ` : ''}
           <div class="card-back-actions">
@@ -89,7 +89,7 @@ function generateCard(project, index, total) {
           ${project.short_mept.map(step => `<div class="card-recipe-line"><span>${step}</span></div>`).join('\n          ')}
           ` : ''}
           ${project.short_outcome && project.short_outcome.length >= 2 ? `
-          <p class="card-recipe-label">Outcome</p>
+          <p class="card-recipe-label card-recipe-label-outcome">Outcome</p>
           <div class="card-recipe-line"><span>${project.short_outcome[0]}</span><span>${project.short_outcome[1]}</span></div>
           ` : ''}
           <div class="card-back-actions">

@@ -152,12 +152,24 @@ export async function initCytoscapeGraph(cytoscape) {
   const escHint = document.getElementById('cy-esc-hint');
   let graphActive = false;
   let legendOpen = true;
+  let lockedNode = null; // Lock state for node selection
 
   function setLegend(open) {
     legendOpen = open;
     if (legendPanel) legendPanel.style.display = open ? '' : 'none';
     if (chipCaret) chipCaret.textContent = open ? '∧' : '∨';
     if (legBtn) legBtn.setAttribute('aria-expanded', String(open));
+  }
+
+  function unlockNode() {
+    lockedNode = null;
+    // Clear all styles
+    cy.elements().forEach(el => {
+      el.style('opacity', null);
+      el.style('border-color', null);
+      el.style('line-color', null);
+      el.style('width', null);
+    });
   }
 
   function activateGraph() {
@@ -178,6 +190,7 @@ export async function initCytoscapeGraph(cytoscape) {
     if (chipDot) chipDot.classList.remove('active');
     if (chipLabel) chipLabel.textContent = 'click to interact';
     if (escHint) escHint.classList.remove('visible');
+    if (lockedNode) unlockNode(); // Clear any locked node
     hideProject();
     setLegend(true);
   }
@@ -217,12 +230,20 @@ export async function initCytoscapeGraph(cytoscape) {
   });
 
   document.addEventListener('keydown', (e) => {
+    // If another handler already handled ESC (like tooltip or modal), don't process
+    if (e.key === 'Escape' && e.defaultPrevented) return;
+
     const mediaModal = document.getElementById('media-carousel-overlay');
     const modalIsOpen = mediaModal && mediaModal.classList.contains('open');
 
-    // Don't deactivate graph on Escape if modal is open (let modal handle it)
+    // ESC key hierarchy: modal → tooltip (handled above) → locked node → graph
     if (e.key === 'Escape' && graphActive && !modalIsOpen) {
-      deactivateGraph();
+      // Progressive ESC behavior: unlock first, then deactivate graph
+      if (lockedNode) {
+        unlockNode();
+      } else {
+        deactivateGraph();
+      }
     }
   });
 
@@ -327,7 +348,31 @@ export async function initCytoscapeGraph(cytoscape) {
     if (mediaLink) mediaLink.style.display = 'none';
   }
 
+  function lockNode(node) {
+    lockedNode = node;
+    const d = node.data();
+    // Apply persistent highlight
+    cy.elements().forEach(el => el.style('opacity', 0.12));
+    node.style('opacity', 1);
+    node.style('border-color', isDark() ? '#52d4d4' : '#1a8080');
+    node.style('border-width', 3);
+    const neighborhood = node.neighborhood();
+    neighborhood.nodes().forEach(n => {
+      n.style('opacity', 1);
+      n.style('border-color', isDark() ? '#52d4d4' : '#1a8080');
+    });
+    neighborhood.edges().forEach(edge => {
+      edge.style('opacity', 1);
+      edge.style('line-color', isDark() ? '#52d4d4' : '#1a8080');
+      edge.style('width', 2);
+    });
+    if (d.type === 'project') showProject(d.id);
+  }
+
   cy.on('mouseover', 'node', (e) => {
+    // Ignore hover if a node is locked
+    if (lockedNode) return;
+
     const hovered = e.target;
     const d = hovered.data();
     cy.elements().forEach(el => el.style('opacity', 0.12));
@@ -348,6 +393,9 @@ export async function initCytoscapeGraph(cytoscape) {
   });
 
   cy.on('mouseout', 'node', () => {
+    // Ignore mouseout if a node is locked
+    if (lockedNode) return;
+
     cy.elements().forEach(el => {
       el.style('opacity', null);
       el.style('border-color', null);
@@ -357,14 +405,34 @@ export async function initCytoscapeGraph(cytoscape) {
   });
 
   cy.on('tap', 'node', (e) => {
-    const d = e.target.data();
+    const node = e.target;
+    const d = node.data();
+
+    // Mobile: use bottom sheet for projects
+    if (window.innerWidth <= 768 && d.type === 'project' && window.openBottomSheet) {
+      const p = projectSidebarData[d.id];
+      if (p) window.openBottomSheet(p);
+      return;
+    }
+
+    // Desktop: toggle lock on project nodes
     if (d.type === 'project') {
-      if (window.innerWidth <= 768 && window.openBottomSheet) {
-        const p = projectSidebarData[d.id];
-        if (p) window.openBottomSheet(p);
-      } else {
-        showProject(d.id);
+      if (lockedNode === node) {
+        // Clicking same locked node → unlock
+        unlockNode();
+      } else if (!lockedNode) {
+        // Only allow locking if nothing is currently locked
+        lockNode(node);
       }
+      // If a different node is locked, do nothing (dimmed nodes not clickable)
+    }
+  });
+
+  // Click on background or non-neighbor nodes → unlock
+  cy.on('tap', (e) => {
+    if (e.target === cy && lockedNode) {
+      // Clicked on background
+      unlockNode();
     }
   });
 

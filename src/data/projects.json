@@ -77,7 +77,7 @@
         "date": "Oct – Nov 2025",
         "end_year": "2025",
         "short_desc": "A proactive AI-assisted retention tool that surfaces at-risk accounts before they churn.",
-        "key_skills": ["Product Design", "Information Architecture", "Data Visualization"],
+        "key_skills": ["Product Design", "Info Architecture", "Data Viz"],
 
         "med_desc": "Worthix clients lacked early warning systems for at-risk accounts; I designed a risk-based churn prediction dashboard segmenting accounts by churn probability and revenue impact, with a conversational AI assistant for non-technical users.",
         "method_concept": "Concept",
@@ -111,7 +111,7 @@
         "date": "Oct 2025",
         "end_year": "2025",
         "short_desc": "A competitive intelligence tool that keeps benchmarking where the data lives.",
-        "key_skills": ["Information Architecture", "Data Visualization", "UX Strategy"],
+        "key_skills": ["Info Architecture", "Data Viz", "UX Strategy"],
 
         "med_desc": "Worthix clients exported data to PowerBI just to benchmark against competitors; I designed a dashboard surfacing industry trends, topic clustering, and AI-generated strategic insights in a single view.",
         "method_concept": "Concept",
@@ -213,7 +213,7 @@
         "date": "May 2023",
         "end_year": "2023",
         "short_desc": "",
-        "key_skills": ["Presentation Design", "Information Architecture", "Science Communication"],
+        "key_skills": ["Presentation Design", "Info Architecture", "Science Comms"],
 
         "med_desc": "Applied information architecture and progressive disclosure to translate a structural neurolinguistics study into an accessible undergraduate lecture.",
         "method_concept": "Concept",
@@ -247,7 +247,7 @@
         "date": "April 2023",
         "end_year": "2023",
         "short_desc": "",
-        "key_skills": ["Science Communication", "Information Architecture"],
+        "key_skills": ["Science Comms", "Info Architecture"],
 
         "med_desc": "Designed a visual decision flowchart for my statistics course that turned 14 chapters of scattered test logic into a single decision path, later distributed to the whole class by the professor.",
         "method_concept": "Method",
@@ -383,7 +383,7 @@
         "date": "Jan – May 2024",
         "end_year": "2024",
         "short_desc": "",
-        "key_skills": ["Data Visualization", "Information Architecture", "Digital Humanities Research"],
+        "key_skills": ["Data Viz", "Info Architecture", "Digital Humanities Research"],
 
         "med_desc": "Mapped 19 Snow White tale variants across six continents using ATU folklore classification and geographic storytelling to trace how narrative structure persists while cultural motifs transform.",
         "method_concept": "Method",
@@ -417,7 +417,7 @@
         "date": "2023",
         "end_year": "2023",
         "short_desc": "",
-        "key_skills": ["Information Architecture", "Data Visualization", "Behavioral Design"],
+        "key_skills": ["Info Architecture", "Data Viz", "Behavioral Design"],
 
         "med_desc": "Designed a self-assessment spreadsheet that breaks study material into discrete components and tracks understanding across four states, resolving the ambiguity of \"partially knowing\" something.",
         "method_concept": "Concept",
@@ -485,7 +485,7 @@
         "date": "Sept – Dec 2024",
         "end_year": "2024",
         "short_desc": "",
-        "key_skills": ["Experimental Design", "Science Communication", "Statistical Analysis"],
+        "key_skills": ["Experimental Design", "Science Comms", "Stats Analysis"],
 
         "med_desc": "Designed two matched versions of a children's book as experimental stimuli to test whether emotion vocabulary priming increases preschoolers' spontaneous use of emotion words in their own storytelling.",
         "method_concept": "Method",

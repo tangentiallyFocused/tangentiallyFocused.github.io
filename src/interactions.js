@@ -7,6 +7,7 @@ export function initInteractions() {
   initEmailCopy();
   initContactEmail();
   initModals();
+  initGraphInfoTooltip();
   console.log('All interactions initialized');
   console.log('window.openModal:', typeof window.openModal);
   console.log('window.openCaseModal:', typeof window.openCaseModal);
@@ -550,8 +551,10 @@ function initMediaCarousel() {
 
   // Close on Escape key
   document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
+    const overlay = document.getElementById('media-carousel-overlay');
+    if (e.key === 'Escape' && overlay && overlay.classList.contains('open')) {
       window.closeMediaCarousel();
+      e.preventDefault(); // Signal that ESC was handled by modal
     }
   });
 
@@ -566,4 +569,67 @@ function initMediaCarousel() {
       }
     }
   });
+}
+
+function initGraphInfoTooltip() {
+  const icon = document.getElementById('cy-info-icon');
+  const tooltip = document.getElementById('cy-info-tooltip');
+
+  if (!icon || !tooltip) return;
+
+  let isLocked = false; // Track if tooltip is locked (clicked) vs temporary (hovered)
+
+  function showTooltip() {
+    tooltip.classList.add('visible');
+  }
+
+  function hideTooltip() {
+    if (!isLocked) {
+      tooltip.classList.remove('visible');
+    }
+  }
+
+  function closeTooltip() {
+    isLocked = false;
+    tooltip.classList.remove('visible');
+  }
+
+  // Show tooltip on hover or focus (temporary)
+  icon.addEventListener('mouseenter', showTooltip);
+  icon.addEventListener('focus', showTooltip);
+
+  // Hide tooltip on mouse leave or blur (only if not locked)
+  icon.addEventListener('mouseleave', hideTooltip);
+  icon.addEventListener('blur', hideTooltip);
+
+  // Click to lock/unlock tooltip
+  icon.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (tooltip.classList.contains('visible') && isLocked) {
+      // Already locked and visible → unlock and close
+      closeTooltip();
+    } else {
+      // Lock tooltip open
+      isLocked = true;
+      showTooltip();
+    }
+  });
+
+  // Close tooltip when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!icon.contains(e.target) && !tooltip.contains(e.target)) {
+      closeTooltip();
+    }
+  });
+
+  // ESC key closes tooltip
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && tooltip.classList.contains('visible')) {
+      closeTooltip();
+      e.preventDefault(); // Signal that ESC was handled by tooltip
+    }
+  });
+
+  // Expose state for external checks (e.g., graph ESC handler)
+  window.isGraphTooltipOpen = () => tooltip.classList.contains('visible');
 }

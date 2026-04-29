@@ -121,12 +121,16 @@
     .titlebar-name {
       font-size: 12px; color: var(--text-dim); letter-spacing: 0.06em; flex: 1;
       text-decoration: none; cursor: pointer; transition: color 0.2s;
+      font-weight: 700;
     }
     .titlebar-name:hover { color: var(--text); text-decoration: none; opacity: 1; }
     nav.top-nav { display: flex; gap: 22px; align-items: center; }
+    /* Bold nav links for better readability, especially in dark mode.
+       Could be conditional (dark mode only) if refined aesthetic is preferred in light mode. */
     nav.top-nav a {
       font-size: 11px; color: var(--magenta-dim);
       letter-spacing: 0.1em; text-transform: uppercase; transition: color 0.2s;
+      font-weight: 700;
     }
     nav.top-nav a:hover { color: var(--magenta); text-decoration: none; opacity: 1; }
     .nav-resume {
@@ -134,6 +138,7 @@
       letter-spacing: 0.1em; text-transform: uppercase;
       border: 1px solid var(--magenta-dim); padding: 3px 9px; border-radius: 0;
       transition: color 0.2s, border-color 0.2s !important;
+      font-weight: 700;
     }
     .nav-resume:hover { color: var(--magenta) !important; border-color: var(--magenta); opacity: 1 !important; text-decoration: none; }
     #theme-toggle {
@@ -656,7 +661,50 @@
     /* Project detail in sidebar */
     .cy-proj-title { font-family: 'DM Serif Display', Georgia, serif; font-size: 18px; color: var(--cream); margin-bottom: 8px; line-height: 1.1; }
 
-    .fig-caption { margin-top: 12px; font-size: 11px; color: var(--text-lo); font-style: italic; }
+    .fig-caption {
+      margin-top: 12px; font-size: 11px; color: var(--text-lo); font-style: italic;
+      position: relative; display: flex; align-items: center;
+    }
+
+    .fig-info-icon {
+      display: inline-block;
+      font-size: 11px;
+      color: var(--magenta-dim);
+      cursor: pointer;
+      font-style: normal;
+      font-weight: 700;
+      transition: color 0.2s;
+      flex-shrink: 0;
+      margin-left: 12px;
+    }
+    .fig-info-icon:hover { color: var(--magenta); }
+
+    .fig-info-tooltip {
+      position: absolute;
+      bottom: calc(100% + 8px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--bg-2);
+      border: 1px solid var(--border);
+      padding: 12px 16px;
+      font-size: 10px;
+      color: var(--text);
+      font-style: normal;
+      line-height: 1.6;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .fig-info-tooltip.visible { opacity: 1; pointer-events: auto; }
+    .fig-info-tooltip strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--text);
+      font-weight: 700;
+    }
 
     /* Bottom sheet - hidden on desktop, shown on mobile */
     #cy-bottom-sheet { display: none; }

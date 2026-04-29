@@ -4,6 +4,170 @@ A chronological record of design decisions, implementation changes, and version 
 
 ---
 
+## v9.10.0 — Graph Interaction Enhancement & Navigation Typography
+**Date:** 2026-04-29
+**Branch:** portfolio-v2.0
+
+### Major Features
+
+#### Node Locking System
+**Decision:** Implement click-to-lock functionality for cytoscape graph project nodes
+**Rationale:**
+- Media links in sidebar require mouse movement from graph to sidebar
+- Hovering over other nodes accidentally changes sidebar content before user can click
+- Needed deliberate selection mechanism to "freeze" a project view
+
+**Implementation:**
+- Click project node → locks selection (highlights persist, sidebar stays)
+- Click same node again → unlocks
+- Click graph background → unlocks
+- Locked state ignores hover events on other nodes (dimmed nodes non-clickable)
+- ESC key unlocks (progressive: unlock → deactivate graph)
+
+**Interaction Flow:**
+1. Hover node → temporary highlight + sidebar preview
+2. Click node → lock selection (safe to move mouse to sidebar)
+3. Unlock via: click node again, click background, or ESC
+
+**Files Modified:**
+- `src/cytoscape-graph.js` — Added `lockedNode` state, `lockNode()`, `unlockNode()` functions
+
+---
+
+#### Graph Help Tooltip
+**Decision:** Add [Help] button with tooltip in fig caption for graph instructions
+**Rationale:**
+- Original caption provided basic instructions but not advanced features (locking, ESC behavior)
+- Tooltip keeps caption clean while providing comprehensive help on-demand
+- [Help] in brackets matches academic aesthetic (citations, placeholders)
+
+**Design Evolution:**
+- Tested ⓘ (circled i) → generic UI feel
+- Tested [i] → too cryptic
+- Tested [?] → font rendering made it hard to read
+- **Selected [Help]** → clear, approachable, fits bracket pattern
+
+**Tooltip Behavior:**
+- **Hover [Help]** → shows tooltip temporarily
+- **Move away** → hides (unless locked)
+- **Click [Help]** → locks tooltip open
+- **Click again / outside / ESC** → closes
+- **Tab to [Help]** → shows tooltip
+- **Tab away** → hides (unless locked)
+
+**Tooltip Content:**
+```
+Interactive Network Graph
+• Click overlay to activate
+• Hover nodes to explore connections
+• Click project node to lock selection
+• ESC to unlock, ESC again to deactivate
+• Scroll to zoom, drag to pan
+```
+
+**Accessibility:**
+- ARIA label: "More instructions, press ESC to close"
+- Keyboard focusable (`tabindex="0"`)
+- Tab/focus shows tooltip
+- No close button needed (ESC + click-outside + tab-away covers all modalities)
+
+**Files Modified:**
+- `src/content.html` — Added [Help] button and tooltip structure to fig caption
+- `src/style.css` — `.fig-info-icon` and `.fig-info-tooltip` styling
+- `src/interactions.js` — `initGraphInfoTooltip()` with locked/unlocked states
+
+---
+
+#### ESC Key Hierarchy System
+**Decision:** Implement progressive ESC key behavior across all interactive elements
+**Rationale:**
+- Multiple overlays/states can be active simultaneously (modal + graph + tooltip + locked node)
+- Users expect ESC to close the "most immediate" thing first
+- Prevent cascading closes (ESC shouldn't close everything at once)
+
+**Priority Order (top to bottom):**
+1. Media carousel modal open → closes modal
+2. Graph help tooltip open → closes tooltip
+3. Graph node locked → unlocks node
+4. Graph active → deactivates graph
+
+**Technical Implementation:**
+- Each handler checks its own state first
+- If handled, calls `e.preventDefault()` to signal completion
+- Subsequent handlers check `e.defaultPrevented` and skip if true
+- Prevents multiple handlers from firing for same ESC press
+
+**Files Modified:**
+- `src/interactions.js` — Media carousel and tooltip ESC handlers with `preventDefault()`
+- `src/cytoscape-graph.js` — Graph ESC handler checks `defaultPrevented`
+
+---
+
+### Typography Refinements
+
+#### Bold Navigation Text
+**Decision:** Apply `font-weight: 700` to all navigation elements
+**Rationale:**
+- Improved readability, especially in dark mode
+- Magenta text on dark background benefits from heavier weight
+- Creates stronger visual hierarchy for primary navigation
+- More authoritative/confident feeling while maintaining refinement
+
+**Implementation:**
+- `nav.top-nav a`: `font-weight: 700`
+- `.nav-resume`: `font-weight: 700`
+- `.titlebar-name`: `font-weight: 700`
+
+**Comment Added:** "Bold nav links for better readability, especially in dark mode. Could be conditional (dark mode only) if refined aesthetic is preferred in light mode."
+
+**Files Modified:**
+- `src/style.css` — Added font-weight to nav elements
+
+---
+
+### Design Principles Applied
+
+**Progressive Disclosure:**
+- ESC key unlocks layers one at a time (doesn't cascade)
+- Help tooltip provides advanced info without cluttering main UI
+- Lock state adds complexity only when needed
+
+**Interaction Consistency:**
+- Lock/unlock pattern mirrors common UI patterns (click to stick, click to release)
+- ESC always "goes back one step"
+- Bracket notation [Help] fits existing academic conventions
+
+**Accessibility First:**
+- All interactions keyboard accessible
+- ARIA labels communicate behavior
+- Multiple escape mechanisms (ESC, click-outside, tab-away)
+- No reliance on single input method
+
+**Visual Weight & Hierarchy:**
+- Bold nav improves scannability without sacrificing refinement
+- Magenta [Help] signals interactivity
+- Tooltip only appears when requested (not overwhelming)
+
+---
+
+### Future Considerations
+
+**Tooltip Enhancements:**
+- Could add animations (fade-in/out)
+- Could position dynamically based on viewport space
+- Could add keyboard shortcut hints (e.g., "or press H")
+
+**Node Locking UX:**
+- Visual indicator on locked node (beyond highlight)?
+- "Locked" chip near graph controls?
+- Multi-select for comparing projects?
+
+**ESC Hierarchy:**
+- Document expected behavior for new features
+- Consider global state manager for overlay priority
+
+---
+
 ## v9.9.1 — Media Link Placement & Alignment Refinements
 **Date:** 2026-04-27
 **Branch:** portfolio-v2.0

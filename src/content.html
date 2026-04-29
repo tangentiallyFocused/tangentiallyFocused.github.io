@@ -34,7 +34,7 @@
       </nav>
       <div id="mobile-nav-footer">
         <a href="resume.pdf" target="_blank" rel="noopener" class="mobile-nav-resume">Résumé ↗</a>
-        <span id="mobile-nav-meta">v9.10.0 · Boston, MA</span>
+        <span id="mobile-nav-meta">v9.11.0 · Boston, MA</span>
       </div>
     </div>
   </div>
@@ -64,7 +64,7 @@
         <div class="hero-masthead fade-up">
           <span class="hero-masthead-left">Portfolio</span>
           <div class="hero-masthead-right">
-            v9.10.0 <span class="sep masthead-hide-mobile">·</span><span class="masthead-hide-mobile"> Product Designer</span> <span class="sep masthead-hide-mobile">·</span><span class="masthead-hide-mobile"> Boston, MA</span>
+            v9.11.0 <span class="sep masthead-hide-mobile">·</span><span class="masthead-hide-mobile"> Product Designer</span> <span class="sep masthead-hide-mobile">·</span><span class="masthead-hide-mobile"> Boston, MA</span>
           </div>
         </div>
 
@@ -283,7 +283,7 @@
             </div>
             <p id="cy-esc-hint">esc to release</p>
           </div>
-          <div id="cy" aria-label="Interactive network graph of projects, skills, and themes"></div>
+          <div id="cy" tabindex="0" role="application" aria-label="Interactive network graph. Use arrow keys to navigate, Enter to select projects. Or use the accessible project list below."></div>
           <!-- Mobile bottom sheet -->
           <div id="cy-bottom-sheet" aria-live="polite">
             <div class="cy-sheet-handle">
@@ -348,6 +348,16 @@
             • Scroll to zoom, drag to pan
           </span>
         </p>
+
+        <!-- Accessible project list for screen readers -->
+        <!-- DEV: Toggle visibility for testing -->
+        <button id="toggle-accessible-list" style="margin-top: 12px; font-size: 11px; padding: 4px 8px; background: var(--bg-2); border: 1px solid var(--border); color: var(--text); cursor: pointer;">
+          [Dev] Show Accessible List
+        </button>
+        <nav class="sr-only" aria-label="All projects" id="cy-accessible-nav">
+          <h3>All projects (alphabetical)</h3>
+          <div id="cy-accessible-projects"></div>
+        </nav>
       </div>
     </section>
 
@@ -443,7 +453,7 @@
           <a href="#" id="email-copy-link" aria-label="Copy email address">Email</a>
           <a href="resume.pdf" target="_blank" rel="noopener">Résumé ↗</a>
         </nav>
-        <p class="footer-version">2026 · v9.10.0 · <span style="color:var(--text-lo);">in collaboration with Claude AI</span></p>
+        <p class="footer-version">2026 · v9.11.0 · <span style="color:var(--text-lo);">in collaboration with Claude AI</span></p>
       </div>
     </div>
   </footer>

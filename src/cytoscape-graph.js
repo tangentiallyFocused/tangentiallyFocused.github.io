@@ -436,6 +436,131 @@ export async function initCytoscapeGraph(cytoscape) {
     }
   });
 
+  // Keyboard navigation for sighted keyboard users
+  let keyboardFocusedNode = null;
+
+  function setKeyboardFocus(node) {
+    if (keyboardFocusedNode) {
+      keyboardFocusedNode.style('border-width', null);
+    }
+    keyboardFocusedNode = node;
+    if (node) {
+      node.style('border-width', 4);
+      node.style('border-color', isDark() ? '#e0c040' : '#8c6400'); // Yellow for keyboard focus
+      const d = node.data();
+      if (d.type === 'project') showProject(d.id);
+    }
+  }
+
+  // Keyboard navigation - listen at document level when graph is active
+  document.addEventListener('keydown', (e) => {
+    if (!graphActive) return;
+
+    // Don't interfere with other interactions
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+
+    // Get project nodes sorted alphabetically (ignoring leading punctuation)
+    const projectNodes = cy.nodes('[type="project"]').sort((a, b) => {
+      const labelA = a.data('label').replace(/^[^a-zA-Z0-9]+/, '').toLowerCase();
+      const labelB = b.data('label').replace(/^[^a-zA-Z0-9]+/, '').toLowerCase();
+      return labelA.localeCompare(labelB);
+    });
+
+    // Arrow keys navigate between project nodes
+    if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(e.key)) {
+      e.preventDefault();
+
+      // Don't allow navigation if a node is locked
+      if (lockedNode) return;
+
+      if (!keyboardFocusedNode) {
+        setKeyboardFocus(projectNodes[0]);
+        return;
+      }
+
+      // Navigate through all project nodes sequentially
+      const currentIndex = projectNodes.indexOf(keyboardFocusedNode);
+      let nextIndex;
+
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+        // Move forward
+        nextIndex = (currentIndex + 1) % projectNodes.length;
+      } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+        // Move backward
+        nextIndex = (currentIndex - 1 + projectNodes.length) % projectNodes.length;
+      }
+
+      setKeyboardFocus(projectNodes[nextIndex]);
+    } else if (e.key === 'Enter' && keyboardFocusedNode) {
+      e.preventDefault();
+      // Enter locks/unlocks the keyboard-focused node
+      if (lockedNode === keyboardFocusedNode) {
+        unlockNode();
+        setKeyboardFocus(null); // Clear keyboard focus when unlocking
+      } else {
+        lockNode(keyboardFocusedNode);
+      }
+    }
+    // Tab key is NOT prevented - allows normal DOM navigation to/from graph
+  });
+
+  // Populate accessible project list for screen readers
+  function populateAccessibleList() {
+    const container = document.getElementById('cy-accessible-projects');
+    if (!container) return;
+
+    // Sort all projects alphabetically (ignoring leading punctuation)
+    const allProjects = Object.values(projectSidebarData).sort((a, b) => {
+      const titleA = a.title.replace(/^[^a-zA-Z0-9]+/, '').toLowerCase();
+      const titleB = b.title.replace(/^[^a-zA-Z0-9]+/, '').toLowerCase();
+      return titleA.localeCompare(titleB);
+    });
+
+    let html = '<ul>';
+    allProjects.forEach(p => {
+      html += `<li><a href="#" data-project-id="${p.caseId || p.title}">${p.title}</a> - ${p.summary}</li>`;
+    });
+    html += '</ul>';
+
+    container.innerHTML = html;
+
+    // Add click handlers to update sidebar
+    container.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const projectId = e.target.getAttribute('data-project-id');
+        const project = Object.values(projectSidebarData).find(p =>
+          (p.caseId || p.title) === projectId
+        );
+        if (project) {
+          showProject(project.caseId || project.title);
+        }
+      });
+    });
+  }
+
+  populateAccessibleList();
+
+  // DEV: Toggle for testing accessible list visibility
+  const toggleBtn = document.getElementById('toggle-accessible-list');
+  const accessibleNav = document.getElementById('cy-accessible-nav');
+  if (toggleBtn && accessibleNav) {
+    toggleBtn.addEventListener('click', () => {
+      if (accessibleNav.classList.contains('sr-only')) {
+        accessibleNav.classList.remove('sr-only');
+        accessibleNav.style.marginTop = '20px';
+        accessibleNav.style.padding = '20px';
+        accessibleNav.style.border = '2px solid var(--yellow)';
+        accessibleNav.style.background = 'var(--bg-2)';
+        toggleBtn.textContent = '[Dev] Hide Accessible List';
+      } else {
+        accessibleNav.classList.add('sr-only');
+        accessibleNav.style = '';
+        toggleBtn.textContent = '[Dev] Show Accessible List';
+      }
+    });
+  }
+
   // Re-apply style on theme toggle
   window.addEventListener('themechange', () => {
     setTimeout(() => cy.style(buildStyle()), 50);

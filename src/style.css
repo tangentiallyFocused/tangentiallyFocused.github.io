@@ -1073,8 +1073,8 @@
       /* Hero */
       .affil-desktop { display: none; }
       .affil-mobile { display: block; line-height: 2; }
-      .hero-meta-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-      .hero-meta-status-item { grid-column: 1 / -1; }
+      .hero-meta-row { display: grid; grid-template-columns: 1fr; gap: 12px; }
+      .hero-meta-status-item { grid-column: 1; }
       .hero-cta { flex-direction: column; gap: 8px; }
       .hero-cta-primary { text-align: center; }
       .hero-cta-row { display: flex; gap: 8px; align-items: flex-start; }

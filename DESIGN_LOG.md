@@ -4,6 +4,186 @@ A chronological record of design decisions, implementation changes, and version 
 
 ---
 
+## v9.12.0 — Hero Positioning & Content Strategy
+**Date:** 2026-04-29
+**Branch:** portfolio-v2.0
+
+### Major Changes
+
+#### Strategic Positioning Refinements
+**Decision:** Restructure hero section to minimize "recent grad" signals while maintaining credibility
+**Rationale:**
+- 1 year post-graduation in difficult job market requires careful positioning
+- Lead with capabilities and approach, not educational timeline
+- Avoid prejudice against junior designers by controlling information disclosure order
+
+**Changes Made:**
+1. **Removed "Working Document" label** - Could read as "unfinished" or apologetic
+2. **Updated keywords** - Changed from 7 to 4, more strategic
+3. **Reframed education as "Interdisciplinary"** - Methodology (present tense) not credentials (past tense)
+4. **Removed institutional names from hero** - Wellesley mentioned in About section instead
+5. **Commented out timeline metadata** - "Received" date was incorrect and highlighted recent grad status
+6. **Removed company affiliation from abstract** - Worthix not well-known, doesn't add credibility
+
+---
+
+#### Keyword Refinement
+**Previous keywords (7):**
+- linguistic relativity
+- human connectome
+- product design
+- physical making
+- color cognition
+- systems design
+- culture & meaning
+
+**New keywords (4):**
+- product design
+- culture & meaning
+- tangible design
+- systems design
+
+**Decision rationale:**
+- **Removed academic terms** (linguistic relativity, sapir-whorf, human connectome) - Too specialized, no context in hero
+- **Removed specific examples** (color cognition, early childhood) - Too narrow, don't represent breadth
+- **Changed "physical making" to "tangible design"** - Professional UX/HCI term vs. maker movement connotation
+- **Kept "product design"** - Professional anchor, critical for recruiter scanning
+- **Kept strategic pillars** - Map directly to C³ title (Cognition, Culture, Craft)
+
+**Keyword order logic:**
+1. Professional identity (what)
+2. Thematic approach (how)
+3. Physical practice (tangible)
+4. Structural practice (systems)
+
+---
+
+#### Education Reframing Strategy
+**Previous structure:**
+```
+Lara Baldez Duque Ribeiro ¹˒²
+¹ Cognitive & Linguistic Sciences · ² Media Arts & Sciences · Wellesley College
+```
+
+**New structure:**
+```
+Lara Baldez Duque Ribeiro
+
+INTERDISCIPLINARY                              STATUS
+Cog Sci · Media Arts                          • Open to collaboration
+```
+
+**Why this works:**
+- "Interdisciplinary" = **how you work** (methodology, present tense)
+- Not "Education" = **what you studied** (credentials, timeline)
+- Departments explain approach without institutional "recent grad" weight
+- Grouped with Status in meta row = supporting info, not primary identity
+- Name stands alone = cleaner hero hierarchy
+
+**Strategic benefit:** Slows down "junior" read while maintaining credibility from interdisciplinary background
+
+---
+
+#### Abstract Metadata Cleanup
+**Removed:**
+- **Affiliation: Worthix** - Unknown company doesn't add credibility, could detract
+- **Year: 2026** - Maintenance burden, makes portfolio feel stale if not updated annually
+
+**Kept:**
+- Author
+- Role: Product Designer
+- Domain: Product Design / HCI
+
+**Rationale:** Generic positive signals that don't tie to timeline or unknown entities
+
+---
+
+#### Hero Metadata Simplification
+**Commented out:**
+- **"Received: September 2019"** - Date was incorrect (should be July 2023), highlights recent grad
+- **"Current Revision: April 2026"** - Could read as "unfinished," version number already shows iteration
+
+**Kept:**
+- **"Interdisciplinary"** - Reframed education
+- **"Status: Open to collaboration"** - Actionable info recruiters want
+
+**Future consideration:** "Received" could be repurposed as "Entered industry: 2025" once experience accumulates
+
+---
+
+#### Mobile Optimizations
+**Decision:** Single-column layout for hero meta row on mobile
+**Implementation:**
+- Changed from 2-column grid to 1-column for cleaner presentation
+- Added `white-space: nowrap` to "Media Arts & Sciences" to prevent mid-phrase wrapping
+- Full-width layout prevents cramped appearance
+
+---
+
+### Design Principles Applied
+
+**Strategic Information Disclosure:**
+- Lead with what you can do, not when you graduated
+- Control the order in which recruiters discover "junior" signals
+- Same information, different framing (methodology vs. timeline)
+
+**Professional Positioning:**
+- "Tangible design" (industry term) vs. "physical making" (hobbyist connotation)
+- "Interdisciplinary" (sophisticated approach) vs. "Education" (student identity)
+- Keywords map to professional competencies, not academic subjects
+
+**Credibility Without Vulnerability:**
+- Interdisciplinary background visible but not leading
+- Prestigious education in About section (context) not hero (primary identity)
+- Work and approach speak first, education supports
+
+---
+
+### Future Considerations
+
+**Hero Evolution:**
+- If "Interdisciplinary" feels too academic, consider "Disciplines" (simpler)
+- Monitor if removing institutional names impacts credibility perception
+- Track whether "tangible design" resonates with target employers
+
+**Timeline Metadata:**
+- Revisit "Entered industry" once 3+ years experience
+- Consider adding prominent projects completed or companies worked with
+
+**Company Affiliation:**
+- Could add if future role is at recognizable company
+- Otherwise keep in project descriptions only
+
+---
+
+## v9.11.1 — Navigation Keyboard Shortcut
+**Date:** 2026-04-29
+**Branch:** portfolio-v2.0
+
+### Feature Addition
+
+#### Global Navigation Shortcut
+**Decision:** Implement `Shift + /` keyboard shortcut to focus navigation menu
+**Rationale:**
+- Keyboard users lack quick way to reach navigation from mid-page
+- Alternative to skip links, more power-user friendly
+- Complements existing keyboard accessibility features
+
+**Implementation:**
+- Press `Shift + /` from anywhere → focuses first nav link ("Abstract")
+- Works cross-platform (Mac/Windows/Linux)
+- Doesn't scroll, only moves focus
+- Disabled while typing in input/textarea fields
+- Added to graph help tooltip: "• Shift + / to focus navigation menu"
+
+**Pattern precedent:** GitHub, Slack, and other web apps use `/` or `?` for navigation shortcuts
+
+**Files Modified:**
+- `src/interactions.js` — `initNavShortcut()` function
+- `src/content.html` — Updated graph help tooltip
+
+---
+
 ## v9.11.0 — Keyboard Accessibility & Screen Reader Support
 **Date:** 2026-04-29
 **Branch:** portfolio-v2.0

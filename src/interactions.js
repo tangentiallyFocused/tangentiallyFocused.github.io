@@ -8,6 +8,7 @@ export function initInteractions() {
   initContactEmail();
   initModals();
   initGraphInfoTooltip();
+  initNavShortcut();
   console.log('All interactions initialized');
   console.log('window.openModal:', typeof window.openModal);
   console.log('window.openCaseModal:', typeof window.openCaseModal);
@@ -632,4 +633,23 @@ function initGraphInfoTooltip() {
 
   // Expose state for external checks (e.g., graph ESC handler)
   window.isGraphTooltipOpen = () => tooltip.classList.contains('visible');
+}
+
+function initNavShortcut() {
+  document.addEventListener('keydown', (e) => {
+    // Don't interfere with typing in inputs/textareas
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+
+    // Shift + / (which produces "?")
+    // Note: On some keyboards, Shift+/ produces "?" so check both
+    if (e.shiftKey && (e.key === '/' || e.key === '?')) {
+      e.preventDefault();
+
+      // Find first nav link and focus it (no scrolling)
+      const firstNavLink = document.querySelector('.top-nav a');
+      if (firstNavLink) {
+        firstNavLink.focus();
+      }
+    }
+  });
 }

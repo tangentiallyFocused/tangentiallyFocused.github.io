@@ -3,7 +3,7 @@ import { getFeaturedProjects, getThemeColor, getThemeClass } from './data-loader
 export async function initFeaturedProjects() {
   const projects = await getFeaturedProjects();
   const container = document.querySelector('#projects .card-grid');
-  const countElem = document.querySelector('#projects .projects-intro p');
+  const countElem = document.querySelector('#projects .projects-count');
 
   if (!container) return;
 
@@ -14,6 +14,27 @@ export async function initFeaturedProjects() {
 
   // Generate cards
   container.innerHTML = projects.map((project, index) => generateCard(project, index, projects.length)).join('');
+
+  // Add event listeners for media buttons after cards are rendered
+  container.querySelectorAll('.card-media-link').forEach(button => {
+    button.addEventListener('click', (e) => {
+      e.stopPropagation();
+      e.preventDefault();
+      const mediaFiles = JSON.parse(button.dataset.files);
+      const mediaAlt = JSON.parse(button.dataset.alt);
+      const title = button.dataset.title;
+
+      window.currentProjectMedia = {
+        files: mediaFiles,
+        alt: mediaAlt,
+        title: title
+      };
+
+      if (window.openMediaCarousel) {
+        window.openMediaCarousel();
+      }
+    });
+  });
 }
 
 function generateCard(project, index, total) {
@@ -57,7 +78,7 @@ function generateCard(project, index, total) {
           ` : ''}
           <div class="card-back-actions">
             <span class="card-back-theme">${project.tags}</span>
-            ${hasValidMedia ? `<button class="card-media-link" onclick="event.stopPropagation();window.currentProjectMedia={files:${JSON.stringify(project.modal_files)},alt:${JSON.stringify(project.modal_files_alt || [])},title:'${project.name.replace(/'/g, "\\'")}'}; window.openMediaCarousel();">View media (${mediaCount}) ↗</button>` : ''}
+            ${hasValidMedia ? `<button class="card-media-link" data-files='${JSON.stringify(project.modal_files)}' data-alt='${JSON.stringify(project.modal_files_alt || [])}' data-title="${project.name.replace(/"/g, '&quot;')}">View media (${mediaCount}) ↗</button>` : ''}
           </div>
         </div>
         <div class="flashcard-front">
@@ -100,7 +121,7 @@ function generateCard(project, index, total) {
           ` : ''}
           <div class="card-back-actions">
             <span class="card-back-theme">${project.tags}</span>
-            ${hasValidMedia ? `<button class="card-media-link" onclick="event.stopPropagation();window.currentProjectMedia={files:${JSON.stringify(project.modal_files)},alt:${JSON.stringify(project.modal_files_alt || [])},title:'${project.name.replace(/'/g, "\\'")}'}; window.openMediaCarousel();">View media (${mediaCount}) ↗</button>` : ''}
+            ${hasValidMedia ? `<button class="card-media-link" data-files='${JSON.stringify(project.modal_files)}' data-alt='${JSON.stringify(project.modal_files_alt || [])}' data-title="${project.name.replace(/"/g, '&quot;')}">View media (${mediaCount}) ↗</button>` : ''}
           </div>
         </div>
       </div>

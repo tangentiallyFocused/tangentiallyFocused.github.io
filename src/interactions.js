@@ -4,7 +4,7 @@ export function initInteractions() {
   initScrollProgress();
   initHamburgerMenu();
   initScrollToTop();
-  initEmailCopy();
+  // initEmailCopy(); // Removed - footer email now uses mailto: link instead of copy functionality
   initContactEmail();
   initModals();
   initGraphInfoTooltip();

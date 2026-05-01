@@ -924,7 +924,9 @@
       background: none; border: none; cursor: pointer;
       font-family: 'JetBrains Mono', 'IBM Plex Mono', monospace;
       letter-spacing: 0.08em; transition: color 0.2s;
-      padding: 0; white-space: nowrap;
+      /* Increase click area without changing visual appearance */
+      padding: 8px 12px; margin: -8px -12px;
+      white-space: nowrap;
     }
     .card-media-link:hover { color: var(--magenta); }
 

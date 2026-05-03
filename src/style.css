@@ -713,9 +713,15 @@
        ABOUT (section 05)
     ========================================================= */
     #about { padding: 88px 0; border-bottom: 1px solid var(--border); }
-    .about-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 52px; align-items: start; }
+    .about-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 52px; align-items: stretch; }
     @media (max-width: 680px) { .about-grid { grid-template-columns: 1fr; } }
+    .about-text { display: flex; flex-direction: column; height: 100%; }
     .about-text p { font-size: 13.5px; color: var(--text); line-height: 1.88; margin-bottom: 20px; }
+    /* Desktop: Distribute items from top to bottom to align disciplines with card */
+    @media (min-width: 681px) {
+      .about-text { justify-content: space-between; }
+      .about-text p { margin-bottom: 0; }
+    }
     .disciplines-inline {
       margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--border);
       display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;

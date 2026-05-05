@@ -4,6 +4,83 @@ A chronological record of design decisions, implementation changes, and version 
 
 ---
 
+## v9.15.0 — Photo Addition & Media Carousel Improvements
+**Date:** 2026-05-05
+**Branch:** portfolio-v2.0
+
+### Major Changes
+
+#### Profile Photo Addition to About Section
+**Decision:** Add profile photo overlapping recipe card in top-right corner
+**Rationale:**
+- Adds warmth and human connection (addresses "AI-generated site" concerns)
+- Complements "grew up between languages and cultures" narrative
+- Positions photo with recipe card to maintain visual hierarchy
+
+**Implementation:**
+- Circular crop (160px desktop, 120px mobile)
+- Positioned absolutely in top-right, overlapping recipe card
+- Photo grouped with recipe card in `<aside>` to maintain relationship on mobile
+- 3px border with shadow for depth
+
+**Photo choice:** Natural, unfiltered outdoor photo (LaraTruckee.png) - reinforces authenticity theme
+
+---
+
+#### Media Carousel Smooth Transitions
+**Problem:** Modal images flashed and jumped when switching between photos
+**Solution:**
+- Fixed container height (60vh) prevents layout shifts
+- Implemented crossfade transition (0.3s opacity)
+- Images positioned absolutely within wrapper to overlay during transition
+- Width adapts to aspect ratio while height remains constant
+
+**Technical changes:**
+- Created `.media-wrapper` container with `position: relative`
+- Images fade out while new image fades in simultaneously
+- Removed jarring instant swaps
+
+---
+
+#### About Section Layout Refinements
+**Mobile/Tablet Stacking:**
+- Changed breakpoint from 680px to 1024px (now catches landscape mobile & portrait tablet)
+- Proper stacking order: text → credentials → recipe + photo
+- Photo and recipe card stay together as one unit on all screen sizes
+
+**Responsive improvements:**
+- Added `min-width: 380px` to recipe card (prevents cramping during resize, removed on mobile)
+- Tightened spacing in credentials section on mobile (580px and below)
+- Reduced margins between credential names, departments, and descriptions
+
+**Disciplines alignment:**
+- Used `margin-top: auto` to align disciplines section with recipe card bottom on desktop
+- Maintains dynamic spacing as content changes
+
+---
+
+#### Content Updates
+**Abstract text refinement:**
+- Changed "Every framework you add" → "Every framework you uncover" (more active, discovery-oriented)
+
+---
+
+## v9.14.0 — About Section Redesign
+**Date:** 2026-05-04
+**Branch:** portfolio-v2.0
+
+### Major Changes
+
+#### About Section Restructure
+**Changes:**
+- Redesigned about section layout
+- Commented out accessible list feature (needs fixes)
+- Identified spacing issues requiring further refinement
+
+**Status:** Intermediate version before photo addition and layout polish in v9.15.0
+
+---
+
 ## v9.12.0 — Hero Positioning & Content Strategy
 **Date:** 2026-04-29
 **Branch:** portfolio-v2.0

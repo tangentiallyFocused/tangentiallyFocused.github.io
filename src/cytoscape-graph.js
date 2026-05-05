@@ -53,14 +53,16 @@ export async function initCytoscapeGraph(cytoscape) {
       //     'color': cyan
       //   }
       // },
-      { selector: 'node[color="cyan"]', style: { 'border-color': cyan, 'color': cyanD }},
-      { selector: 'node[color="magenta"]', style: { 'border-color': mag, 'color': magD }},
-      { selector: 'node[color="yellow"]', style: { 'border-color': yell, 'color': yellD }},
+      // changed the colors for the theme nodes from {color}D to simply {color}
+      { selector: 'node[color="cyan"]', style: { 'border-color': cyan, 'color': cyan }},
+      { selector: 'node[color="magenta"]', style: { 'border-color': mag, 'color': mag }},
+      { selector: 'node[color="yellow"]', style: { 'border-color': yell, 'color': yell }},
       {
         selector: 'node[type="project"]',
         style: {
           'background-color': magC,
-          'color': magD,
+          // 'color': magD,
+          'color': mag,
           'font-family': 'JetBrains Mono, IBM Plex Mono, monospace',
           'label': 'data(label)',
           'font-size': 18,
@@ -82,7 +84,8 @@ export async function initCytoscapeGraph(cytoscape) {
         selector: 'node[type="skill"]',
         style: {
           'background-color': yellC,
-          'color': yellD,
+          // 'color': yellD,
+          'color': yell,
           'font-family': 'JetBrains Mono, IBM Plex Mono, monospace',
           'label': 'data(label)',
           'font-size': 14,

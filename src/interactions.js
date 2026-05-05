@@ -503,10 +503,17 @@ function initMediaCarousel() {
     const currentFile = files[currentMediaIndex];
     const mediaType = getMediaType(currentFile);
 
-    // Clear existing content and rebuild based on media type
+    // Crossfade transition between media
     if (container) {
-      const existingMedia = container.querySelector('img, iframe, video');
-      if (existingMedia) existingMedia.remove();
+      // Ensure media wrapper exists
+      let mediaWrapper = container.querySelector('.media-wrapper');
+      if (!mediaWrapper) {
+        mediaWrapper = document.createElement('div');
+        mediaWrapper.className = 'media-wrapper';
+        container.insertBefore(mediaWrapper, counter);
+      }
+
+      const existingMedia = mediaWrapper.querySelector('img, iframe, video');
 
       let mediaElement;
 
@@ -533,7 +540,25 @@ function initMediaCarousel() {
       }
 
       if (mediaElement) {
-        container.insertBefore(mediaElement, counter);
+        // Start new media hidden
+        mediaElement.style.opacity = '0';
+        mediaWrapper.appendChild(mediaElement);
+
+        // Fade out old, fade in new
+        if (existingMedia) {
+          existingMedia.style.transition = 'opacity 0.3s ease';
+          existingMedia.style.opacity = '0';
+
+          setTimeout(() => {
+            existingMedia.remove();
+          }, 300);
+        }
+
+        // Fade in new media (wait a frame for DOM to update)
+        requestAnimationFrame(() => {
+          mediaElement.style.transition = 'opacity 0.3s ease';
+          mediaElement.style.opacity = '1';
+        });
       }
     }
 

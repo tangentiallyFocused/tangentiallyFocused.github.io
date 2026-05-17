@@ -4,6 +4,16 @@ A chronological record of design decisions, implementation changes, and version 
 
 ---
 
+## v9.20.2 — Meta Fields & Favicon
+**Date:** 2026-05-17
+**Branch:** portfolio-v2.0
+
+### Changes
+- Added meta fields for improved SEO and social sharing
+- Added favicon for better browser tab identification
+
+---
+
 ## v9.20.1 — Featured Card Layout Fix
 **Date:** 2026-05-17
 **Branch:** portfolio-v2.0

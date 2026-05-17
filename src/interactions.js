@@ -397,25 +397,152 @@ function initCaseStudyModals() {
 function initBottomSheet() {
   const sheet = document.getElementById('cy-bottom-sheet');
   const body = document.getElementById('cy-sheet-body');
-  const closeBtn = document.getElementById('cy-sheet-close-btn');
-  if (!sheet) return;
+  const handle = document.getElementById('cy-sheet-handle');
+  if (!sheet || !handle) return;
+
+  let startY = 0;
+  let currentY = 0;
+  let isDragging = false;
+  let sheetHeight = 0;
+  const collapsedHeight = window.innerHeight * 0.35; // 35% of viewport for initial state
+  const expandedHeight = window.innerHeight * 0.8;   // 80% for expanded state
+  const closeThreshold = 80; // Pixels to drag down before closing
 
   window.openBottomSheet = function(projectData) {
     if (!body) return;
+
+    // Build skills chips HTML
+    let skillsHTML = '';
+    if (projectData.skills && projectData.skills.length > 0) {
+      skillsHTML = `<div class="card-skills" style="margin-bottom:12px;margin-top:12px;">
+        ${projectData.skills.map(skill => `<span class="skill-chip">${skill}</span>`).join('')}
+      </div>`;
+    }
+
+    // Build method/concept bullets HTML
+    let methodHTML = '';
+    if (projectData.method && projectData.method.length > 0) {
+      methodHTML = `
+        <p style="font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-lo);margin-bottom:4px;margin-top:12px;">${projectData.methodConcept || 'Method'}</p>
+        ${projectData.method.map(step => `<div class="card-recipe-line"><span>${step}</span></div>`).join('')}
+      `;
+    }
+
+    // Build outcome HTML
+    let outcomeHTML = '';
+    if (projectData.outcome && projectData.outcome.length >= 2) {
+      outcomeHTML = `
+        <p style="font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-lo);margin-bottom:4px;margin-top:16px;">Outcome</p>
+        <div class="card-recipe-line"><span>${projectData.outcome[0]}</span><span>${projectData.outcome[1]}</span></div>
+      `;
+    }
+
+    // Build view media button HTML
+    let mediaHTML = '';
+    if (projectData.mediaFiles && projectData.mediaFiles.length > 0) {
+      const mediaCount = projectData.mediaFiles.length;
+      mediaHTML = `<button class="card-media-link" onclick="window.currentProjectMedia = {files: ${JSON.stringify(projectData.mediaFiles).replace(/"/g, '&quot;')}, alts: ${JSON.stringify(projectData.mediaAlt || []).replace(/"/g, '&quot;')}, title: '${(projectData.title || '').replace(/'/g, "\\'")}'}; window.openMediaCarousel();">View media (${mediaCount}) ↗</button>`;
+    }
+
     body.innerHTML = `
       <p style="font-size:9px;letter-spacing:0.22em;text-transform:uppercase;color:var(--text-lo);margin-bottom:6px;">${projectData.eyebrow}</p>
       <p style="font-family:'DM Serif Display',Georgia,serif;font-size:19px;color:var(--cream);margin-bottom:8px;">${projectData.title}</p>
-      <p style="font-size:12px;color:var(--text-dim);line-height:1.65;margin-bottom:10px;">${projectData.summary}</p>
-      <p style="font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-lo);margin-bottom:4px;">Tools</p>
+      <p style="font-size:12px;color:var(--text-dim);line-height:1.65;margin-bottom:14px;">${projectData.summary}</p>
+      ${skillsHTML}
+      <p style="font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-lo);margin-bottom:4px;margin-top:12px;">Tools</p>
       <p style="font-size:11px;color:var(--text-dim);margin-bottom:8px;">${projectData.tools}</p>
-      <p style="font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-lo);margin-bottom:4px;">Outcome</p>
-      <p style="font-size:11px;color:var(--text-dim);">${projectData.outcome}</p>
+      ${methodHTML}
+      ${outcomeHTML}
+      <div class="card-back-actions" style="margin-top:16px;">
+        <span class="card-back-theme" style="color:${projectData.themeColor || 'var(--cyan-dim)'};">${projectData.theme}</span>
+        ${mediaHTML}
+      </div>
     `;
+
+    // Set initial height and open
+    sheet.style.height = collapsedHeight + 'px';
+    sheet.classList.remove('expanded');
     sheet.classList.add('open');
+    sheetHeight = collapsedHeight;
   };
 
-  window.closeBottomSheet = function() { sheet.classList.remove('open'); };
-  if (closeBtn) closeBtn.addEventListener('click', window.closeBottomSheet);
+  window.closeBottomSheet = function() {
+    sheet.classList.remove('open', 'expanded');
+    sheet.style.transform = '';
+    sheet.style.height = '';
+  };
+
+  // Touch/Mouse drag handlers
+  function handleStart(e) {
+    isDragging = true;
+    startY = e.type.includes('mouse') ? e.clientY : e.touches[0].clientY;
+    currentY = startY;
+    sheet.classList.add('dragging');
+  }
+
+  function handleMove(e) {
+    if (!isDragging) return;
+    e.preventDefault();
+
+    const clientY = e.type.includes('mouse') ? e.clientY : e.touches[0].clientY;
+    const deltaY = startY - clientY; // Positive when dragging up, negative when dragging down
+
+    // Update sheet height based on drag
+    const newHeight = sheetHeight + deltaY;
+
+    // Constrain height between 0 and expandedHeight
+    if (newHeight > 0 && newHeight <= expandedHeight) {
+      sheet.style.height = newHeight + 'px';
+    }
+
+    currentY = clientY;
+  }
+
+  function handleEnd(e) {
+    if (!isDragging) return;
+    isDragging = false;
+    sheet.classList.remove('dragging');
+
+    const deltaY = startY - currentY;
+    const currentHeight = parseFloat(sheet.style.height) || collapsedHeight;
+
+    // Determine final state based on drag direction and distance
+    if (deltaY < -closeThreshold && currentHeight < collapsedHeight) {
+      // Dragged down past threshold from collapsed state - close it
+      window.closeBottomSheet();
+    } else if (deltaY > 50) {
+      // Dragged up significantly - expand to full height
+      sheet.style.height = expandedHeight + 'px';
+      sheet.classList.add('expanded');
+      sheetHeight = expandedHeight;
+    } else if (deltaY < -30 && currentHeight > collapsedHeight * 0.8) {
+      // Dragged down from expanded - collapse to default
+      sheet.style.height = collapsedHeight + 'px';
+      sheet.classList.remove('expanded');
+      sheetHeight = collapsedHeight;
+    } else {
+      // Snap back to current state
+      if (currentHeight > collapsedHeight * 1.2) {
+        sheet.style.height = expandedHeight + 'px';
+        sheet.classList.add('expanded');
+        sheetHeight = expandedHeight;
+      } else {
+        sheet.style.height = collapsedHeight + 'px';
+        sheet.classList.remove('expanded');
+        sheetHeight = collapsedHeight;
+      }
+    }
+  }
+
+  // Add event listeners for both touch and mouse
+  handle.addEventListener('mousedown', handleStart);
+  handle.addEventListener('touchstart', handleStart, { passive: false });
+
+  document.addEventListener('mousemove', handleMove);
+  document.addEventListener('touchmove', handleMove, { passive: false });
+
+  document.addEventListener('mouseup', handleEnd);
+  document.addEventListener('touchend', handleEnd);
 }
 
 function initMobileMetaAccordion() {

@@ -281,11 +281,12 @@
           <div id="cy" tabindex="0" role="application" aria-label="Interactive network graph. Use arrow keys to navigate, Enter to select projects. Or use the accessible project list below."></div>
           <!-- Mobile bottom sheet -->
           <div id="cy-bottom-sheet" aria-live="polite">
-            <div class="cy-sheet-handle">
-              <div style="width:32px;height:3px;background:var(--border-hi);border-radius:2px;margin:0 auto;flex:1;"></div>
-              <button class="cy-sheet-close" id="cy-sheet-close-btn">✕</button>
+            <div class="cy-sheet-handle" id="cy-sheet-handle">
+              <div class="cy-sheet-handle-bar"></div>
             </div>
-            <div class="cy-sheet-body" id="cy-sheet-body"></div>
+            <div class="cy-sheet-content">
+              <div class="cy-sheet-body" id="cy-sheet-body"></div>
+            </div>
           </div>
           <div class="cy-sidebar" aria-live="polite" aria-label="Project detail">
 

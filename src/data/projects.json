@@ -104,7 +104,7 @@
     {
         "name": "Worthix Competitive Analysis Dashboard",
         "themes": ["Interaction", "Perception"],
-        "thumbnail": "./assets/comp-analysis-summary.PNG",
+        "thumbnail": "./assets/competitive_analysis/comp-analysis-summary.PNG",
         "thumbnail_alt": "Competitive Analysis Dashboard",
 
         "affiliation": "Worthix",
@@ -122,7 +122,7 @@
         "role": "Designer",
         "all_tools": ["Figma", "Claude.ai"],
         "all_skills": ["Information Architecture", "Data Visualization", "UX Strategy", "Product Design", "AI-Assisted Design"],
-        "modal_files": ["./assets/comp-analysis-summary.PNG"],
+        "modal_files": ["./assets/competitive_analysis/competitive_analysis-home.PNG"],
         "modal_files_alt": ["figma ss"],
         "long_desc": "Designed an in-app competitive analysis dashboard for Worthix, an AI SaaS startup. Their platform analyzes customer reviews but lacked visual benchmarking tools - clients were exporting data to external platforms just to compare against competitors. I created an interface that shows industry trends, topic clustering, and AI-generated strategic insights in a single view. The persistent sidebar delivers actionable recommendations without cluttering the exploration area. Designed in Figma with functional Claude prototypes, then handed off to the development team for implementation.",
         "long_mept": "",

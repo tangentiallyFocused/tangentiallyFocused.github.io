@@ -96,7 +96,7 @@
         "format": "UI/UX Design",
         "tags": "Data × Retention",
 
-        "featured": "Yes 1",
+        "featured": "No",
 
         "collaboration": "Team",
         "collaborators": "Lara Baldez Duque Ribeiro, Worthix Team"
@@ -292,8 +292,8 @@
         "role": "Lead Designer",
         "all_tools": ["Figma", "Loom"],
         "all_skills": ["User Onboarding", "Progressive Disclosure"],
-        "modal_files": [""],
-        "modal_files_alt": [""],
+        "modal_files": ["./assets/contextual_onboarding/contextual_onboarding-prototype.mp4", "./assets/contextual_onboarding/contextual_onboarding-prototype.gif"],
+        "modal_files_alt": ["Screenrecording of Figma prototype"],
         "long_desc": "",
         "long_mept": "",
         "long_outcome": "",
@@ -444,13 +444,13 @@
     {
         "name": "Town H@ll",
         "themes": ["Interaction"],
-        "thumbnail": "./assets/townhall-summary.PNG",
+        "thumbnail": "./assets/town_hall/townhall-summary.PNG",
         "thumbnail_alt": "Screenshot Town H@ll frames in Figma",
 
         "affiliation": "Wellesley College",
         "date": "May – July 2024",
         "end_year": "2024",
-        "short_desc": "",
+        "short_desc": "A civic engagement app for residents who can't always make it in person.",
         "key_skills": ["UX Strategy", "Product Design", "User Research"],
 
         "med_desc": "Designed a civic engagement app with a 4-person team that lets residents participate in local government through live streaming, direct messaging, and real-time question submission.",
@@ -462,7 +462,7 @@
         "role": "Designer & Developer",
         "all_tools": ["Figma", "Balsamiq", "ChatGPT", "Google Workspace"],
         "all_skills": ["UX Strategy", "Product Design", "User Research", "Information Architecture", "Progressive Disclosure", "Color Systems", "Civic Tech", "AI-Assisted Design"],
-        "modal_files": ["./assets/town-hall/townhall-figma_all.PNG"],
+        "modal_files": ["./assets/town_hall/townhall-figma_all.PNG"],
         "modal_files_alt": ["Screenshot of all Figma frames"],
         "long_desc": "",
         "long_mept": "",
@@ -470,7 +470,7 @@
         "format": "UI/UX Design",
         "tags": "Civic Tech × Accessibility",
 
-        "featured": "No",
+        "featured": "Yes 1",
 
         "collaboration": "Team",
         "collaborators": "Lara Baldez Duque Ribeiro, Annabel Obas, Yitzel Serna, Elizabeth Smith"

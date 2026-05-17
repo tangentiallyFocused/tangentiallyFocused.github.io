@@ -443,6 +443,13 @@ function initMediaCarousel() {
       title.textContent = window.currentProjectMedia.title;
     }
 
+    // Hide arrows if only one item
+    if (window.currentProjectMedia.files.length === 1) {
+      overlay.classList.add('single-item');
+    } else {
+      overlay.classList.remove('single-item');
+    }
+
     updateMediaDisplay();
     overlay.classList.add('open');
     document.body.style.overflow = 'hidden';
@@ -563,7 +570,14 @@ function initMediaCarousel() {
     }
 
     if (counter) {
-      counter.textContent = `${currentMediaIndex + 1} / ${files.length}`;
+      const count = `${currentMediaIndex + 1} / ${files.length}`;
+      const description = alts[currentMediaIndex] || '';
+
+      if (description && description.trim() !== '') {
+        counter.innerHTML = `${count}<br/><br/>${description}`;
+      } else {
+        counter.textContent = count;
+      }
     }
 
     if (prevBtn) {

@@ -144,6 +144,55 @@ export async function initCytoscapeGraph(cytoscape) {
     userPanningEnabled: false,
   });
 
+  // Store original positions after layout ** FROM CLAUDE
+const originalPositions = {};
+cy.nodes().forEach(node => {
+    const pos = node.position();
+    originalPositions[node.id()] = { x: pos.x, y: pos.y };
+});
+
+// Each node gets unique phase offsets for organic movement ** FROM CLAUDE AI
+const nodePhases = {};
+cy.nodes().forEach(node => {
+    nodePhases[node.id()] = {
+        xPhase: Math.random() * Math.PI * 2,      // Random starting point
+        yPhase: Math.random() * Math.PI * 2,
+        xFreq: 0.8 + Math.random() * 0.4,         // Slight frequency variation
+        yFreq: 0.8 + Math.random() * 0.4
+    };
+});
+
+let time = 0;
+let jiggleStrength = 2;
+let movementSpeed = 0.01;
+// let movementSpeed = 0.005;
+let animationRunning = true;
+
+// Animation loop
+function animate() {
+    if (!animationRunning) return;
+    
+    time += movementSpeed;
+    
+    cy.nodes().forEach(node => {
+        const original = originalPositions[node.id()];
+        const phases = nodePhases[node.id()];
+        
+        // Sine waves create smooth circular/elliptical motion
+        const offsetX = Math.sin(time * phases.xFreq + phases.xPhase) * jiggleStrength;
+        const offsetY = Math.sin(time * phases.yFreq + phases.yPhase) * jiggleStrength;
+        
+        node.position({
+            x: original.x + offsetX,
+            y: original.y + offsetY
+        });
+    });
+    
+    requestAnimationFrame(animate);
+}
+
+animate(); // END SECTION FROM CLAUDE AI
+
   // Overlay and controls
   const overlay = document.getElementById('cy-overlay');
   const statBtn = document.getElementById('cy-chip-state-btn');

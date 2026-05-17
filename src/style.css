@@ -392,6 +392,7 @@
     /* Card back — recipe-format condensed case study */
     .card-back-eyebrow { font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--text-lo); margin-bottom: 6px; }
     .card-back-title { font-family: 'DM Serif Display', Georgia, serif; font-size: 20px; color: var(--cream); margin-bottom: 8px; line-height: 1.1; }
+    .card-affiliation { font-size: 11px; color: var(--text-lo); margin-bottom: 10px; }
     .card-back-summary { font-size: 12px; color: var(--text-dim); line-height: 1.68; margin-bottom: 10px; }
     /* Recipe section labels on back — theme colored */
     .card-recipe-label { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; margin-top: 10px; margin-bottom: 5px; }
@@ -1131,6 +1132,8 @@
     /* Tablet ≤1024px — single card column */
     @media (max-width: 1024px) {
       .card-grid { grid-template-columns: 1fr; }
+      .card-grid > *:nth-child(3) .flashcard-back,
+      .card-grid > *:nth-child(3) .flashcard-ghost { padding-bottom: 24px; }
     }
 
     /* Mobile ≤768px */
@@ -1199,27 +1202,29 @@
       #cy { min-height: 500px; }
       #cy-overlay { right: 0; }
       #cy-bottom-sheet {
-        display: block;
+        display: flex;
+        flex-direction: column;
         position: fixed; bottom: 0; left: 0; right: 0;
         background: var(--bg-2); border-top: 1px solid var(--border-hi);
         transform: translateY(100%); transition: transform 0.3s cubic-bezier(0.32,0.72,0,1);
-        z-index: 100; max-height: 80%; overflow: hidden;
+        z-index: 100; max-height: 90vh;
         box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3);
       }
       #cy-bottom-sheet.open { transform: translateY(0); }
       #cy-bottom-sheet.dragging { transition: none; }
-      #cy-bottom-sheet.expanded { max-height: 80%; }
       .cy-sheet-handle {
         display: flex; align-items: center; justify-content: center;
         padding: 12px 16px; border-bottom: 1px solid var(--border);
         cursor: grab; touch-action: none;
+        flex-shrink: 0;
       }
       .cy-sheet-handle:active { cursor: grabbing; }
       .cy-sheet-handle-bar {
         width: 85%; height: 3px; background: var(--border-hi); border-radius: 2px;
       }
-      .cy-sheet-content { height: 100%; overflow-y: auto; }
+      .cy-sheet-content { flex: 1; overflow-y: auto; min-height: 0; }
       .cy-sheet-body { padding: 16px; }
+      .cy-sheet-body .card-media-link { max-width: 15ch; }
 
       /* Modals */
       #modal-overlay { padding: 0; align-items: flex-end; }

@@ -263,6 +263,10 @@ export async function initCytoscapeGraph(cytoscape) {
     const el = (i) => document.getElementById(i);
     if (el('cy-proj-eyebrow')) el('cy-proj-eyebrow').textContent = p.eyebrow;
     if (el('cy-proj-title')) el('cy-proj-title').textContent = p.title;
+    if (el('cy-proj-affiliation')) {
+      el('cy-proj-affiliation').textContent = p.affiliation || '';
+      el('cy-proj-affiliation').style.display = p.affiliation ? 'block' : 'none';
+    }
     if (el('cy-proj-summary')) el('cy-proj-summary').textContent = p.summary;
 
     // Populate skills pills

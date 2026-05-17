@@ -404,8 +404,8 @@ function initBottomSheet() {
   let currentY = 0;
   let isDragging = false;
   let sheetHeight = 0;
+  let contentHeight = 0; // Natural height of the content
   const collapsedHeight = window.innerHeight * 0.35; // 35% of viewport for initial state
-  const expandedHeight = window.innerHeight * 0.8;   // 80% for expanded state
   const closeThreshold = 80; // Pixels to drag down before closing
 
   window.openBottomSheet = function(projectData) {
@@ -441,13 +441,14 @@ function initBottomSheet() {
     let mediaHTML = '';
     if (projectData.mediaFiles && projectData.mediaFiles.length > 0) {
       const mediaCount = projectData.mediaFiles.length;
-      mediaHTML = `<button class="card-media-link" onclick="window.currentProjectMedia = {files: ${JSON.stringify(projectData.mediaFiles).replace(/"/g, '&quot;')}, alts: ${JSON.stringify(projectData.mediaAlt || []).replace(/"/g, '&quot;')}, title: '${(projectData.title || '').replace(/'/g, "\\'")}'}; window.openMediaCarousel();">View media (${mediaCount}) ↗</button>`;
+      mediaHTML = `<button class="card-media-link" id="bottom-sheet-media-btn" data-files='${JSON.stringify(projectData.mediaFiles)}' data-alt='${JSON.stringify(projectData.mediaAlt || [])}' data-title="${(projectData.title || '').replace(/"/g, '&quot;')}">View media (${mediaCount}) ↗</button>`;
     }
 
     body.innerHTML = `
       <p style="font-size:9px;letter-spacing:0.22em;text-transform:uppercase;color:var(--text-lo);margin-bottom:6px;">${projectData.eyebrow}</p>
-      <p style="font-family:'DM Serif Display',Georgia,serif;font-size:19px;color:var(--cream);margin-bottom:8px;">${projectData.title}</p>
-      <p style="font-size:12px;color:var(--text-dim);line-height:1.65;margin-bottom:14px;">${projectData.summary}</p>
+      <p style="font-family:'DM Serif Display',Georgia,serif;font-size:21px;color:var(--cream);margin-bottom:${projectData.affiliation ? '2px' : '8px'};">${projectData.title}</p>
+      ${projectData.affiliation ? `<p style="font-size:11px;color:var(--text-lo);margin-bottom:10px;">${projectData.affiliation}</p>` : ''}
+      <p style="font-size:13px;color:var(--text-dim);line-height:1.65;margin-bottom:14px;">${projectData.summary}</p>
       ${skillsHTML}
       <p style="font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-lo);margin-bottom:4px;margin-top:12px;">Tools</p>
       <p style="font-size:11px;color:var(--text-dim);margin-bottom:8px;">${projectData.tools}</p>
@@ -459,11 +460,44 @@ function initBottomSheet() {
       </div>
     `;
 
-    // Set initial height and open
-    sheet.style.height = collapsedHeight + 'px';
-    sheet.classList.remove('expanded');
+    // Add event listener for media button after DOM update
+    setTimeout(() => {
+      const mediaBtn = document.getElementById('bottom-sheet-media-btn');
+      if (mediaBtn) {
+        mediaBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          e.preventDefault();
+          const mediaFiles = JSON.parse(mediaBtn.dataset.files);
+          const mediaAlt = JSON.parse(mediaBtn.dataset.alt);
+          const title = mediaBtn.dataset.title;
+
+          window.currentProjectMedia = {
+            files: mediaFiles,
+            alt: mediaAlt,
+            title: title
+          };
+
+          if (window.openMediaCarousel) {
+            window.openMediaCarousel();
+          }
+        });
+      }
+    }, 0);
+
+    // Measure the natural content height first
+    sheet.style.height = 'auto';
+    sheet.style.visibility = 'hidden';
     sheet.classList.add('open');
-    sheetHeight = collapsedHeight;
+
+    requestAnimationFrame(() => {
+      contentHeight = sheet.offsetHeight;
+
+      // Set to collapsed height and show
+      sheet.style.height = collapsedHeight + 'px';
+      sheet.style.visibility = 'visible';
+      sheet.classList.remove('expanded');
+      sheetHeight = collapsedHeight;
+    });
   };
 
   window.closeBottomSheet = function() {
@@ -474,6 +508,11 @@ function initBottomSheet() {
 
   // Touch/Mouse drag handlers
   function handleStart(e) {
+    // Only allow dragging from the handle itself, not from interactive elements
+    if (e.target.closest('button') || e.target.closest('a')) {
+      return;
+    }
+
     isDragging = true;
     startY = e.type.includes('mouse') ? e.clientY : e.touches[0].clientY;
     currentY = startY;
@@ -489,9 +528,10 @@ function initBottomSheet() {
 
     // Update sheet height based on drag
     const newHeight = sheetHeight + deltaY;
+    const maxHeight = Math.min(contentHeight, window.innerHeight * 0.9);
 
-    // Constrain height between 0 and expandedHeight
-    if (newHeight > 0 && newHeight <= expandedHeight) {
+    // Constrain height between 0 and content height (or 90vh)
+    if (newHeight > 0 && newHeight <= maxHeight) {
       sheet.style.height = newHeight + 'px';
     }
 
@@ -505,17 +545,18 @@ function initBottomSheet() {
 
     const deltaY = startY - currentY;
     const currentHeight = parseFloat(sheet.style.height) || collapsedHeight;
+    const expandedHeight = Math.min(contentHeight, window.innerHeight * 0.9);
 
     // Determine final state based on drag direction and distance
-    if (deltaY < -closeThreshold && currentHeight < collapsedHeight) {
+    if (deltaY < -closeThreshold && currentHeight < collapsedHeight * 1.2) {
       // Dragged down past threshold from collapsed state - close it
       window.closeBottomSheet();
     } else if (deltaY > 50) {
-      // Dragged up significantly - expand to full height
+      // Dragged up significantly - expand to content height
       sheet.style.height = expandedHeight + 'px';
       sheet.classList.add('expanded');
       sheetHeight = expandedHeight;
-    } else if (deltaY < -30 && currentHeight > collapsedHeight * 0.8) {
+    } else if (deltaY < -30 && currentHeight > collapsedHeight * 1.2) {
       // Dragged down from expanded - collapse to default
       sheet.style.height = collapsedHeight + 'px';
       sheet.classList.remove('expanded');

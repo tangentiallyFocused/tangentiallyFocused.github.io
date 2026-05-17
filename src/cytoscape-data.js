@@ -93,6 +93,7 @@ export async function getCytoscapeData() {
     const id = `p-${i}`;
     projectSidebarData[id] = {
       eyebrow: `${p.themes.join(', ')} · ${p.end_year}`,
+      affiliation: p.affiliation || '',
       title: p.name.replace(/\n/g, ' '),
       summary: p.med_desc,
       skills: p.key_skills || [],

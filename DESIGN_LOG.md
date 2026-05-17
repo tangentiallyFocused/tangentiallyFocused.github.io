@@ -4,6 +4,75 @@ A chronological record of design decisions, implementation changes, and version 
 
 ---
 
+## v9.20.1 — Featured Card Layout Fix
+**Date:** 2026-05-17
+**Branch:** portfolio-v2.0
+
+### Changes
+- Fixed card 3 bottom padding in landscape single-column layout (tablet ≤1024px)
+- Added 24px bottom padding to card 3's `.flashcard-back` and `.flashcard-ghost` to account for negative margin on `.card-media-link` button
+- Prevents content cutoff at bottom of card in landscape mode
+
+**Technical:** Negative margin trick on media button (-8px) was extending content beyond ghost element's calculated height. Increased ghost padding from 16px to 24px to compensate.
+
+---
+
+## v9.20.0 — Bottom Sheet Improvements
+**Date:** 2026-05-17
+**Branch:** portfolio-v2.0
+
+### Major Changes
+
+#### Draggable Bottom Sheet Implementation
+- Implemented drag-to-expand/collapse functionality for mobile network graph bottom sheet
+- 85% width centered handle for better affordance
+- Auto-sizes to content height (no fixed collapsed/expanded states)
+- Drag down to close gesture
+- Fixed flexbox layout for proper content scrolling
+
+#### Bottom Sheet Content Additions
+- Added affiliation field below title
+- Added all missing content: skills, tools, method/concept bullets, outcome, tags, view media button
+- Proper spacing between sections (12-16px margins)
+- Font size adjustments: title 21px, description 13px
+
+#### Technical Fixes
+- Changed from `display: block` to `display: flex` with `flex-direction: column`
+- `.cy-sheet-content` with `flex: 1`, `overflow-y: auto`, `min-height: 0` for proper scrolling
+- View media button event listener fixed (data attributes + proper event handling)
+- Prevented drag from interfering with button clicks
+- Added `max-width: 15ch` to view media button on mobile
+
+---
+
+## v9.15.3 — Media Carousel Updates
+**Date:** 2026-05-17
+**Branch:** portfolio-v2.0
+
+### Changes
+- Adjusted media carousel images and descriptions
+- Updated image display and alt text handling
+
+---
+
+## v9.15.2 — Competitive Analysis Media Update
+**Date:** 2026-05-17
+**Branch:** portfolio-v2.0
+
+### Changes
+- Updated images for Worthix Competitive Analysis Dashboard project
+
+---
+
+## v9.15.1 — Featured Project Update
+**Date:** 2026-05-17
+**Branch:** portfolio-v2.0
+
+### Changes
+- Changed featured-1 project from original selection to Town H@ll
+
+---
+
 ## v9.15.0 — Photo Addition & Media Carousel Improvements
 **Date:** 2026-05-05
 **Branch:** portfolio-v2.0

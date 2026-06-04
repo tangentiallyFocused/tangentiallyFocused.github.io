@@ -504,6 +504,11 @@ function initBottomSheet() {
     sheet.classList.remove('open', 'expanded');
     sheet.style.transform = '';
     sheet.style.height = '';
+
+    // Unlock cytoscape node if it was locked
+    if (window.unlockCyNode) {
+      window.unlockCyNode();
+    }
   };
 
   // Touch/Mouse drag handlers

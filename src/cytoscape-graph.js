@@ -224,6 +224,9 @@ animate(); // END SECTION FROM CLAUDE AI
     });
   }
 
+  // Expose unlockNode globally for bottom sheet
+  window.unlockCyNode = unlockNode;
+
   function activateGraph() {
     graphActive = true;
     cy.userZoomingEnabled(true);
@@ -464,24 +467,34 @@ animate(); // END SECTION FROM CLAUDE AI
     const node = e.target;
     const d = node.data();
 
-    // Mobile: use bottom sheet for projects
-    if (window.innerWidth <= 768 && d.type === 'project' && window.openBottomSheet) {
-      const p = projectSidebarData[d.id];
-      if (p) window.openBottomSheet(p);
+    // Mobile: lock view and open bottom sheet for projects only
+    if (window.innerWidth <= 768) {
+      if (d.type === 'project' && window.openBottomSheet) {
+        const p = projectSidebarData[d.id];
+        if (p) {
+          lockNode(node); // Lock the visual state to show connections
+          window.openBottomSheet(p);
+        }
+      } else {
+        // Skill nodes on mobile: lock visual only (no bottom sheet)
+        if (lockedNode === node) {
+          unlockNode();
+        } else if (!lockedNode) {
+          lockNode(node);
+        }
+      }
       return;
     }
 
-    // Desktop: toggle lock on project nodes
-    if (d.type === 'project') {
-      if (lockedNode === node) {
-        // Clicking same locked node → unlock
-        unlockNode();
-      } else if (!lockedNode) {
-        // Only allow locking if nothing is currently locked
-        lockNode(node);
-      }
-      // If a different node is locked, do nothing (dimmed nodes not clickable)
+    // Desktop: toggle lock on both project and skill nodes
+    if (lockedNode === node) {
+      // Clicking same locked node → unlock
+      unlockNode();
+    } else if (!lockedNode) {
+      // Only allow locking if nothing is currently locked
+      lockNode(node);
     }
+    // If a different node is locked, do nothing (dimmed nodes not clickable)
   });
 
   // Click on background or non-neighbor nodes → unlock

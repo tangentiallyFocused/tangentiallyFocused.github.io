@@ -1,0 +1,546 @@
+[
+    {
+        "name": "AELN (Concept Game)",
+        "themes": ["Interaction", "Perception"],
+        "thumbnail": "./assets/aeln-summary.png",
+        "thumbnail_alt": "Screenshot of AELN draft on Unity Game Engine",
+
+        "affiliation": "Wellesley College",
+        "date": "Jan – May 2025",
+        "end_year": "2025",
+        "short_desc": "",
+        "key_skills": ["3D Modeling", "Game Systems Design", "User Research"],
+
+        "med_desc": "Co-designed 3D assets and mechanic-as-metaphor systems for a collaborative educational game exploring substance dependency, set in a Kowloon-inspired megastructure.",
+        "key_tools": ["Unity Game Engine", "Blender", "C#"],
+        "method_concept": "Method",
+        "short_mept": ["1. Group brainstorming & concept development", "2. Moodboarding & design documentation", "3. 3D asset modeling & texturing", "4. User testing & feedback collection"],
+        "short_outcome": ["User testing", "Proof of concept"],
+
+        "role": "Asset Artist & Systems Designer",
+        "all_tools": ["Unity Game Engine", "Blender", "Adobe Photoshop", "Google Workspace"],
+        "all_skills": ["3D Modeling", "Unity", "Game Systems Design", "C#", "User Research"],
+        "modal_files": ["./assets/aeln-summary.png"],
+        "modal_files_alt": ["Screenshot of AELN draft on Unity Game Engine"],
+        "long_desc": "Contributed asset development and systems design to a collaborative educational game exploring substance dependency. Proposed the Kowloon-inspired megastructure setting; dense, vertical, claustrophobic architecture mirroring addiction's psychological trap. Modeled environmental pieces and alien humanoid characters in Blender, textured in Photoshop, integrated into Unity. Co-designed mechanic-as-metaphor systems where \"drugs\" function as ability modifiers with compounding consequences: speed boosts followed by slower-than-baseline crashes, anxiety relief with escalating side effects. Worked with three teammates on concept documentation and C# implementation. Used alien protagonists for educational distance; acknowledging we weren't addiction professionals. Project remained in pre-production due to institutional disruption (campus strike, scheduling conflicts). Demonstrates 3D modeling, texturing workflows, game systems design, and collaborative development.",
+        "long_mept": "",
+        "long_outcome": "",
+        "format": "Video Game",
+        "tags": "Games × Education",
+
+        "featured": "No",
+
+        "collaboration": "Team",
+        "collaborators": "Lara Baldez Duque Ribeiro, Annabel Obas, Emmie Reagan, Nkechi Ezirim"
+    },
+    {
+        "name": "Reproductions",
+        "themes": ["Perception"],
+        "thumbnail": "./assets/reproductions/body-series-summary.PNG",
+        "thumbnail_alt": "5 paintings of a woman's body",
+
+        "affiliation": "Wellesley College",
+        "date": "Apr – May 2024",
+        "end_year": "2024",
+        "short_desc": "",
+        "key_skills": ["Color Systems", "Woodworking", "Traditional Media"],
+
+        "med_desc": "Built and painted a fragmented nude series using a printer's CMY palette, merging mechanical color systems with physical painting to explore perception of the body and self.",
+        "key_tools": ["Oil on Canvas", "Wood"],
+        "method_concept": "Concept",
+        "short_mept": ["• Polysemic: printing, biology, & art", "• Bodily fragments, read as pure color", "• Tension between the concrete & abstract", "• Objectification vs. identity"],
+        "short_outcome": ["CMY constraint", "Perceptual disconnect"],
+
+        "role": "Designer & Painter",
+        "all_tools": ["Oil on Canvas (Prussian Blue, Quinacridone Magenta, Lemon Yellow)", "Wood"],
+        "all_skills": ["Color Systems", "Woodworking", "Traditional Media"],
+        "modal_files": ["./assets/reproductions/body-series-summary.PNG", "./assets/reproductions/reproductions-abstract-lighting.JPG", "./assets/reproductions/reproductions-under-lighting.JPG", "./assets/reproductions/reproductions-back-lighting.JPG", "./assets/reproductions/reproductions-boobs-lighting.JPG", "./assets/reproductions/reproductions-side-lighting.JPG"],
+        "modal_files_alt": ["5 paintings of a woman's body", "reproductions-abstract-lighting"],
+        "long_desc": "",
+        "long_mept": "",
+        "long_outcome": "",
+        "format": "Painting",
+        "tags": "Painting × Identity",
+
+        "featured": "No",
+
+        "collaboration": "Solo",
+        "collaborators": "Lara Baldez Duque Ribeiro"
+    },
+    {
+        "name": "Worthix Churn Dashboard",
+        "themes": ["Interaction"],
+        "thumbnail": "./assets/score-dashboard-summary.PNG",
+        "thumbnail_alt": "Dashboard highlighting key statistics and alerts related to customer churn",
+
+        "affiliation": "Worthix",
+        "date": "Oct – Nov 2025",
+        "end_year": "2025",
+        "short_desc": "A proactive AI-assisted retention tool that surfaces at-risk accounts before they churn.",
+        "key_skills": ["Product Design", "Info Architecture", "Data Viz"],
+
+        "med_desc": "Worthix clients lacked early warning systems for at-risk accounts; I designed a risk-based churn prediction dashboard segmenting accounts by churn probability and revenue impact, with a conversational AI assistant for non-technical users.",
+        "method_concept": "Concept",
+        "key_tools": ["Figma", "Claude.ai"],
+        "short_mept": ["• Critical metrics surface before anything else", "• Risk segmentation makes prioritization visible", "• AI assistant turns data into layman's terms"],
+        "short_outcome": ["AI assistant", "Market differentiator"],
+
+        "role": "Lead Designer",
+        "all_tools": ["Figma", "Claude.ai"],
+        "all_skills": ["Product Design", "Information Architecture", "Data Visualization", "Progressive Disclosure", "AI-Assisted Design"],
+        "modal_files": ["./assets/score-dashboard-summary.PNG"],
+        "modal_files_alt": ["Dashboard highlighting key statistics and alerts related to customer churn"],
+        "long_desc": "",
+        "long_mept": "Concept",
+        "long_outcome": "",
+        "format": "UI/UX Design",
+        "tags": "Data × Retention",
+
+        "featured": "No",
+
+        "collaboration": "Team",
+        "collaborators": "Lara Baldez Duque Ribeiro, Worthix Team"
+    },
+    {
+        "name": "Worthix Competitive Analysis Dashboard",
+        "themes": ["Interaction", "Perception"],
+        "thumbnail": "./assets/competitive_analysis/comp-analysis-summary.PNG",
+        "thumbnail_alt": "Competitive Analysis Dashboard",
+
+        "affiliation": "Worthix",
+        "date": "Oct 2025",
+        "end_year": "2025",
+        "short_desc": "A competitive intelligence tool that keeps benchmarking where the data lives.",
+        "key_skills": ["Info Architecture", "Data Viz", "UX Strategy"],
+
+        "med_desc": "Worthix clients exported data to PowerBI just to benchmark against competitors; I designed a dashboard surfacing industry trends, topic clustering, and AI-generated strategic insights in a single view.",
+        "method_concept": "Concept",
+        "key_tools": ["Figma", "Claude.ai"],
+        "short_mept": ["• Industry context anchors all comparison", "• Topic clusters clarify competitive position", "• Persistent sidebar emphasizes next steps"],
+        "short_outcome": ["Full Figma spec", "3-day turnaround"],
+
+        "role": "Designer",
+        "all_tools": ["Figma", "Claude.ai"],
+        "all_skills": ["Information Architecture", "Data Visualization", "UX Strategy", "Product Design", "AI-Assisted Design"],
+        "modal_files": ["./assets/competitive_analysis/competitive_analysis-home.PNG"],
+        "modal_files_alt": ["figma ss"],
+        "long_desc": "Designed an in-app competitive analysis dashboard for Worthix, an AI SaaS startup. Their platform analyzes customer reviews but lacked visual benchmarking tools - clients were exporting data to external platforms just to compare against competitors. I created an interface that shows industry trends, topic clustering, and AI-generated strategic insights in a single view. The persistent sidebar delivers actionable recommendations without cluttering the exploration area. Designed in Figma with functional Claude prototypes, then handed off to the development team for implementation.",
+        "long_mept": "",
+        "long_outcome": "",
+        "format": "UI/UX Design",
+        "tags": "Data × Benchmarking",
+
+        "featured": "Yes 3",
+
+        "collaboration": "Solo",
+        "collaborators": "Lara Baldez Duque Ribeiro"
+    },
+    {
+        "name": "Custom 3D Printed Nails",
+        "themes": ["Interconnectivity"],
+        "thumbnail": "./assets/custom-nails/custom-nails-summary.PNG",
+        "thumbnail_alt": "Prototype of nails being 3D printed",
+
+        "affiliation": "Wellesley College",
+        "date": "Feb – Apr 2025",
+        "end_year": "2025",
+        "short_desc": "Custom-fit nails, designed and printed from a scan of your own fingers.",
+        "key_skills": ["3D Modeling", "Product Design", "Traditional Media"],
+
+        "med_desc": "Designed a personalized press-on nail system using 3D scanning and parametric modeling — making custom fit accessible beyond mass production's one-size-fits-all standard.",
+        "method_concept": "Method",
+        "key_tools": ["3D Scanner", "Blender", "3D Printer"],
+        "short_mept": ["1. 3D scanning nail geometry & contours", "2. Parametric modeling of custom-fit bases", "3. Iterative prototyping & curvature refinement", "4. Printing & hand-painted embellishment"],
+        "short_outcome": ["Wearable prototype", "Replicable system"],
+
+        "role": "Designer & Sculptor",
+        "all_tools": ["3D Scanner", "Blender", "3D Printer", "PLA", "Gel Polish"],
+        "all_skills": ["3D Modeling", "Product Design", "Traditional Media"],
+        "modal_files": ["./assets/custom-nails/nails_capture_one.png", "./assets/custom-nails/nails_capture_two.png", "./assets/custom-nails/nails_prototype_one.png", "./assets/custom-nails/nails_prototype_two.png", "./assets/custom-nails/nails_embellish_one.png", "./assets/custom-nails/nails_embellish_two.png"],
+        "modal_files_alt": ["Initial 3D scan of my hand", "Rendered scan ready for printing and for modelling", "Prototype of nails being 3D printed", "First prototype of nails being 3D printed", "Initial fit check with prototype nails", "Filed, polished, and designed nails - Ombre set", "Filed, polished, and designed nails - WOAW UAW! set (Workers Unions)"],
+        "long_desc": "Press-on nails are designed for a standardized nail shape that doesn't exist - they fit poorly, feel uncomfortable, and pop off constantly. I 3D scanned my own fingers to capture exact nail geometry and surrounding contours, then used Blender to model custom-fit bases. After iterative prototyping to refine curvature and adhesion surface area, I 3D printed the final pieces and added hand-painted embellishments. The result: press-on nails that actually fit. This project bridges digital fabrication and traditional craft: using scanning and parametric modeling to solve a fit problem that mass production ignores. Read more about it in the featured section below.",
+        "long_mept": "",
+        "long_outcome": "",
+        "format": "Sculpture",
+        "tags": "Fabrication × Fashion",
+
+        "featured": "Yes 2",
+
+        "collaboration": "Solo",
+        "collaborators": "Lara Baldez Duque Ribeiro"
+    },
+    {
+        "name": "House of Memory",
+        "themes": ["Interaction", "Perception"],
+        "thumbnail": "./assets/house-memory-summary.PNG",
+        "thumbnail_alt": "Angled mirrors reflecting hands (that are holding corded phones) forming a heart",
+
+        "affiliation": "Wellesley College",
+        "date": "Apr – May 2024",
+        "end_year": "2024",
+        "short_desc": "",
+        "key_skills": ["Site-Specific Installation", "Spatial Design", "Woodworking"],
+
+        "med_desc": "Built a wooden house on its back whose mirrored roof reflects two flanking plaster hand casts into a heart shape above, while the upward-facing door invites visitors to deposit notes inside.",
+        "method_concept": "Concept",
+        "key_tools": ["Wood", "Plaster", "Mirror", "Vintage Phones"],
+        "short_mept": ["• Heart is only visible in mirrored reflection", "• House as archive for strangers' memories", "• Phones as cord connecting two points", "• Sculpture that asks to be touched & used"],
+        "short_outcome": ["Interactive sculpture", "Collective memory"],
+
+        "role": "Designer & Sculptor",
+        "all_tools": ["Wood", "Plaster", "Mirror", "Vintage Phones"],
+        "all_skills": ["Site-Specific Installation", "Spatial Design", "Woodworking", "Traditional Media"],
+        "modal_files": ["./assets/house_of_memory/house-in_context.PNG", "./assets/house_of_memory/house-concept.PNG", "./assets/house_of_memory/house-testing.PNG", "./assets/house_of_memory/house-straight_on.PNG", "./assets/house_of_memory/house-unaligned.PNG", "./assets/house_of_memory/house-phone_closeup_white.PNG", "./assets/house_of_memory/house-phone_closeup_black.PNG", "./assets/house_of_memory/house-top_view_angled.PNG", "./assets/house_of_memory/house-top_view_direct.PNG", "./assets/house_of_memory/house-open_door.PNG"],
+        "modal_files_alt": ["Angled mirrors reflecting hands (that are holding corded phones) forming a heart shown in context", "Concept", "Testing", "Straight on", "Unaligned", "Closeup white phone", "Closeup black phone", "Top view angled", "Top view direct", "Open door"],
+        "long_desc": "",
+        "long_mept": "",
+        "long_outcome": "",
+        "format": "Sculpture",
+        "tags": "Memory × Connectivity",
+
+        "featured": "No",
+
+        "collaboration": "Solo",
+        "collaborators": "Lara Baldez Duque Ribeiro"
+    },
+    {
+        "name": "Language Structures the Brain",
+        "themes": ["Interconnectivity", "Interaction", "Perception"],
+        "thumbnail": "./assets/language-structures-summary.PNG",
+        "thumbnail_alt": "Slide highlighting how language is processed in the brain",
+
+        "affiliation": "Wellesley College",
+        "date": "May 2023",
+        "end_year": "2023",
+        "short_desc": "",
+        "key_skills": ["Presentation Design", "Info Architecture", "Science Comms"],
+
+        "med_desc": "Applied information architecture and progressive disclosure to translate a structural neurolinguistics study into an accessible undergraduate lecture.",
+        "method_concept": "Concept",
+        "key_tools": ["PowerPoint, Microsoft Word, Zotero"],
+        "short_mept": ["• Title as persistent anchor", "• Key terms highlighted when relevant", "• Layout mirrors anatomy; dorsal up, ventral down", "• Transitions as pacing, not decoration"],
+        "short_outcome": ["Slide deck + script", "Structural legibility"],
+
+        "role": "Information Designer",
+        "all_tools": ["Microsoft PowerPoint", "PSYCInfo", "Microsoft Word"],
+        "all_skills": ["Information Architecture", "Progressive Disclosure", "Presentation Design", "Science Communication"],
+        "modal_files": ["LaraBDR-UpdatedFINALWei2023.pptx", "LaraBDR-FINALscriptWei2023.pdf"],
+        "modal_files_alt": ["PowerPoint slide for how language structures the brain", "PDF script for the PPTX"],
+        "long_desc": "",
+        "long_mept": "",
+        "long_outcome": "",
+        "format": "Research",
+        "tags": "Language × Cognition",
+
+        "featured": "No",
+
+        "collaboration": "Solo",
+        "collaborators": "Lara Baldez Duque Ribeiro"
+    },
+    {
+        "name": "ESCI Analysis Chooser",
+        "themes": ["Interconnectivity", "Perception"],
+        "thumbnail": "./assets/esci_mindmap.PNG",
+        "thumbnail_alt": "ORPI Data Type Selection Chart",
+
+        "affiliation": "Wellesley College",
+        "date": "April 2023",
+        "end_year": "2023",
+        "short_desc": "",
+        "key_skills": ["Science Comms", "Info Architecture"],
+
+        "med_desc": "Designed a visual decision flowchart for my statistics course that turned 14 chapters of scattered test logic into a single decision path, later distributed to the whole class by the professor.",
+        "method_concept": "Method",
+        "key_tools": ["XMind", "Introduction to the New Statistics"],
+        "short_mept": ["1. Identified the navigational problem", "2. Mapped ecision logic & test relationships", "3. Drafted flowchart structure & paths", "4. Refined labels & chapter references"],
+        "short_outcome": ["Professor commendation", "Distributed to course"],
+
+        "role": "Information Designer",
+        "all_tools": ["XMind", "Introduction to the New Statistics"],
+        "all_skills": ["Science Communication", "Information Architecture"],
+        "modal_files": ["./assets/esci_mindmap.PNG"],
+        "modal_files_alt": ["ESCI Mindmap"],
+        "long_desc": "",
+        "long_mept": "",
+        "long_outcome": "",
+        "format": "Organizational Resources",
+        "tags": "Statistics × Logic",
+
+        "featured": "No",
+
+        "collaboration": "Solo",
+        "collaborators": "Lara Baldez Duque Ribeiro"
+    },
+    {
+        "name": "Contextual Onboarding Tutorial",
+        "themes": ["Interaction", "Perception"],
+        "thumbnail": "./assets/onboarding-summary.PNG",
+        "thumbnail_alt": "Still of the onboarding tutorial for Worthix Hub 1.0",
+
+        "affiliation": "Worthix",
+        "date": "August 2025",
+        "end_year": "2025",
+        "short_desc": "",
+        "key_skills": ["User Onboarding", "Progressive Disclosure"],
+
+        "med_desc": "Designed a progressive disclosure tooltip system to guide new users through Worthix Hub, reducing reliance on Customer Success teams for basic navigation.",
+        "method_concept": "Method",
+        "key_tools": ["Figma", "Loom"],
+        "short_mept": ["1. Identified navigation failure points", "2. Mapped multi-step disclosure flow", "3. Designed spotlight modal sequence", "4. Documented via screen walkthrough"],
+        "short_outcome": ["Contextual onboarding flow", "Exploration"],
+
+        "role": "Lead Designer",
+        "all_tools": ["Figma", "Loom"],
+        "all_skills": ["User Onboarding", "Progressive Disclosure"],
+        "modal_files": ["./assets/contextual_onboarding/contextual_onboarding-prototype.mp4", "./assets/contextual_onboarding/contextual_onboarding-prototype.gif"],
+        "modal_files_alt": ["Screenrecording of Figma prototype"],
+        "long_desc": "",
+        "long_mept": "",
+        "long_outcome": "",
+        "format": "UI/UX Design",
+        "tags": "Onboarding × Navigation",
+
+        "featured": "No",
+
+        "collaboration": "Solo",
+        "collaborators": "Lara Baldez Duque Ribeiro"
+    },
+    {
+        "name": "Through Their Eyes",
+        "themes": ["Perception"],
+        "thumbnail": "./assets/pet-perspective-summary.PNG",
+        "thumbnail_alt": "Image of both of my 'Through Their Eyes' pieces",
+
+        "affiliation": "Wellesley College",
+        "date": "July 2023",
+        "end_year": "2023",
+        "short_desc": "",
+        "key_skills": ["Color Systems", "Perspective Drawing", "Traditional Media"],
+
+        "med_desc": "Used species-accurate color ranges and deadpan annotations to see through my pets' eyes: my bulldogs eyeing the stove, my cat facing the consequences of wanting the shower on.",
+        "method_concept": "Concept",
+        "key_tools": ["Colored Pencil", "Ink", "Paper"],
+        "short_mept": ["• Drawn from their literal viewing angles", "• Color palettes limited to each species' vision", "• Annotations as deadpan inner monologue", "• Their favorite spots at home"],
+        "short_outcome": ["Two-drawing series", "Cognition as filter"],
+
+        "role": "Artist",
+        "all_tools": ["Colored Pencil", "Ink", "Paper"],
+        "all_skills": ["Color Systems", "Perspective Drawing", "Traditional Media"],
+        "modal_files": ["./assets/through_their_eyes/through-dog_perspective.PNG", "./assets/through_their_eyes/through-cat_perspective.PNG"],
+        "modal_files_alt": ["Dog Perspective- Kitchen & Food", "Cat Perspective- The Shower"],
+        "long_desc": "",
+        "long_mept": "",
+        "long_outcome": "",
+        "format": "Drawing",
+        "tags": "Drawing × Cognition",
+
+        "featured": "No",
+
+        "collaboration": "Solo",
+        "collaborators": "Lara Baldez Duque Ribeiro"
+    },
+    {
+        "name": "Portfolio",
+        "themes": ["Interconnectivity", "Interaction", "Perception"],
+        "thumbnail": "./assets/portfolio-summary.PNG",
+        "thumbnail_alt": "The most updated version of my portfolio (Nov 27, 2025) **UPDATE**",
+
+        "affiliation": "Independent",
+        "date": "July 2023 – Apr 2026",
+        "end_year": "2026",
+        "short_desc": "",
+        "key_skills": ["Design Systems", "HTML/CSS", "JavaScript", "Accessibility"],
+
+        "med_desc": "Designed a portfolio site where the color system, network graph, and navigation don't just illustrate the work; they are the work.",
+        "method_concept": "Concept",
+        "key_tools": ["HTML/CSS/JS", "Figma", "Claude AI"],
+        "short_mept": ["• Three conceptual pillars, one system", "• Color as cognition", "• Connectome: relation, not isolation", "• Site as demonstration, not documentation"],
+        "short_outcome": ["Website", "The medium is the message"],
+
+        "role": "Designer & Developer",
+        "all_tools": ["HTML/CSS/JS", "Figma", "Claude.ai", "Claude Code"],
+        "all_skills": ["Design Systems", "Information Architecture", "Progressive Disclosure", "Color Systems", "Accessibility", "HTML/CSS", "JavaScript", "AI-Assisted Design"],
+        "modal_files": [""],
+        "modal_files_alt": [""],
+        "long_desc": "",
+        "long_mept": "",
+        "long_outcome": "",
+        "format": "UI/UX Design & Coding",
+        "tags": "Design × Identity",
+
+        "featured": "No",
+
+        "collaboration": "Solo",
+        "collaborators": "Lara Baldez Duque Ribeiro"
+    },
+    {
+        "name": "'Snow White' Variants",
+        "themes": ["Interconnectivity"],
+        "thumbnail": "./assets/snow-white-summary.PNG",
+        "thumbnail_alt": "Screenshot of 'Snow White' Variants website displaying different regions of the world",
+
+        "affiliation": "Wellesley College",
+        "date": "Jan – May 2024",
+        "end_year": "2024",
+        "short_desc": "",
+        "key_skills": ["Data Viz", "Info Architecture", "Digital Humanities Research"],
+
+        "med_desc": "Mapped 19 Snow White tale variants across six continents using ATU folklore classification and geographic storytelling to trace how narrative structure persists while cultural motifs transform.",
+        "method_concept": "Method",
+        "key_tools": ["ArcGIS StoryMaps", "ATU Index", "Academic Databases"],
+        "short_mept": ["1. Classified variants using ATU tale-type 709", "2. Analyzed sources & tale excerpts", "3. Designed dual-map interface & story cards", "4. Implemented geographic & linear navigation"],
+        "short_outcome": ["19 variants documented", "Migration mapped"],
+
+        "role": "Researcher & Information Designer",
+        "all_tools": ["ArcGIS StoryMaps", "ATU Index", "Academic Databases"],
+        "all_skills": ["Data Visualization", "Information Architecture", "Digital Humanities Research"],
+        "modal_files": ["https://arcg.is/0vGX4b0"],
+        "modal_files_alt": ["'Snow White' Variants website hosted on ArcGIS. Link: https://arcg.is/0vGX4b0"],
+        "long_desc": "",
+        "long_mept": "",
+        "long_outcome": "",
+        "format": "Research",
+        "tags": "Folklore × Interconnectivity",
+
+        "featured": "No",
+
+        "collaboration": "Solo",
+        "collaborators": "Lara Baldez Duque Ribeiro"
+    },
+    {
+        "name": "Learning System for Active Recall",
+        "themes": ["Interconnectivity", "Perception"],
+        "thumbnail": "./assets/study-spreadsheet-summary.PNG",
+        "thumbnail_alt": "Screenshot of spreadsheed used for active recall studying",
+
+        "affiliation": "Independent",
+        "date": "2023",
+        "end_year": "2023",
+        "short_desc": "",
+        "key_skills": ["Info Architecture", "Data Viz", "Behavioral Design"],
+
+        "med_desc": "Designed a self-assessment spreadsheet that breaks study material into discrete components and tracks understanding across four states, resolving the ambiguity of \"partially knowing\" something.",
+        "method_concept": "Concept",
+        "key_tools": ["Google Sheets"],
+        "short_mept": ["• 4-level scale: confusion → full understanding", "• :) / :( split resolves vague middle states", "• Content breakdown forces clarity before recall", "• Instructions embedded in the interface"],
+        "short_outcome": ["Personal use → public release", "Active recall"],
+
+        "role": "Designer & Developer",
+        "all_tools": ["Google Sheets", "Google Workspace"],
+        "all_skills": ["Information Architecture", "Data Visualization", "Behavioral Design", "Product Design", "User Onboarding"],
+        "modal_files": ["https://docs.google.com/spreadsheets/d/1w3o8jZ842iw15XClLO-wt3H2X4QAdJgXBjJR0SSeohg/edit?usp=sharing"],
+        "modal_files_alt": ["Google Spreadsheet with commenting permissions. Link: https://docs.google.com/spreadsheets/d/1w3o8jZ842iw15XClLO-wt3H2X4QAdJgXBjJR0SSeohg/edit?usp=sharing"],
+        "long_desc": "",
+        "long_mept": "",
+        "long_outcome": "",
+        "format": "Organizational Resources",
+        "tags": "Learning × Recall",
+
+        "featured": "No",
+
+        "collaboration": "Solo",
+        "collaborators": "Lara Baldez Duque Ribeiro"
+    },
+    {
+        "name": "Town H@ll",
+        "themes": ["Interaction"],
+        "thumbnail": "./assets/town_hall/townhall-summary.PNG",
+        "thumbnail_alt": "Screenshot Town H@ll frames in Figma",
+
+        "affiliation": "Wellesley College",
+        "date": "May – July 2024",
+        "end_year": "2024",
+        "short_desc": "A civic engagement app for residents who can't always make it in person.",
+        "key_skills": ["UX Strategy", "Product Design", "User Research"],
+
+        "med_desc": "Designed a civic engagement app with a 4-person team that lets residents participate in local government through live streaming, direct messaging, and real-time question submission.",
+        "method_concept": "Method",
+        "key_tools": ["Figma, Balsamiq, ChatGPT"],
+        "short_mept": ["1. Generated personas & conducted interviews", "2. Synthesized findings & developed wireframes", "3. Iterated on peer & faculty feedback", "4. Developed prototypes in Figma"],
+        "short_outcome": ["Interactive prototype", "Proof of concept"],
+
+        "role": "Designer & Developer",
+        "all_tools": ["Figma", "Balsamiq", "ChatGPT", "Google Workspace"],
+        "all_skills": ["UX Strategy", "Product Design", "User Research", "Information Architecture", "Progressive Disclosure", "Color Systems", "Civic Tech", "AI-Assisted Design"],
+        "modal_files": ["./assets/town_hall/townhall-figma_all.PNG"],
+        "modal_files_alt": ["Screenshot of all Figma frames"],
+        "long_desc": "",
+        "long_mept": "",
+        "long_outcome": "",
+        "format": "UI/UX Design",
+        "tags": "Civic Tech × Accessibility",
+
+        "featured": "Yes 1",
+
+        "collaboration": "Team",
+        "collaborators": "Lara Baldez Duque Ribeiro, Annabel Obas, Yitzel Serna, Elizabeth Smith"
+    },
+    {
+        "name": "Use Your Inside Voice",
+        "themes": ["Perception"],
+        "thumbnail": "./assets/inside-voice-summary.PNG",
+        "thumbnail_alt": "Side-by-side comparison of 1 page from both testing conditions",
+
+        "affiliation": "Wellesley College",
+        "date": "Sept – Dec 2024",
+        "end_year": "2024",
+        "short_desc": "",
+        "key_skills": ["Experimental Design", "Science Comms", "Stats Analysis"],
+
+        "med_desc": "Designed two matched versions of a children's book as experimental stimuli to test whether emotion vocabulary priming increases preschoolers' spontaneous use of emotion words in their own storytelling.",
+        "method_concept": "Method",
+        "key_tools": ["Photoshop", "Jamovi", "Bookbinding"],
+        "short_mept": ["1. Reviewed literature & formed hypothesis", "2. Designed, printed, & hand-bound conditions", "3. Conducted sessions with preschoolers", "4. Analyzed results in Jamovi"],
+        "short_outcome": ["Null result", "Floor effect identified"],
+
+        "role": "Researcher & Designer",
+        "all_tools": ["Photoshop", "Jamovi", "PSYCInfo", "Google Workspace", "Paper", "Cardboard"],
+        "all_skills": ["Experimental Design", "Statistical Analysis", "Science Communication", "Data Visualization", "Traditional Media"],
+        "modal_files": ["./assets/use_your_inside_voice/inside_voice-comparison.PNG"],
+        "modal_files_alt": ["Comparison of pages we edited"],
+        "long_desc": "",
+        "long_mept": "",
+        "long_outcome": "",
+        "format": "Research",
+        "tags": "Design × Emotion",
+
+        "featured": "No",
+
+        "collaboration": "Team",
+        "collaborators": "Lara Baldez Duque Ribeiro, Madeleine Hansen"
+    },
+    {
+        "name": "Worthix Color System",
+        "themes": ["Perception"],
+        "thumbnail": "./assets/worthix-styleguide-summary.PNG",
+        "thumbnail_alt": "Light- and dark-mode palettes developed for Worthix",
+
+        "affiliation": "Worthix",
+        "date": "Oct – Nov 2025",
+        "end_year": "2025",
+        "short_desc": "",
+        "key_skills": ["Color Systems", "Design Systems", "HTML/CSS"],
+
+        "med_desc": "Built Worthix's first semantic color system and delivered it as a production-ready CSS file with MD3 token structure and chromatic-only neutrals to unify brand identity across products.",
+        "method_concept": "Concept",
+        "key_tools": ["CSS", "Claude.ai", "Figma"],
+        "short_mept": ["• Brand maturity through consistent identity", "• Adaptable and future-proofed token architecture", "• Chromatic neutrals for warmth and accessibility", "• A system built to scale"],
+        "short_outcome": ["CSS token file", "Unified brand identity"],
+
+        "role": "Designer & Developer",
+        "all_tools": ["CSS", "Claude.ai", "Figma"],
+        "all_skills": ["Color Systems", "Design Systems", "HTML/CSS", "AI-Assisted Design"],
+        "modal_files": ["./assets/worthix-styleguide-summary.PNG"],
+        "modal_files_alt": ["Refined light and dark mode palettes for Worthix"],
+        "long_desc": "",
+        "long_mept": "",
+        "long_outcome": "",
+        "format": "Brand Design",
+        "tags": "Color × Identity",
+
+        "featured": "No",
+
+        "collaboration": "Solo",
+        "collaborators": "Lara Baldez Duque Ribeiro"
+    }
+]

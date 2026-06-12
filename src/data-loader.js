@@ -1,11 +1,11 @@
 // Data loader module for projects and skills
 export async function loadProjects() {
-  const response = await fetch('/src/data/projects.json');
+  const response = await fetch('/data/projects.json');
   return await response.json();
 }
 
 export async function loadSkills() {
-  const response = await fetch('/src/data/skills.json');
+  const response = await fetch('/data/skills.json');
   return await response.json();
 }
 

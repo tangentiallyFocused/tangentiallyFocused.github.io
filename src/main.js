@@ -20,7 +20,7 @@ cytoscape.use(fcose);
 
 // Load HTML content
 async function loadContent() {
-  const response = await fetch('/src/content.html');
+  const response = await fetch('/content.html');
   const html = await response.text();
   document.getElementById('app').innerHTML = html;
 }

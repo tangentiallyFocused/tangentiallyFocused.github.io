@@ -1,0 +1,536 @@
+  <div id="progress-rail" role="progressbar" aria-label="Page reading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+    <div id="progress-fill"></div>
+  </div>
+  <div id="progress-label" aria-hidden="true">0%</div>
+
+  <header id="titlebar">
+    <a href="#" class="titlebar-name" id="scroll-to-top">Lara Baldez Duque Ribeiro</a>
+    <nav class="top-nav" aria-label="Site sections">
+      <a href="#abstract">Abstract</a>
+      <a href="#projects">Work</a>
+      <a href="#themes">Themes</a>
+      <a href="#connectome">Network</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="resume.pdf" target="_blank" rel="noopener" class="nav-resume">Résumé ↗</a>
+    </nav>
+    <button id="hamburger" aria-label="Open navigation menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <button id="theme-toggle" aria-label="Toggle light and dark mode">☀</button>
+  </header>
+
+  <!-- Mobile nav overlay -->
+  <div id="mobile-nav-overlay" aria-hidden="true">
+    <div id="mobile-nav-inner">
+      <button id="mobile-nav-close" aria-label="Close navigation">✕ close</button>
+      <nav id="mobile-nav-links">
+        <a href="#abstract" class="mobile-nav-item"><span>Abstract</span><span class="mobile-nav-num">01</span></a>
+        <a href="#projects" class="mobile-nav-item"><span>Work</span><span class="mobile-nav-num">02</span></a>
+        <a href="#themes" class="mobile-nav-item"><span>Themes</span><span class="mobile-nav-num">03</span></a>
+        <a href="#connectome" class="mobile-nav-item"><span>Network</span><span class="mobile-nav-num">04</span></a>
+        <a href="#about" class="mobile-nav-item"><span>About</span><span class="mobile-nav-num">05</span></a>
+        <a href="#contact" class="mobile-nav-item"><span>Contact</span><span class="mobile-nav-num">06</span></a>
+      </nav>
+      <div id="mobile-nav-footer">
+        <a href="resume.pdf" target="_blank" rel="noopener" class="mobile-nav-resume">Résumé ↗</a>
+        <span id="mobile-nav-meta">v9.20.3 · Boston, MA</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="page">
+
+    <!-- ════════════ HERO ════════════ -->
+    <section id="hero" aria-labelledby="hero-title">
+      <svg class="hero-graphic" aria-hidden="true" viewBox="0 0 500 380" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="#52d4d4" stroke-opacity="0.9" fill="none" stroke-width="0.8">
+          <line x1="250" y1="190" x2="140" y2="100"/><line x1="250" y1="190" x2="360" y2="110"/>
+          <line x1="250" y1="190" x2="400" y2="260"/><line x1="250" y1="190" x2="100" y2="280"/>
+          <line x1="250" y1="190" x2="200" y2="310"/><line x1="140" y1="100" x2="80" y2="60"/>
+          <line x1="140" y1="100" x2="200" y2="60"/><line x1="360" y1="110" x2="430" y2="70"/>
+          <line x1="360" y1="110" x2="440" y2="160"/><line x1="400" y1="260" x2="460" y2="300"/>
+          <line x1="100" y1="280" x2="50" y2="320"/><line x1="200" y1="310" x2="280" y2="350"/>
+        </g>
+        <g fill="#52d4d4">
+          <circle cx="250" cy="190" r="6"/><circle cx="140" cy="100" r="4"/><circle cx="360" cy="110" r="4"/>
+          <circle cx="400" cy="260" r="4"/><circle cx="100" cy="280" r="4"/><circle cx="200" cy="310" r="4"/>
+          <circle cx="80" cy="60" r="2.5"/><circle cx="200" cy="60" r="2.5"/><circle cx="430" cy="70" r="2.5"/>
+          <circle cx="460" cy="300" r="2.5"/><circle cx="50" cy="320" r="2.5"/><circle cx="280" cy="350" r="2.5"/>
+        </g>
+      </svg>
+
+      <div class="container">
+        <div class="hero-masthead fade-up">
+          <span class="hero-masthead-left">Portfolio</span>
+          <div class="hero-masthead-right">
+            v9.20.3 <span class="sep masthead-hide-mobile">·</span><span class="masthead-hide-mobile"> Product Designer</span> <span class="sep masthead-hide-mobile">·</span><span class="masthead-hide-mobile"> Boston, MA</span>
+          </div>
+        </div>
+
+        <!-- Working Document label removed for cleaner hero presentation. Kept for potential future use if "in progress" framing becomes relevant. -->
+        <!-- <p class="hero-doc-type fade-up d1">Working Document</p> -->
+
+        <h1 class="hero-title fade-up d2" id="hero-title">
+          Designing at the Intersection of<br/>
+          <em>Cognition, Culture, and Craft:</em> <!-- 'Cognition, Culture, and Construction' is the original alternative -->
+        </h1>
+        <p class="hero-subtitle-line fade-up d2">Revealing What Was Never Complicated to Begin With</p>
+
+        <div class="hero-byline fade-up d3">
+          <div class="hero-author">Lara Baldez Duque Ribeiro</div>
+        </div>
+
+        <!-- Reframed education as "Interdisciplinary" to position as methodology/approach (present tense) rather than credentials/timeline (recent grad signal). Same info, different framing: slows down junior positioning while maintaining credibility. Grouped with Status in meta row to reduce visual clutter and keep name as standalone hero element. -->
+        <div class="hero-meta-row fade-up d4">
+          <!-- "Received" commented out - date is incorrect (should be July 2023 graduation, not Sept 2019). Highlighting recent grad status doesn't help positioning. Could be repurposed in future as "Entered industry: 2025" to show longevity once established. -->
+          <!--
+          <div class="hero-meta-item">
+            <div class="hero-meta-label">Received</div>
+            <div class="hero-meta-value">September 2019</div>
+          </div>
+          -->
+          <!-- "Current revision" commented out - signals maintenance but could read as "still being edited" / unfinished. Version number in masthead already shows iteration. -->
+          <!--
+          <div class="hero-meta-item">
+            <div class="hero-meta-label">Current revision</div>
+            <div class="hero-meta-value">April 2026</div>
+          </div>
+          -->
+          <div class="hero-meta-item">
+            <div class="hero-meta-label">Interdisciplinary</div>
+            <div class="hero-meta-value">Cognitive &amp; Linguistic Sciences · <span style="white-space: nowrap;">Media Arts &amp; Sciences</span></div>
+          </div>
+          <div class="hero-meta-item hero-meta-status-item">
+            <div class="hero-meta-label">Status</div>
+            <div class="hero-meta-status">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span class="hero-meta-value">Open to collaboration</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="fade-up d5">
+          <p class="hero-kw-label">Keywords</p>
+          <!-- Option 1: Alternating italics -->
+          <!-- <p class="hero-keywords" aria-label="Keywords"><span>product design</span>; <span class="kw-alt">culture &amp; meaning</span>; <span>tangible design</span>; <span class="kw-alt">systems design</span></p> -->
+
+          <!-- Option 2: Styled semicolons -->
+          <!-- <p class="hero-keywords" aria-label="Keywords">product design<span class="kw-sep">;</span> culture &amp; meaning<span class="kw-sep">;</span> tangible design<span class="kw-sep">;</span> systems design</p> -->
+
+          <!-- Option 4: All keywords italicized -->
+          <p class="hero-keywords kw-all-italic" aria-label="Keywords"><span class="kw-item">product design</span><span class="kw-sep">;</span> <span class="kw-item">culture &amp; meaning</span><span class="kw-sep">;</span> <span class="kw-item">tangible design</span><span class="kw-sep">;</span> <span class="kw-item">systems design</span></p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary hero-cta-primary">View Work</a>
+            <div class="hero-cta-row">
+              <a href="#abstract" class="btn btn-ghost">Read Abstract</a>
+              <a href="resume.pdf" target="_blank" rel="noopener" class="btn btn-resume">Résumé ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════ 01 · ABSTRACT ════════════ -->
+    <section id="abstract" aria-labelledby="abstract-heading">
+      <div class="container">
+        <p class="section-label">01 — Abstract</p>
+        <h2 class="sec-heading" id="abstract-heading">On Cognition, Culture, and Craft</h2>
+        <div class="sec-divider" aria-hidden="true"></div>
+        <div class="abstract-box">
+          <span class="abstract-label" aria-hidden="true">Abstract</span>
+
+          <!-- Teaser — always visible -->
+          <p>My practice starts from a simple conviction: nothing exists in isolation. Systems, people, ideas — everything is in constant conversation. The lenses you bring determine which conversations you can hear, and which you can start. I design at the intersection of <span class="abstract-kw">cognitive &amp; linguistic sciences</span>, <span class="abstract-kw">media arts &amp; sciences</span>, and <span class="abstract-kw">education</span> — three disciplines that share a single question: <b class="emphasis">what creates meaning, and what does meaning create?</b></p>
+
+          <!-- Read more button -->
+          <button class="abstract-read-more" id="abstract-read-more-btn" aria-expanded="false" aria-controls="abstract-expansion" onclick="(function(btn){var exp=document.getElementById('abstract-expansion');var open=exp.classList.toggle('open');btn.classList.toggle('open',open);btn.setAttribute('aria-expanded',String(open));btn.querySelector('.abstract-read-more-label').textContent=open?'Read less':'Read more';})(this)">
+            <span class="abstract-read-more-label">Read more</span>
+            <span class="abstract-read-more-caret">∨</span>
+          </button>
+
+          <!-- Expansion -->
+          <!-- Note: Citations use [1], [2], [3] (bracketed numbers) rather than [a], [b], [c] (letters) to follow standard academic convention.
+               Affiliations use ¹, ² (superscript numbers) in the hero section. While both use numbers, the visual distinction
+               (superscript vs. bracketed) and contextual separation (hero vs. abstract) prevent confusion. -->
+          <div class="abstract-expansion" id="abstract-expansion">
+            <p>Years ago, while reading Guy Deutscher’s <i>Through the Language Glass</i>,<span class="abstract-cite">[1]</span> I discovered the Sapir-Whorf hypothesis. It’s a theory of cognitive science which argues that the language(s) you speak shape how you perceive the world; not a limit, but a lens. Simply put, learning new languages, new frameworks, new disciplines genuinely grows what you can see.</p>
+            
+            <p>My background reflects this — spanning cognitive science, media arts, education, and hands-on making, each one shapes how I approach the others.</p>
+            
+            <p>Culture and design work the same way. Culture shapes the meanings available to us; the things we make reshape the people who use them, which shapes what they make next. An unbroken cycle. In my work, I'm not just asking "what does the user want?" but "what does it shape?" This portfolio is a record of that exploration.</p>
+
+            <p class="ref-note">
+              <span class="ref-num">[1]</span> Deutscher, G. (2010). <em>Through the Language Glass: Why the World Looks Different in Other Languages.</em> Metropolitan Books. &nbsp;
+          </div>
+
+          <div class="abstract-meta" aria-label="Document metadata">
+            <div class="abstract-meta-item"><strong>Author</strong>Lara Baldez Duque Ribeiro</div>
+            <!-- Affiliation commented out - Worthix is not a well-known company and doesn't add credibility in hero/abstract. Could detract from positioning by signaling "no-name company" rather than leaving employment ambiguous. Company mentioned in project descriptions where relevant (dashboards). -->
+            <!-- <div class="abstract-meta-item"><strong>Affiliation</strong>Worthix</div> -->
+            <div class="abstract-meta-item"><strong>Role</strong>Product Designer</div>
+            <div class="abstract-meta-item"><strong>Domain</strong>Product Design / HCI</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════ 02 · FEATURED WORK ════════════ -->
+    <section id="projects" aria-labelledby="projects-heading">
+      <div class="wide-container">
+        <div class="projects-intro">
+          <p class="section-label">02 — Featured Work</p>
+          <h2 class="sec-heading" id="projects-heading">Selected Projects</h2>
+          <div class="sec-divider" aria-hidden="true"></div>
+          <p class="projects-count">Click any card to flip it &nbsp;·&nbsp; 3 entries</p>
+        </div>
+        <div class="card-grid" role="list">
+          <!-- Cards loaded dynamically from projects.json via projects.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════ 03 · THEMES ════════════ -->
+    <section id="themes" aria-labelledby="themes-heading">
+      <div class="container">
+        <div class="themes-intro">
+          <p class="section-label">03 — Guiding Themes</p>
+          <h2 class="sec-heading" id="themes-heading">Three Lenses, Defined</h2>
+          <div class="sec-divider" aria-hidden="true"></div>
+          <p class="themes-sub">The conceptual vocabulary behind every project. The network below maps how these lenses apply across the work.</p>
+        </div>
+
+        <div class="themes-table" role="list" aria-label="Guiding themes">
+
+          <div class="theme-row c" role="listitem">
+            <span class="theme-num" aria-hidden="true">01</span>
+            <div class="theme-term">
+              <h3 class="theme-term-name">Interconnectivity</h3>
+              <p class="theme-term-short">The condition — the state of being in relationship.</p>
+            </div>
+            <p class="theme-def">Revealing how meaning emerges from relationships between ideas, people, &amp; technologies rather than from isolated elements. Culture shapes meaning; meaning shapes culture. Design lives in that loop.</p>
+          </div>
+
+          <div class="theme-row m" role="listitem">
+            <span class="theme-num" aria-hidden="true">02</span>
+            <div class="theme-term">
+              <h3 class="theme-term-name">Interaction</h3>
+              <p class="theme-term-short">The process — what happens within relationships.</p>
+            </div>
+            <p class="theme-def">How things change through exposure to other factors, designing for feedback loops where systems &amp; people mutually shape each other.</p>
+          </div>
+
+          <div class="theme-row y" role="listitem">
+            <span class="theme-num" aria-hidden="true">03</span>
+            <div class="theme-term">
+              <h3 class="theme-term-name">Perception</h3>
+              <p class="theme-term-short">How meaning is constructed from that process.</p>
+            </div>
+            <p class="theme-def">Good design doesn't simplify complexity; it reveals what was never complicated to begin with.</p>
+          </div>
+
+        </div>
+
+        <div class="themes-footer">
+          <button class="site-decisions-link" onclick="openModal()" aria-haspopup="dialog">
+            On the research and decisions behind this site
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════ 04 · CONNECTOME — Cytoscape.js ════════════ -->
+    <section id="connectome" aria-labelledby="connectome-heading">
+      <div class="wide-container">
+        <div class="connectome-header">
+          <p class="section-label">04 — Practice Network</p>
+          <h2 class="sec-heading" id="connectome-heading">My Design Connectome</h2>
+          <div class="sec-divider" aria-hidden="true"></div>
+          <p class="connectome-sub-text">The same three lenses, mapped across projects and skills. The themes are the structure; the work is the evidence. Hover any node to explore its relationships.</p>
+        </div>
+
+        <div class="cy-wrap">
+          <!-- Scroll overlay -->
+          <div id="cy-overlay"></div>
+          <!-- Chip + legend -->
+          <div id="cy-chip">
+            <button id="cy-chip-state-btn" aria-label="Toggle graph interaction">
+              <span id="cy-chip-dot"></span>
+              <span id="cy-chip-label">click to interact</span>
+            </button>
+            <button id="cy-chip-legend-btn" aria-expanded="true" aria-controls="cy-legend-panel">
+              <span>legend</span>
+              <span id="cy-chip-caret">∧</span>
+            </button>
+            <div id="cy-legend-panel">
+              <div class="cy-legend-row">
+                <span class="cy-legend-swatch" style="background:transparent;border:2px solid var(--cyan);"></span>
+                <span class="cy-legend-text">Theme</span>
+              </div>
+              <div class="cy-legend-row">
+                <span class="cy-legend-swatch" style="background:var(--magenta-container);border:1px solid var(--magenta-dim);"></span>
+                <span class="cy-legend-text">Project</span>
+              </div>
+              <div class="cy-legend-row">
+                <span class="cy-legend-swatch" style="background:var(--yellow-container);border:1px solid var(--yellow-dim);"></span>
+                <span class="cy-legend-text">Skill</span>
+              </div>
+            </div>
+            <p id="cy-esc-hint">esc to release</p>
+          </div>
+          <div id="cy" tabindex="0" role="application" aria-label="Interactive network graph. Use arrow keys to navigate, Enter to select projects. Or use the accessible project list below."></div>
+          <!-- Mobile bottom sheet -->
+          <div id="cy-bottom-sheet" aria-live="polite">
+            <div class="cy-sheet-handle" id="cy-sheet-handle">
+              <div class="cy-sheet-handle-bar"></div>
+            </div>
+            <div class="cy-sheet-content">
+              <div class="cy-sheet-body" id="cy-sheet-body"></div>
+            </div>
+          </div>
+          <div class="cy-sidebar" aria-live="polite" aria-label="Project detail">
+
+            <!-- Idle state: three themes -->
+            <div id="cy-idle">
+              <p class="cy-sidebar-label">Three lenses</p>
+              <div class="cy-theme-row">
+                <div class="cy-theme-rule" style="background:var(--cyan);"></div>
+                <p class="cy-theme-name" style="color:var(--cyan);">Interconnectivity</p>
+                <p class="cy-theme-short">The condition — the state of being in relationship.</p>
+              </div>
+              <div class="cy-theme-row">
+                <div class="cy-theme-rule" style="background:var(--magenta);"></div>
+                <p class="cy-theme-name" style="color:var(--magenta);">Interaction</p>
+                <p class="cy-theme-short">The process — what happens within relationships.</p>
+              </div>
+              <div class="cy-theme-row">
+                <div class="cy-theme-rule" style="background:var(--yellow);"></div>
+                <p class="cy-theme-name" style="color:var(--yellow);">Perception</p>
+                <p class="cy-theme-short">How meaning is constructed from that process.</p>
+              </div>
+            </div>
+
+            <!-- Project hover state: card-back recipe format -->
+            <div id="cy-project-detail" style="display:none; flex-direction:column; height:100%;">
+              <p class="card-back-eyebrow" id="cy-proj-eyebrow"></p>
+              <h3 class="cy-proj-title" id="cy-proj-title"></h3>
+              <p class="card-affiliation" id="cy-proj-affiliation"></p>
+              <p class="card-back-summary" id="cy-proj-summary"></p>
+              <div class="card-skills" id="cy-proj-skills" aria-label="Skills"></div>
+              <p class="card-recipe-label" id="cy-proj-tools-label">Tools</p>
+              <p class="card-recipe-inline" id="cy-proj-tools"></p>
+              <p class="card-recipe-label" id="cy-proj-method-label">Method</p>
+              <div id="cy-proj-method"></div>
+              <p class="card-recipe-label" id="cy-proj-outcome-label">Outcome</p>
+              <div id="cy-proj-outcome"></div>
+              <div class="card-back-actions" style="margin-top:auto;">
+                <span class="card-back-theme" id="cy-proj-theme"></span>
+                <button class="cy-media-link" id="cy-proj-media-link" style="display:none;" onclick="window.openMediaCarousel()">View media (<span id="cy-media-count">0</span>) ↗</button>
+                <!-- NOTE: "Open case study" button commented out for now -->
+                <!-- <button class="card-expand" id="cy-proj-expand">Open case study ↗</button> -->
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <p class="fig-caption" aria-hidden="true">
+          fig. 2 — network · hover nodes to explore · scroll to zoom in/out · physics-driven layout via Cytoscape.js ·
+          <span class="fig-info-icon" id="cy-info-icon" role="button" tabindex="0" aria-label="More instructions, press ESC to close">[Help]</span>
+          <span class="fig-info-tooltip" id="cy-info-tooltip">
+            <strong>Interactive Network Graph</strong><br>
+            • Click overlay to activate<br>
+            • Hover nodes to explore connections<br>
+            • Click project node to lock selection<br>
+            • ESC to unlock, ESC again to deactivate<br>
+            • Scroll to zoom, drag to pan<br>
+            • Shift + / to focus navigation menu
+          </span>
+        </p>
+
+        <!-- Accessible project list for screen readers -->
+        <!-- DEV: Toggle visibility for testing -->
+        <!-- <button id="toggle-accessible-list" style="margin-top: 12px; font-size: 11px; padding: 4px 8px; background: var(--bg-2); border: 1px solid var(--border); color: var(--text); cursor: pointer;">
+          [Dev] Show Accessible List
+        </button>
+        <nav class="sr-only" aria-label="All projects" id="cy-accessible-nav">
+          <h3>All projects (alphabetical)</h3>
+          <div id="cy-accessible-projects"></div>
+        </nav> -->
+      </div>
+    </section>
+
+    <!-- ════════════ 05 · ABOUT ════════════ -->
+    <section id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <p class="section-label">05 — About</p>
+        <h2 class="sec-heading" id="about-heading">About</h2>
+        <div class="sec-divider" aria-hidden="true"></div>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>Hi, I'm Lara. A designer who grew up between languages and cultures, learning early on that there's no neutral vantage point — only the one you happen to be standing at. Every framework you uncover doesn't replace the last one. It adds to it.</p>
+            <p>My studies followed the same logic: cognitive science, media arts, education, with detours wherever the question led. Less of a plan, more of a pattern. Find the interesting question and follow it into whatever field is holding the answer. Cognitive science taught me how people build meaning; media arts taught me how to build things, including prototypes in code. Both taught me that the best solution on paper isn't always the best one for the person using it.</p>
+            <p>Outside the screen: I cook from whatever's already there. The recipe is a starting point — suggestions, not requirements. That dish on the right is exactly that. The constraint, as always, turned out to be the interesting part.</p>
+
+            <div class="disciplines-inline" aria-label="Academic background">
+              <div class="disc-inline-item">
+                <div class="disc-inline-color c" aria-hidden="true"></div>
+                <p class="disc-inline-name">
+                  <a href="https://www.wellesley.edu/cogsci" target="_blank" rel="noopener">Cognitive &amp; Linguistic Sciences</a>
+                </p>
+                <p class="disc-inline-dept">Psychology · Wellesley</p>
+                <p class="disc-inline-desc">How language and thought shape each other.</p>
+              </div>
+              <div class="disc-inline-item">
+                <div class="disc-inline-color m" aria-hidden="true"></div>
+                <p class="disc-inline-name">
+                  <a href="https://www.wellesley.edu/mediaarts" target="_blank" rel="noopener">Media Arts &amp; Sciences</a>
+                </p>
+                <p class="disc-inline-dept">Computer Science · Wellesley</p>
+                <p class="disc-inline-desc">Computation, art, and human expression — at their intersection.</p>
+              </div>
+              <div class="disc-inline-item">
+                <div class="disc-inline-color y" aria-hidden="true"></div>
+                <p class="disc-inline-name">Education</p>
+                <p class="disc-inline-dept">Practice &amp; deep interest</p>
+              </div>
+            </div>
+          </div>
+
+          <aside aria-label="A recipe by Lara">
+            <!-- <img src="/assets/LaraDrum.JPG" alt="Lara playing traditional drums" class="about-photo" /> -->
+            <img src="/assets/LaraTruckee.JPG" alt="Lara in Truckee" class="about-photo" />
+            <div class="recipe-card">
+              <p class="recipe-card-label">A recent creation</p>
+              <h4>Risotto de Carne<br/>Puxada c/ Espinafre</h4>
+              <p class="recipe-subtitle">Pulled steak risotto with spinach</p>
+
+              <p class="recipe-section-label">For the beef</p>
+              <div class="recipe-line"><span>bife ancho (chuck)</span><span>pressure cook</span></div>
+              <div class="recipe-line"><span>smoked paprika + salt</span><span>rub</span></div>
+              <div class="recipe-line"><span>garlic, onion, white wine</span><span>braise base</span></div>
+              <div class="recipe-line" style="margin-bottom:18px;"><span>finish in butter</span><span>crisp &amp; pull</span></div>
+
+              <p class="recipe-section-label">For the risotto</p>
+              <div class="recipe-line"><span>risotto rice</span><span>toasted in butter</span></div>
+              <div class="recipe-line"><span>broth from the beef ↑</span><span>don't waste it</span></div>
+              <div class="recipe-line"><span>spinach, mayo, parmesan</span><span>finish</span></div>
+              <div class="recipe-line"><span>lime + salt flakes</span><span>top &amp; serve</span></div>
+
+              <p class="recipe-note">The broth that cooked the beef becomes the risotto's backbone — nothing wasted, everything connected.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════ 06 · CONTACT ════════════ -->
+    <section id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <p class="section-label">06 — Contact</p>
+        <h2 class="sec-heading" id="contact-heading">What's Next?</h2>
+        <div class="sec-divider" aria-hidden="true"></div>
+        <p class="contact-opening">Nothing exists in isolation. Let's be in conversation.</p>
+        <p class="contact-body-text"><!-- I'm open to collaborations in education technology, language tools, early childhood, and health UX. --> If something here sparked a thought — about a project, a problem, an intersection worth exploring, or anything else — I'd love to hear from you.</p>
+        <button class="footer-email-large" id="footer-email-btn" aria-label="Copy email address">lbduquer@gmail.com</button>
+        <p class="footer-email-hint">Click to copy · or find me at the links below</p>
+        <span class="email-copied-flash" id="email-copied-flash">Copied!</span>
+      </div>
+    </section>
+
+  </main>
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <a href="#" class="footer-name" id="footer-scroll-to-top">Lara Baldez Duque Ribeiro</a>
+          <p class="footer-meta">Product Designer &nbsp;·&nbsp; Boston, MA</p>
+        </div>
+        <nav class="footer-links" aria-label="External links">
+          <a href="https://www.linkedin.com/in/lara-bduquer-434297261" target="_blank">LinkedIn</a>
+          <a href="https://github.com/tangentiallyFocused" target="_blank">GitHub</a>
+          <a href="mailto:lbduquer@gmail.com">Email</a>
+          <a href="resume.pdf" target="_blank" rel="noopener">Résumé ↗</a>
+        </nav>
+        <p class="footer-version">2026 · v9.20.3 · <span style="color:var(--text-lo);">in collaboration with Claude AI</span></p>
+      </div>
+    </div>
+  </footer>
+  <!-- ════════════ CASE STUDY MODAL ════════════ -->
+  <div id="case-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="case-modal-title" onclick="if(event.target===this)closeCaseModal()">
+    <div id="case-modal">
+      <div class="case-modal-header">
+        <div>
+          <p class="case-modal-eyebrow" id="case-modal-eyebrow">Case Study</p>
+          <h2 class="case-modal-title" id="case-modal-title"></h2>
+        </div>
+        <button class="case-modal-close" onclick="closeCaseModal()" aria-label="Close case study">✕ close</button>
+      </div>
+      <div class="case-modal-split">
+        <aside class="case-modal-meta" id="case-modal-meta">
+          <!-- Mobile accordion toggle (hidden on desktop) -->
+          <button class="case-meta-toggle" id="case-meta-toggle" style="display:none;">
+            <span>Project details</span><span id="case-meta-caret">∧</span>
+          </button>
+        </aside>
+        <div class="case-modal-body" id="case-modal-body"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════ MEDIA CAROUSEL MODAL ════════════ -->
+  <div id="media-carousel-overlay" role="dialog" aria-modal="true" aria-labelledby="media-carousel-title" onclick="if(event.target===this)closeMediaCarousel()">
+    <div id="media-carousel">
+      <div class="media-carousel-header">
+        <h2 class="media-carousel-title" id="media-carousel-title">Project Media</h2>
+        <button class="media-carousel-close" onclick="closeMediaCarousel()" aria-label="Close media carousel">✕ close</button>
+      </div>
+      <div class="media-carousel-content">
+        <button class="media-nav-btn media-nav-prev" id="media-nav-prev" aria-label="Previous media" onclick="prevMedia()">‹</button>
+        <div class="media-carousel-main">
+          <!-- Media element created dynamically by JavaScript -->
+          <p class="media-carousel-counter" id="media-carousel-counter">1 / 1</p>
+        </div>
+        <button class="media-nav-btn media-nav-next" id="media-nav-next" aria-label="Next media" onclick="nextMedia()">›</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════ SITE DECISIONS MODAL ════════════ -->
+  <div id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" onclick="if(event.target===this)closeModal()">
+    <div id="modal">
+      <div class="modal-header">
+        <div>
+          <p class="modal-eyebrow">Meta</p>
+          <h2 class="modal-title" id="modal-title">On the Research &amp; Decisions Behind This Site</h2>
+        </div>
+        <button class="modal-close" onclick="closeModal()" aria-label="Close">✕ close</button>
+      </div>
+      <div class="modal-split">
+        <!-- Mobile section bar (hidden on desktop, shown on mobile) -->
+        <div class="modal-mobile-bar" id="modal-mobile-bar" style="display:none;">
+          <span class="modal-mobile-current" id="modal-mobile-current">Research foundation</span>
+          <button class="modal-mobile-toggle" id="modal-mobile-toggle">Sections ∨</button>
+          <div class="modal-mobile-dd" id="modal-mobile-dd">
+            <button class="modal-mobile-dd-btn active" data-section="research">Research foundation</button>
+            <button class="modal-mobile-dd-btn" data-section="paper">Research paper format</button>
+            <button class="modal-mobile-dd-btn" data-section="cmy">CMY ink system</button>
+            <button class="modal-mobile-dd-btn" data-section="shapes">Shapes</button>
+            <button class="modal-mobile-dd-btn" data-section="flashcard">Flashcard format</button>
+            <button class="modal-mobile-dd-btn" data-section="themes">Three themes</button>
+            <button class="modal-mobile-dd-btn" data-section="typeface">Typeface</button>
+          </div>
+        </div>
+        <nav class="modal-nav" aria-label="Modal sections">
+          <p class="modal-nav-label">Sections</p>
+          <button class="modal-nav-btn active" data-section="research">Research foundation</button>
+          <button class="modal-nav-btn" data-section="paper">Research paper format</button>
+          <button class="modal-nav-btn" data-section="cmy">CMY ink system</button>
+          <button class="modal-nav-btn" data-section="shapes">Shapes</button>
+          <button class="modal-nav-btn" data-section="flashcard">Flashcard format</button>
+          <button class="modal-nav-btn" data-section="themes">Three themes</button>
+          <button class="modal-nav-btn" data-section="typeface">Typeface</button>
+        </nav>
+        <div class="modal-content" id="modal-content-area" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>

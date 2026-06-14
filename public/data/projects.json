@@ -5,7 +5,7 @@
         "thumbnail": "./assets/aeln-summary.png",
         "thumbnail_alt": "Screenshot of AELN draft on Unity Game Engine",
 
-        "affiliation": "Wellesley College",
+        "affiliation": "MAS, Wellesley College",
         "date": "Jan – May 2025",
         "end_year": "2025",
         "short_desc": "",
@@ -39,7 +39,7 @@
         "thumbnail": "./assets/reproductions/body-series-summary.PNG",
         "thumbnail_alt": "5 paintings of a woman's body",
 
-        "affiliation": "Wellesley College",
+        "affiliation": "Art/MAS, Wellesley College",
         "date": "Apr – May 2024",
         "end_year": "2024",
         "short_desc": "",
@@ -110,7 +110,7 @@
         "affiliation": "Worthix",
         "date": "Oct 2025",
         "end_year": "2025",
-        "short_desc": "A competitive intelligence tool that keeps benchmarking where the data lives.",
+        "short_desc": "A competitive intelligence tool that keeps benchmarking where the data lives.\n&#8627; <b>Full Figma spec (3-day turnaround)</b>",
         "key_skills": ["Info Architecture", "Data Viz", "UX Strategy"],
 
         "med_desc": "Worthix clients exported data to PowerBI just to benchmark against competitors; I designed a dashboard surfacing industry trends, topic clustering, and AI-generated strategic insights in a single view.",
@@ -141,10 +141,10 @@
         "thumbnail": "./assets/custom-nails/custom-nails-summary.PNG",
         "thumbnail_alt": "Prototype of nails being 3D printed",
 
-        "affiliation": "Wellesley College",
+        "affiliation": "Art/MAS, Wellesley College",
         "date": "Feb – Apr 2025",
         "end_year": "2025",
-        "short_desc": "Custom-fit nails, designed and printed from a scan of your own fingers.",
+        "short_desc": "Custom-fit nails, designed and printed from a scan of your own fingers.\n&#8627; <b>Wearable prototype (replicable system)</b>",
         "key_skills": ["3D Modeling", "Product Design", "Traditional Media"],
 
         "med_desc": "Designed a personalized press-on nail system using 3D scanning and parametric modeling — making custom fit accessible beyond mass production's one-size-fits-all standard.",
@@ -175,7 +175,7 @@
         "thumbnail": "./assets/house-memory-summary.PNG",
         "thumbnail_alt": "Angled mirrors reflecting hands (that are holding corded phones) forming a heart",
 
-        "affiliation": "Wellesley College",
+        "affiliation": "Art/MAS, Wellesley College",
         "date": "Apr – May 2024",
         "end_year": "2024",
         "short_desc": "",
@@ -209,7 +209,7 @@
         "thumbnail": "./assets/language-structures-summary.PNG",
         "thumbnail_alt": "Slide highlighting how language is processed in the brain",
 
-        "affiliation": "Wellesley College",
+        "affiliation": "Psychology/CLSC, Wellesley College",
         "date": "May 2023",
         "end_year": "2023",
         "short_desc": "",
@@ -243,7 +243,7 @@
         "thumbnail": "./assets/esci_mindmap.PNG",
         "thumbnail_alt": "ORPI Data Type Selection Chart",
 
-        "affiliation": "Wellesley College",
+        "affiliation": "Psychology, Wellesley College",
         "date": "April 2023",
         "end_year": "2023",
         "short_desc": "",
@@ -311,7 +311,7 @@
         "thumbnail": "./assets/pet-perspective-summary.PNG",
         "thumbnail_alt": "Image of both of my 'Through Their Eyes' pieces",
 
-        "affiliation": "Wellesley College",
+        "affiliation": "Art/MAS, Wellesley College",
         "date": "July 2023",
         "end_year": "2023",
         "short_desc": "",
@@ -379,7 +379,7 @@
         "thumbnail": "./assets/snow-white-summary.PNG",
         "thumbnail_alt": "Screenshot of 'Snow White' Variants website displaying different regions of the world",
 
-        "affiliation": "Wellesley College",
+        "affiliation": "Anthropology/MAS, Wellesley College",
         "date": "Jan – May 2024",
         "end_year": "2024",
         "short_desc": "",
@@ -447,10 +447,10 @@
         "thumbnail": "./assets/town_hall/townhall-summary.PNG",
         "thumbnail_alt": "Screenshot Town H@ll frames in Figma",
 
-        "affiliation": "Wellesley College",
+        "affiliation": "MAS/CS, Wellesley College",
         "date": "May – July 2024",
         "end_year": "2024",
-        "short_desc": "A civic engagement app for residents who can't always make it in person.",
+        "short_desc": "A civic engagement app for residents who can't always make it in person.\n&#8627; <b>Interactive prototype (proof of concept)</b>",
         "key_skills": ["UX Strategy", "Product Design", "User Research"],
 
         "med_desc": "Designed a civic engagement app with a 4-person team that lets residents participate in local government through live streaming, direct messaging, and real-time question submission.",
@@ -481,7 +481,7 @@
         "thumbnail": "./assets/inside-voice-summary.PNG",
         "thumbnail_alt": "Side-by-side comparison of 1 page from both testing conditions",
 
-        "affiliation": "Wellesley College",
+        "affiliation": "Psychology/CLSC, Wellesley College",
         "date": "Sept – Dec 2024",
         "end_year": "2024",
         "short_desc": "",

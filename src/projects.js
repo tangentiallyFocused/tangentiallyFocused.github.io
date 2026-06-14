@@ -1,5 +1,10 @@
 import { getFeaturedProjects, getThemeColor, getThemeClass } from './data-loader.js';
 
+// Helper to convert \n to <br> tags
+function nl2br(text) {
+  return text ? text.replace(/\n/g, '<br>') : '';
+}
+
 export async function initFeaturedProjects() {
   const projects = await getFeaturedProjects();
   const container = document.querySelector('#projects .card-grid');
@@ -63,7 +68,7 @@ function generateCard(project, index, total) {
         <div class="flashcard-ghost" aria-hidden="true">
           <p class="card-back-eyebrow">${themeLabel} · ${project.end_year}</p>
           <h3 class="card-back-title">${project.name}</h3>
-          <p class="card-back-summary">${project.med_desc}</p>
+          <p class="card-back-summary">${nl2br(project.med_desc)}</p>
           ${project.key_tools && project.key_tools.length > 0 ? `
           <p class="card-recipe-label">Tools</p>
           <p class="card-recipe-inline">${project.key_tools.join(', ')}</p>
@@ -94,7 +99,7 @@ function generateCard(project, index, total) {
             <p class="card-index">${cardIndex}</p>
             <h3 class="card-title">${project.name}</h3>
             <p class="card-context">${project.affiliation} · ${project.end_year}</p>
-            <p class="card-summary">${project.short_desc}</p>
+            <p class="card-summary">${nl2br(project.short_desc)}</p>
             <div class="card-skills" aria-label="Skills">
               ${project.key_skills && project.key_skills.length > 0 ?
                 project.key_skills.map(skill => `<span class="skill-chip">${skill}</span>`).join('\n              ') :
@@ -106,7 +111,7 @@ function generateCard(project, index, total) {
           <button class="card-close" aria-label="Return to card front" onclick="event.stopPropagation();this.closest('.flashcard').classList.remove('flipped')">✕ close</button>
           <p class="card-back-eyebrow">${themeLabel} · ${project.end_year}</p>
           <h3 class="card-back-title">${project.name}</h3>
-          <p class="card-back-summary">${project.med_desc}</p>
+          <p class="card-back-summary">${nl2br(project.med_desc)}</p>
           ${project.key_tools && project.key_tools.length > 0 ? `
           <p class="card-recipe-label">Tools</p>
           <p class="card-recipe-inline">${project.key_tools.join(', ')}</p>

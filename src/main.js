@@ -1,6 +1,7 @@
 import './style.css';
 import cytoscape from 'cytoscape';
 import fcose from 'cytoscape-fcose';
+import contentHtml from './content.html?raw';
 
 // Register fcose layout
 cytoscape.use(fcose);
@@ -19,15 +20,13 @@ cytoscape.use(fcose);
 })();
 
 // Load HTML content
-async function loadContent() {
-  const response = await fetch('/content.html');
-  const html = await response.text();
-  document.getElementById('app').innerHTML = html;
+function loadContent() {
+  document.getElementById('app').innerHTML = contentHtml;
 }
 
 // Initialize after content loads
 document.addEventListener('DOMContentLoaded', async () => {
-  await loadContent();
+  loadContent();
 
   // Import and initialize modules
   const { initInteractions } = await import('./interactions.js');

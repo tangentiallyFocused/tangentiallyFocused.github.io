@@ -34,7 +34,7 @@
       </nav>
       <div id="mobile-nav-footer">
         <a href="resume.pdf" target="_blank" rel="noopener" class="mobile-nav-resume">Résumé ↗</a>
-        <span id="mobile-nav-meta">v10.2.0 · Boston, MA</span>
+        <span id="mobile-nav-meta">v10.3.0 · Boston, MA</span>
       </div>
     </div>
   </div>
@@ -64,7 +64,7 @@
         <div class="hero-masthead fade-up">
           <span class="hero-masthead-left">Portfolio</span>
           <div class="hero-masthead-right">
-            v10.2.0 <span class="sep masthead-hide-mobile">·</span><span class="masthead-hide-mobile"> Product Designer, Worthix</span> <span class="sep masthead-hide-mobile">·</span><span class="masthead-hide-mobile"> Boston, MA</span>
+            v10.3.0 <span class="sep masthead-hide-mobile">·</span><span class="masthead-hide-mobile"> Product Designer, Worthix</span> <span class="sep masthead-hide-mobile">·</span><span class="masthead-hide-mobile"> Boston, MA</span>
           </div>
         </div>
 
@@ -168,7 +168,7 @@
             <div class="abstract-meta-item"><strong>Author</strong>Lara Baldez Duque Ribeiro</div>
             <!-- Affiliation commented out - Worthix is not a well-known company and doesn't add credibility in hero/abstract. Could detract from positioning by signaling "no-name company" rather than leaving employment ambiguous. Company mentioned in project descriptions where relevant (dashboards). -->
             <!-- <div class="abstract-meta-item"><strong>Affiliation</strong>Worthix</div> -->
-            <div class="abstract-meta-item"><strong>Role</strong>Product Designer</div>
+            <div class="abstract-meta-item"><strong>Role</strong>Product Designer (Sole)</div>
             <div class="abstract-meta-item"><strong>Domain</strong>Product Design / HCI</div>
           </div>
         </div>
@@ -246,7 +246,7 @@
           <p class="section-label">04 — Practice Network</p>
           <h2 class="sec-heading" id="connectome-heading">My Design Connectome</h2>
           <div class="sec-divider" aria-hidden="true"></div>
-          <p class="connectome-sub-text">The same three lenses, mapped across projects and skills. The themes are the structure; the work is the evidence. Hover any node to explore its relationships.</p>
+          <p class="connectome-sub-text">The same three lenses, mapped across 15+ projects and skills. The themes are the structure; the work is the evidence. Hover any node to explore its relationships.</p>
         </div>
 
         <div class="cy-wrap">
@@ -264,7 +264,7 @@
             </button>
             <div id="cy-legend-panel">
               <div class="cy-legend-row">
-                <span class="cy-legend-swatch" style="background:transparent;border:2px solid var(--cyan);"></span>
+                <span class="cy-legend-swatch" style="background:transparent; border:2px solid transparent; border-image:linear-gradient(45deg, var(--magenta), var(--yellow), var(--cyan)) 1;"></span>
                 <span class="cy-legend-text">Theme</span>
               </div>
               <div class="cy-legend-row">
@@ -334,16 +334,23 @@
           </div>
         </div>
         <p class="fig-caption" aria-hidden="true">
-          fig. 2 — network · hover nodes to explore · scroll to zoom in/out · physics-driven layout via Cytoscape.js ·
-          <span class="fig-info-icon" id="cy-info-icon" role="button" tabindex="0" aria-label="More instructions, press ESC to close">[Help]</span>
+          fig. 2 — network · <span class="fig-desktop-only">hover nodes to explore · scroll to zoom in/out</span><span class="fig-mobile-only">tap nodes to explore · pinch to zoom in/out</span> · physics-driven layout via Cytoscape.js · <span class="fig-info-icon" id="cy-info-icon" role="button" tabindex="0" aria-label="More instructions, press ESC to close">[Help]</span>
           <span class="fig-info-tooltip" id="cy-info-tooltip">
             <strong>Interactive Network Graph</strong><br>
-            • Click overlay to activate<br>
-            • Hover nodes to explore connections<br>
-            • Click project node to lock selection<br>
-            • ESC to unlock, ESC again to deactivate<br>
-            • Scroll to zoom, drag to pan<br>
-            • Shift + / to focus navigation menu
+            <span class="fig-desktop-only">
+              • Click overlay to activate<br>
+              • Hover nodes to explore connections<br>
+              • Click project node to lock selection<br>
+              • ESC to unlock, ESC again to deactivate<br>
+              • Scroll to zoom, drag to pan<br>
+              • Shift + / to focus navigation menu
+            </span>
+            <span class="fig-mobile-only">
+              • Click overlay to activate<br>
+              • Click project node to explore connections and lock selection<br>
+              • Tap elsewhere to unlock, and again to deactivate<br>
+              • Pinch to zoom, drag to pan
+            </span>
           </span>
         </p>
 
@@ -451,7 +458,7 @@
           <a href="mailto:lbduquer@gmail.com">Email</a>
           <a href="resume.pdf" target="_blank" rel="noopener">Résumé ↗</a>
         </nav>
-        <p class="footer-version">2026 · v10.2.0 · <span style="color:var(--text-lo);">in collaboration with Claude AI</span></p>
+        <p class="footer-version">2026 · v10.3.0 · <span style="color:var(--text-lo);">in collaboration with Claude AI</span></p>
       </div>
     </div>
   </footer>

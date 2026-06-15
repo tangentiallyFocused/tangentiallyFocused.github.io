@@ -110,7 +110,7 @@
         "affiliation": "Worthix",
         "date": "Oct 2025",
         "end_year": "2025",
-        "short_desc": "A competitive intelligence tool that keeps benchmarking where the data lives.\n&#8627; <b>Full Figma spec (3-day turnaround)</b>",
+        "short_desc": "A competitive intelligence tool that keeps benchmarking where the data lives.\n<div class=\"front-outcome card-summary\">&#x2514; Full Figma spec (3-day turnaround)</div>",
         "key_skills": ["Info Architecture", "Data Viz", "UX Strategy"],
 
         "med_desc": "Worthix clients exported data to PowerBI just to benchmark against competitors; I designed a dashboard surfacing industry trends, topic clustering, and AI-generated strategic insights in a single view.",
@@ -144,7 +144,7 @@
         "affiliation": "Art/MAS, Wellesley College",
         "date": "Feb – Apr 2025",
         "end_year": "2025",
-        "short_desc": "Custom-fit nails, designed and printed from a scan of your own fingers.\n&#8627; <b>Wearable prototype (replicable system)</b>",
+        "short_desc": "Custom-fit nails, designed and printed from a scan of your own fingers.\n<div class=\"front-outcome card-summary\">&#x2514; Wearable prototype (replicable system)</div>",
         "key_skills": ["3D Modeling", "Product Design", "Traditional Media"],
 
         "med_desc": "Designed a personalized press-on nail system using 3D scanning and parametric modeling — making custom fit accessible beyond mass production's one-size-fits-all standard.",
@@ -450,7 +450,7 @@
         "affiliation": "MAS/CS, Wellesley College",
         "date": "May – July 2024",
         "end_year": "2024",
-        "short_desc": "A civic engagement app for residents who can't always make it in person.\n&#8627; <b>Interactive prototype (proof of concept)</b>",
+        "short_desc": "A civic engagement app for residents who can't always make it in person.\n<div class=\"front-outcome card-summary\">&#x2514; Interactive prototype (proof of concept)</div>",
         "key_skills": ["UX Strategy", "Product Design", "User Research"],
 
         "med_desc": "Designed a civic engagement app with a 4-person team that lets residents participate in local government through live streaming, direct messaging, and real-time question submission.",
